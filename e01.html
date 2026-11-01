@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morganà London — The Sovereign Issue</title>
+<meta name="description" content="Morganà London. Sovereign, Autumn–Winter 2026. The Sovereign Issue.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FFFFFF; --ink:#111111; --ink2:#444; --mute:#8a8a8a; --line:#E3E0DA;
+  --gold:#B8893E; --gold2:rgb(200,168,112); --ivory:#F6F1E8; --wine:#4A0E1C; --wine2:#2B0710; --black:#0B0B0B;
+  --serif:'Bodoni Moda', 'Didot', 'Times New Roman', serif; --sans:'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:15px;line-height:1.6;overflow-x:hidden}
+body.lock{overflow:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:1px solid var(--gold);outline-offset:3px}
+.serif{font-family:var(--serif)}
+.it{font-style:italic}
+.micro{font-family:var(--sans);font-weight:500;font-size:10px;letter-spacing:.24em;text-transform:uppercase;line-height:1.4}
+.rule{height:1px;background:var(--line)}
+.wrap{padding:0 6vw}
+.btn{display:inline-block;padding:14px 26px;border:1px solid var(--ink);font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;transition:background .35s,color .35s}
+.btn:hover{background:var(--ink);color:#fff}
+.btn.gold{border-color:var(--gold);color:var(--gold)}
+.btn.gold:hover{background:var(--gold);color:#fff}
+.lnk{font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:3px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv-w .w{display:inline-block;opacity:0;transform:translateY(.5em);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv-w.in .w{opacity:1;transform:none}
+.rv-w.in .w:nth-child(2){transition-delay:.12s}.rv-w.in .w:nth-child(3){transition-delay:.24s}.rv-w.in .w:nth-child(4){transition-delay:.36s}
+.px img{will-change:transform;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv,.rv-w .w{opacity:1;transform:none;transition:none}
+  *{animation:none!important}
+}
+
+/* header */
+.hd{position:sticky;top:0;z-index:50;background:var(--paper);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:72px;padding:0 6vw;border-bottom:1px solid var(--line)}
+.hd-nav{display:flex;gap:30px}
+.hd-nav.r{justify-content:flex-end;margin-right:120px}
+.hd-nav a,.hd-tools button{font-family:var(--sans);font-weight:500;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;position:relative}
+.hd-nav a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.hd-nav a:hover::after{transform:scaleX(1)}
+.wordmark{font-family:var(--serif);font-weight:500;font-size:22px;letter-spacing:.34em;text-indent:.34em;white-space:nowrap}
+.hd-tools{position:absolute;right:6vw;top:0;height:72px;display:flex;gap:22px;align-items:center}
+.hd-tools svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.2}
+.bagbtn{display:flex;align-items:center;gap:8px}
+.count{font-family:var(--serif);font-size:13px;font-weight:500;min-width:18px;height:18px;border:1px solid var(--ink);border-radius:50%;display:inline-grid;place-items:center;letter-spacing:0}
+.burger{display:none;width:28px;height:28px;position:relative}
+.burger span,.burger span::before,.burger span::after{content:"";position:absolute;left:4px;width:20px;height:1px;background:var(--ink);transition:transform .4s var(--ease)}
+.burger span{top:14px}.burger span::before{top:-6px;left:0}.burger span::after{top:6px;left:0}
+.mm{position:fixed;inset:0;z-index:60;background:var(--paper);display:flex;flex-direction:column;justify-content:center;padding:0 8vw;transform:translateY(-100%);transition:transform .6s var(--ease);visibility:hidden}
+.mm.open{transform:none;visibility:visible}
+.mm a{font-family:var(--serif);font-size:38px;line-height:1.25;letter-spacing:.02em;display:block}
+.mm a i{font-family:var(--sans);font-style:normal;font-size:10px;letter-spacing:.24em;color:var(--gold);margin-right:14px;vertical-align:middle;text-transform:uppercase}
+.mm .mm-foot{position:absolute;left:8vw;right:8vw;bottom:34px;display:flex;justify-content:space-between;align-items:center}
+.mm-close{position:absolute;top:22px;right:6vw}
+.mm-close svg{width:22px;height:22px;stroke:var(--ink);stroke-width:1.2}
+
+/* cover */
+.cover{padding:4.5vw 0 3vw;position:relative}
+.cover-inner{position:relative;margin:0 6vw 0 12vw}
+.cover-panel{position:relative;background:var(--black);padding:3vw 3vw 6.6vw 20vw}
+.cover-img{width:100%;aspect-ratio:2/1;object-fit:cover;object-position:50% 42%}
+.cover-letter{position:absolute;left:-11vw;top:-5.4vw;font-family:var(--serif);font-weight:900;font-size:30vw;line-height:1;color:var(--gold);pointer-events:none;z-index:2;letter-spacing:-.02em;font-variation-settings:"opsz" 96}
+.cover-vert{position:absolute;left:17.4vw;top:3vw;z-index:3;display:flex;gap:10px;writing-mode:vertical-rl;transform:rotate(180deg);color:#fff}
+.cover-vert .short{display:none}
+.cover-vert span{font-family:var(--sans);font-weight:500;font-size:10px;letter-spacing:.3em;text-transform:uppercase;white-space:nowrap}
+.cover-vert span + span{color:var(--gold2)}
+.cover-lines{position:absolute;right:5.5vw;bottom:1.3vw;text-align:right;color:#fff;z-index:3;text-shadow:0 1px 14px rgba(0,0,0,.45)}
+.cl-kicker{font-family:var(--sans);font-weight:500;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold2);margin-top:.9vw}
+.cl-title{font-family:var(--serif);font-weight:400;font-style:italic;font-size:8.6vw;line-height:.95;letter-spacing:.01em}
+.cl-sub{margin-top:.8vw;font-size:13px;font-weight:300;letter-spacing:.02em;max-width:34ch;margin-left:auto}
+.cl-sub a{border-bottom:1px solid rgba(255,255,255,.5);padding-bottom:2px}
+.cover-foot{display:flex;justify-content:space-between;align-items:baseline;margin:1.6vw 6vw 0 12vw;color:var(--ink2)}
+.cover-foot .micro b{color:var(--ink);font-weight:500}
+.cover-foot .folio{font-family:var(--serif);font-size:13px;letter-spacing:.1em}
+
+/* contents */
+.contents{padding:8vw 6vw 6vw;display:grid;grid-template-columns:5fr 7fr;gap:6vw;border-top:1px solid var(--line)}
+.contents h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,64px);line-height:1;letter-spacing:-.01em}
+.contents h2 em{display:block;font-weight:400;color:var(--gold);font-size:.52em;font-style:italic;margin-top:.3em}
+.contents .onc{margin-top:3vw;display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:end;max-width:420px}
+.contents .onc img{aspect-ratio:3/4;object-fit:cover}
+.contents .onc p{font-size:13px;color:var(--ink2);line-height:1.6}
+.contents .onc p b{display:block;color:var(--ink);font-weight:500;font-family:var(--sans);font-size:10px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:6px}
+.toc{list-style:none}
+.toc li{display:grid;grid-template-columns:54px 1fr auto;gap:18px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line)}
+.toc li:first-child{border-top:1px solid var(--line)}
+.toc .n{font-family:var(--serif);font-size:20px;color:var(--gold);letter-spacing:.04em}
+.toc a{font-family:var(--serif);font-size:clamp(20px,2vw,28px);line-height:1.1;display:block}
+.toc a:hover{font-style:italic}
+.toc small{display:block;font-family:var(--sans);font-size:12px;color:var(--mute);margin-top:4px;letter-spacing:.02em}
+.toc .p{font-family:var(--sans);font-size:10px;letter-spacing:.2em;color:var(--mute)}
+
+/* features */
+.feat{position:relative;padding:5vw 0}
+.folio{display:flex;justify-content:space-between;align-items:baseline;padding:0 6vw 2.4vw;color:var(--mute)}
+.folio .micro b{color:var(--ink);font-weight:500}
+.folio .n{font-family:var(--serif);font-size:13px;letter-spacing:.14em}
+
+.f1-grid{position:relative;display:grid;grid-template-columns:30vw 1fr}
+.f1-img{grid-column:2;aspect-ratio:3/2;overflow:hidden}
+.f1-img img{width:100%;height:112%;object-fit:cover;object-position:50% 30%}
+.f1-title{position:absolute;left:6vw;top:8vw;z-index:2;color:#fff;mix-blend-mode:difference;font-family:var(--serif);font-weight:400;line-height:.9;pointer-events:none}
+.f1-title .w1{display:block;font-size:4.5vw;letter-spacing:.02em;margin-left:.3vw}
+.f1-title .w2{display:block;font-size:11.5vw;font-style:italic;margin-left:-.4vw;letter-spacing:-.02em}
+.f1-title .w3{display:block;font-size:7.5vw;margin-left:24vw;margin-top:.8vw}
+.f1-text{grid-column:1;grid-row:1;align-self:end;padding:0 3vw 0 6vw;position:relative;z-index:1}
+.drop::first-letter{font-family:var(--serif);font-weight:500;font-size:3.6em;float:left;line-height:.8;padding:.08em .12em 0 0;color:var(--gold)}
+.feat p{font-size:14.5px;line-height:1.75;color:var(--ink2);max-width:40ch}
+.cap{font-family:var(--sans);font-size:11px;letter-spacing:.08em;color:var(--mute);margin-top:18px;line-height:1.7}
+.cap b{color:var(--ink);font-weight:500}
+.feat .lnk{display:inline-block;margin-top:20px}
+
+.f2{padding:6vw 6vw 4vw;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3vw;align-items:start}
+.f2-a{grid-column:1;aspect-ratio:3/4;overflow:hidden}
+.f2-b{grid-column:3;aspect-ratio:3/4;overflow:hidden;margin-top:12vw}
+.f2 figure img{width:100%;height:112%;object-fit:cover}
+.f2 figcaption{margin-top:12px}
+.f2-mid{grid-column:2;position:relative;padding-top:4vw;text-align:center;z-index:2}
+.f2-title{font-family:var(--serif);font-weight:400;line-height:.9;text-align:left;margin-left:-1vw;width:calc(100% + 4vw)}
+.f2-title .w1{display:block;font-size:6.8vw;letter-spacing:-.01em}
+.f2-title .w2{display:block;font-size:4.2vw;font-style:italic;color:var(--gold);margin-left:11vw;margin-top:.6vw}
+.f2-title .w3{display:block;font-size:9.6vw;margin-left:2vw;margin-top:-.4vw;letter-spacing:-.02em}
+.f2-mid p{margin:2.6vw auto 0;text-align:left;max-width:34ch}
+.f2-mid .lnk{margin-top:20px;display:inline-block}
+
+.f3{padding:4vw 0 6vw;position:relative}
+.f3-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.f3-img{grid-column:1/3;grid-row:1;aspect-ratio:16/8;overflow:hidden;margin-left:12vw}
+.f3-img img{width:100%;height:115%;object-fit:cover;object-position:50% 50%}
+.f3-port{grid-column:1;grid-row:1;align-self:end;width:22vw;margin-left:6vw;margin-bottom:-6vw;position:relative;z-index:2;background:var(--paper);padding:0 0 0 0;box-shadow:0 20px 60px rgba(0,0,0,.08)}
+.f3-port img{aspect-ratio:3/4;object-fit:cover;width:100%}
+.f3-quote{padding:10vw 6vw 0 34vw;display:grid;grid-template-columns:1fr 1fr;gap:4vw;align-items:end}
+.f3-quote blockquote{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.6vw,54px);line-height:1.08;letter-spacing:-.01em}
+.f3-quote blockquote em{color:var(--gold);font-style:italic}
+.f3-quote cite{display:block;font-style:normal;margin-top:1.2vw}
+
+/* video */
+.film{position:relative;margin:4vw 0 0;background:var(--black)}
+.film video{width:100%;aspect-ratio:16/9;object-fit:cover;max-height:92vh}
+.film-type{position:absolute;left:6vw;bottom:5vw;color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.45);z-index:2}
+.film-type .micro{color:var(--gold2);margin-bottom:1vw}
+.film-type h2{font-family:var(--serif);font-weight:400;font-size:8vw;line-height:.9;letter-spacing:-.01em}
+.film-type h2 em{font-style:italic;font-weight:400;margin-left:8vw;display:block;font-size:.72em}
+.film-type p{max-width:38ch;font-size:13px;margin-top:1.4vw;color:#e8e8e8}
+.film-side{position:absolute;right:6vw;top:5vw;writing-mode:vertical-rl;transform:rotate(180deg);color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+
+/* reels */
+.reels{padding:7vw 6vw 5vw}
+.reels-head{display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:4vw;margin-bottom:3.5vw}
+.reels-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,5vw,72px);line-height:.95;letter-spacing:-.01em}
+.reels-head h2 em{font-style:italic;color:var(--gold)}
+.reels-head p{max-width:40ch;justify-self:end}
+.reels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3vw;align-items:start}
+.reel{position:relative}
+.reel:nth-child(2){margin-top:5vw}.reel:nth-child(3){margin-top:10vw}
+.reel video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#111}
+.reel .rn{position:absolute;top:-1.2vw;left:-1.2vw;font-family:var(--serif);font-size:clamp(28px,3vw,44px);color:var(--gold);background:var(--paper);padding:0 .35em;line-height:1.1;letter-spacing:.06em}
+.reel figcaption{margin-top:12px}
+
+/* shop */
+.shop{padding:6vw 0 4vw;border-top:1px solid var(--line)}
+.shop-head{display:grid;grid-template-columns:1fr auto;align-items:end;padding:0 6vw;gap:3vw}
+.shop-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6vw,92px);line-height:.92;letter-spacing:-.015em}
+.shop-head h2 em{font-style:italic;font-size:.6em;color:var(--gold);display:block;margin-left:.15em}
+.shop-head p{max-width:36ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px 22px;padding:2.4vw 6vw 0}
+.chip{font-family:var(--sans);font-weight:500;font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:8px 0;border-bottom:1px solid transparent;color:var(--mute)}
+.chip.on,.chip:hover{color:var(--ink);border-color:var(--ink)}
+.shop-grid{display:grid;grid-template-columns:5fr 7fr;gap:3vw;padding:3vw 6vw 0;align-items:start}
+.shop-ed{position:relative;position:sticky;top:90px;overflow:hidden}
+.shop-ed img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.hot{position:absolute;width:30px;height:30px;border-radius:50%;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:14px;display:grid;place-items:center;transform:translate(-50%,-50%);box-shadow:0 2px 14px rgba(0,0,0,.25);transition:transform .35s var(--ease),background .3s,color .3s}
+.hot:hover{transform:translate(-50%,-50%) scale(1.12);background:var(--gold);color:#fff}
+.hot span{position:absolute;left:38px;top:50%;transform:translateY(-50%);white-space:nowrap;font-family:var(--sans);font-size:10px;letter-spacing:.18em;text-transform:uppercase;background:var(--paper);padding:6px 10px;opacity:0;transition:opacity .3s;pointer-events:none}
+.hot:hover span{opacity:1}
+.shop-ed figcaption{margin-top:12px}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:3vw 2vw}
+.pc{position:relative}
+.pc-img{display:block;width:100%;aspect-ratio:2/3;overflow:hidden;position:relative;background:#f3f1ec}
+.pc-open{position:absolute;inset:0;width:100%;display:block}
+.pc-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .6s var(--ease),transform 1.2s var(--ease)}
+.pc-img img.alt{opacity:0}
+.pc:hover .pc-img img.alt{opacity:1}
+.pc:hover .pc-img img{transform:scale(1.03)}
+.pc-n{position:absolute;top:10px;left:10px;z-index:2;width:26px;height:26px;border-radius:50%;background:var(--paper);font-family:var(--serif);font-size:13px;display:grid;place-items:center;color:var(--ink)}
+.pc-meta{display:flex;justify-content:space-between;gap:10px;margin-top:12px;align-items:baseline}
+.pc-meta h4{font-family:var(--serif);font-weight:400;font-size:16px;line-height:1.2}
+.pc-meta h4 small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-top:4px}
+.pc-meta .pr{font-family:var(--sans);font-size:12px;letter-spacing:.06em;white-space:nowrap}
+.pc-quick{position:absolute;left:0;right:0;bottom:0;padding:12px;background:var(--paper);font-family:var(--sans);font-weight:500;font-size:10px;letter-spacing:.22em;text-transform:uppercase;transform:translateY(100%);transition:transform .4s var(--ease);z-index:2}
+.pc:hover .pc-quick,.pc:focus-within .pc-quick{transform:none}
+.shop-more{text-align:center;padding:4vw 6vw 0}
+@media (hover:none){.pc-quick{display:none}}
+
+/* diary */
+.diary{margin:6vw 0 0;padding:6vw 6vw 7vw;background:var(--black);color:#fff;display:grid;grid-template-columns:7fr 5fr;gap:5vw;align-items:center;position:relative;overflow:hidden}
+.diary .micro{color:var(--gold2)}
+.diary .date{font-family:var(--serif);font-weight:400;font-size:clamp(60px,11vw,170px);line-height:.9;letter-spacing:-.02em;margin:1.4vw 0 2vw;color:#fff}
+.diary .date em{font-style:italic;color:var(--gold)}
+.diary h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.4vw,50px);line-height:1.05}
+.diary h2 em{font-style:italic}
+.diary p{color:#cfcfcf;max-width:42ch;margin-top:1.4vw}
+.diary .dl{display:grid;grid-template-columns:auto 1fr;gap:10px 28px;margin-top:2.6vw;font-size:13px;color:#d9d9d9}
+.diary .dl dt{font-family:var(--sans);font-weight:500;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);padding-top:3px}
+.diary .btn{margin-top:2.6vw;border-color:#fff;color:#fff}
+.diary .btn:hover{background:#fff;color:var(--ink)}
+.diary-img{aspect-ratio:3/4;overflow:hidden;position:relative}
+.diary-img img{width:100%;height:112%;object-fit:cover;object-position:50% 20%}
+.diary-img figcaption{position:absolute;left:0;bottom:-28px;color:#9a9a9a}
+.diary-vert{position:absolute;right:2vw;top:6vw;writing-mode:vertical-rl;transform:rotate(180deg);color:#6f6f6f}
+
+/* back issues */
+.back{padding:7vw 6vw 6vw}
+.back-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:3vw}
+.back-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,5vw,72px);line-height:.95}
+.back-head h2 em{font-style:italic;color:var(--gold)}
+.issues{display:grid;grid-template-columns:1fr 1fr;gap:3vw}
+.issue{position:relative;padding:5vw 2.4vw 2.4vw 4vw;cursor:pointer;overflow:hidden;display:block;width:100%;text-align:left}
+.issue.lum{background:#EBE2D1;color:#2a2622}
+.issue.fort{background:#D6D6D3;color:#1d1d1f}
+.iss-panel{position:relative;padding:1.4vw 1.4vw 1.4vw 8vw;display:block}
+.issue.lum .iss-panel{background:var(--ivory)}
+.issue.fort .iss-panel{background:#28282A}
+.iss-panel img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1.4s var(--ease)}
+.issue:hover .iss-panel img{transform:scale(1.03)}
+.iss-letter{position:absolute;left:.6vw;top:1.2vw;font-family:var(--serif);font-weight:900;font-size:10vw;line-height:1;color:var(--gold);z-index:2;pointer-events:none}
+.iss-vert{position:absolute;left:9vw;top:6.6vw;writing-mode:vertical-rl;transform:rotate(180deg);z-index:3;font-family:var(--sans);font-weight:500;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:#6b6257}
+.issue.fort .iss-vert{color:#fff}
+.iss-lines{display:flex;justify-content:space-between;align-items:end;margin-top:1.4vw;gap:2vw}
+.iss-lines h3{font-family:var(--serif);font-weight:400;font-style:italic;font-size:clamp(30px,3.4vw,52px);line-height:1}
+.iss-lines .micro{margin-bottom:6px;opacity:.75}
+.iss-lines .lnk{white-space:nowrap}
+.iss-paris{position:absolute;right:4.2vw;top:3.6vw;width:8vw;z-index:3;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.iss-paris img{aspect-ratio:3/4;object-fit:cover}
+
+/* footer */
+.ft{border-top:1px solid var(--line);padding:5vw 6vw 3vw}
+.ft-grid{display:grid;grid-template-columns:5fr 2fr 2fr 3fr;gap:4vw}
+.ft h4{font-family:var(--sans);font-weight:500;font-size:10px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:16px}
+.ft ul{list-style:none}.ft li{margin:8px 0;font-size:13px}
+.ft li a:hover{text-decoration:underline;text-underline-offset:4px}
+.news p{font-family:var(--serif);font-size:clamp(22px,2.2vw,30px);line-height:1.15;max-width:22ch;margin-bottom:22px}
+.news form{display:flex;border-bottom:1px solid var(--ink);max-width:420px}
+.news input{flex:1;border:0;background:none;font:inherit;font-size:14px;padding:10px 0;color:var(--ink)}
+.news input::placeholder{color:var(--mute)}
+.news button{font-family:var(--sans);font-weight:500;font-size:10px;letter-spacing:.24em;text-transform:uppercase;padding:10px 0 10px 16px}
+.news .thanks{font-size:13px;color:var(--gold);display:none;margin-top:12px}
+.news.done form{display:none}.news.done .thanks{display:block}
+.ft-bot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:5vw;padding-top:20px;border-top:1px solid var(--line);color:var(--mute);font-size:11px;letter-spacing:.06em}
+.ft-bot .wordmark{font-size:14px;color:var(--ink)}
+
+/* overlays: bag, quick view, collection, welcome, search */
+.scrim{position:fixed;inset:0;z-index:70;background:transparent;visibility:hidden}
+.scrim.open{visibility:visible}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);z-index:80;background:var(--paper);box-shadow:-20px 0 60px rgba(0,0,0,.12);border-left:1px solid var(--line);transform:translateX(100%);transition:transform .6s var(--ease);display:flex;flex-direction:column}
+.drawer.open{transform:none}
+.dr-head{display:flex;justify-content:space-between;align-items:center;padding:24px 28px;border-bottom:1px solid var(--line)}
+.dr-head h3{font-family:var(--serif);font-weight:400;font-size:22px}
+.xbtn svg{width:20px;height:20px;stroke:currentColor;stroke-width:1.2;fill:none}
+.dr-body{flex:1;overflow:auto;padding:12px 28px}
+.bag-empty{padding:40px 0;color:var(--mute);text-align:center;font-family:var(--serif);font-size:18px}
+.bi{display:grid;grid-template-columns:76px 1fr auto;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}
+.bi img{aspect-ratio:2/3;object-fit:cover;width:100%}
+.bi h4{font-family:var(--serif);font-weight:400;font-size:16px}
+.bi small{display:block;color:var(--mute);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line);margin-top:10px}
+.qty button{width:28px;height:28px;font-size:14px}
+.qty span{min-width:26px;text-align:center;font-size:12px}
+.bi .rm{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);margin-top:10px}
+.bi .pr{font-size:13px}
+.dr-foot{padding:20px 28px 28px;border-top:1px solid var(--line)}
+.dr-foot .tot{display:flex;justify-content:space-between;font-family:var(--serif);font-size:18px;margin-bottom:6px}
+.dr-foot .kl{font-size:11px;color:var(--mute);letter-spacing:.04em;margin-bottom:16px}
+.dr-foot .btn{width:100%;text-align:center;background:var(--ink);color:#fff}
+.modal{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:4vw;visibility:hidden;opacity:0;transition:opacity .5s var(--ease),visibility .5s}
+.modal.open{visibility:visible;opacity:1}
+.qv{background:var(--paper);width:min(1040px,100%);max-height:92vh;overflow:auto;display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.18);position:relative;transform:translateY(20px);transition:transform .6s var(--ease)}
+.modal.open .qv{transform:none}
+.qv-gal{background:#f3f1ec;position:relative}
+.qv-gal .main{aspect-ratio:2/3;width:100%;object-fit:cover}
+.qv-thumbs{display:flex;gap:6px;padding:10px;overflow:auto;background:var(--paper)}
+.qv-thumbs img{width:54px;aspect-ratio:2/3;object-fit:cover;cursor:pointer;opacity:.55;transition:opacity .3s}
+.qv-thumbs img.on,.qv-thumbs img:hover{opacity:1}
+.qv-info{padding:40px 40px 32px;display:flex;flex-direction:column}
+.qv-info .micro{color:var(--gold);margin-bottom:12px}
+.qv-info h3{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.1}
+.qv-info .price{font-size:15px;margin:10px 0 18px;letter-spacing:.04em}
+.qv-info p{font-size:14px;color:var(--ink2);line-height:1.7}
+.sizes{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 8px}
+.sz{width:46px;height:40px;border:1px solid var(--line);font-size:12px;letter-spacing:.06em;transition:border-color .3s,background .3s,color .3s}
+.sz.on{border-color:var(--ink);background:var(--ink);color:#fff}
+.sz:hover{border-color:var(--ink)}
+.szg{font-size:11px;color:var(--mute);letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid var(--line)}
+.qv-info .btn{margin-top:22px;width:100%;text-align:center;background:var(--ink);color:#fff;border-color:var(--ink)}
+.qv-info .btn.added{background:var(--gold);border-color:var(--gold)}
+.qv-info .fab{margin-top:auto;padding-top:22px;font-size:11px;color:var(--mute);letter-spacing:.06em;line-height:1.8}
+.qv-close{position:absolute;top:14px;right:14px;z-index:3;background:var(--paper);width:36px;height:36px;border-radius:50%;display:grid;place-items:center}
+.qv-close svg{width:16px;height:16px;stroke:currentColor;stroke-width:1.3;fill:none}
+.col{position:fixed;inset:0;z-index:75;background:var(--paper);overflow:auto;transform:translateY(100%);transition:transform .7s var(--ease);visibility:hidden}
+.col.open{transform:none;visibility:visible}
+.col-bar{position:sticky;top:0;z-index:3;background:var(--paper);display:flex;justify-content:space-between;align-items:center;padding:18px 6vw;border-bottom:1px solid var(--line)}
+.col-bar .wordmark{font-size:16px}
+.col-hero{display:grid;grid-template-columns:1fr 1fr;gap:4vw;padding:4vw 6vw;align-items:center}
+.col-hero figure{aspect-ratio:4/5;overflow:hidden;max-height:70vh}
+.col-hero img{width:100%;height:100%;object-fit:cover}
+.col-hero h2{font-family:var(--serif);font-weight:400;font-size:clamp(50px,8vw,120px);line-height:.9;letter-spacing:-.02em}
+.col-hero h2 em{font-style:italic;color:var(--gold);display:block;font-size:.4em;margin-top:.3em}
+.col-hero p{margin-top:2vw;max-width:40ch;font-size:15px}
+.col-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3vw 2vw;padding:2vw 6vw 6vw}
+.col-chips{padding:0 6vw}
+.welcome{position:fixed;left:24px;bottom:24px;z-index:65;width:min(360px,calc(100% - 48px));background:var(--paper);border:1px solid var(--line);box-shadow:0 20px 60px rgba(0,0,0,.12);padding:26px 26px 22px;transform:translateY(30px);opacity:0;visibility:hidden;transition:transform .7s var(--ease),opacity .7s var(--ease),visibility .7s}
+.welcome.open{transform:none;opacity:1;visibility:visible}
+.welcome h4{font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.1;margin:8px 0 10px}
+.welcome p{font-size:13px;color:var(--ink2)}
+.welcome form{display:flex;border-bottom:1px solid var(--ink);margin-top:16px}
+.welcome input{flex:1;border:0;background:none;font:inherit;font-size:13px;padding:8px 0}
+.welcome button.go{font-family:var(--sans);font-weight:500;font-size:10px;letter-spacing:.22em;text-transform:uppercase}
+.welcome .xbtn{position:absolute;top:12px;right:12px}
+.welcome .done{display:none;color:var(--gold);font-size:13px;margin-top:14px}
+.search{position:fixed;left:0;right:0;top:0;z-index:85;background:var(--paper);border-bottom:1px solid var(--line);padding:26px 6vw;transform:translateY(-100%);transition:transform .5s var(--ease);visibility:hidden}
+.search.open{transform:none;visibility:visible}
+.search form{display:flex;gap:16px;align-items:center;border-bottom:1px solid var(--ink);max-width:720px;margin:0 auto}
+.search input{flex:1;border:0;background:none;font-family:var(--serif);font-size:26px;padding:10px 0}
+.search-res{max-width:720px;margin:14px auto 0;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13px}
+.search-res button{border-bottom:1px solid var(--line)}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);z-index:90;background:var(--ink);color:#fff;padding:12px 20px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:0;transition:opacity .4s,transform .4s;pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* responsive */
+@media (max-width:1100px){
+  .hd-nav{gap:20px}
+  .pgrid{grid-template-columns:repeat(2,1fr)}
+  .col-grid{grid-template-columns:repeat(3,1fr)}
+  .ft-grid{grid-template-columns:1fr 1fr;gap:5vw}
+}
+@media (max-width:900px){
+  .hd{grid-template-columns:auto 1fr auto;height:64px}
+  .hd-nav{display:none}
+  .burger{display:block}
+  .wordmark{font-size:18px;justify-self:center}
+  .hd-tools{position:static;height:auto;gap:16px}
+  .cover{padding:6vw 0 6vw}
+  .cover-inner{margin:0 10vw 0 4vw;padding-top:48vw}
+  .cover-letter{left:-1vw;top:-7vw;font-size:54vw;font-variation-settings:"opsz" 14}
+  .cover-vert{left:auto;right:-7.5vw;top:0;color:var(--ink);gap:8px}
+  .cover-vert span{font-size:9px;letter-spacing:.26em}
+  .cover-vert span + span{color:var(--gold)}
+  .cover-vert .long{display:none}.cover-vert .short{display:inline}
+  .cover-panel{padding:4vw 4vw 6vw}
+  .cover-img{aspect-ratio:4/5;object-position:70% 50%}
+  .cover-lines{position:static;text-shadow:none;text-align:left;padding:7vw 1vw 0}
+  .cl-kicker{margin-top:4vw}
+  .cl-title{font-size:19vw}
+  .cl-sub{margin-left:0;font-size:13px;color:#d6d6d6}
+  .cover-foot{margin:5vw 10vw 0 4vw}
+  .cover-foot{margin:4vw 4vw 0;flex-direction:column;gap:6px}
+  .contents{grid-template-columns:1fr;gap:8vw;padding:12vw 6vw 8vw}
+  .toc li{grid-template-columns:40px 1fr}
+  .toc .p{display:none}
+  .f1-grid{grid-template-columns:1fr;padding-top:0}
+  .f1-img{grid-column:1;aspect-ratio:4/5;margin-left:14vw;margin-top:26vw}
+  .f1-img img{object-position:62% 30%}
+  .f1-title{left:4vw;top:0}
+  .f1-title .w1{font-size:9vw}.f1-title .w2{font-size:21vw}.f1-title .w3{font-size:13vw;margin-left:14vw;margin-top:3vw}
+  .f1-text{grid-column:1;grid-row:2;padding:6vw 6vw 0}
+  .f2{grid-template-columns:1fr 1fr;gap:4vw;padding:10vw 6vw 4vw}
+  .f2-a{grid-column:1;grid-row:1}
+  .f2-b{grid-column:2;grid-row:1;margin-top:16vw}
+  .f2-mid{grid-column:1/3;grid-row:2;padding-top:6vw;text-align:left}
+  .f2-title{margin-left:0;width:auto}
+  .f2-title .w1{font-size:16vw}.f2-title .w2{font-size:9vw;margin-left:20vw}.f2-title .w3{font-size:22vw;margin-left:0}
+  .f2-mid p{margin:5vw 0 0}
+  .f3-img{margin-left:0;aspect-ratio:4/3}
+  .f3-port{width:40vw;margin-left:4vw;margin-bottom:-10vw}
+  .f3-quote{padding:16vw 6vw 0;grid-template-columns:1fr;gap:5vw}
+  .film video{aspect-ratio:4/5;max-height:none}
+  .film-type{bottom:7vw;left:5vw}
+  .film-type h2{font-size:15vw}
+  .film-side{right:4vw;top:6vw}
+  .reels{padding:12vw 6vw 8vw}
+  .reels-head{grid-template-columns:1fr;gap:4vw;margin-bottom:8vw}
+  .reels-head p{justify-self:start}
+  .reels-grid{grid-template-columns:1fr 1fr;gap:4vw}
+  .reel:nth-child(2){margin-top:10vw}.reel:nth-child(3){margin-top:0;grid-column:1/3;width:60%;justify-self:center}
+  .reel .rn{top:-3vw;left:-2vw}
+  .shop-head{grid-template-columns:1fr;gap:4vw}
+  .shop-grid{grid-template-columns:1fr;gap:8vw;padding-top:6vw}
+  .shop-ed{position:relative;top:auto}
+  .hot span{display:none}
+  .pgrid{grid-template-columns:1fr 1fr;gap:8vw 4vw}
+  .diary{grid-template-columns:1fr;padding:12vw 6vw 14vw;gap:10vw}
+  .diary .date{font-size:17vw}
+  .diary-vert{display:none}
+  .diary-img{width:70%}
+  .back{padding:12vw 4vw 8vw}
+  .back-head{flex-direction:column;align-items:flex-start;gap:3vw;margin-bottom:6vw;padding:0 2vw}
+  .issues{grid-template-columns:1fr;gap:6vw}
+  .issue{padding:10vw 5vw 6vw 10vw}
+  .iss-letter{font-size:24vw;left:1vw;top:3vw}
+  .iss-vert{display:none}
+  .iss-panel{padding:3vw 3vw 3vw 18vw}
+  .iss-paris{width:20vw;right:6vw;top:8vw}
+  .iss-lines{flex-direction:column;align-items:flex-start;gap:3vw;margin-top:5vw}
+  .ft{padding:12vw 6vw 8vw}
+  .ft-grid{grid-template-columns:1fr;gap:9vw}
+  .ft-bot{margin-top:10vw;flex-direction:column;gap:8px}
+  .qv{grid-template-columns:1fr;max-height:88vh}
+  .qv-gal .main{aspect-ratio:4/5}
+  .qv-info{padding:26px 22px 28px}
+  .modal{padding:0;align-items:end}
+  .col-hero{grid-template-columns:1fr;padding:8vw 6vw}
+  .col-hero figure{max-height:none}
+  .col-grid{grid-template-columns:1fr 1fr;gap:7vw 4vw}
+}
+</style>
+</head>
+<body>
+
+<header class="hd" id="top">
+  <button class="burger" aria-label="Open menu" aria-controls="mm" aria-expanded="false"><span></span></button>
+  <nav class="hd-nav l" aria-label="Primary">
+    <a href="#cover">Sovereign</a><a href="#shop">Shop</a><a href="#issues">Collections</a>
+  </nav>
+  <a class="wordmark" href="#top" aria-label="Morganà London home">MORGANÀ</a>
+  <nav class="hd-nav r" aria-label="Secondary">
+    <a href="#f1">Editorial</a><a href="#f3">Story</a><a href="#diary">Events</a>
+  </nav>
+  <div class="hd-tools">
+    <button class="sbtn" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button>
+    <button class="bagbtn" aria-label="Open bag"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="count" id="bagcount">0</span></button>
+  </div>
+</header>
+
+<div class="mm" id="mm" aria-hidden="true">
+  <button class="mm-close" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+  <a href="#cover"><i>01</i>Sovereign</a>
+  <a href="#shop"><i>02</i>Shop</a>
+  <a href="#issues"><i>03</i>Collections</a>
+  <a href="#f1"><i>04</i>Editorial</a>
+  <a href="#f3"><i>05</i>Story</a>
+  <a href="#diary"><i>06</i>Events</a>
+  <div class="mm-foot"><span class="micro">The Sovereign Issue · AW26</span><span class="micro">GBP £</span></div>
+</div>
+
+<main>
+
+<!-- COVER -->
+<section class="cover" id="cover" aria-label="The Sovereign Issue">
+  <div class="cover-inner">
+    <div class="cover-panel">
+      <img class="cover-img" src="assets/img/editorial/land-lace-recline.jpg" alt="Sovereign: the Aurelia lace slip, reclining on a charcoal sofa" fetchpriority="high">
+      <div class="cover-lines">
+        <h1 class="cl-title">Sovereign</h1>
+        <p class="cl-sub">Tailoring, knit and leather for the long evenings. Launching 19.11.26. <a href="#contents">Read the issue</a></p>
+        <p class="cl-kicker">Autumn–Winter 2026 · Issue N°01</p>
+      </div>
+    </div>
+    <div class="cover-letter" aria-hidden="true">M</div>
+    <div class="cover-vert" aria-hidden="true"><span>Morganà · London</span><span class="long">The Sovereign Issue · AW26</span><span class="short">Sovereign · AW26</span></div>
+  </div>
+  <div class="cover-foot">
+    <p class="micro"><b>On the cover</b> &nbsp;Aurelia Lace Slip, £245 · Photographed in London</p>
+    <p class="folio">N°01 &nbsp;·&nbsp; p.01</p>
+  </div>
+</section>
+
+<!-- CONTENTS -->
+<section class="contents" id="contents">
+  <div>
+    <h2 class="rv">In this issue <em>Sovereign, Autumn–Winter 2026</em></h2>
+    <div class="onc rv">
+      <img src="assets/img/editorial/port-fur.jpg" alt="The Duchess wrap coat with a fur collar, at the black doors" loading="lazy">
+      <p><b>Cover story</b>Quiet authority, worn in. Twenty pieces made for the long London evening, from the floor-sweeping coat to the roll-neck that goes under everything.</p>
+    </div>
+  </div>
+  <ol class="toc rv">
+    <li><span class="n">01</span><a href="#f1">The Long Coat<small>Floor-sweeping, belted, cut for a London winter</small></a><span class="p">p.02</span></li>
+    <li><span class="n">02</span><a href="#f2">Lace, After Dark<small>The slip dress, trimmed in champagne</small></a><span class="p">p.04</span></li>
+    <li><span class="n">03</span><a href="#f3">Knit &amp; Walnut<small>Open-knit on the sofa, the long evenings in</small></a><span class="p">p.06</span></li>
+    <li><span class="n">04</span><a href="#film">The Rail<small>Moving pictures from the atelier</small></a><span class="p">p.08</span></li>
+    <li><span class="n">05</span><a href="#shop">The Shopping Page<small>Twenty pieces, numbered</small></a><span class="p">p.10</span></li>
+    <li><span class="n">06</span><a href="#diary">Diary<small>One year of Morganà · 19.11.26</small></a><span class="p">p.14</span></li>
+    <li><span class="n">07</span><a href="#issues">Back Issues<small>Lumière, Summer 2026 · Fortia, Autumn–Winter 2025</small></a><span class="p">p.16</span></li>
+  </ol>
+</section>
+
+<!-- FEATURE 01 -->
+<section class="feat" id="f1">
+  <div class="folio"><p class="micro"><b>01</b> &nbsp;The Long Coat</p><p class="n">p.02 — 03</p></div>
+  <div class="f1-grid">
+    <figure class="f1-img px" data-px="0.1"><img src="assets/img/editorial/land-fur-collar.jpg" alt="The Duchess wrap coat with its fur collar, against black panelled doors" loading="lazy"></figure>
+    <h2 class="f1-title rv-w" aria-label="The Long Coat"><span class="w w1">The</span><span class="w w2">Long</span><span class="w w3">Coat</span></h2>
+    <div class="f1-text rv">
+      <p class="drop">A coat you wear from the first cold morning to the last. Double-face wool, a belt you tie rather than buckle, lapels wide enough to turn up against the wind off the Mersey. Underneath, the roll-neck does the quiet work.</p>
+      <p class="cap"><b>Sovereign Long Coat</b> £550 · <b>Essential Roll-Neck</b> £95 · <b>Duchess Wrap Coat</b> £495</p>
+      <button class="lnk" data-qv="sov-15">Shop the look</button>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE 02 -->
+<section class="feat" id="f2">
+  <div class="folio"><p class="micro"><b>02</b> &nbsp;Lace, After Dark</p><p class="n">p.04 — 05</p></div>
+  <div class="f2">
+    <figure class="f2-a px rv" data-px="0.08"><img src="assets/img/editorial/port-lace.jpg" alt="The Aurelia lace slip at the wine doors" loading="lazy"><figcaption class="cap"><b>Aurelia Lace Slip</b> £245</figcaption></figure>
+    <div class="f2-mid">
+      <h2 class="f2-title rv-w" aria-label="Lace, after dark"><span class="w w1">Lace,</span><span class="w w2">after</span><span class="w w3">dark.</span></h2>
+      <p class="rv">A fitted knit slip, edged in champagne lace at the neckline and hem. Worn with a sheer stocking and one piece of gold. The wine doors do the rest.</p>
+      <button class="lnk rv" data-qv="sov-02">Shop the slip</button>
+    </div>
+    <figure class="f2-b px rv" data-px="0.14"><img src="assets/img/editorial/port-bordeaux.jpg" alt="The Bordeaux roll-neck under the Kensington blazer" loading="lazy"><figcaption class="cap"><b>Bordeaux Roll-Neck</b> £110 · <b>Kensington Blazer</b> £325</figcaption></figure>
+  </div>
+</section>
+
+<!-- FEATURE 03 -->
+<section class="feat f3" id="f3">
+  <div class="folio"><p class="micro"><b>03</b> &nbsp;Knit &amp; Walnut</p><p class="n">p.06 — 07</p></div>
+  <div class="f3-grid">
+    <figure class="f3-img px" data-px="0.12"><img src="assets/img/editorial/land-knit-sofa.jpg" alt="The Ivoire open-knit jacket on a bouclé sofa" loading="lazy"></figure>
+    <figure class="f3-port rv"><img src="assets/img/editorial/port-knit-walnut.jpg" alt="The Clementine knit set against walnut panelling" loading="lazy"></figure>
+  </div>
+  <div class="f3-quote">
+    <blockquote class="rv">The house began in a room with wine-lacquered doors and <em>one good coat.</em> A year on, the room is bigger. The coat is the same.</blockquote>
+    <div class="rv">
+      <cite class="micro">— Morganà, on the first year</cite>
+      <p class="cap" style="margin-top:14px"><b>Ivoire Open-Knit Jacket</b> £215 · <b>Clementine Knit Set</b> £260</p>
+      <button class="lnk" data-qv="sov-07" style="margin-top:16px">Shop the knit</button>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="film" id="film">
+  <video src="assets/video/hero-landscape.mp4" poster="assets/video/hero-landscape-poster.jpg" autoplay muted loop playsinline aria-label="The Sovereign rail: coats, knit and tailoring on wooden hangers"></video>
+  <div class="film-type">
+    <p class="micro">04 &nbsp;·&nbsp; Moving pictures</p>
+    <h2 class="rv-w"><span class="w">The Rail</span><em class="w">before the doors open</em></h2>
+    <p class="rv">Twenty pieces on wooden hangers, the morning of the shoot. Wool, bouclé, suede and one leopard.</p>
+  </div>
+  <p class="film-side micro">Sovereign · AW26 · 14 seconds</p>
+</section>
+
+<!-- REELS -->
+<section class="reels" id="reels">
+  <div class="reels-head">
+    <h2 class="rv">Three short <em>films</em></h2>
+    <p class="rv">Shot in the showroom on Stamford New Road. The black blazer and the Bordeaux roll-neck at the wine doors, the long coat at the black ones, and the atelier: hands, gold and paper bags.</p>
+  </div>
+  <div class="reels-grid">
+    <figure class="reel rv"><span class="rn">I</span><video src="assets/video/reel-wine-doors.mp4" poster="assets/video/reel-wine-doors-poster.jpg" autoplay muted loop playsinline aria-label="At the wine doors"></video><figcaption class="cap"><b>At the wine doors</b> · Kensington Blazer, Bordeaux Roll-Neck</figcaption></figure>
+    <figure class="reel rv"><span class="rn">II</span><video src="assets/video/reel-black-doors.mp4" poster="assets/video/reel-black-doors-poster.jpg" autoplay muted loop playsinline aria-label="At the black doors"></video><figcaption class="cap"><b>At the black doors</b> · Sovereign Long Coat</figcaption></figure>
+    <figure class="reel rv"><span class="rn">III</span><video src="assets/video/reel-atelier.mp4" poster="assets/video/reel-atelier-poster.jpg" autoplay muted loop playsinline aria-label="The atelier"></video><figcaption class="cap"><b>The atelier</b> · Hands, gold and paper</figcaption></figure>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section class="shop" id="shop">
+  <div class="shop-head">
+    <h2 class="rv">The Shopping Page <em>twenty pieces, numbered</em></h2>
+    <p class="rv">Every piece in the issue, in the order you met it. Hover for the back, open for sizes. Delivery across the UK, Klarna in three.</p>
+  </div>
+  <div class="chips" id="chips"></div>
+  <div class="shop-grid">
+    <figure class="shop-ed rv">
+      <img src="assets/img/editorial/port-leopard-sofa.jpg" alt="The Margaux pencil skirt and the Essential roll-neck, on the sofa" loading="lazy">
+      <button class="hot" style="left:40%;top:44%" data-qv="sov-11" aria-label="Essential Roll-Neck, £95">1<span>Essential Roll-Neck · £95</span></button>
+      <button class="hot" style="left:50%;top:69%" data-qv="sov-03" aria-label="Margaux Pencil Skirt, £165">2<span>Margaux Pencil Skirt · £165</span></button>
+      <figcaption class="cap"><b>Worn here</b> 1 Essential Roll-Neck £95 · 2 Margaux Pencil Skirt £165</figcaption>
+    </figure>
+    <div>
+      <div class="pgrid" id="pgrid"></div>
+      <div class="shop-more"><button class="btn" id="more">View all 20 pieces</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIARY -->
+<section class="diary" id="diary">
+  <div>
+    <p class="micro rv">06 &nbsp;·&nbsp; Diary &nbsp;·&nbsp; A private event</p>
+    <p class="date rv-w"><span class="w">19.</span><span class="w">11.</span><span class="w it">26</span></p>
+    <h2 class="rv">One year of <em>Morganà</em></h2>
+    <p class="rv">Sovereign opens its doors on a Thursday evening in Altrincham. Drinks · Canapés · DJ. The collection on the rail and on the floor, the long coat by the door.</p>
+    <dl class="dl rv">
+      <dt>When</dt><dd>Thursday 19 November 2026, from 7pm</dd>
+      <dt>Where</dt><dd>102 Stamford New Road, Altrincham WA14 1DG</dd>
+      <dt>RSVP</dt><dd><a href="mailto:info@morgana.london?subject=One%20year%20of%20Morgan%C3%A0%20%E2%80%94%20RSVP">info@morgana.london</a></dd>
+    </dl>
+    <a class="btn rv" href="mailto:info@morgana.london?subject=One%20year%20of%20Morgan%C3%A0%20%E2%80%94%20RSVP">Request an invitation</a>
+  </div>
+  <figure class="diary-img px rv" data-px="0.1"><img src="assets/img/editorial/port-black-coat.jpg" alt="The Sovereign long coat at the black doors" loading="lazy"><figcaption class="micro">The Sovereign Long Coat, £550</figcaption></figure>
+  <p class="diary-vert micro">Morganà · London · Est. 2025</p>
+</section>
+
+<!-- BACK ISSUES -->
+<section class="back" id="issues">
+  <div class="back-head">
+    <h2 class="rv">Back <em>issues</em></h2>
+    <p class="micro rv">07 &nbsp;·&nbsp; Two earlier chapters, still in the shop</p>
+  </div>
+  <div class="issues">
+    <button class="issue lum rv" data-col="lumiere" aria-label="Open Lumière, Summer 2026">
+      <span class="iss-letter" aria-hidden="true">L</span>
+      <span class="iss-vert" aria-hidden="true">Morganà · Paris · Summer 2026</span>
+      <span class="iss-panel"><img src="assets/img/lumiere/riviera.jpg" alt="Lumière: linen on the Riviera" loading="lazy"></span>
+      <span class="iss-paris"><img src="assets/img/lumiere/paris-balcony.jpg" alt="Lumière: the ivory slip on a Paris balcony" loading="lazy"></span>
+      <span class="iss-lines"><span><span class="micro">Issue N°00 · Summer 2026</span><h3>Lumière</h3></span><span class="lnk">Open the issue</span></span>
+    </button>
+    <button class="issue fort rv" data-col="fortia" aria-label="Open Fortia, Autumn–Winter 2025">
+      <span class="iss-letter" aria-hidden="true">F</span>
+      <span class="iss-vert" aria-hidden="true">Morganà · Studio · Autumn–Winter 2025</span>
+      <span class="iss-panel"><img src="assets/img/fortia/39-0.jpg" alt="Fortia: the Flint fur-collar coat on grey" loading="lazy" style="object-position:50% 20%"></span>
+      <span class="iss-lines"><span><span class="micro">The first chapter · AW25</span><h3>Fortia</h3></span><span class="lnk">Open the issue</span></span>
+    </button>
+  </div>
+</section>
+
+</main>
+
+<footer class="ft">
+  <div class="ft-grid">
+    <div class="news" id="news">
+      <h4>The letter</h4>
+      <p>First word on the next issue, and ten percent off the first order.</p>
+      <form><input type="email" placeholder="Your email" required aria-label="Email address"><button type="submit">Subscribe</button></form>
+      <p class="thanks">Thank you. The next issue will find you first.</p>
+    </div>
+    <div><h4>Client care</h4><ul><li><a href="mailto:info@morgana.london">info@morgana.london</a></li><li><a href="#">Delivery &amp; returns</a></li><li><a href="#">Size guide</a></li><li><a href="#">Klarna · pay in 3</a></li></ul></div>
+    <div><h4>The house</h4><ul><li><a href="#f3">Story</a></li><li><a href="#diary">Events</a></li><li><a href="#issues">Collections</a></li><li><a href="#">Stockists</a></li></ul></div>
+    <div><h4>Follow</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">Pinterest</a></li><li><a href="#">TikTok</a></li></ul><p class="cap" style="margin-top:18px">102 Stamford New Road<br>Altrincham WA14 1DG</p></div>
+  </div>
+  <div class="ft-bot">
+    <span class="wordmark">MORGANÀ</span>
+    <span>© 2026 Morganà London Ltd · GBP £ · Klarna available · Concept preview</span>
+  </div>
+</footer>
+
+<!-- overlays -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="bag" aria-label="Shopping bag" aria-hidden="true">
+  <div class="dr-head"><h3>Your bag <span class="micro" id="bagn" style="color:var(--mute)"></span></h3><button class="xbtn" data-close aria-label="Close bag"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></svg></button></div>
+  <div class="dr-body" id="bagbody"></div>
+  <div class="dr-foot">
+    <div class="tot"><span>Subtotal</span><span id="bagtot">£0</span></div>
+    <p class="kl">Or 3 payments with Klarna, interest free. Delivery calculated at checkout. GBP.</p>
+    <button class="btn">Checkout</button>
+  </div>
+</aside>
+
+<div class="modal" id="qvm" aria-hidden="true" role="dialog" aria-label="Quick view">
+  <div class="qv">
+    <button class="qv-close" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+    <div class="qv-gal"><img class="main" id="qvmain" src="" alt=""><div class="qv-thumbs" id="qvthumbs"></div></div>
+    <div class="qv-info">
+      <p class="micro" id="qvcol"></p>
+      <h3 id="qvname"></h3>
+      <p class="price" id="qvprice"></p>
+      <p id="qvdesc"></p>
+      <div class="sizes" id="qvsizes"></div>
+      <button class="szg">Size guide</button>
+      <button class="btn" id="qvadd">Add to bag</button>
+      <p class="fab" id="qvfab"></p>
+    </div>
+  </div>
+</div>
+
+<section class="col" id="col" aria-hidden="true">
+  <div class="col-bar"><span class="wordmark">MORGANÀ</span><span class="micro" id="colbar"></span><button class="xbtn" data-close aria-label="Close collection"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></svg></button></div>
+  <div class="col-hero"><figure><img id="colimg" src="" alt=""></figure><div><p class="micro" id="colseason" style="color:var(--gold);margin-bottom:1vw"></p><h2 id="colname"></h2><p id="colline"></p></div></div>
+  <div class="chips col-chips" id="colchips"></div>
+  <div class="col-grid" id="colgrid"></div>
+</section>
+
+<div class="search" id="search" aria-hidden="true">
+  <form id="sform"><input type="search" placeholder="Search the issue" aria-label="Search products" id="sinput"><button class="micro" type="submit">Search</button><button type="button" class="xbtn" data-close aria-label="Close search"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></svg></button></form>
+  <div class="search-res" id="sres"></div>
+</div>
+
+<aside class="welcome" id="welcome" aria-label="Welcome offer">
+  <button class="xbtn" data-close aria-label="Dismiss"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+  <p class="micro" style="color:var(--gold)">A welcome</p>
+  <h4>Ten percent, for the first order.</h4>
+  <p>Leave an address and the code follows. Nothing else, until the next issue.</p>
+  <form><input type="email" placeholder="Your email" required aria-label="Email address"><button class="go" type="submit">Send</button></form>
+  <p class="done">Thank you. The code is on its way.</p>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/products.js"></script>
+<script>
+(function(){
+  const M = window.MORGANA, P = M.products, byId = id => P.find(p => p.id === id);
+  const gbp = n => '£' + n;
+  const $ = (s, r=document) => r.querySelector(s), $$ = (s, r=document) => [...r.querySelectorAll(s)];
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const order = ["sov-11","sov-03","sov-15","sov-02","sov-06","sov-05","sov-19","sov-07","sov-01","sov-18","sov-12","sov-04","sov-14","sov-09","sov-16","sov-13","sov-08","sov-10","sov-17","sov-20"];
+  const sov = order.map(byId);
+
+  /* reveal */
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px', threshold: .05 });
+  const watch = r => $$('.rv, .rv-w', r || document).forEach(el => io.observe(el));
+  watch();
+
+  /* parallax */
+  const pxs = $$('.px');
+  let ticking = false;
+  function px() {
+    ticking = false;
+    const vh = innerHeight;
+    pxs.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > vh) return;
+      const sp = parseFloat(el.dataset.px || .1);
+      const c = (r.top + r.height / 2) - vh / 2;
+      const img = el.querySelector('img');
+      if (img) img.style.transform = 'translateY(' + (-c * sp).toFixed(1) + 'px)';
+    });
+  }
+  if (!reduced && innerWidth > 900) {
+    addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(px); } }, { passive: true });
+    px();
+  } else { pxs.forEach(el => { const i = el.querySelector('img'); if (i) i.style.height = '100%'; }); }
+
+  /* header / menu */
+  const mm = $('#mm'), burger = $('.burger');
+  function menu(open) { mm.classList.toggle('open', open); mm.setAttribute('aria-hidden', !open); burger.setAttribute('aria-expanded', open); document.body.classList.toggle('lock', open); }
+  burger.addEventListener('click', () => menu(true));
+  $('.mm-close').addEventListener('click', () => menu(false));
+  $$('#mm a').forEach(a => a.addEventListener('click', () => menu(false)));
+
+  /* overlays */
+  const scrim = $('#scrim');
+  let openEl = null;
+  function openOv(el) { closeOv(); openEl = el; el.classList.add('open'); el.setAttribute('aria-hidden', 'false'); scrim.classList.add('open'); document.body.classList.add('lock'); }
+  function closeOv() { if (!openEl) return; openEl.classList.remove('open'); openEl.setAttribute('aria-hidden', 'true'); openEl = null; scrim.classList.remove('open'); document.body.classList.remove('lock'); }
+  scrim.addEventListener('click', closeOv);
+  $$('[data-close]').forEach(b => b.addEventListener('click', e => { const w = b.closest('#welcome'); if (w) { w.classList.remove('open'); remember(); } else closeOv(); }));
+  addEventListener('keydown', e => { if (e.key === 'Escape') { closeOv(); menu(false); $('#welcome').classList.remove('open'); } });
+
+  /* toast */
+  let tt; function toast(msg) { const t = $('#toast'); t.textContent = msg; t.classList.add('on'); clearTimeout(tt); tt = setTimeout(() => t.classList.remove('on'), 2200); }
+
+  /* bag */
+  let bag = [];
+  function paintBag() {
+    const n = bag.reduce((a, b) => a + b.qty, 0);
+    $('#bagcount').textContent = n; $('#bagn').textContent = n ? n + (n === 1 ? ' item' : ' items') : '';
+    const body = $('#bagbody');
+    if (!bag.length) { body.innerHTML = '<p class="bag-empty">Your bag is empty.</p>'; }
+    else body.innerHTML = bag.map((l, i) => { const p = byId(l.id); return `<div class="bi"><img src="${p.images[0]}" alt=""><div><h4>${p.name}</h4><small>Size ${l.size}${p.colour ? ' · ' + p.colour : ''}</small><div class="qty"><button data-q="-1" data-i="${i}" aria-label="Less">−</button><span>${l.qty}</span><button data-q="1" data-i="${i}" aria-label="More">+</button></div><button class="rm" data-rm="${i}">Remove</button></div><span class="pr">${gbp(p.price * l.qty)}</span></div>`; }).join('');
+    $('#bagtot').textContent = gbp(bag.reduce((a, l) => a + byId(l.id).price * l.qty, 0));
+    $$('[data-q]', body).forEach(b => b.addEventListener('click', () => { const l = bag[+b.dataset.i]; l.qty = Math.max(1, l.qty + (+b.dataset.q)); paintBag(); }));
+    $$('[data-rm]', body).forEach(b => b.addEventListener('click', () => { bag.splice(+b.dataset.rm, 1); paintBag(); }));
+  }
+  function addToBag(id, size) { const l = bag.find(x => x.id === id && x.size === size); if (l) l.qty++; else bag.push({ id, size, qty: 1 }); paintBag(); }
+  paintBag();
+  $('.bagbtn').addEventListener('click', () => openOv($('#bag')));
+
+  /* quick view */
+  let qvId = null, qvSize = null;
+  function quickView(id) {
+    const p = byId(id); if (!p) return; qvId = id; qvSize = null;
+    $('#qvcol').textContent = (p.collection === 'sovereign' ? 'Sovereign · AW26' : p.collection === 'lumiere' ? 'Lumière · Summer 2026' : 'Fortia · AW25') + (p.isNew ? ' · New' : '');
+    $('#qvname').textContent = p.name; $('#qvprice').textContent = gbp(p.price) + (p.colour ? ' · ' + p.colour : '');
+    $('#qvdesc').textContent = p.description;
+    $('#qvmain').src = p.images[0]; $('#qvmain').alt = p.name;
+    $('#qvthumbs').innerHTML = p.images.map((s, i) => `<img src="${s}" alt="" class="${i ? '' : 'on'}" data-i="${i}">`).join('');
+    $$('#qvthumbs img').forEach(t => t.addEventListener('click', () => { $('#qvmain').src = p.images[+t.dataset.i]; $$('#qvthumbs img').forEach(x => x.classList.remove('on')); t.classList.add('on'); }));
+    $('#qvsizes').innerHTML = p.sizes.map(s => `<button class="sz" data-s="${s}">${s}</button>`).join('');
+    $$('#qvsizes .sz').forEach(b => b.addEventListener('click', () => { $$('#qvsizes .sz').forEach(x => x.classList.remove('on')); b.classList.add('on'); qvSize = b.dataset.s; }));
+    $('#qvfab').textContent = (p.fabric || 'Composition and care to follow') + ' · Made for Morganà London · Free UK returns within 14 days';
+    const add = $('#qvadd'); add.textContent = 'Add to bag'; add.classList.remove('added');
+    openOv($('#qvm'));
+  }
+  $('#qvadd').addEventListener('click', () => {
+    const b = $('#qvadd');
+    if (b.classList.contains('added')) { openOv($('#bag')); return; }
+    if (!qvSize) { toast('Choose a size'); return; }
+    addToBag(qvId, qvSize); b.textContent = 'Added — view bag'; b.classList.add('added');
+  });
+  document.addEventListener('click', e => { const b = e.target.closest('[data-qv]'); if (b) { e.preventDefault(); quickView(b.dataset.qv); } });
+
+  /* product cards */
+  function card(p, n) {
+    return `<article class="pc rv"><span class="pc-n">${n}</span><div class="pc-img"><button class="pc-open" data-qv="${p.id}" aria-label="${p.name}, ${gbp(p.price)}"><img src="${p.images[0]}" alt="${p.name}" loading="lazy"><img class="alt" src="${p.images[1] || p.images[0]}" alt="" loading="lazy"></button><button class="pc-quick" data-qv="${p.id}">Quick view</button></div><div class="pc-meta"><h4>${p.name}<small>${p.category}${p.colour ? ' · ' + p.colour : ''}</small></h4><span class="pr">${gbp(p.price)}</span></div></article>`;
+  }
+  let showAll = false, cat = 'All';
+  function paintShop() {
+    const list = sov.filter(p => cat === 'All' || p.category === cat);
+    const shown = showAll || cat !== 'All' ? list : list.slice(0, 6);
+    $('#pgrid').innerHTML = shown.map((p, i) => card(p, order.indexOf(p.id) + 1)).join('');
+    $('#more').style.display = (showAll || cat !== 'All') ? 'none' : '';
+    watch($('#pgrid'));
+  }
+  const cats = ['All', ...new Set(sov.map(p => p.category))];
+  $('#chips').innerHTML = cats.map(c => `<button class="chip ${c === 'All' ? 'on' : ''}" data-c="${c}">${c}</button>`).join('');
+  $$('#chips .chip').forEach(b => b.addEventListener('click', () => { cat = b.dataset.c; $$('#chips .chip').forEach(x => x.classList.toggle('on', x === b)); paintShop(); }));
+  $('#more').addEventListener('click', () => { showAll = true; paintShop(); });
+  paintShop();
+
+  /* collections */
+  const colMeta = { lumiere: { img: 'assets/img/lumiere/paris-balcony.jpg', season: 'Issue N°00 · Summer 2026 · Paris and the coast', line: 'Linen, light and the Paris summer. Shot outdoors, on balconies and by the sea, in ivory and white. Twenty-two pieces, still in the shop.' }, fortia: { img: 'assets/img/fortia/39-0.jpg', season: 'The first chapter · Autumn–Winter 2025', line: 'The first collection. Tailoring cut for strength, photographed in the studio on grey. Thirty-six pieces, still in the shop.' } };
+  let colId = null, colCat = 'All';
+  function openCol(id) {
+    colId = id; colCat = 'All';
+    const c = M.collections.find(x => x.id === id), m = colMeta[id];
+    $('#colimg').src = m.img; $('#colimg').alt = c.name; $('#colname').innerHTML = c.name + '<em>' + c.season + '</em>'; $('#colseason').textContent = m.season; $('#colline').textContent = m.line; $('#colbar').textContent = c.name + ' · ' + c.season;
+    const list = P.filter(p => p.collection === id);
+    const cc = ['All', ...new Set(list.map(p => p.category))];
+    $('#colchips').innerHTML = cc.map(x => `<button class="chip ${x === 'All' ? 'on' : ''}" data-c="${x}">${x}</button>`).join('');
+    $$('#colchips .chip').forEach(b => b.addEventListener('click', () => { colCat = b.dataset.c; $$('#colchips .chip').forEach(x => x.classList.toggle('on', x === b)); paintCol(); }));
+    paintCol(); openOv($('#col')); $('#col').scrollTop = 0;
+    if (location.hash !== '#' + id) history.pushState(null, '', '#' + id);
+  }
+  function paintCol() { const list = P.filter(p => p.collection === colId && (colCat === 'All' || p.category === colCat)); $('#colgrid').innerHTML = list.map((p, i) => card(p, i + 1)).join(''); $$('#colgrid .rv').forEach(el => el.classList.add('in')); }
+  $$('[data-col]').forEach(b => b.addEventListener('click', () => openCol(b.dataset.col)));
+  addEventListener('popstate', () => { if (openEl === $('#col') && !['#lumiere', '#fortia'].includes(location.hash)) closeOv(); });
+  if (['#lumiere', '#fortia'].includes(location.hash)) openCol(location.hash.slice(1));
+
+  /* search */
+  $('.sbtn').addEventListener('click', () => { openOv($('#search')); setTimeout(() => $('#sinput').focus(), 300); });
+  function doSearch() {
+    const q = $('#sinput').value.trim().toLowerCase();
+    const res = q ? P.filter(p => (p.name + ' ' + p.category + ' ' + p.colour + ' ' + p.collection).toLowerCase().includes(q)).slice(0, 12) : [];
+    $('#sres').innerHTML = res.length ? res.map(p => `<button data-qv="${p.id}">${p.name} · ${gbp(p.price)}</button>`).join('') : (q ? '<span style="color:var(--mute)">Nothing by that name yet.</span>' : '');
+  }
+  $('#sinput').addEventListener('input', doSearch);
+  $('#sform').addEventListener('submit', e => { e.preventDefault(); doSearch(); });
+
+  /* newsletter + welcome */
+  $('#news form').addEventListener('submit', e => { e.preventDefault(); $('#news').classList.add('done'); });
+  const W = $('#welcome');
+  function remember() { try { localStorage.setItem('mor-welcome', '1'); } catch (e) {} }
+  let seen = false; try { seen = localStorage.getItem('mor-welcome') === '1'; } catch (e) {}
+  if (!seen) setTimeout(() => W.classList.add('open'), 9000);
+  $('#welcome form').addEventListener('submit', e => { e.preventDefault(); $('#welcome form').style.display = 'none'; $('#welcome .done').style.display = 'block'; remember(); setTimeout(() => W.classList.remove('open'), 2600); });
+})();
+</script>
+</body>
+</html>

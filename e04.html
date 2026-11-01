@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morganà London — Sovereign of Winter</title>
+<meta name="description" content="Morganà London. Sovereign, Autumn–Winter 2026. Editorial concept e04: The Campaign — Sovereign of Winter.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23141010'/%3E%3Ctext x='32' y='48' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23B8893E'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#F6F1E8; --paper:#FBF8F2; --ink:#141010; --black:#0E0B0B; --wine:#4A0E1C; --wine-deep:#2B0710;
+  --gold:#B8893E; --gold-soft:rgb(200,168,112); --taupe:#8C7F72; --line:rgba(20,16,16,.14); --line-ivory:rgba(246,241,232,.22);
+  --serif:"Bodoni Moda","Bodoni 72","Didot",Georgia,serif; --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.19,1,.22,1); --gutter:clamp(20px,4vw,64px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--ivory);color:var(--ink);font:300 15px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+body.lock{overflow:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+:focus-visible{outline:1px solid var(--gold);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.eyebrow{font:400 10px/1.4 var(--sans);letter-spacing:.3em;text-transform:uppercase}
+.serif{font-family:var(--serif)}
+.btn{display:inline-flex;align-items:center;gap:14px;padding:14px 26px;border:1px solid currentColor;font:500 10.5px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;transition:background .5s var(--ease),color .5s var(--ease),transform .5s var(--ease)}
+.btn:hover{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+.btn.light:hover{background:var(--ivory);color:var(--ink);border-color:var(--ivory)}
+.btn.solid{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+.btn.solid:hover{background:var(--wine);border-color:var(--wine)}
+.link{font:500 10.5px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:6px}
+.rule{height:1px;background:var(--line)}
+
+/* ---------- header ---------- */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:60;height:84px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 var(--gutter);color:var(--ivory);transition:background .6s var(--ease),color .6s var(--ease),height .6s var(--ease)}
+.hdr::after{content:"";position:absolute;left:var(--gutter);right:var(--gutter);bottom:0;height:1px;background:currentColor;opacity:0;transition:opacity .6s}
+.hdr.is-solid{background:var(--ivory);color:var(--ink);height:68px}
+.hdr.is-solid::after{opacity:.12}
+.hdr.dark-on{color:var(--ink)}
+.hdr nav{display:flex;gap:34px}
+.hdr nav a,.hdr .icons button{font:500 10.5px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;position:relative;padding:6px 0}
+.hdr nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.hdr nav a:hover::after{transform:scaleX(1)}
+.hdr .nav-r{justify-content:flex-end}
+.brand{font:500 clamp(18px,1.5vw,22px)/1 var(--serif);letter-spacing:.42em;text-indent:.42em;text-align:center;white-space:nowrap}
+.hdr .icons{display:flex;gap:26px;justify-content:flex-end;align-items:center;margin-left:34px}
+.hdr .right{display:flex;justify-content:flex-end;align-items:center}
+.count{display:inline-block;min-width:16px;height:16px;line-height:16px;text-align:center;font-size:9px;letter-spacing:0;margin-left:6px;border:1px solid currentColor;border-radius:50%;vertical-align:1px}
+.burger{display:none;width:28px;height:20px;position:relative}
+.burger span{position:absolute;left:0;right:0;height:1px;background:currentColor;transition:transform .5s var(--ease),opacity .3s}
+.burger span:nth-child(1){top:3px}.burger span:nth-child(2){top:10px}.burger span:nth-child(3){top:17px}
+
+/* mobile menu */
+.menu{position:fixed;inset:0;z-index:70;background:var(--ivory);color:var(--ink);transform:translateY(-100%);transition:transform .8s var(--ease);display:flex;flex-direction:column;padding:100px var(--gutter) 40px;visibility:hidden}
+.menu.open{transform:none;visibility:visible}
+.menu a.big{font:400 clamp(34px,9vw,44px)/1.15 var(--serif);letter-spacing:.02em;padding:8px 0;border-bottom:1px solid var(--line)}
+.menu a.big i{color:var(--gold)}
+.menu .small{margin-top:auto;display:flex;flex-wrap:wrap;gap:18px 28px}
+.menu .close{position:absolute;top:26px;right:var(--gutter);font:500 10.5px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:100svh;min-height:620px;display:grid;grid-template-columns:1fr 1fr;background:var(--black);color:var(--ivory);overflow:hidden}
+.hero .half{position:relative;overflow:hidden}
+.hero .half img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;transform:scale(1.06);transition:transform 2.2s var(--ease)}
+.hero.in .half img{transform:none}
+.hero .half.r img{object-position:50% 30%}
+.hero-type{position:absolute;inset:0;pointer-events:none;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+.hero-type .ln{display:block;overflow:hidden}
+.hero-type .ln span{display:block;transform:translateY(110%);transition:transform 1.4s var(--ease)}
+.hero.in .ln span{transform:none}
+.hero-type .l1{font:italic 400 clamp(30px,5vw,84px)/1 var(--serif);margin-left:-40vw}
+.hero-type .l2{font:400 clamp(66px,14.6vw,226px)/.9 var(--serif);letter-spacing:-.015em;margin-top:-.08em}
+.hero-type .l3{font:italic 400 clamp(32px,6.6vw,108px)/1 var(--serif);margin-left:30vw;margin-top:.02em}
+.hero.in .l1 span{transition-delay:.15s}.hero.in .l2 span{transition-delay:.3s}.hero.in .l3 span{transition-delay:.5s}
+.hero-micro{position:absolute;top:104px;left:var(--gutter);right:var(--gutter);display:flex;justify-content:space-between;opacity:.9}
+.hero-ctas{position:absolute;left:0;right:0;bottom:7vh;display:grid;grid-template-columns:1fr 1fr}
+.hero-ctas div{display:flex;justify-content:center}
+.hero-ctas .btn{text-shadow:none;backdrop-filter:none}
+.hero-coll{position:absolute;left:50%;bottom:7vh;transform:translateX(-50%);writing-mode:vertical-rl;font:400 10px/1 var(--sans);letter-spacing:.34em;text-transform:uppercase;opacity:.85;display:none}
+.scroll-cue{position:absolute;right:var(--gutter);bottom:7vh;width:1px;height:56px;background:var(--line-ivory);overflow:hidden}
+.scroll-cue::after{content:"";position:absolute;left:0;top:0;width:1px;height:100%;background:var(--ivory);animation:cue 2.4s var(--ease) infinite}
+@keyframes cue{0%{transform:translateY(-100%)}60%{transform:translateY(100%)}100%{transform:translateY(100%)}}
+
+/* ---------- cover (giant letter) ---------- */
+.cover{position:relative;padding:18vh 0 10vh}
+.cover-wrap{position:relative;margin-left:16vw;margin-right:0}
+.cover-panel{position:relative;background:var(--black);padding:7vw 0 5vw 9vw}
+.cover-panel .ph{position:relative;overflow:hidden;aspect-ratio:16/9}
+.cover-panel .ph img{width:100%;height:118%;object-fit:cover;object-position:50% 40%;will-change:transform}
+.cover-letter{position:absolute;left:-13.5vw;top:-9.5vw;font:400 34vw/.78 var(--serif);color:var(--gold);z-index:2;pointer-events:none;letter-spacing:-.04em}
+.cover-vert{position:absolute;left:3.2vw;top:11vw;z-index:3;color:var(--ivory);display:flex;gap:10px}
+.cover-vert span{writing-mode:vertical-rl;transform:rotate(180deg);font:400 9.5px/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;opacity:.9}
+.cover-vert span + span{opacity:.5}
+.cover-cap{position:absolute;right:var(--gutter);bottom:1.6vw;color:var(--ivory);font:400 10px/1.5 var(--sans);letter-spacing:.2em;text-transform:uppercase;opacity:.7;text-align:right}
+.cover-intro{display:grid;grid-template-columns:16vw 1fr 1fr;gap:0 5vw;padding:9vh var(--gutter) 0 0;margin-left:0}
+.cover-intro .n{padding-left:var(--gutter);font:400 11px/1.6 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--taupe)}
+.cover-intro h2{margin:0;font:400 clamp(34px,4.2vw,62px)/1.02 var(--serif);letter-spacing:-.01em}
+.cover-intro h2 i{color:var(--gold)}
+.cover-intro p{margin:0;max-width:40ch;font-size:15.5px;line-height:1.75}
+.cover-intro .meta{margin-top:26px;display:flex;gap:28px;flex-wrap:wrap}
+.cover-intro .meta span{font:400 10px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--taupe)}
+
+/* ---------- chapters ---------- */
+.chap{position:relative;height:100vh;min-height:620px;overflow:hidden;color:var(--ivory);background:var(--black)}
+.chap .bg{position:absolute;inset:-12% 0;will-change:transform}
+.chap .bg img{width:100%;height:100%;object-fit:cover}
+.chap .type{position:absolute;text-shadow:0 2px 28px rgba(0,0,0,.38)}
+.chap .cap{position:absolute;font:400 10px/1.7 var(--sans);letter-spacing:.24em;text-transform:uppercase;opacity:.85}
+.chap .cap b{font-weight:500}
+.chap .num{font:400 10px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;opacity:.8;margin-bottom:18px;display:block}
+/* I */
+.chap.c1 .bg img{object-position:62% 30%}
+.chap.c1 .type{left:var(--gutter);bottom:9vh;max-width:60vw}
+.chap.c1 .t1{font:400 clamp(44px,7.6vw,120px)/.92 var(--serif);display:block}
+.chap.c1 .t2{font:italic 400 clamp(54px,10.4vw,164px)/.92 var(--serif);display:block;margin-left:7vw}
+.chap.c1 .t3{font:italic 400 clamp(20px,2.4vw,36px)/1.1 var(--serif);display:block;margin:.5em 0 0 1vw}
+.chap.c1 .cap{right:var(--gutter);top:14vh;text-align:right}
+/* II */
+.chap.c2 .bg img{object-position:50% 45%}
+.chap.c2 .type{left:var(--gutter);bottom:8vh}
+.chap.c2 .t1{font:400 clamp(44px,8.6vw,138px)/.9 var(--serif);display:block;letter-spacing:-.01em}
+.chap.c2 .t2{font:italic 400 clamp(54px,12vw,190px)/.9 var(--serif);display:block;margin-left:10vw}
+.chap.c2 .cap{right:var(--gutter);top:14vh;text-align:right}
+/* III */
+.chap.c3 .bg img{object-position:40% 40%}
+.chap.c3 .type{right:var(--gutter);top:18vh;text-align:right}
+.chap.c3 .t1{font:400 clamp(70px,15vw,236px)/.85 var(--serif);display:block;letter-spacing:-.02em}
+.chap.c3 .t2{font:italic 400 clamp(28px,4vw,62px)/1 var(--serif);display:block;margin-right:12vw;margin-top:.15em}
+.chap.c3 .t3{font:italic 400 clamp(28px,4vw,62px)/1 var(--serif);display:block;margin-right:2vw}
+.chap.c3 .cap{left:var(--gutter);bottom:7vh}
+.chap .cap a{border-bottom:1px solid rgba(246,241,232,.5)}
+
+/* ---------- sticky product story ---------- */
+.story{display:grid;grid-template-columns:1fr 1fr;background:var(--paper)}
+.story-media{position:sticky;top:0;height:100vh;overflow:hidden;background:var(--black)}
+.story-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity 1s var(--ease),transform 1.6s var(--ease)}
+.story-media img.on{opacity:1;transform:none}
+.story-media .tag{position:absolute;left:var(--gutter);top:112px;color:var(--ivory);font:400 10px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;opacity:.85}
+.story-media .idx{position:absolute;right:var(--gutter);bottom:6vh;color:var(--ivory);font:italic 400 clamp(26px,3vw,44px)/1 var(--serif)}
+.story-steps{padding:0 clamp(28px,7vw,120px)}
+.step{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:14vh 0}
+.step .no{font:400 11px/1 var(--sans);letter-spacing:.3em;color:var(--taupe);margin-bottom:28px}
+.step h3{margin:0 0 18px;font:400 clamp(36px,4.4vw,66px)/1 var(--serif);letter-spacing:-.01em}
+.step h3 i{color:var(--gold)}
+.step p{margin:0 0 26px;max-width:38ch;font-size:15.5px;line-height:1.75}
+.step .row{display:flex;align-items:center;gap:30px}
+.step .price{font:400 20px/1 var(--serif)}
+.story-head{grid-column:1/-1;padding:12vh var(--gutter) 6vh;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.story-head h2{margin:0;font:400 clamp(36px,5.4vw,84px)/.95 var(--serif);letter-spacing:-.01em}
+.story-head h2 i{color:var(--gold)}
+.story-head p{margin:0;max-width:34ch;color:var(--taupe)}
+
+/* ---------- film ---------- */
+.film{background:var(--black);color:var(--ivory);padding:12vh 0}
+.film-frame{position:relative;width:min(92vw,1440px);margin:0 auto;aspect-ratio:2.39/1;overflow:hidden;background:#000}
+.film-frame video{width:100%;height:100%;object-fit:cover}
+.film-bar{width:min(92vw,1440px);margin:0 auto;display:flex;justify-content:space-between;align-items:baseline;padding:18px 0 0;gap:20px;flex-wrap:wrap}
+.film-bar .eyebrow{opacity:.75}
+.film-title{width:min(92vw,1440px);margin:0 auto 26px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
+.film-title h2{margin:0;font:italic 400 clamp(36px,5.6vw,86px)/.95 var(--serif)}
+.film-title h2 b{font-style:normal;font-weight:400}
+.film-vert{position:absolute;left:-28px;top:50%;transform:rotate(180deg) translateY(50%);writing-mode:vertical-rl;font:400 9.5px/1 var(--sans);letter-spacing:.34em;text-transform:uppercase;opacity:.5}
+
+/* ---------- shop ---------- */
+.shop{padding:14vh var(--gutter) 10vh}
+.shop-head{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end;margin-bottom:34px}
+.shop-head h2{margin:0;font:400 clamp(40px,6vw,96px)/.92 var(--serif);letter-spacing:-.015em}
+.shop-head h2 i{color:var(--gold)}
+.shop-head .eyebrow{color:var(--taupe);margin-bottom:14px;display:block}
+.filters{display:flex;gap:10px 24px;flex-wrap:wrap;align-items:center;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:34px}
+.filters .grp{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.filters .grp + .grp{margin-left:auto}
+.chip{font:500 10.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;padding:8px 0;position:relative;opacity:.55;transition:opacity .3s}
+.chip::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.chip:hover{opacity:1}
+.chip.on{opacity:1}.chip.on::after{transform:scaleX(1)}
+.filters select{font:500 10.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;border:0;background:transparent;color:inherit;padding:8px 0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:48px 22px}
+.card{position:relative}
+.card-img{display:block;width:100%;position:relative;aspect-ratio:2/3;overflow:hidden;background:#e9e3d8}
+.card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .7s var(--ease),transform 1.2s var(--ease)}
+.card-img img.alt{opacity:0}
+.card:hover .card-img img.alt{opacity:1}
+.card:hover .card-img img{transform:scale(1.03)}
+.card .qv{position:absolute;left:50%;bottom:16px;transform:translate(-50%,8px);opacity:0;transition:opacity .4s,transform .5s var(--ease);background:var(--ivory);color:var(--ink);padding:10px 16px;font:500 9.5px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;pointer-events:none}
+.card:hover .qv{opacity:1;transform:translate(-50%,0)}
+.card-meta{display:flex;justify-content:space-between;gap:12px;margin-top:14px;font:400 13.5px/1.4 var(--sans)}
+.card-meta .nm{font:400 15px/1.3 var(--serif)}
+.card small{display:block;font:400 9.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--taupe);margin-top:7px}
+.card .new{position:absolute;left:12px;top:12px;font:500 9px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;background:var(--ivory);padding:7px 9px}
+.empty{padding:60px 0;color:var(--taupe);text-align:center}
+.shop-foot{display:flex;justify-content:center;margin-top:48px}
+
+/* ---------- event ---------- */
+.event{display:grid;grid-template-columns:5fr 7fr;background:var(--black);color:var(--ivory)}
+.event .reel{position:relative;min-height:70vh;overflow:hidden}
+.event .reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.event .reel .corner{position:absolute;left:var(--gutter);top:var(--gutter);font:400 9.5px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;opacity:.85}
+.event .body{padding:clamp(48px,9vh,120px) clamp(28px,7vw,120px);display:flex;flex-direction:column;justify-content:center}
+.event .body .eyebrow{color:var(--gold-soft)}
+.event h2{margin:22px 0 10px;font:italic 400 clamp(40px,5.4vw,84px)/.98 var(--serif)}
+.event h2 b{font-style:normal;font-weight:400}
+.event .date{font:400 clamp(64px,10vw,160px)/.9 var(--serif);letter-spacing:-.02em;margin:26px 0 24px;color:var(--gold)}
+.event .lines{display:grid;grid-template-columns:auto 1fr;gap:10px 30px;font-size:14.5px;line-height:1.7;max-width:60ch}
+.event .lines span:first-child{font:400 10px/2.4 var(--sans);letter-spacing:.26em;text-transform:uppercase;opacity:.6}
+.event .cta{margin-top:40px;display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+
+/* ---------- collection banners ---------- */
+.colls{background:var(--paper)}
+.coll{display:grid;grid-template-columns:1fr 1fr;min-height:84vh;cursor:pointer;position:relative}
+.coll .ph{position:relative;overflow:hidden;min-height:56vh}
+.coll .ph img{position:absolute;inset:-10% 0;width:100%;height:120%;object-fit:cover;will-change:transform}
+.coll .tx{padding:clamp(48px,9vh,120px) clamp(28px,7vw,120px);display:flex;flex-direction:column;justify-content:center;position:relative}
+.coll .tx .eyebrow{display:block;margin-bottom:26px}
+.coll h2{margin:0;font:400 clamp(60px,9.4vw,150px)/.88 var(--serif);letter-spacing:-.02em}
+.coll h2 i{display:block;font-size:.5em;margin-left:.9em;margin-top:.1em}
+.coll p{margin:30px 0 36px;max-width:36ch;font-size:15.5px;line-height:1.75}
+.coll .tx .btn{align-self:flex-start}
+.coll .big-n{position:absolute;right:var(--gutter);top:var(--gutter);font:italic 400 clamp(60px,8vw,130px)/1 var(--serif);opacity:.14}
+.coll.lum .tx{background:#EFE8DB;color:var(--ink)}
+.coll.lum .ph img{object-position:50% 30%}
+.coll.for{grid-template-columns:1fr 1fr}
+.coll.for .tx{background:#2A2A2C;color:var(--ivory);order:1}
+.coll.for .ph{order:2}
+.coll.for .ph img{object-position:50% 18%}
+.coll.for h2 i{color:#B9B6B0}
+.coll.lum h2 i{color:var(--gold)}
+.coll .ph .cap{position:absolute;left:var(--gutter);bottom:var(--gutter);color:var(--ink);background:var(--ivory);padding:8px 12px;font:500 9px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase}
+.colls-head{padding:14vh var(--gutter) 8vh;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.colls-head h2{margin:0;font:400 clamp(36px,5vw,76px)/.95 var(--serif)}
+.colls-head h2 i{color:var(--gold)}
+.colls-head p{margin:0;color:var(--taupe);max-width:36ch}
+
+/* ---------- footer ---------- */
+.foot{background:var(--ivory);padding:12vh var(--gutter) 40px;border-top:1px solid var(--line)}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.foot h4{margin:0 0 20px;font:400 10px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--taupe)}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:12px;font-size:14px}
+.foot .news p{margin:0 0 20px;font:italic 400 clamp(24px,2.4vw,34px)/1.2 var(--serif);max-width:20ch}
+.news form{display:flex;border-bottom:1px solid var(--ink);max-width:380px}
+.news input{flex:1;border:0;background:transparent;padding:14px 0;font:300 14px/1 var(--sans);color:inherit;outline:none}
+.news input::placeholder{color:var(--taupe)}
+.news button{font:500 10.5px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;padding:0 0 0 14px}
+.news .thanks{display:none;font:italic 400 18px/1.4 var(--serif)}
+.news.done form{display:none}.news.done .thanks{display:block}
+.foot-bot{margin-top:10vh;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font:400 9.5px/1.6 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--taupe)}
+.foot-brand{font:500 clamp(44px,12vw,180px)/.9 var(--serif);letter-spacing:.2em;text-indent:.2em;text-align:center;margin:0 0 8vh;color:var(--ink)}
+
+/* ---------- overlays ---------- */
+.veil{position:fixed;inset:0;background:rgba(14,11,11,.5);z-index:80;opacity:0;visibility:hidden;transition:opacity .6s,visibility .6s}
+.veil.open{opacity:1;visibility:visible}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100vw);background:var(--ivory);color:var(--ink);z-index:90;transform:translateX(100%);transition:transform .8s var(--ease);display:flex;flex-direction:column;visibility:hidden}
+.drawer.open{transform:none;visibility:visible}
+.drawer .d-head{display:flex;justify-content:space-between;align-items:center;padding:26px var(--gutter) 20px;border-bottom:1px solid var(--line)}
+.drawer .d-head h3{margin:0;font:400 22px/1 var(--serif);letter-spacing:.06em}
+.drawer .d-body{flex:1;overflow:auto;padding:10px var(--gutter)}
+.drawer .d-foot{padding:20px var(--gutter) 28px;border-top:1px solid var(--line)}
+.line{display:grid;grid-template-columns:76px 1fr auto;gap:18px;padding:18px 0;border-bottom:1px solid var(--line)}
+.line img{width:76px;aspect-ratio:2/3;object-fit:cover}
+.line .nm{font:400 15px/1.3 var(--serif)}
+.line .sz{font:400 10px/1.8 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--taupe)}
+.line .qty{display:inline-flex;align-items:center;gap:12px;margin-top:10px;border:1px solid var(--line);padding:4px 10px;font-size:12px}
+.line .qty button{width:16px;text-align:center;font-size:14px}
+.line .rm{font:400 9.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--taupe);margin-left:14px;border-bottom:1px solid var(--line)}
+.line .pr{font:400 15px/1.3 var(--serif);text-align:right}
+.sub{display:flex;justify-content:space-between;font:400 16px/1 var(--serif);margin-bottom:8px}
+.klarna{font:400 10px/1.7 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--taupe);margin:0 0 18px}
+.d-foot .btn{width:100%;justify-content:center}
+.bag-empty{padding:50px 0;text-align:center;color:var(--taupe);font:italic 400 18px/1.4 var(--serif)}
+
+.modal{position:fixed;inset:0;z-index:95;display:grid;place-items:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s}
+.modal.open{opacity:1;visibility:visible}
+.modal .box{background:var(--ivory);color:var(--ink);width:min(980px,100%);max-height:calc(100vh - 40px);display:grid;grid-template-columns:1fr 1fr;overflow:hidden;transform:translateY(20px);transition:transform .7s var(--ease)}
+.modal.open .box{transform:none}
+.modal .gal{position:relative;background:#e9e3d8;overflow:hidden}
+.modal .gal img.main{width:100%;height:100%;object-fit:cover;aspect-ratio:2/3}
+.modal .thumbs{position:absolute;left:14px;bottom:14px;display:flex;gap:6px}
+.modal .thumbs button{width:40px;aspect-ratio:2/3;overflow:hidden;opacity:.6;border:1px solid transparent}
+.modal .thumbs button.on{opacity:1;border-color:var(--ivory)}
+.modal .thumbs img{width:100%;height:100%;object-fit:cover}
+.modal .info{padding:40px;display:flex;flex-direction:column;overflow:auto}
+.modal .info .eyebrow{color:var(--taupe)}
+.modal h3{margin:14px 0 6px;font:400 clamp(26px,2.6vw,36px)/1.05 var(--serif)}
+.modal .price{font:400 18px/1 var(--serif);margin-bottom:22px}
+.modal p{margin:0 0 24px;font-size:14.5px;line-height:1.7}
+.sizes{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.sizes button{min-width:44px;height:40px;padding:0 12px;border:1px solid var(--line);font:400 11px/1 var(--sans);letter-spacing:.14em;transition:background .3s,color .3s,border-color .3s}
+.sizes button.on{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+.sz-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.sz-head .sg{font:400 9.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--taupe);border-bottom:1px solid var(--line)}
+.modal .info .btn{margin-top:auto;justify-content:center}
+.modal .close{position:absolute;top:14px;right:14px;width:40px;height:40px;background:var(--ivory);display:grid;place-items:center;font-size:20px;line-height:1}
+.modal .box{position:relative}
+.modal .det{margin-top:18px;font:400 10px/1.9 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--taupe)}
+.msg{font:italic 400 14px/1.4 var(--serif);color:var(--wine);min-height:20px;margin-top:10px}
+
+.search{position:fixed;top:0;left:0;right:0;z-index:92;background:var(--ivory);color:var(--ink);transform:translateY(-100%);transition:transform .7s var(--ease);padding:30px var(--gutter);visibility:hidden;border-bottom:1px solid var(--line)}
+.search.open{transform:none;visibility:visible}
+.search form{display:flex;align-items:center;gap:20px;max-width:900px;margin:0 auto;border-bottom:1px solid var(--ink)}
+.search input{flex:1;border:0;background:transparent;font:italic 400 clamp(24px,3vw,40px)/1.2 var(--serif);padding:12px 0;outline:none;color:inherit;min-width:0}
+.search input::placeholder{color:var(--taupe)}
+.search button{font:500 10.5px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase}
+
+/* ---------- reveals ---------- */
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1.1s var(--ease),transform 1.3s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);background:var(--ink);color:var(--ivory);padding:14px 22px;font:400 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;z-index:100;opacity:0;transition:opacity .4s,transform .5s var(--ease);pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .hdr nav{gap:22px}
+  .cover-intro{grid-template-columns:1fr 1fr;gap:30px}
+  .cover-intro .n{grid-column:1/-1}
+}
+@media (max-width:860px){
+  .hdr{grid-template-columns:auto 1fr auto;height:70px}
+  .hdr nav{display:none}
+  .burger{display:block}
+  .hdr .icons{gap:18px;margin-left:0}
+  .hdr .icons .srch{display:none}
+  .hero{min-height:560px}
+  .hero .half img{object-position:50% 18%}
+  .hero-type .l1{margin-left:-36vw}
+  .hero-type .l3{margin-left:22vw}
+  .hero-micro{top:86px;font-size:9px;white-space:nowrap}
+  .hero-micro span:nth-child(2){display:none}
+  .hero-ctas{bottom:5vh;gap:8px}
+  .hero-ctas .btn{padding:12px 14px;font-size:9.5px;letter-spacing:.2em}
+  .scroll-cue{display:none}
+  .cover{padding:12vh 0 6vh}
+  .cover-wrap{margin:0 0 0 var(--gutter)}
+  .cover-panel{padding:16vw 0 6vw 6vw;margin-top:18vw}
+  .cover-letter{left:-4vw;top:-30vw;font-size:58vw}
+  .cover-vert{left:auto;right:var(--gutter);top:5vw;flex-direction:column;gap:6px;align-items:flex-end}
+  .cover-vert span{writing-mode:horizontal-tb;transform:none}
+  .cover-cap{display:none}
+  .cover-intro{grid-template-columns:1fr;gap:22px;padding:7vh var(--gutter) 0 var(--gutter)}
+  .cover-intro .n{padding-left:0}
+  .chap{height:88vh;min-height:560px}
+  .chap.c1 .bg img{object-position:68% 20%}
+  .chap.c1 .type{max-width:80vw;bottom:7vh}
+  .chap.c1 .cap{top:auto;bottom:7vh;right:var(--gutter);left:auto;max-width:34vw}
+  .chap.c2 .bg img{object-position:30% 45%}
+  .chap.c2 .t2{margin-left:8vw}
+  .chap.c2 .cap{top:auto;bottom:7vh;right:var(--gutter);max-width:34vw}
+  .chap.c3 .bg img{object-position:38% 50%}
+  .chap.c3 .type{top:14vh}
+  .chap.c3 .t2{margin-right:6vw}
+  .story{grid-template-columns:1fr}
+  .story-media{height:56vh;z-index:2}
+  .story-steps{padding:0 var(--gutter);background:var(--paper)}
+  .step{min-height:0;padding:12vh 0}
+  .story-head{padding:10vh var(--gutter) 5vh}
+  .film{padding:8vh 0}
+  .film-vert{display:none}
+  .grid{grid-template-columns:repeat(2,1fr);gap:34px 14px}
+  .filters .grp + .grp{margin-left:0}
+  .event{grid-template-columns:1fr}
+  .event .reel{min-height:68vh}
+  .coll{grid-template-columns:1fr !important}
+  .coll .ph{min-height:62vh;order:1 !important}
+  .coll .tx{order:2 !important}
+  .coll h2 i{margin-left:.5em}
+  .foot-top{grid-template-columns:1fr 1fr;gap:34px}
+  .foot .news{grid-column:1/-1}
+  .modal{padding:0;place-items:end}
+  .modal .box{grid-template-columns:1fr;max-height:92vh;overflow:auto}
+  .modal .gal img.main{aspect-ratio:4/5}
+  .modal .info{padding:26px var(--gutter) 30px}
+  .modal .info .btn{margin-top:20px}
+}
+@media (max-width:420px){
+  .hero-type .l2{font-size:17vw}
+  .hero-type .l1{margin-left:-34vw}
+  .chap.c3 .t1{font-size:22vw}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important;animation-iteration-count:1 !important}
+  .rv{opacity:1;transform:none}
+  .hero-type .ln span{transform:none}
+  .hero .half img{transform:none}
+}
+</style>
+</head>
+<body>
+<a id="top"></a>
+
+<header class="hdr" id="hdr">
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  <nav class="nav-l" aria-label="Primary"><a href="#cover">Sovereign</a><a href="#shop">Shop</a><a href="#collections">Collections</a></nav>
+  <a class="brand" href="#top" aria-label="Morganà London, home">MORGANÀ</a>
+  <div class="right">
+    <nav class="nav-r" aria-label="Secondary"><a href="#chapters">Editorial</a><a href="#story">Story</a><a href="#event">Events</a></nav>
+    <div class="icons">
+      <button class="srch" id="searchBtn" aria-label="Search">Search</button>
+      <button id="bagBtn" aria-label="Open bag">Bag<span class="count" id="bagCount">0</span></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <button class="close" id="menuClose">Close</button>
+  <a class="big" href="#cover">Sovereign <i>AW26</i></a>
+  <a class="big" href="#shop">Shop</a>
+  <a class="big" href="#collections">Collections</a>
+  <a class="big" href="#chapters">Editorial</a>
+  <a class="big" href="#story">Story</a>
+  <a class="big" href="#event">Events</a>
+  <div class="small">
+    <button class="link" id="menuSearch">Search</button>
+    <a class="link" href="mailto:info@morgana.london">info@morgana.london</a>
+    <span class="eyebrow">GBP · Klarna</span>
+  </div>
+</div>
+
+<!-- ====================== HERO: split campaign ====================== -->
+<section class="hero" id="hero" aria-label="Sovereign, Autumn–Winter 2026">
+  <div class="half l"><img src="assets/img/editorial/port-fur.jpg" alt="Sovereign campaign: ivory wrap coat with a dark fur collar and leather gloves at the black doors" fetchpriority="high"></div>
+  <div class="half r"><img src="assets/img/editorial/port-bordeaux.jpg" alt="Sovereign campaign: black blazer over a bordeaux roll-neck at the wine doors"></div>
+  <div class="hero-micro eyebrow"><span>Autumn—Winter 2026 · N°01</span><span>Sovereign · The campaign</span><span>Morganà · London</span></div>
+  <h1 class="hero-type">
+    <span class="ln l1"><span>The</span></span>
+    <span class="ln l2"><span>Sovereign</span></span>
+    <span class="ln l3"><span>of Winter</span></span>
+  </h1>
+  <div class="hero-ctas">
+    <div><a class="btn light" href="#shop" data-coll="sovereign">Shop Sovereign</a></div>
+    <div><a class="btn light" href="#film">View the film</a></div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<!-- ====================== COVER: giant letter ====================== -->
+<section class="cover" id="cover">
+  <div class="cover-wrap">
+    <div class="cover-letter rv" aria-hidden="true">S</div>
+    <div class="cover-panel">
+      <div class="cover-vert"><span>Morganà · London</span><span>The Sovereign Issue</span></div>
+      <div class="ph"><img src="assets/img/editorial/land-lace-recline.jpg" alt="Sovereign campaign: lace-trimmed knit slip dress, reclining on a charcoal sofa" data-px="0.08"></div>
+      <div class="cover-cap">Aurelia Lace Slip<br>£245</div>
+    </div>
+  </div>
+  <div class="cover-intro">
+    <div class="n rv">N°01<br>AW 26</div>
+    <h2 class="rv d1">Sovereign. A collection for the long evenings, cut with <i>quiet authority.</i></h2>
+    <div class="rv d2">
+      <p>Tailoring with weight in the shoulder, knits that sit close, leather softened with lace. Walnut, wine lacquer and a single sconce: the house at night, worn by day.</p>
+      <div class="meta"><span>Sovereign</span><span>Autumn–Winter 2026</span><span>Launching 19.11.26</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== CHAPTERS ====================== -->
+<div id="chapters">
+<section class="chap c1" aria-label="Chapter one">
+  <div class="bg" data-px="0.12"><img src="assets/img/editorial/land-fur-collar.jpg" alt="Ivory coat with a dark fur collar, gold drop earrings, black lacquered doors behind"></div>
+  <div class="type"><span class="num">Chapter I / III</span><span class="t1">Fur,</span><span class="t2">collar</span><span class="t3">and the long coat.</span></div>
+  <div class="cap"><b>Duchess Wrap Coat</b><br>£495 · <a href="#shop" data-coll="sovereign">Shop the look</a></div>
+</section>
+<section class="chap c2" aria-label="Chapter two">
+  <div class="bg" data-px="0.1"><img src="assets/img/editorial/land-suit-sofa.jpg" alt="Taupe single-breasted suit, seated on a charcoal bouclé sofa"></div>
+  <div class="type"><span class="num">Chapter II / III</span><span class="t1">Tailoring</span><span class="t2">at rest.</span></div>
+  <div class="cap"><b>The Regent Suit</b><br>£480 · <a href="#shop" data-coll="sovereign">Shop the look</a></div>
+</section>
+<section class="chap c3" aria-label="Chapter three">
+  <div class="bg" data-px="0.1"><img src="assets/img/editorial/land-black-coat.jpg" alt="Black belted coat with wide lapels, a hand at the collar, against black panelling"></div>
+  <div class="type"><span class="num">Chapter III / III</span><span class="t1">Noir</span><span class="t2">after</span><span class="t3">dark.</span></div>
+  <div class="cap"><b>Sovereign Long Coat</b><br>£550 · <a href="#shop" data-coll="sovereign">Shop the look</a></div>
+</section>
+</div>
+
+<!-- ====================== STICKY PRODUCT STORY ====================== -->
+<section class="story" id="story">
+  <div class="story-head">
+    <h2 class="rv">Four pieces, <i>one wardrobe.</i></h2>
+    <p class="rv d1">The Sovereign edit in the order you'll wear it: coat, suit, knit, slip. Scroll, and the image keeps pace.</p>
+  </div>
+  <div class="story-media" id="storyMedia">
+    <img src="assets/img/editorial/port-fur.jpg" alt="" class="on" data-step="0">
+    <img src="assets/img/editorial/port-suit.jpg" alt="" data-step="1">
+    <img src="assets/img/editorial/port-knit-walnut.jpg" alt="" data-step="2">
+    <img src="assets/img/editorial/port-lace.jpg" alt="" data-step="3">
+    <span class="tag">Sovereign · The edit</span>
+    <span class="idx" id="storyIdx">I / IV</span>
+  </div>
+  <div class="story-steps" id="storySteps">
+    <article class="step" data-step="0" data-id="sov-06"><span class="no">01 — THE COAT</span><h3>Duchess <i>Wrap</i> Coat</h3><p>Double-face wool, a self-tie belt and patch pockets. The coat that closes the evening.</p><div class="row"><span class="price">£495</span><button class="btn" data-qv="sov-06">Add to bag</button></div></article>
+    <article class="step" data-step="1" data-id="sov-01"><span class="no">02 — THE SUIT</span><h3>The <i>Regent</i> Suit</h3><p>Single-breasted blazer and wide-leg trouser in soft taupe wool. Worn with nothing underneath but a rib.</p><div class="row"><span class="price">£480</span><button class="btn" data-qv="sov-01">Add to bag</button></div></article>
+    <article class="step" data-step="2" data-id="sov-05"><span class="no">03 — THE KNIT</span><h3>Clementine <i>Knit</i> Set</h3><p>A fine roll-neck and button-front midi in dense espresso knit. Walnut-coloured, walnut-warm.</p><div class="row"><span class="price">£260</span><button class="btn" data-qv="sov-05">Add to bag</button></div></article>
+    <article class="step" data-step="3" data-id="sov-02"><span class="no">04 — THE SLIP</span><h3>Aurelia <i>Lace</i> Slip</h3><p>Fitted knit trimmed with champagne lace at the neckline and hem. Under the coat, or on its own.</p><div class="row"><span class="price">£245</span><button class="btn" data-qv="sov-02">Add to bag</button></div></article>
+  </div>
+</section>
+
+<!-- ====================== FILM ====================== -->
+<section class="film" id="film">
+  <div class="film-title"><h2 class="rv"><b>The film.</b> <br>Sovereign, <i>in fourteen seconds.</i></h2><span class="eyebrow rv d1">Autumn—Winter 2026</span></div>
+  <div class="film-frame rv d1">
+    <span class="film-vert">Morganà · London</span>
+    <video src="assets/video/hero-landscape.mp4" poster="assets/video/hero-landscape-poster.jpg" autoplay muted loop playsinline aria-label="Sovereign film: the clothing rail and accessories"></video>
+  </div>
+  <div class="film-bar"><span class="eyebrow">The rail · Coats, knit, tweed</span><span class="eyebrow">00:14 · Loop</span></div>
+</section>
+
+<!-- ====================== SHOP ====================== -->
+<section class="shop" id="shop">
+  <div class="shop-head">
+    <div><span class="eyebrow rv">The shop · <span id="shopCount">0</span> pieces</span><h2 class="rv d1" id="shopTitle">Sovereign, <i>the edit.</i></h2></div>
+    <a class="link rv d2" href="#collections">All collections</a>
+  </div>
+  <div class="filters rv" id="filters">
+    <div class="grp" role="group" aria-label="Collection">
+      <button class="chip on" data-f="collection" data-v="all">All</button>
+      <button class="chip" data-f="collection" data-v="sovereign">Sovereign</button>
+      <button class="chip" data-f="collection" data-v="lumiere">Lumière</button>
+      <button class="chip" data-f="collection" data-v="fortia">Fortia</button>
+    </div>
+    <div class="grp">
+      <label class="sr" for="catSel">Category</label>
+      <select id="catSel"><option value="all">All categories</option></select>
+      <label class="sr" for="sortSel">Sort</label>
+      <select id="sortSel"><option value="featured">Featured</option><option value="asc">Price, low to high</option><option value="desc">Price, high to low</option></select>
+    </div>
+  </div>
+  <div class="grid" id="grid"></div>
+  <div class="shop-foot"><button class="btn" id="moreBtn">Show more</button></div>
+</section>
+
+<!-- ====================== EVENT ====================== -->
+<section class="event" id="event">
+  <div class="reel">
+    <video src="assets/video/reel-wine-doors.mp4" poster="assets/video/reel-wine-doors-poster.jpg" autoplay muted loop playsinline aria-label="Black blazer and bordeaux roll-neck at the wine doors"></video>
+    <span class="corner">Reel · The wine doors</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow rv">A private event</span>
+    <h2 class="rv d1">One year <b>of</b> Morganà</h2>
+    <div class="date rv d2">19.11.26</div>
+    <div class="lines rv d3">
+      <span>When</span><span>Thursday 19 November 2026, from 7pm</span>
+      <span>Where</span><span>102 Stamford New Road, Altrincham WA14 1DG</span>
+      <span>Evening</span><span>Drinks · Canapés · DJ</span>
+      <span>RSVP</span><span><a href="mailto:info@morgana.london?subject=RSVP%20One%20year%20of%20Morgan%C3%A0" class="link">info@morgana.london</a></span>
+    </div>
+    <div class="cta rv d3"><a class="btn light" href="mailto:info@morgana.london?subject=RSVP%20One%20year%20of%20Morgan%C3%A0">Request an invitation</a><span class="eyebrow">Sovereign launches the same night</span></div>
+  </div>
+</section>
+
+<!-- ====================== COLLECTIONS ====================== -->
+<section class="colls" id="collections">
+  <div class="colls-head"><h2 class="rv">The earlier <i>chapters.</i></h2><p class="rv d1">Two collections, still in the house. Open either one to shop it.</p></div>
+  <article class="coll lum" data-coll="lumiere" tabindex="0" role="link" aria-label="Open the Lumière collection">
+    <div class="ph"><img src="assets/img/lumiere/paris-balcony.jpg" alt="Lumière: ivory satin slip dress on a Paris balcony" data-px="0.08"><span class="cap">Summer 2026 · Paris</span></div>
+    <div class="tx"><span class="big-n">II</span><span class="eyebrow">Collection II · Summer 2026</span><h2>Lumière<i>Linen, light and the Paris summer.</i></h2><p>Founder-led, outdoors, in linen and ivory. From the balcony to the coast, with the sun doing half the work.</p><span class="btn">Explore Lumière</span></div>
+  </article>
+  <article class="coll for" data-coll="fortia" tabindex="0" role="link" aria-label="Open the Fortia collection">
+    <div class="tx"><span class="big-n">I</span><span class="eyebrow">Collection I · Autumn–Winter 2025</span><h2>Fortia<i>The first chapter. Tailoring cut for strength.</i></h2><p>Studio tailoring on grey. Fur-trimmed coats, wrap blazers and the first roll-necks, where the house found its shoulders.</p><span class="btn light">Explore Fortia</span></div>
+    <div class="ph"><img src="assets/img/fortia/39-0.jpg" alt="Fortia: grey fur-collar coat over a white shirt, studio on grey" data-px="0.08"><span class="cap">Autumn–Winter 2025 · Studio</span></div>
+  </article>
+</section>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="foot">
+  <div class="foot-brand rv" aria-hidden="true">MORGANÀ</div>
+  <div class="foot-top">
+    <div class="news" id="news">
+      <h4>Newsletter</h4>
+      <p>First word on Sovereign, the event, and what arrives after.</p>
+      <form id="newsForm" novalidate><label class="sr" for="newsMail">Email address</label><input id="newsMail" type="email" placeholder="Your email" required autocomplete="email"><button type="submit">Join</button></form>
+      <div class="thanks">Thank you. You're on the list. — Morganà</div>
+    </div>
+    <div><h4>Client care</h4><ul><li><a href="mailto:info@morgana.london">info@morgana.london</a></li><li>Shipping &amp; returns</li><li>Size guide</li><li>Pay in 3 with Klarna</li></ul></div>
+    <div><h4>Collections</h4><ul><li><a href="#cover">Sovereign, AW26</a></li><li><a href="#collections" data-coll="lumiere">Lumière, Summer 2026</a></li><li><a href="#collections" data-coll="fortia">Fortia, AW25</a></li></ul></div>
+    <div><h4>The house</h4><ul><li><a href="#story">Story</a></li><li><a href="#chapters">Editorial</a></li><li><a href="#event">Events</a></li><li>Instagram</li></ul></div>
+  </div>
+  <div class="foot-bot"><span>© 2026 Morganà London</span><span>GBP · Klarna available · UK delivery</span><span>Concept preview</span></div>
+</footer>
+
+<!-- ====================== OVERLAYS ====================== -->
+<div class="veil" id="veil"></div>
+<div class="search" id="search" aria-hidden="true">
+  <form id="searchForm"><label class="sr" for="searchIn">Search the shop</label><input id="searchIn" type="search" placeholder="Search Sovereign, coats, knit…"><button type="submit">Search</button><button type="button" id="searchClose">Close</button></form>
+</div>
+<aside class="drawer" id="bag" aria-label="Your bag" aria-hidden="true">
+  <div class="d-head"><h3>Bag <span class="eyebrow" id="bagN"></span></h3><button class="link" id="bagClose">Close</button></div>
+  <div class="d-body" id="bagBody"></div>
+  <div class="d-foot"><div class="sub"><span>Subtotal</span><span id="bagSub">£0</span></div><p class="klarna">Or 3 payments of <span id="klarna">£0</span> with Klarna · GBP</p><button class="btn solid">Checkout</button></div>
+</aside>
+<div class="modal" id="qv" role="dialog" aria-modal="true" aria-label="Quick view" aria-hidden="true">
+  <div class="box">
+    <button class="close" id="qvClose" aria-label="Close quick view">×</button>
+    <div class="gal"><img class="main" id="qvImg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2' height='3'/%3E" alt=""><div class="thumbs" id="qvThumbs"></div></div>
+    <div class="info">
+      <span class="eyebrow" id="qvColl"></span>
+      <h3 id="qvName"></h3>
+      <div class="price" id="qvPrice"></div>
+      <p id="qvDesc"></p>
+      <div class="sz-head"><span class="eyebrow">Size</span><button class="sg" type="button">Size guide</button></div>
+      <div class="sizes" id="qvSizes"></div>
+      <div class="msg" id="qvMsg"></div>
+      <button class="btn solid" id="qvAdd">Add to bag</button>
+      <div class="det" id="qvDet"></div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="assets/products.js"></script>
+<script>
+(function(){
+  const D=window.MORGANA||{products:[]}, P=D.products;
+  const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+  const money=n=>'£'+Number(n).toLocaleString('en-GB');
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const collName={sovereign:'Sovereign',lumiere:'Lumière',fortia:'Fortia'};
+  const byId=id=>P.find(p=>p.id===id);
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  /* header */
+  const hdr=$('#hdr');
+  const hero=$('#hero');
+  const onScroll=()=>{hdr.classList.toggle('is-solid',scrollY>60)};
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  requestAnimationFrame(()=>hero.classList.add('in'));
+
+  /* overlays */
+  const veil=$('#veil'), menu=$('#menu'), bag=$('#bag'), qv=$('#qv'), search=$('#search');
+  const open=(el)=>{el.classList.add('open');el.setAttribute('aria-hidden','false');veil.classList.add('open');document.body.classList.add('lock')};
+  const closeAll=()=>{[menu,bag,qv,search].forEach(el=>{el.classList.remove('open');el.setAttribute('aria-hidden','true')});veil.classList.remove('open');document.body.classList.remove('lock');$('#burger').setAttribute('aria-expanded','false')};
+  veil.addEventListener('click',closeAll);
+  addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});
+  $('#burger').addEventListener('click',()=>{open(menu);$('#burger').setAttribute('aria-expanded','true')});
+  $('#menuClose').addEventListener('click',closeAll);
+  $$('#menu a').forEach(a=>a.addEventListener('click',closeAll));
+  $('#bagBtn').addEventListener('click',()=>open(bag));
+  $('#bagClose').addEventListener('click',closeAll);
+  $('#qvClose').addEventListener('click',closeAll);
+  $('#searchBtn').addEventListener('click',()=>{open(search);setTimeout(()=>$('#searchIn').focus(),300)});
+  $('#menuSearch').addEventListener('click',()=>{closeAll();open(search);setTimeout(()=>$('#searchIn').focus(),300)});
+  $('#searchClose').addEventListener('click',closeAll);
+
+  /* toast */
+  let tT;const toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(tT);tT=setTimeout(()=>t.classList.remove('show'),2200)};
+
+  /* shop */
+  const state={collection:'all',category:'all',sort:'featured',q:'',limit:12};
+  const grid=$('#grid');
+  const cats=[...new Set(P.map(p=>p.category))].sort();
+  cats.forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;$('#catSel').appendChild(o)});
+  const card=p=>`<article class="card" data-id="${p.id}">
+    <button class="card-img" type="button" data-qv="${p.id}" aria-label="Quick view, ${esc(p.name)}">
+      <img src="${p.images[0]}" alt="${esc(p.name)}" loading="lazy"><img class="alt" src="${p.images[1]||p.images[0]}" alt="" aria-hidden="true" loading="lazy">
+      ${p.isNew?'<span class="new">New</span>':''}<span class="qv">Quick view</span>
+    </button>
+    <div class="card-meta"><span class="nm">${esc(p.name)}</span><span>${money(p.price)}</span></div>
+    <small>${collName[p.collection]} · ${esc(p.category)}</small>
+  </article>`;
+  function list(){
+    let L=P.filter(p=>(state.collection==='all'||p.collection===state.collection)&&(state.category==='all'||p.category===state.category));
+    if(state.q){const q=state.q.toLowerCase();L=L.filter(p=>(p.name+' '+p.category+' '+p.colour+' '+collName[p.collection]).toLowerCase().includes(q))}
+    if(state.sort==='asc')L=L.slice().sort((a,b)=>a.price-b.price);
+    if(state.sort==='desc')L=L.slice().sort((a,b)=>b.price-a.price);
+    return L;
+  }
+  function paintShop(){
+    const L=list();
+    $('#shopCount').textContent=L.length;
+    const t=$('#shopTitle');
+    t.innerHTML=state.q?`“${esc(state.q)}”, <i>${L.length} found.</i>`:state.collection==='all'?'Every piece, <i>three chapters.</i>':`${collName[state.collection]}, <i>the edit.</i>`;
+    grid.innerHTML=L.length?L.slice(0,state.limit).map(card).join(''):'<div class="empty">Nothing here yet. Try another collection.</div>';
+    $('#moreBtn').style.display=L.length>state.limit?'':'none';
+    $$('.chip[data-f="collection"]').forEach(c=>c.classList.toggle('on',c.dataset.v===state.collection));
+  }
+  $('#filters').addEventListener('click',e=>{const c=e.target.closest('.chip');if(!c)return;state[c.dataset.f]=c.dataset.v;state.limit=12;state.q='';paintShop()});
+  $('#catSel').addEventListener('change',e=>{state.category=e.target.value;state.limit=12;paintShop()});
+  $('#sortSel').addEventListener('change',e=>{state.sort=e.target.value;paintShop()});
+  $('#moreBtn').addEventListener('click',()=>{state.limit+=12;paintShop()});
+  function goColl(c){state.collection=c;state.category='all';state.q='';state.limit=12;paintShop();$('#shop').scrollIntoView({behavior:reduce?'auto':'smooth'})}
+  $$('[data-coll]').forEach(el=>{
+    el.addEventListener('click',e=>{e.preventDefault();closeAll();goColl(el.dataset.coll)});
+    if(el.getAttribute('role')==='link')el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();goColl(el.dataset.coll)}});
+  });
+  $('#searchForm').addEventListener('submit',e=>{e.preventDefault();state.q=$('#searchIn').value.trim();state.collection='all';state.category='all';state.limit=24;paintShop();closeAll();$('#shop').scrollIntoView({behavior:reduce?'auto':'smooth'})});
+  paintShop();
+
+  /* quick view */
+  let cur=null,size=null;
+  function openQV(id){
+    const p=byId(id);if(!p)return;cur=p;size=null;
+    $('#qvImg').src=p.images[0];$('#qvImg').alt=p.name;
+    $('#qvThumbs').innerHTML=p.images.slice(0,5).map((s,i)=>`<button type="button" class="${i?'':'on'}" data-i="${i}" aria-label="View ${i+1}"><img src="${s}" alt=""></button>`).join('');
+    $('#qvColl').textContent=`${collName[p.collection]} · ${p.category}${p.colour?' · '+p.colour:''}`;
+    $('#qvName').textContent=p.name;$('#qvPrice').textContent=money(p.price);$('#qvDesc').textContent=p.description;
+    $('#qvSizes').innerHTML=p.sizes.map(s=>`<button type="button" data-s="${s}">${s}</button>`).join('');
+    $('#qvDet').innerHTML=`${p.fabric?esc(p.fabric)+'<br>':''}Free UK delivery over £150 · Pay in 3 with Klarna`;
+    $('#qvMsg').textContent='';
+    open(qv);
+  }
+  document.addEventListener('click',e=>{const b=e.target.closest('[data-qv]');if(b){openQV(b.dataset.qv)}});
+  $('#qvThumbs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$('#qvImg').src=cur.images[+b.dataset.i];$$('#qvThumbs button').forEach(x=>x.classList.toggle('on',x===b))});
+  $('#qvSizes').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;size=b.dataset.s;$$('#qvSizes button').forEach(x=>x.classList.toggle('on',x===b));$('#qvMsg').textContent=''});
+  $('#qvAdd').addEventListener('click',()=>{if(!size){$('#qvMsg').textContent='Choose a size first.';return}addToBag(cur.id,size);closeAll();open(bag)});
+
+  /* bag */
+  let items=[];
+  function addToBag(id,s){const f=items.find(i=>i.id===id&&i.size===s);if(f)f.qty++;else items.push({id,size:s,qty:1});paintBag();toast('Added to bag')}
+  function paintBag(){
+    const n=items.reduce((a,i)=>a+i.qty,0);$('#bagCount').textContent=n;$('#bagN').textContent=n?`${n} item${n>1?'s':''}`:'';
+    const sub=items.reduce((a,i)=>a+byId(i.id).price*i.qty,0);
+    $('#bagSub').textContent=money(sub);$('#klarna').textContent=money(Math.ceil(sub/3));
+    $('#bagBody').innerHTML=items.length?items.map((i,k)=>{const p=byId(i.id);return `<div class="line"><img src="${p.images[0]}" alt=""><div><div class="nm">${esc(p.name)}</div><div class="sz">Size ${i.size} · ${collName[p.collection]}</div><div class="qty"><button data-k="${k}" data-d="-1" aria-label="Decrease">−</button><span>${i.qty}</span><button data-k="${k}" data-d="1" aria-label="Increase">+</button></div><button class="rm" data-rm="${k}">Remove</button></div><div class="pr">${money(p.price*i.qty)}</div></div>`}).join(''):'<div class="bag-empty">Your bag is empty.<br>The Sovereign edit is waiting.</div>';
+  }
+  $('#bagBody').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.rm!==undefined){items.splice(+b.dataset.rm,1)}else{const it=items[+b.dataset.k];it.qty+=+b.dataset.d;if(it.qty<1)items.splice(+b.dataset.k,1)}paintBag()});
+  paintBag();
+
+  /* newsletter */
+  $('#newsForm').addEventListener('submit',e=>{e.preventDefault();const v=$('#newsMail').value.trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){$('#newsMail').focus();return}$('#news').classList.add('done')});
+
+  /* reveals */
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}}),{rootMargin:'0px 0px -8% 0px',threshold:.05});
+  $$('.rv').forEach(el=>io.observe(el));
+
+  /* sticky story */
+  const stepsIO=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){const s=en.target.dataset.step;$$('#storyMedia img').forEach(im=>im.classList.toggle('on',im.dataset.step===s));$('#storyIdx').textContent=['I','II','III','IV'][+s]+' / IV'}}),{rootMargin:'-45% 0px -45% 0px',threshold:0});
+  $$('.step').forEach(s=>stepsIO.observe(s));
+
+  /* parallax */
+  const px=$$('[data-px]');
+  if(!reduce&&px.length){
+    let tick=false;const vh=()=>innerHeight;
+    const run=()=>{tick=false;const h=vh();px.forEach(el=>{const r=el.getBoundingClientRect();if(r.bottom<0||r.top>h)return;const c=(r.top+r.height/2)-h/2;el.style.transform=`translate3d(0,${(-c*parseFloat(el.dataset.px)).toFixed(1)}px,0)`})};
+    addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(run)}},{passive:true});run();
+  }
+})();
+</script>
+</body>
+</html>

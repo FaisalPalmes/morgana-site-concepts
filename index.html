@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Morganà website concepts</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +30,7 @@
   .thumbs { position:relative; aspect-ratio:16/10; overflow:hidden; background:#e6dccd; }
   .thumbs img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:opacity .8s cubic-bezier(.2,.7,.2,1), transform 1.2s cubic-bezier(.2,.7,.2,1); }
   .thumbs img.b { opacity:0; }
+  .thumbs img.m { object-fit:contain; background:#1d1416; }
   .card:hover .thumbs img.b, .final .thumbs:hover img.b { opacity:1; }
   .card:hover .thumbs img { transform:scale(1.03); }
   .meta { display:flex; justify-content:space-between; align-items:baseline; margin-top:14px; border-top:1px solid #d9cdbc; padding-top:12px; }
@@ -51,9 +52,57 @@
   <div class="rule"></div>
   <div class="mark">MORGANÀ</div>
   <div class="rule"></div>
-  <p>Ten versions of the new site, each built on the one before. Sovereign leads, and Lumière and Fortia stay shoppable. Hover a card to see the product page.</p>
+  <p>Round two: twelve editorial directions, four families of three, after the cover-letter banner idea. Round one's ten versions are further down. Hover a card to see it on a phone.</p>
 </header>
 <main>
+  <section class="final">
+    <a class="thumbs" href="e12.html" aria-label="Open e12">
+      <img class="a" src="hub/e12.jpg" alt="e12 home">
+      <img class="b m" src="hub/e12_m.jpg" alt="e12 on a phone">
+    </a>
+    <div>
+      <div class="label">Round two · the pick</div>
+      <h2>e12, <em>The Best Of</em></h2>
+      <p>The giant gold M cover, SOVEREIGN across the panel edge, a cinema film moment, film-strip reels, a full modern shop with quick add, the launch countdown, and Lumière and Fortia as two full-width banners.</p>
+      <a class="btn" href="e12.html">Open e12</a><a class="btn ghost" href="e10.html">Mayfair Edit</a>
+    </div>
+  </section>
+
+  <h3 class="sec">The Cover</h3>
+  <div class="label">The magazine-cover banner, made ours</div>
+  <div class="grid">
+    <a class="card" href="e01.html"><div class="thumbs"><img class="a" src="hub/e01.jpg" alt=""><img class="b m" src="hub/e01_m.jpg" alt=""></div><div class="meta"><b>e01</b><span>The Sovereign Issue</span></div><p>Closest to the reference: white page, black panel, giant gold M. The page reads like an issue, with contents, features, a shopping page and a diary.</p></a>
+    <a class="card" href="e02.html"><div class="thumbs"><img class="a" src="hub/e02.jpg" alt=""><img class="b m" src="hub/e02_m.jpg" alt=""></div><div class="meta"><b>e02</b><span>Wine Cover</span></div><p>Deep wine ground, ivory panel, oversized gold S. A pinned section where the S stays as four looks move around it.</p></a>
+    <a class="card" href="e03.html"><div class="thumbs"><img class="a" src="hub/e03.jpg" alt=""><img class="b m" src="hub/e03_m.jpg" alt=""></div><div class="meta"><b>e03</b><span>Ivory Atlas</span></div><p>Every section opens with its own giant letter or numeral, on asymmetric grids, with a sticky horizontal lookbook.</p></a>
+  </div>
+
+  <h3 class="sec" style="margin-top:64px">The Campaign</h3>
+  <div class="label">Full-bleed campaign heroes, huge staggered italics</div>
+  <div class="grid">
+    <a class="card" href="e04.html"><div class="thumbs"><img class="a" src="hub/e04.jpg" alt=""><img class="b m" src="hub/e04_m.jpg" alt=""></div><div class="meta"><b>e04</b><span>Sovereign of Winter</span></div><p>A split two-portrait hero with one enormous headline across both, then chapters, a sticky product story and a letterboxed film.</p></a>
+    <a class="card" href="e05.html"><div class="thumbs"><img class="a" src="hub/e05.jpg" alt=""><img class="b m" src="hub/e05_m.jpg" alt=""></div><div class="meta"><b>e05</b><span>Night Film</span></div><p>Video-led and nocturnal. The three reels pin side by side as you scroll, and the shop opens as a full-screen drawer.</p></a>
+    <a class="card" href="e06.html"><div class="thumbs"><img class="a" src="hub/e06.jpg" alt=""><img class="b m" src="hub/e06_m.jpg" alt=""></div><div class="meta"><b>e06</b><span>Grand Tour</span></div><p>Daytime ivory and gold, a layered parallax collage, and a shop-the-look image with hotspots.</p></a>
+  </div>
+
+  <h3 class="sec" style="margin-top:64px">The Atelier</h3>
+  <div class="label">Parisian minimal</div>
+  <div class="grid">
+    <a class="card" href="e07.html"><div class="thumbs"><img class="a" src="hub/e07.jpg" alt=""><img class="b m" src="hub/e07_m.jpg" alt=""></div><div class="meta"><b>e07</b><span>Rue</span></div><p>White space, a condensed wordmark, drifting type fragments, and a gallery-style product index with hover previews.</p></a>
+    <a class="card" href="e08.html"><div class="thumbs"><img class="a" src="hub/e08.jpg" alt=""><img class="b m" src="hub/e08_m.jpg" alt=""></div><div class="meta"><b>e08</b><span>Salon</span></div><p>A salon hang of framed images over a huge thin SOVEREIGN, wipe reveals, and a two-column shop with a side filter.</p></a>
+    <a class="card" href="e09.html"><div class="thumbs"><img class="a" src="hub/e09.jpg" alt=""><img class="b m" src="hub/e09_m.jpg" alt=""></div><div class="meta"><b>e09</b><span>Noir Index</span></div><p>Pure black, a cropped gold M, and a table of contents that drives the page. Lumière turns the page ivory.</p></a>
+  </div>
+
+  <h3 class="sec" style="margin-top:64px">London glamour</h3>
+  <div class="label">Wine, walnut and gold, made modern</div>
+  <div class="grid" style="margin-bottom:96px">
+    <a class="card" href="e10.html"><div class="thumbs"><img class="a" src="hub/e10.jpg" alt=""><img class="b m" src="hub/e10_m.jpg" alt=""></div><div class="meta"><b>e10</b><span>Mayfair Edit</span></div><p>A giant gold À whose accent overlaps the photo, numbered editor's picks, a cinema-screen film and an engraved invitation.</p></a>
+    <a class="card" href="e11.html"><div class="thumbs"><img class="a" src="hub/e11.jpg" alt=""><img class="b m" src="hub/e11_m.jpg" alt=""></div><div class="meta"><b>e11</b><span>Private View</span></div><p>The collection as an exhibition: rooms, wall labels, and a horizontal walk-through. Past collections are previous exhibitions.</p></a>
+    <a class="card" href="e12.html"><div class="thumbs"><img class="a" src="hub/e12.jpg" alt=""><img class="b m" src="hub/e12_m.jpg" alt=""></div><div class="meta"><b>e12</b><span>The Best Of</span></div><p>The synthesis: the cover hero, the film, the reels, the full shop, the countdown and the two collection banners.</p></a>
+  </div>
+
+  <h3 class="sec">Round one</h3>
+  <div class="label">1 Nov · v01–v10</div>
+  <div style="height:28px"></div>
   <section class="final">
     <a class="thumbs" href="v10.html" aria-label="Open v10">
       <img class="a" src="hub/v10-a.jpg" alt="v10 home">
@@ -92,7 +141,15 @@
         <li>Forms (RSVP, appointment, newsletter) send nothing; checkout would hand off to Shopify.</li>
       </ul>
     </div>
-</section>
+    <div>
+      <h4>Files</h4>
+      <ul>
+        <li>Item photos for Angelica to name: <code>04_EXPORTS\_FOR-REVIEW\angelica-item-naming_2026-11-01\</code></li>
+        <li>What changed in each version: <code>CHANGELOG.md</code> in this folder.</li>
+        <li>To reopen: double-click <code>OPEN-PREVIEW.bat</code> in this folder.</li>
+      </ul>
+    </div>
+  </section>
 </main>
 <footer>Morganà London · concept preview · not live</footer>
 </body>

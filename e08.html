@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morganà London — Sovereign, the salon</title>
+<meta name="description" content="Morganà London. Sovereign, Autumn–Winter 2026. Concept e08, Salon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Italiana&family=Jost:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3EDE2; --bg-2:#EBE2D3; --ink:#2E1A10; --wal:#4A2E1F; --mute:#8C7A68; --rule:#D8CCB8; --gold:#B8893E; --wine:#4A0E1C;
+  --disp:"Libre Caslon Display","Times New Roman",serif;
+  --thin:"Italiana","Libre Caslon Display",serif;
+  --sans:"Jost",system-ui,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --gut:clamp(20px,5vw,80px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:14.5px;line-height:1.65;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:1px solid var(--wal);outline-offset:3px}
+::selection{background:var(--wal);color:var(--bg)}
+.lbl{font-family:var(--sans);font-weight:400;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute)}
+.disp{font-family:var(--disp);font-weight:400}
+.thin{font-family:var(--thin)}
+.wrap{padding-left:var(--gut);padding-right:var(--gut)}
+.hair{height:1px;background:var(--rule)}
+
+/* frames */
+.frame{background:var(--bg);border:1px solid var(--wal);padding:10px;box-shadow:0 18px 40px -26px rgba(46,26,16,.45)}
+.frame.dark{background:#f7f2e9}
+.frame img,.frame video{width:100%;height:100%;object-fit:cover}
+.frame figcaption,.capl{font-family:var(--sans);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);margin-top:10px;display:flex;justify-content:space-between;gap:12px}
+.frame figcaption b,.capl b{font-weight:400;color:var(--ink)}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:50;height:72px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 var(--gut);transition:background .5s var(--ease),border-color .5s;border-bottom:1px solid transparent}
+.hdr.solid{background:rgba(243,237,226,.94);border-bottom-color:var(--rule);backdrop-filter:blur(6px)}
+.hdr nav{display:flex;gap:26px}
+.hdr nav a{font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:400;position:relative;padding:6px 0}
+.hdr nav a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:var(--wal);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.hdr nav a:hover::after{transform:scaleX(1)}
+.wordmark{font-family:var(--disp);font-size:24px;letter-spacing:.34em;text-transform:uppercase;text-indent:.34em;justify-self:center;line-height:1}
+.hdr .tools{display:flex;justify-content:flex-end;gap:22px;align-items:center}
+.hdr .tools button{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:400}
+.hdr svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.1}
+.burger{display:none}
+@media (max-width:900px){
+  .hdr{grid-template-columns:auto 1fr auto;height:62px}
+  .hdr nav{display:none}.burger{display:inline-flex}
+  .wordmark{font-size:19px;letter-spacing:.28em}
+  .hdr .tools .search{display:none}
+}
+.menu{position:fixed;inset:0;z-index:90;background:var(--bg);display:flex;flex-direction:column;justify-content:space-between;padding:96px var(--gut) 40px;transform:translateY(-100%);transition:transform .6s var(--ease);visibility:hidden}
+.menu.open{transform:none;visibility:visible}
+.menu a{display:block;font-family:var(--disp);font-size:36px;padding:10px 0;border-bottom:1px solid var(--rule)}
+.menu .close{position:absolute;top:20px;right:var(--gut);font-size:11px;letter-spacing:.3em;text-transform:uppercase}
+.menu .small{display:flex;flex-direction:column;gap:6px}
+
+/* reveals */
+.rv{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1.1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.wipe{clip-path:inset(0 100% 0 0);transition:clip-path 1.5s var(--ease)}
+.wipe.up{clip-path:inset(100% 0 0 0)}
+.wipe.in{clip-path:inset(0 0 0 0)}
+.wipe img,.wipe video{transform:scale(1.06);transition:transform 1.8s var(--ease)}
+.wipe.in img,.wipe.in video{transform:none}
+.lines .ln{display:block;overflow:hidden}
+.lines .ln span{display:block;transform:translateY(110%);transition:transform 1s var(--ease)}
+.lines.in .ln span{transform:none}
+.lines .ln:nth-child(2) span{transition-delay:.1s}.lines .ln:nth-child(3) span{transition-delay:.2s}
+
+/* ---------- salon hang ---------- */
+.salon{position:relative;height:150vh;min-height:1100px;margin-top:72px;overflow:hidden}
+.salon .word{position:absolute;left:0;right:0;top:9vh;text-align:center;font-family:var(--thin);font-size:clamp(80px,15.6vw,240px);line-height:.9;letter-spacing:.04em;color:var(--wal);z-index:0;pointer-events:none;white-space:nowrap}
+.salon .word small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.44em;text-transform:uppercase;color:var(--mute);margin-bottom:22px}
+.salon .pic{position:absolute;z-index:1;will-change:transform}
+.salon .pic .frame{height:100%}
+.salon .p1{left:7%;top:29%;width:19%;aspect-ratio:2/3}
+.salon .p2{left:29%;top:17%;width:26%;aspect-ratio:2/3}
+.salon .p3{left:58%;top:35%;width:34%;aspect-ratio:16/10}
+.salon .p4{left:23%;top:72%;width:29%;aspect-ratio:16/10}
+.salon .p5{left:52%;top:69%;width:15%;aspect-ratio:2/3}
+.salon .p6{left:74%;top:9%;width:14%;aspect-ratio:2/3}
+.salon .tag{position:absolute;z-index:2;font-family:var(--sans);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute)}
+.salon .t1{left:var(--gut);top:14vh;writing-mode:vertical-rl;transform:rotate(180deg)}
+.salon .t2{left:var(--gut);bottom:7vh;text-align:left;line-height:2}
+.salon .t3{right:var(--gut);bottom:7vh;text-align:right;font-family:var(--disp);font-size:clamp(22px,2.2vw,32px);letter-spacing:0;text-transform:none;color:var(--ink);max-width:20ch;line-height:1.2}
+.salon .t3 em{font-style:italic;font-family:var(--sans);font-weight:300;font-size:.78em}
+@media (max-width:1100px){.salon{min-height:900px}}
+@media (max-width:760px){
+  .salon{height:auto;min-height:0;margin-top:62px;padding:30px 20px 40px;overflow:hidden}
+  .salon .word{position:relative;top:auto;font-size:clamp(50px,14.6vw,90px);letter-spacing:.02em;text-align:left;margin-bottom:6px}
+  .salon .word small{margin-bottom:12px}
+  .salon .pic{position:relative;left:auto!important;top:auto!important;width:auto;transform:none!important}
+  .hang-m{display:grid;grid-template-columns:1fr 1fr;gap:26px 14px;align-items:start}
+  .salon .p1{grid-column:1;margin-top:30px}
+  .salon .p2{grid-column:2;margin-top:10px}
+  .salon .p3{grid-column:1/-1;width:88%;margin-left:auto;aspect-ratio:16/10}
+  .salon .p4{grid-column:1/-1;width:80%;aspect-ratio:16/10}
+  .salon .p5{grid-column:2;width:80%;margin-left:auto}
+  .salon .p6{grid-column:1;margin-top:40px}
+  .salon .tag{position:static;transform:none;writing-mode:horizontal-tb}
+  .salon .t1{display:none}
+  .salon .t3{margin-top:34px;font-size:22px;text-align:left;max-width:none}
+  .salon .t2{text-align:left;margin-top:12px}
+}
+
+/* ---------- intro ---------- */
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:60px;padding:12vh var(--gut);align-items:start;border-top:1px solid var(--rule)}
+.intro h2{font-family:var(--disp);font-size:clamp(34px,4vw,58px);line-height:1.1}
+.intro h2 em{font-family:var(--thin);font-style:normal;font-size:1.15em}
+.intro .col p{max-width:42ch;margin-bottom:16px;color:#4a3a2e}
+.intro .col .lbl{margin-bottom:16px;display:block}
+@media (max-width:900px){.intro{grid-template-columns:1fr;gap:30px;padding:70px 20px}}
+
+/* ---------- lookbook ---------- */
+.look{position:relative;height:320vh}
+.look .pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.look .head{position:absolute;top:96px;left:var(--gut);right:var(--gut);display:flex;justify-content:space-between;align-items:flex-end;z-index:2}
+.look .head h2{font-family:var(--disp);font-size:clamp(28px,3vw,44px);line-height:1.05}
+.look .head h2 em{font-family:var(--thin);font-style:normal}
+.look .prog{width:160px;height:1px;background:var(--rule);position:relative}
+.look .prog i{position:absolute;left:0;top:0;bottom:0;width:100%;background:var(--wal);transform:scaleX(0);transform-origin:left}
+.track{display:flex;gap:6vw;align-items:center;padding-left:var(--gut);will-change:transform}
+.track .sl{flex:0 0 auto;display:flex;flex-direction:column;gap:12px}
+.track .sl.l{width:46vw}.track .sl.p{width:26vw}.track .sl.s{width:19vw;margin-top:12vh}
+.track .sl .frame{aspect-ratio:2/3}
+.track .sl.l .frame{aspect-ratio:16/10}
+.track .num{font-family:var(--thin);font-size:44px;line-height:1;color:var(--wal)}
+.track .txt{flex:0 0 auto;width:30vw;font-family:var(--disp);font-size:clamp(24px,2.4vw,36px);line-height:1.2}
+.track .txt em{font-family:var(--thin);font-style:normal}
+.track .txt small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute);margin-top:20px}
+.track .end{flex:0 0 auto;width:var(--gut)}
+@media (max-width:760px){
+  .look{height:auto}
+  .look .pin{position:static;height:auto;overflow:visible;padding:70px 0 20px;display:block}
+  .look .head{position:static;padding:0 20px 24px;flex-direction:column;align-items:flex-start;gap:16px}
+  .track{overflow-x:auto;width:100%;min-width:0;scroll-snap-type:x mandatory;scroll-padding-left:20px;padding:0 20px;gap:20px;transform:none!important;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .track::-webkit-scrollbar{display:none}
+  .track .sl{scroll-snap-align:start}
+  .track .sl.l{width:84vw}.track .sl.p{width:64vw}.track .sl.s{width:50vw;margin-top:0}
+  .track .txt{width:70vw;font-size:22px}
+}
+
+/* ---------- film ---------- */
+.film{padding:10vh var(--gut) 8vh;display:grid;grid-template-columns:repeat(12,1fr);gap:20px;align-items:center}
+.film .frame{grid-column:3/13;aspect-ratio:16/9;position:relative}
+.film .frame video{height:100%}
+.film .side{grid-column:1/3;grid-row:1;align-self:end;position:relative}
+.film .side h2{font-family:var(--disp);font-size:clamp(40px,5.6vw,86px);line-height:.95;margin-left:4vw;white-space:nowrap;color:#F3EDE2;mix-blend-mode:difference}
+.film .side h2 em{font-family:var(--thin);font-style:normal;display:block;margin-left:-4vw}
+.film .side p{max-width:22ch;margin-top:20px;color:#4a3a2e}
+.film .side .lbl{display:block;margin-bottom:14px}
+@media (max-width:900px){.film{display:block;padding:60px 20px}.film .side h2{margin-left:0;white-space:normal}.film .side{margin-bottom:20px}}
+
+/* ---------- reels ---------- */
+.reels{padding:4vh var(--gut) 12vh;display:grid;grid-template-columns:repeat(12,1fr);gap:20px;align-items:start}
+.reels .r{grid-column:span 3}
+.reels .r .frame{aspect-ratio:9/16}
+.reels .r:nth-child(1){grid-column:2/5;margin-top:10vh}
+.reels .r:nth-child(2){grid-column:5/8}
+.reels .r:nth-child(3){grid-column:9/12;margin-top:16vh}
+.reels .quote{grid-column:1/-1;text-align:center;font-family:var(--disp);font-size:clamp(26px,3.2vw,46px);line-height:1.2;max-width:26ch;margin:10vh auto 0}
+.reels .quote em{font-family:var(--thin);font-style:normal;font-size:1.1em}
+.reels .quote small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute);margin-top:20px}
+@media (max-width:760px){.reels{display:block;padding:20px 20px 60px}.reels .r{width:62%;margin:0 0 24px}.reels .r:nth-child(2){margin-left:auto}.reels .r:nth-child(3){margin-left:12%}}
+
+/* ---------- shop ---------- */
+.shop{display:grid;grid-template-columns:260px 1fr;gap:40px;padding:0 var(--gut) 12vh;border-top:1px solid var(--rule)}
+.shop .side{position:sticky;top:96px;align-self:start;padding-top:60px}
+.shop .side h2{font-family:var(--disp);font-size:clamp(30px,3vw,44px);line-height:1;margin:8px 0 26px}
+.shop .side h2 em{font-family:var(--thin);font-style:normal}
+.fg{margin-bottom:26px}
+.fg .lbl{display:block;margin-bottom:10px}
+.fg button{display:block;width:100%;text-align:left;padding:6px 0;font-size:13px;letter-spacing:.04em;color:var(--mute);display:flex;justify-content:space-between;transition:color .3s}
+.fg button.on,.fg button:hover{color:var(--ink)}
+.fg button.on::before{content:"— ";}
+.fg button span{font-size:10px;letter-spacing:.2em;color:var(--mute)}
+.fg select{width:100%;background:none;border:0;border-bottom:1px solid var(--rule);padding:8px 0;font:inherit;font-size:13px;color:var(--ink)}
+.shop .main{padding-top:60px}
+.shop .main .count{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:28px;border-bottom:1px solid var(--rule);padding-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 24px}
+@media (max-width:1200px){.grid{grid-template-columns:1fr 1fr}}
+.card{text-align:left}
+.card .im{position:relative;aspect-ratio:2/3;overflow:hidden;background:var(--bg-2)}
+.card .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .6s var(--ease),transform 1.2s var(--ease)}
+.card .im img.b{opacity:0}
+.card:hover .im img.b{opacity:1}
+.card .im .n{position:absolute;left:12px;top:10px;font-family:var(--thin);font-size:22px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+.card .cap{display:flex;justify-content:space-between;gap:10px;margin-top:14px;align-items:baseline}
+.card .cap b{font-family:var(--disp);font-weight:400;font-size:20px;line-height:1.1}
+.card .cap span{font-size:12px;letter-spacing:.1em}
+.card .sub{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-top:4px}
+.card .qvb{margin-top:10px;font-size:10px;letter-spacing:.28em;text-transform:uppercase;border-bottom:1px solid var(--wal);padding-bottom:3px;opacity:0;transition:opacity .4s}
+.card:hover .qvb,.card:focus-visible .qvb{opacity:1}
+@media (max-width:900px){
+  .shop{display:block;padding:0 20px 60px}
+  .shop .side{position:static;padding-top:60px}
+  .fg{display:inline-block;vertical-align:top;width:48%;margin-right:2%}
+  .grid{gap:34px 14px}
+  .card .cap b{font-size:16px}
+  .card .qvb{display:none}
+}
+
+/* ---------- event ---------- */
+.event{padding:6vh var(--gut) 14vh;display:grid;place-items:center}
+.event .card-ev{border:1px solid var(--wal);padding:10px;max-width:760px;width:100%}
+.event .inner{border:1px solid var(--rule);padding:clamp(30px,6vw,70px) clamp(20px,5vw,60px);text-align:center;position:relative}
+.event .inner::before,.event .inner::after{content:"";position:absolute;left:50%;width:1px;height:28px;background:var(--rule);transform:translateX(-50%)}
+.event .inner::before{top:0}.event .inner::after{bottom:0}
+.event h2{font-family:var(--disp);font-size:clamp(34px,4.6vw,66px);line-height:1.05;margin:14px 0 8px}
+.event h2 em{font-family:var(--thin);font-style:normal}
+.event .date{font-family:var(--thin);font-size:clamp(54px,8vw,120px);line-height:1;color:var(--wal);margin:14px 0 8px}
+.event p{color:#4a3a2e;max-width:40ch;margin:12px auto 0}
+.event .ln{display:flex;justify-content:center;gap:28px;margin-top:22px;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase}
+.event .rsvp{display:inline-block;margin-top:30px;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;border-bottom:1px solid var(--wal);padding-bottom:4px}
+
+/* ---------- collections ---------- */
+.coll{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;align-items:center;padding:12vh var(--gut);position:relative;overflow:hidden;text-align:left;width:100%}
+.coll .big{position:absolute;font-family:var(--thin);font-size:clamp(90px,18vw,270px);line-height:.85;letter-spacing:.04em;color:var(--wal);pointer-events:none;white-space:nowrap}
+.coll .pic{position:relative;z-index:1}
+.coll .pic .frame{aspect-ratio:2/3}
+.coll .tx{position:relative;z-index:2}
+.coll .tx h2{font-family:var(--disp);font-size:clamp(34px,4.2vw,60px);line-height:1.05;margin:12px 0 14px}
+.coll .tx p{max-width:34ch;color:#4a3a2e}
+.coll .tx .cta{display:inline-block;margin-top:24px;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:4px}
+.coll.lum{background:var(--bg)}
+.coll.lum .big{left:-2vw;top:8vh}
+.coll.lum .pic{grid-column:2/6}
+.coll.lum .pic2{grid-column:6/8;margin-top:28vh}
+.coll.lum .pic2 .frame{aspect-ratio:3/4}
+.coll.lum .tx{grid-column:9/13}
+.coll.for{background:var(--ink);color:var(--bg)}
+.coll.for .big{right:-2vw;bottom:6vh;color:#5e4535}
+.coll.for .tx{grid-column:1/5}
+.coll.for .tx p{color:#cbb9a5}
+.coll.for .pic{grid-column:6/10}
+.coll.for .pic2{grid-column:10/13;margin-top:-20vh}
+.coll.for .pic2 .frame{aspect-ratio:3/4}
+.coll.for .frame{background:#3a2418;border-color:#8c6b52;box-shadow:0 24px 50px -30px rgba(0,0,0,.8)}
+.coll.for .capl{color:#b7a28c}
+.coll.for .capl b{color:var(--bg)}
+.coll.for .lbl{color:#b7a28c}
+@media (max-width:900px){
+  .coll{display:block;padding:70px 20px}
+  .coll .big{font-size:84px;top:20px;left:10px;right:auto;bottom:auto}
+  .coll.for .big{right:auto;left:10px;top:20px}
+  .coll .pic{width:70%;margin:60px auto 0 auto}
+  .coll .pic2{width:44%;margin:-30% 0 0 auto}
+  .coll .tx{margin-top:34px}
+}
+
+/* ---------- footer ---------- */
+.ftr{padding:10vh var(--gut) 40px;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;border-top:1px solid var(--rule)}
+.ftr h4{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute);margin-bottom:18px;font-weight:400}
+.ftr ul{list-style:none;display:flex;flex-direction:column;gap:9px;font-size:13px}
+.ftr .nl p{font-family:var(--disp);font-size:24px;line-height:1.25;max-width:22ch;margin-bottom:22px}
+.ftr form{display:flex;border-bottom:1px solid var(--wal);max-width:380px}
+.ftr input{flex:1;border:0;background:none;padding:10px 0;font:inherit;color:var(--ink);min-width:0}
+.ftr input::placeholder{color:var(--mute)}
+.ftr form button{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;padding-left:14px}
+.ftr .thanks{font-family:var(--disp);font-style:italic;font-size:17px;margin-top:10px;min-height:24px}
+.ftr .base{grid-column:1/-1;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--rule);padding-top:22px;margin-top:20px;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--mute)}
+@media (max-width:900px){.ftr{grid-template-columns:1fr 1fr;padding:60px 20px 32px}.ftr .nl{grid-column:1/-1}}
+
+/* ---------- overlays ---------- */
+.scrim{position:fixed;inset:0;background:rgba(46,26,16,.45);opacity:0;pointer-events:none;transition:opacity .5s var(--ease);z-index:80}
+.scrim.on{opacity:1;pointer-events:auto}
+.qv{position:fixed;top:0;right:0;bottom:0;width:min(100vw,900px);background:var(--bg);z-index:85;transform:translateX(100%);transition:transform .7s var(--ease);display:grid;grid-template-columns:1.1fr 1fr;overflow:hidden;visibility:hidden}
+.qv.open{transform:none;visibility:visible}
+.qv .gal{position:relative;background:var(--bg-2);overflow-y:auto;padding:28px}
+.qv .gal img{width:100%;aspect-ratio:2/3;object-fit:cover;border:1px solid var(--wal);padding:8px;background:var(--bg);margin-bottom:20px}
+.qv .det{padding:64px 44px 40px;display:flex;flex-direction:column;gap:16px;overflow-y:auto}
+.qv .det h3{font-family:var(--disp);font-size:34px;line-height:1.05}
+.qv .det .price{font-size:14px;letter-spacing:.14em}
+.qv .det p{color:#4a3a2e;max-width:40ch}
+.qv .sizes{display:flex;gap:8px;flex-wrap:wrap}
+.qv .sizes button{width:46px;height:40px;border:1px solid var(--rule);font-size:11px;letter-spacing:.1em;transition:border-color .3s,background .3s}
+.qv .sizes button.on{border-color:var(--wal);background:var(--wal);color:var(--bg)}
+.qv .add{margin-top:8px;height:52px;background:var(--wal);color:var(--bg);font-size:11px;letter-spacing:.32em;text-transform:uppercase;transition:opacity .3s}
+.qv .add:disabled{opacity:.35;cursor:not-allowed}
+.qv .meta{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);line-height:2}
+.qv .x,.bag .x{position:absolute;top:20px;right:24px;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;z-index:2;padding:6px}
+@media (max-width:760px){
+  .qv{grid-template-columns:1fr;grid-template-rows:50vh 1fr}
+  .qv .gal{padding:14px}
+  .qv .gal img{aspect-ratio:auto;height:calc(50vh - 28px);margin:0 0 14px}
+  .qv .det{padding:26px 20px 30px}
+}
+.bag{position:fixed;top:0;right:0;bottom:0;width:min(100vw,440px);background:var(--bg);z-index:86;transform:translateX(100%);transition:transform .7s var(--ease);display:flex;flex-direction:column;visibility:hidden;border-left:1px solid var(--rule)}
+.bag.open{transform:none;visibility:visible}
+.bag .hd{padding:26px 28px 18px;border-bottom:1px solid var(--rule);font-family:var(--disp);font-size:22px}
+.bag .items{flex:1;overflow-y:auto;padding:10px 28px}
+.bag .it{display:grid;grid-template-columns:72px 1fr auto;gap:16px;padding:18px 0;border-bottom:1px solid var(--rule);align-items:start}
+.bag .it img{width:72px;aspect-ratio:2/3;object-fit:cover;border:1px solid var(--wal);padding:3px}
+.bag .it b{font-family:var(--disp);font-weight:400;font-size:17px;display:block}
+.bag .it small{display:block;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-top:4px}
+.bag .qty{display:inline-flex;align-items:center;gap:12px;margin-top:12px;font-size:12px}
+.bag .qty button{width:24px;height:24px;border:1px solid var(--rule);line-height:1}
+.bag .it .rm{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-top:10px;display:block}
+.bag .it .pr{font-size:13px;letter-spacing:.1em}
+.bag .empty{padding:60px 0;text-align:center;font-family:var(--disp);font-style:italic;font-size:20px;color:var(--mute)}
+.bag .ft{padding:20px 28px 28px;border-top:1px solid var(--rule)}
+.bag .tot{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:8px}
+.bag .kl{font-size:11.5px;color:var(--mute);margin-bottom:18px}
+.bag .co{display:block;width:100%;height:52px;background:var(--wal);color:var(--bg);font-size:11px;letter-spacing:.32em;text-transform:uppercase}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);opacity:0;background:var(--wal);color:var(--bg);padding:12px 22px;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;z-index:95;transition:opacity .4s,transform .5s var(--ease);pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+@media (prefers-reduced-motion:reduce){
+  .rv,.wipe,.lines .ln span,.wipe img,.wipe video{opacity:1!important;transform:none!important;transition:none!important;clip-path:none!important}
+  .salon .pic{transform:none!important}
+  *{scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+    <nav aria-label="Main">
+      <a href="#sovereign">Sovereign</a><a href="#shop">Shop</a><a href="#collections">Collections</a><a href="#editorial">Editorial</a><a href="#story">Story</a><a href="#event">Events</a>
+    </nav>
+  </div>
+  <a class="wordmark" href="#top" aria-label="Morganà home">Morganà</a>
+  <div class="tools">
+    <button class="search" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+    <button id="bagBtn" aria-label="Open bag"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Bag</span> <span id="bagCount">0</span></button>
+  </div>
+</header>
+<div class="menu" id="menu" aria-hidden="true">
+  <button class="close" id="menuClose">Close</button>
+  <div><a href="#sovereign">Sovereign</a><a href="#shop">Shop</a><a href="#collections">Collections</a><a href="#editorial">Editorial</a><a href="#story">Story</a><a href="#event">Events</a></div>
+  <div class="small lbl"><span>Morganà · London</span><span>Autumn–Winter 2026 · The salon</span><span>info@morgana.london</span></div>
+</div>
+
+<main id="top">
+
+<!-- SALON HANG -->
+<section class="salon" id="sovereign" aria-label="Sovereign, the salon hang">
+  <div class="word" aria-hidden="true"><small>Morganà · London · Autumn–Winter 2026</small>SOVEREIGN</div>
+  <div class="hang-m">
+    <figure class="pic p1" data-sp="0.05"><div class="frame wipe up"><img src="assets/img/editorial/port-bordeaux.jpg" alt="Bordeaux roll-neck under a black blazer at the wine doors"></div><figcaption class="capl"><b>N°18</b><span>Bordeaux Roll-Neck</span></figcaption></figure>
+    <figure class="pic p2" data-sp="-0.04"><div class="frame wipe"><img src="assets/img/editorial/port-fur.jpg" alt="Ivory wrap coat with fur collar at the black doors"></div><figcaption class="capl"><b>N°06</b><span>Duchess Wrap Coat · £495</span></figcaption></figure>
+    <figure class="pic p3" data-sp="0.08"><div class="frame wipe"><img src="assets/img/editorial/land-lace-recline.jpg" alt="Lace-trimmed slip dress, reclining on a charcoal sofa"></div><figcaption class="capl"><b>N°02</b><span>Aurelia Lace Slip · £245</span></figcaption></figure>
+    <figure class="pic p4" data-sp="-0.06"><div class="frame wipe"><img src="assets/img/editorial/land-knit-sofa.jpg" alt="Open-knit zip jacket on a bouclé sofa"></div><figcaption class="capl"><b>N°07</b><span>Ivoire Open-Knit Jacket · £215</span></figcaption></figure>
+    <figure class="pic p5" data-sp="0.1"><div class="frame wipe up"><img src="assets/img/editorial/port-noir.jpg" alt="Black belted long coat and hat"></div><figcaption class="capl"><b>N°15</b><span>Sovereign Long Coat</span></figcaption></figure>
+    <figure class="pic p6" data-sp="-0.09"><div class="frame wipe up"><img src="assets/img/editorial/port-cocoon.jpg" alt="Ivory cocoon coat beside a sconce"></div><figcaption class="capl"><b>N°12</b><span>Blanc Cocoon Coat</span></figcaption></figure>
+    <div class="tag t1">The Sovereign issue · N°01</div>
+    <div class="tag t3">A salon hang of the winter: <em>tailoring, knit and leather, framed for the long evenings.</em></div>
+    <div class="tag t2">Launching 19.11.26<br>Altrincham · London</div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro" id="story">
+  <h2 class="lines"><span class="ln"><span>Quiet authority,</span></span><span class="ln"><span><em>hung</em> like pictures</span></span><span class="ln"><span>in a drawing room.</span></span></h2>
+  <div class="col rv">
+    <span class="lbl">Story</span>
+    <p>Morganà was founded by Angelica with a single idea: that a woman should dress for the room she is already in. Wine-lacquered doors, walnut, sconces. London interiors, worn out in the evening.</p>
+    <p>Sovereign is the house's second winter and its first full one: double-face wool, dense knit, leather finished with lace. Twenty pieces, each named later by Angelica herself.</p>
+    <span class="lbl">— Morganà</span>
+  </div>
+</section>
+
+<!-- LOOKBOOK -->
+<section class="look" id="editorial" aria-label="Lookbook">
+  <div class="pin">
+    <div class="head">
+      <div><span class="lbl">Lookbook · I — VI</span><h2>The winter, <em>wall by wall.</em></h2></div>
+      <div class="prog" aria-hidden="true"><i id="prog"></i></div>
+    </div>
+    <div class="track" id="track">
+      <div class="sl p"><div class="num">I</div><div class="frame"><img src="assets/img/editorial/port-houndstooth.jpg" alt="Cropped houndstooth jacket" loading="lazy"></div><div class="capl"><b>Windsor Cropped Jacket</b><span>£295</span></div></div>
+      <div class="sl l"><div class="num">II</div><div class="frame"><img src="assets/img/editorial/land-suit-sofa.jpg" alt="Taupe suit seated on a charcoal sofa" loading="lazy"></div><div class="capl"><b>The Regent Suit</b><span>£480</span></div></div>
+      <div class="txt">Pieces that sit on the body <em>the way a room sits around you.</em><small>— Morganà</small></div>
+      <div class="sl s"><div class="num">III</div><div class="frame"><img src="assets/img/editorial/port-leopard-sofa.jpg" alt="Leopard pencil skirt and black roll-neck" loading="lazy"></div><div class="capl"><b>Margaux Pencil Skirt</b><span>£165</span></div></div>
+      <div class="sl p"><div class="num">IV</div><div class="frame"><img src="assets/img/editorial/port-olive.jpg" alt="Olive leather set" loading="lazy"></div><div class="capl"><b>Olivia Leather Set</b><span>£395</span></div></div>
+      <div class="sl l"><div class="num">V</div><div class="frame"><img src="assets/img/editorial/land-wrap-coat.jpg" alt="Oatmeal wrap coat against walnut panelling" loading="lazy"></div><div class="capl"><b>Duchess Wrap Coat</b><span>£495</span></div></div>
+      <div class="sl s"><div class="num">VI</div><div class="frame"><img src="assets/img/editorial/port-black-coat.jpg" alt="Black belted coat at the wine doors" loading="lazy"></div><div class="capl"><b>Sovereign Long Coat</b><span>£550</span></div></div>
+      <div class="end"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FILM -->
+<section class="film" aria-label="The film">
+  <div class="frame wipe"><video autoplay muted loop playsinline poster="assets/video/hero-landscape-poster.jpg" preload="metadata"><source src="assets/video/hero-landscape.mp4" type="video/mp4"></video></div>
+  <div class="side rv">
+    <span class="lbl">The rail · 14 s</span>
+    <h2>Wool,<em>knit, leather.</em></h2>
+    <p>The rail, the day it was finished. Every piece in Sovereign, in one slow pass.</p>
+  </div>
+</section>
+
+<!-- REELS -->
+<section class="reels" aria-label="In motion">
+  <figure class="r"><div class="frame wipe up"><video autoplay muted loop playsinline poster="assets/video/reel-wine-doors-poster.jpg" preload="metadata"><source src="assets/video/reel-wine-doors.mp4" type="video/mp4"></video></div><figcaption class="capl"><b>I</b><span>The wine doors</span></figcaption></figure>
+  <figure class="r"><div class="frame wipe up"><video autoplay muted loop playsinline poster="assets/video/reel-black-doors-poster.jpg" preload="metadata"><source src="assets/video/reel-black-doors.mp4" type="video/mp4"></video></div><figcaption class="capl"><b>II</b><span>The black doors</span></figcaption></figure>
+  <figure class="r"><div class="frame wipe up"><video autoplay muted loop playsinline poster="assets/video/reel-atelier-poster.jpg" preload="metadata"><source src="assets/video/reel-atelier.mp4" type="video/mp4"></video></div><figcaption class="capl"><b>III</b><span>The atelier</span></figcaption></figure>
+  <blockquote class="quote rv">Dress for the door you are <em>walking through,</em> not the one you left.<small>— Morganà</small></blockquote>
+</section>
+
+<!-- SHOP -->
+<section class="shop" id="shop">
+  <aside class="side">
+    <span class="lbl">The shop</span>
+    <h2 id="shopTitle">Sovereign, <em>the pieces</em></h2>
+    <div class="fg"><span class="lbl">Collection</span><div id="fCol">
+      <button class="on" data-v="sovereign">Sovereign <span>AW26</span></button>
+      <button data-v="lumiere">Lumière <span>SS26</span></button>
+      <button data-v="fortia">Fortia <span>AW25</span></button>
+      <button data-v="all">Everything</button></div></div>
+    <div class="fg"><span class="lbl">Category</span><div id="fCat"></div></div>
+    <div class="fg"><span class="lbl">Sort</span><select id="fSort" aria-label="Sort"><option value="new">As hung</option><option value="asc">Price, low to high</option><option value="desc">Price, high to low</option></select></div>
+  </aside>
+  <div class="main">
+    <div class="count"><span class="lbl" id="shopSub"></span><span class="lbl">Placeholder names and prices · GBP</span></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- EVENT -->
+<section class="event" id="event">
+  <div class="card-ev rv"><div class="inner">
+    <span class="lbl">A private event · Events</span>
+    <h2>One year <em>of Morganà</em></h2>
+    <div class="date">19.11.26</div>
+    <span class="lbl">Thursday · 7pm</span>
+    <p>102 Stamford New Road, Altrincham WA14 1DG. The doors open on Sovereign.</p>
+    <div class="ln"><span>Drinks</span><span>Canapés</span><span>DJ</span></div>
+    <a class="rsvp" href="mailto:info@morgana.london?subject=RSVP%20%E2%80%94%20One%20year%20of%20Morgan%C3%A0">RSVP · info@morgana.london</a>
+  </div></div>
+</section>
+
+<!-- COLLECTIONS -->
+<section id="collections" aria-label="Earlier collections">
+  <button class="coll lum" data-open="lumiere">
+    <div class="big" aria-hidden="true">LUMIÈRE</div>
+    <figure class="pic"><div class="frame wipe"><img src="assets/img/lumiere/paris-balcony.jpg" alt="Ivory satin slip on a Paris balcony"></div><figcaption class="capl"><b>Paris</b><span>Summer 2026</span></figcaption></figure>
+    <figure class="pic pic2"><div class="frame wipe up"><img src="assets/img/lumiere/sea.jpg" alt="White linen shirt and trousers on the coast"></div><figcaption class="capl"><b>Riviera</b></figcaption></figure>
+    <div class="tx rv">
+      <span class="lbl">Chapter II · Summer 2026</span>
+      <h2>Lumière</h2>
+      <p>Linen, light and the Paris summer. Founder-led, shot outdoors between the balconies and the coast.</p>
+      <span class="cta">Enter the collection · 22 pieces</span>
+    </div>
+  </button>
+  <button class="coll for" data-open="fortia">
+    <div class="big" aria-hidden="true">FORTIA</div>
+    <div class="tx rv">
+      <span class="lbl">Chapter I · Autumn–Winter 2025</span>
+      <h2>Fortia</h2>
+      <p>The first chapter. Tailoring cut for strength, photographed in the studio on grey.</p>
+      <span class="cta">Enter the collection · 36 pieces</span>
+    </div>
+    <figure class="pic"><div class="frame wipe"><img src="assets/img/fortia/39-0.jpg" alt="Grey fur-collar coat on a studio grey backdrop"></div><figcaption class="capl"><b>Studio</b><span>AW25</span></figcaption></figure>
+    <figure class="pic pic2"><div class="frame wipe up"><img src="assets/img/fortia/23-0.jpg" alt="Black wrap blazer dress"></div><figcaption class="capl"><b>Noir</b></figcaption></figure>
+  </button>
+</section>
+
+<footer class="ftr">
+  <div class="nl">
+    <h4>Newsletter</h4>
+    <p>First word on Sovereign, the event, and the pieces that go quickly.</p>
+    <form id="nlForm" novalidate><label for="nlEmail" style="position:absolute;left:-9999px">Email</label><input id="nlEmail" type="email" placeholder="Your email" autocomplete="email"><button type="submit">Join</button></form>
+    <div class="thanks" id="nlThanks" aria-live="polite"></div>
+  </div>
+  <div><h4>Client care</h4><ul><li><a href="mailto:info@morgana.london">info@morgana.london</a></li><li>Shipping and returns</li><li>Size guide</li><li>Klarna · Pay in 3</li></ul></div>
+  <div><h4>House</h4><ul><li><a href="#story">Story</a></li><li><a href="#event">Events</a></li><li><a href="#editorial">Editorial</a></li><li>102 Stamford New Road, Altrincham</li></ul></div>
+  <div><h4>Follow</h4><ul><li>Instagram</li><li>TikTok</li><li>Pinterest</li></ul></div>
+  <div class="base"><span>© Morganà London · GBP £ · Klarna available</span><span>Concept preview · e08 Salon</span></div>
+</footer>
+</main>
+
+<div class="scrim" id="scrim"></div>
+<aside class="qv" id="qv" aria-hidden="true" role="dialog" aria-label="Quick view">
+  <button class="x" id="qvClose">Close</button>
+  <div class="gal" id="qvGal"></div>
+  <div class="det">
+    <div class="lbl" id="qvCol"></div><h3 id="qvName"></h3><div class="price" id="qvPrice"></div><p id="qvDesc"></p>
+    <div class="lbl">Size</div><div class="sizes" id="qvSizes"></div>
+    <button class="add" id="qvAdd" disabled>Select a size</button>
+    <div class="meta" id="qvMeta"></div>
+  </div>
+</aside>
+<aside class="bag" id="bag" aria-hidden="true" role="dialog" aria-label="Bag">
+  <button class="x" id="bagClose">Close</button>
+  <div class="hd">Bag · <span id="bagN">0</span></div>
+  <div class="items" id="bagItems"></div>
+  <div class="ft"><div class="tot"><span>Subtotal</span><span id="bagTot">£0</span></div><div class="kl" id="bagKl">Or 3 interest-free payments with Klarna.</div><button class="co">Checkout · Concept</button></div>
+</aside>
+<div class="toast" id="toast" aria-live="polite"></div>
+
+<script src="assets/products.js"></script>
+<script>
+(function(){
+  const M=window.MORGANA, $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+  const money=n=>'£'+n.toLocaleString('en-GB');
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const colName={sovereign:'Sovereign',lumiere:'Lumière',fortia:'Fortia',all:'Everything'};
+  const colSeason={sovereign:'Autumn–Winter 2026',lumiere:'Summer 2026 · Paris',fortia:'Autumn–Winter 2025 · Studio',all:'Three chapters'};
+  const state={col:'sovereign',cat:'all',sort:'new',bag:[],cur:null,size:null};
+
+  const hdr=$('#hdr'); const hdrScroll=()=>hdr.classList.toggle('solid',scrollY>20); hdrScroll();
+  const menu=$('#menu'),burger=$('#burger');
+  const openMenu=o=>{menu.classList.toggle('open',o);menu.setAttribute('aria-hidden',!o);burger.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';};
+  burger.addEventListener('click',()=>openMenu(true)); $('#menuClose').addEventListener('click',()=>openMenu(false)); $$('#menu a').forEach(a=>a.addEventListener('click',()=>openMenu(false)));
+
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{rootMargin:'0px 0px -6% 0px',threshold:.06});
+  $$('.rv,.lines').forEach(el=>io.observe(el));
+  /* clip-path wipes: observe the parent box, since a fully clipped target reports no intersection */
+  const wio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){$$('.wipe',e.target).forEach(w=>w.classList.add('in'));wio.unobserve(e.target);}}),{rootMargin:'0px 0px -6% 0px',threshold:.05});
+  $$('.wipe').forEach(w=>wio.observe(w.parentElement));
+
+  /* salon parallax + lookbook */
+  const pics=$$('.salon .pic'), look=$('.look'), track=$('#track'), prog=$('#prog');
+  let ticking=false;
+  function frame(){
+    ticking=false; hdrScroll();
+    if(reduce||innerWidth<=760) return;
+    const y=scrollY, vh=innerHeight;
+    if(y<vh*1.8) pics.forEach(p=>{p.style.transform='translate3d(0,'+(y*parseFloat(p.dataset.sp)).toFixed(1)+'px,0)';});
+    const r=look.getBoundingClientRect();
+    const total=r.height-vh;
+    const t=Math.min(1,Math.max(0,-r.top/total));
+    const max=track.scrollWidth-innerWidth;
+    track.style.transform='translate3d('+(-t*max).toFixed(1)+'px,0,0)';
+    prog.style.transform='scaleX('+t.toFixed(3)+')';
+  }
+  addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(frame);}},{passive:true});
+  addEventListener('resize',()=>{if(innerWidth<=760){pics.forEach(p=>p.style.transform='');track.style.transform='';}frame();});
+  frame();
+
+  /* shop */
+  const grid=$('#grid');
+  function cats(){ const s=new Set(M.products.filter(p=>state.col==='all'||p.collection===state.col).map(p=>p.category)); return ['all',...s]; }
+  function paintCats(){ $('#fCat').innerHTML=cats().map(c=>`<button data-c="${c}" class="${state.cat===c?'on':''}">${c==='all'?'All':c}</button>`).join(''); }
+  function list(){ let L=M.products.filter(p=>(state.col==='all'||p.collection===state.col)&&(state.cat==='all'||p.category===state.cat)); if(state.sort==='asc') L=[...L].sort((a,b)=>a.price-b.price); if(state.sort==='desc') L=[...L].sort((a,b)=>b.price-a.price); return L; }
+  function paint(){
+    const L=list();
+    $('#shopTitle').innerHTML=colName[state.col]+', <em>the pieces</em>';
+    $('#shopSub').textContent=colSeason[state.col]+' · '+L.length+' pieces';
+    grid.innerHTML=L.map((p,i)=>`<button class="card rv" data-id="${p.id}">
+      <div class="im"><img class="a" src="${p.images[0]}" alt="${p.name}" loading="lazy"><img class="b" src="${p.images[1]||p.images[0]}" alt="" loading="lazy"><span class="n">${String(i+1).padStart(2,'0')}</span></div>
+      <div class="cap"><b>${p.name}</b><span>${money(p.price)}</span></div>
+      <div class="sub">${p.category}${p.colour?' · '+p.colour:''}${p.isNew?' · New':''}</div>
+      <span class="qvb">Quick view</span></button>`).join('');
+    $$('.card',grid).forEach(c=>io.observe(c));
+  }
+  $('#fCol').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;setCol(b.dataset.v);});
+  $('#fCat').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;state.cat=b.dataset.c;paintCats();paint();});
+  $('#fSort').addEventListener('change',e=>{state.sort=e.target.value;paint();});
+  grid.addEventListener('click',e=>{const c=e.target.closest('.card');if(c)openQV(c.dataset.id);});
+  function setCol(c){state.col=c;state.cat='all';$$('#fCol button').forEach(x=>x.classList.toggle('on',x.dataset.v===c));paintCats();paint();}
+  $$('[data-open]').forEach(b=>b.addEventListener('click',()=>{setCol(b.dataset.open);$('#shop').scrollIntoView({behavior:reduce?'auto':'smooth'});}));
+  paintCats(); paint();
+
+  /* quick view */
+  const qv=$('#qv'),scrim=$('#scrim'),bag=$('#bag');
+  function openQV(id){
+    const p=M.products.find(x=>x.id===id); if(!p)return; state.cur=p;state.size=null;
+    $('#qvGal').innerHTML=p.images.slice(0,4).map((s,i)=>`<img src="${s}" alt="${p.name}, view ${i+1}">`).join(''); $('#qvGal').scrollTop=0;
+    $('#qvCol').textContent=colName[p.collection]+' · '+p.category+(p.colour?' · '+p.colour:'');
+    $('#qvName').textContent=p.name; $('#qvPrice').textContent=money(p.price); $('#qvDesc').textContent=p.description;
+    $('#qvSizes').innerHTML=p.sizes.map(s=>`<button data-s="${s}">${s}</button>`).join('');
+    $('#qvAdd').disabled=true;$('#qvAdd').textContent='Select a size';
+    $('#qvMeta').innerHTML=(p.fabric||'Composition and care to follow')+'<br>Free UK delivery over £150 · Klarna pay in 3';
+    qv.classList.add('open');qv.setAttribute('aria-hidden','false');scrim.classList.add('on');document.body.style.overflow='hidden';setTimeout(()=>$('#qvClose').focus(),50);
+  }
+  function closeAll(){qv.classList.remove('open');qv.setAttribute('aria-hidden','true');bag.classList.remove('open');bag.setAttribute('aria-hidden','true');scrim.classList.remove('on');openMenu(false);document.body.style.overflow='';}
+  $('#qvSizes').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;state.size=b.dataset.s;$$('#qvSizes button').forEach(x=>x.classList.toggle('on',x===b));$('#qvAdd').disabled=false;$('#qvAdd').textContent='Add to bag · '+money(state.cur.price);});
+  $('#qvAdd').addEventListener('click',()=>{if(!state.cur||!state.size)return;addToBag(state.cur,state.size);closeAll();openBag();});
+  $('#qvClose').addEventListener('click',closeAll);scrim.addEventListener('click',closeAll);
+  addEventListener('keydown',e=>{if(e.key==='Escape')closeAll();});
+
+  /* bag */
+  function openBag(){bag.classList.add('open');bag.setAttribute('aria-hidden','false');scrim.classList.add('on');document.body.style.overflow='hidden';setTimeout(()=>$('#bagClose').focus(),50);}
+  $('#bagBtn').addEventListener('click',openBag);$('#bagClose').addEventListener('click',closeAll);
+  function addToBag(p,size){const it=state.bag.find(x=>x.id===p.id&&x.size===size);if(it)it.qty++;else state.bag.push({id:p.id,size,qty:1});paintBag();toast(p.name+' · '+size+' added');}
+  function paintBag(){
+    const n=state.bag.reduce((a,b)=>a+b.qty,0);$('#bagCount').textContent=n;$('#bagN').textContent=n;
+    const items=$('#bagItems');
+    if(!state.bag.length){items.innerHTML='<div class="empty">Your bag is empty.</div>';$('#bagTot').textContent='£0';$('#bagKl').textContent='Or 3 interest-free payments with Klarna.';return;}
+    let tot=0;
+    items.innerHTML=state.bag.map((it,i)=>{const p=M.products.find(x=>x.id===it.id);tot+=p.price*it.qty;return `<div class="it"><img src="${p.images[0]}" alt=""><div><b>${p.name}</b><small>${p.category} · Size ${it.size}</small><div class="qty"><button data-q="-1" data-i="${i}" aria-label="Decrease">−</button><span>${it.qty}</span><button data-q="1" data-i="${i}" aria-label="Increase">+</button></div><button class="rm" data-rm="${i}">Remove</button></div><div class="pr">${money(p.price*it.qty)}</div></div>`;}).join('');
+    $('#bagTot').textContent=money(tot);$('#bagKl').textContent='Or 3 interest-free payments of '+money(Math.round(tot/3))+' with Klarna.';
+  }
+  $('#bagItems').addEventListener('click',e=>{const q=e.target.closest('[data-q]'),rm=e.target.closest('[data-rm]');if(q){const it=state.bag[+q.dataset.i];it.qty+=+q.dataset.q;if(it.qty<1)state.bag.splice(+q.dataset.i,1);paintBag();}if(rm){state.bag.splice(+rm.dataset.rm,1);paintBag();}});
+  paintBag();
+  let tt;function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2200);}
+
+  $('#nlForm').addEventListener('submit',e=>{e.preventDefault();const v=$('#nlEmail').value.trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){$('#nlThanks').textContent='Please enter a valid email.';return;}$('#nlForm').style.display='none';$('#nlThanks').textContent='Thank you. You are on the list for Sovereign.';});
+})();
+</script>
+</body>
+</html>
