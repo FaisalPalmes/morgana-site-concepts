@@ -108,32 +108,6 @@ button{cursor:pointer}
 .state .t2{max-width:16em;margin:24px auto 0}
 .state p.body{max-width:31em;margin:28px auto 0;color:var(--mute)}
 
-/* THE LOOK: the one dark, edge-to-edge moment */
-.look{position:relative;height:430vh;background:var(--wine);color:var(--ivory)}
-.lk-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
-.lk-box{position:absolute;overflow:hidden;will-change:left,top,width,height}
-.lk-film video{object-position:50% 22%}
-.lk-photo,.lk-p{opacity:0}
-.lk-p{transform:translateY(40px)}
-.lk-cap{position:absolute;opacity:0}
-.lk-cap .lab{color:rgba(243,235,223,.6);margin-bottom:6px}
-.lk-cap .t3{display:flex;justify-content:space-between;gap:16px}
-.lk-cap .t3 span:last-child{font:300 14px/1.9 var(--sans)}
-.lk-intro{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:22px;text-shadow:0 1px 24px rgba(0,0,0,.25);pointer-events:none}
-.lk-idx{position:absolute;left:var(--g);top:calc(var(--hd) + 22px);display:flex;gap:26px}
-.lk-idx span{opacity:.45;transition:opacity .6s}
-.lk-idx span.on{opacity:1}
-.lk-idx span.on::after{content:"";display:block;height:1px;background:currentColor;margin-top:6px}
-.lk-cta{position:absolute;right:var(--g);top:calc(var(--hd) + 22px);opacity:0}
-.lk-list{display:none}
-@media (max-width:760px){
-  .look{height:380vh}
-  .lk-cap{display:none}
-  .lk-list{display:block;position:absolute;left:var(--g);right:var(--g);opacity:0}
-  .lk-list a{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(243,235,223,.18);font-size:14px}
-  .lk-cta{top:auto;bottom:24px;right:auto;left:var(--g)}
-}
-
 /* product grid and cards */
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(36px,4vw,56px) var(--gap)}
 @media (max-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
@@ -167,7 +141,7 @@ button{cursor:pointer}
 .life-end .t2{margin:18px 0 26px}
 @media (max-width:760px){.life-rail{grid-auto-columns:72%}.life-g{grid-template-columns:1fr 1fr}.ar{display:none}}
 
-/* The Look, A: split, film fixed beside the pieces */
+/* THE LOOK: the one dark moment. The film holds on the left while the pieces pass on the right */
 .lkA{display:grid;grid-template-columns:1fr 1fr;background:var(--wine);color:var(--ivory)}
 .lkA-film{position:relative}
 .lkA-stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
@@ -180,11 +154,11 @@ button{cursor:pointer}
 .lkA-ps{display:flex;flex-direction:column;gap:clamp(80px,12vh,150px);margin:clamp(80px,12vh,150px) 0}
 .lkA-p{display:block;width:min(100%,400px)}
 .lkA-p:nth-child(2){align-self:flex-end}
-.lkA-p .lab,.lkD .lab.m,.lkC .lab.m{color:rgba(243,235,223,.6)}
+.lkA-p .lab{color:rgba(243,235,223,.6)}
 .lkA-p .f23 img{transition:transform 2.2s var(--ease)}
 .lkA-p:hover .f23 img{transform:scale(1.03)}
 .lkA-sum{border-top:1px solid rgba(243,235,223,.2);padding-top:22px;max-width:400px}
-.lkA-sum .row,.lkD .row{display:flex;justify-content:space-between;margin-bottom:22px}
+.lkA-sum .row{display:flex;justify-content:space-between;margin-bottom:22px}
 .btn.light{background:var(--ivory);color:var(--wine)}
 .btn.light:hover{background:#fff}
 @media (max-width:760px){
@@ -194,50 +168,6 @@ button{cursor:pointer}
   .lkA-ps{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);margin:48px 0}
   .lkA-p{width:auto}
 }
-
-/* The Look, C: a strip of frames moving sideways */
-.lkC{position:relative;height:340vh;background:var(--wine);color:var(--ivory);--fh:min(58vh,104vw)}
-.lkC-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
-.lkC-head{padding:0 var(--g);margin-bottom:clamp(20px,3.4vh,40px);display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
-.lkC-head .t2{margin-top:12px}
-.lkC-track{display:flex;gap:var(--gap);padding:0 var(--g);will-change:transform}
-.lkC-fr{flex:0 0 auto;width:calc(var(--fh) * 2 / 3);display:block}
-.lkC-fr .f23{height:var(--fh);aspect-ratio:auto}
-.lkC-fr .lkC-cap{padding-top:14px;display:flex;justify-content:space-between;gap:12px}
-.lkC-fr .t3 span{display:block;font:300 14px/1.7 var(--sans);color:rgba(243,235,223,.7)}
-.lkC-end{height:var(--fh);border:1px solid rgba(243,235,223,.25);display:flex;flex-direction:column;justify-content:center;gap:18px;padding:0 clamp(20px,2.4vw,36px)}
-.lkC-bar{position:absolute;left:var(--g);right:var(--g);bottom:clamp(20px,4vh,40px);height:1px;background:rgba(243,235,223,.18)}
-.lkC-bar i{display:block;height:100%;background:var(--ivory);transform-origin:left;transform:scaleX(0)}
-@media (max-width:760px){.lkC{height:300vh}.lkC-head .ln{display:none}}
-
-/* The Look, D: shop the photograph */
-.lkD{background:var(--wine);color:var(--ivory);padding:var(--sp) var(--g)}
-.lkD-in{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gap);align-items:center}
-.lkD-img{grid-column:2/7;position:relative;width:100%;max-width:calc(84vh * 2 / 3);justify-self:center}
-.hs{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:rgba(243,235,223,.92);color:var(--wine);font:400 11px/30px var(--sans);text-align:center;transition:transform .4s var(--ease)}
-.hs::before{content:"";position:absolute;inset:-7px;border-radius:50%;border:1px solid rgba(243,235,223,.7);animation:hsp 2.6s var(--ease) infinite}
-@keyframes hsp{0%{transform:scale(.7);opacity:1}100%{transform:scale(1.5);opacity:0}}
-.hs:hover,.hs.on{transform:scale(1.15)}
-.hs-card{position:absolute;width:210px;display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:center;background:var(--ivory);color:var(--ink);padding:10px;opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .4s var(--ease),transform .4s var(--ease)}
-.hs-card.on{opacity:1;pointer-events:auto;transform:none}
-.hs-card .t3{font-size:16px}
-.hs-card small{display:block;color:var(--mute);font-size:12px;margin-top:4px}
-.lkD-t{grid-column:8/12}
-.lkD-t .t2{margin:16px 0 18px}
-.lkD-t .body{color:rgba(243,235,223,.7);max-width:24em}
-.lkD-list{list-style:none;margin:36px 0 30px;border-top:1px solid rgba(243,235,223,.2)}
-.lkD-list a{display:grid;grid-template-columns:28px 1fr auto;gap:12px;align-items:baseline;padding:14px 0;border-bottom:1px solid rgba(243,235,223,.2);transition:padding .4s var(--ease)}
-.lkD-list a:hover,.lkD-list a.on{padding-left:8px}
-.lkD-list .t3 + span{font-size:14px}
-.lkD-film{display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:end;margin-top:44px}
-.lkD-film .f23{width:96px}
-@media (max-width:760px){.lkD-in{grid-template-columns:1fr}.lkD-img,.lkD-t{grid-column:1/-1}.lkD-t{padding-top:28px}.lkD-img .hs-card{left:10px!important;right:10px;top:auto!important;bottom:10px;width:auto}}
-
-/* concept switch, preview only */
-.lv{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:45;display:flex;align-items:center;gap:4px;background:rgba(22,19,15,.86);color:#fff;padding:6px 8px 6px 16px;font:400 10px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;white-space:nowrap}
-.lv a{padding:7px 9px;opacity:.55}
-.lv a.on{opacity:1;text-decoration:underline;text-underline-offset:4px}
-body:not([data-page=home]) .lv{display:none}
 
 /* diptych */
 .dip{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
@@ -381,19 +311,18 @@ body:not([data-page=home]) .lv{display:none}
 </header>
 
 <main id="view"></main>
-<nav class="lv" id="lv" aria-label="Concept: versions of The Look"><span>The Look</span></nav>
 
 <footer class="ft">
   <div class="ft-g">
     <div>
-      <h4>The letter</h4>
-      <p class="mute" style="max-width:26em">New collections, stories from the house and the occasional note.</p>
+      <h4>Newsletter</h4>
+      <p class="mute" style="max-width:26em">New collections and news from Morganà.</p>
       <form class="nl" id="nl"><input type="email" required placeholder="Your email address" aria-label="Email address"><button class="lab" type="submit">Subscribe</button></form>
       <p class="nl-ok" id="nlok">Thank you. You'll hear from us soon.</p>
     </div>
-    <div><h4>Client care</h4><ul><li><a href="mailto:info@morgana.london">info@morgana.london</a></li><li><a href="#/house">Delivery</a></li><li><a href="#/house">Returns</a></li><li><a href="#/house">Size guide</a></li></ul></div>
+    <div><h4>Customer care</h4><ul><li><a href="mailto:info@morgana.london">info@morgana.london</a></li><li><a href="#/house">Delivery</a></li><li><a href="#/house">Returns</a></li><li><a href="#/house">Size guide</a></li></ul></div>
     <div><h4>Collections</h4><ul><li><a href="#/collection/sovereign">Sovereign</a></li><li><a href="#/collection/lumiere">Lumière</a></li><li><a href="#/collection/fortia">Fortia</a></li><li><a href="#/shop">Shop all</a></li></ul></div>
-    <div><h4>The house</h4><ul><li><a href="#/house">Our story</a></li><li><a href="#/life">Morganà life</a></li><li><a href="#">Instagram</a></li><li><a href="#">TikTok</a></li></ul></div>
+    <div><h4>About</h4><ul><li><a href="#/house">Our story</a></li><li><a href="#/life">Morganà life</a></li><li><a href="#">Instagram</a></li><li><a href="#">TikTok</a></li></ul></div>
   </div>
   <div class="ft-mark" aria-hidden="true">MORGANÀ</div>
   <div class="ft-b lab"><span>© 2026 Morganà London</span><span>GBP £ · Pay in 3 with Klarna</span><span>Concept preview</span></div>
@@ -409,7 +338,7 @@ body:not([data-page=home]) .lv{display:none}
       <a href="#/shop" data-img="assets/img/editorial/port-lace.jpg"><small>02</small>Shop all</a>
       <a href="#/collection/lumiere" data-img="assets/img/lumiere/paris-balcony.jpg"><small>03</small>Lumière</a>
       <a href="#/collection/fortia" data-img="assets/img/fortia/39-0.jpg"><small>04</small>Fortia</a>
-      <a href="#/house" data-img="assets/img/editorial/port-knit-walnut.jpg"><small>05</small>The house</a>
+      <a href="#/house" data-img="assets/img/editorial/port-knit-walnut.jpg"><small>05</small>About</a>
       <a href="#/life" data-img="assets/img/editorial/port-leopard-sofa.jpg"><small>06</small>Morganà life</a>
       <div class="menu-sub lab"><a href="mailto:info@morgana.london" style="font:inherit;opacity:1;transform:none">Contact</a><span>London</span></div>
     </nav>
@@ -444,6 +373,8 @@ body:not([data-page=home]) .lv{display:none}
   var lerp = function(a, b, t){ return a + (b - a) * t; };
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var COL = {}; M.collections.forEach(function(c){ COL[c.id] = c; });
+  var LINES = { sovereign: 'Tailoring, knitwear and coats for autumn and winter.', lumiere: 'Linen and light layers for summer.', fortia: 'Our first collection. Tailoring and suiting.' };
+  M.collections.forEach(function(c){ if (LINES[c.id]) c.line = LINES[c.id]; });
   var NAME = { sovereign: 'Sovereign', lumiere: 'Lumière', fortia: 'Fortia' };
 
   /* ---------- pieces ---------- */
@@ -464,20 +395,20 @@ body:not([data-page=home]) .lv{display:none}
   /* ---------- Morganà life (placeholder pictures until the new ones arrive) ---------- */
   var TYPE = { campaign: 'Campaign', bts: 'Behind the scenes', event: 'Event' };
   var LIFE = [
-    { t: 'campaign', img: 'assets/img/editorial/land-blazer-bag.jpg', wide: 1, title: 'Sovereign, the wine room', line: 'Autumn–Winter 2026 campaign', href: '#/collection/sovereign' },
-    { t: 'bts', vid: 'assets/video/reel-atelier.mp4', poster: 'assets/video/reel-atelier-poster.jpg', title: 'The finishing touches', line: 'On set, October 2026' },
-    { t: 'event', img: 'assets/img/editorial/port-noir.jpg', title: 'Evenings out', line: 'Event photographs to follow' },
-    { t: 'campaign', img: 'assets/img/editorial/port-knit-walnut.jpg', title: 'Walnut and wool', line: 'Sovereign campaign', href: '#/collection/sovereign' },
-    { t: 'bts', vid: 'assets/video/reel-black-doors.mp4', poster: 'assets/video/reel-black-doors-poster.jpg', title: 'Between takes', line: 'The black doors, October 2026' },
-    { t: 'campaign', img: 'assets/img/lumiere/paris-balcony.jpg', title: 'Lumière in Paris', line: 'Summer 2026 campaign', href: '#/collection/lumiere' },
-    { t: 'event', img: 'assets/img/editorial/port-leopard-sofa.jpg', title: 'With friends of the house', line: 'Event photographs to follow' },
-    { t: 'event', img: 'assets/img/editorial/land-suit-sofa.jpg', wide: 1, title: 'A night with the house', line: 'Event photographs to follow' },
-    { t: 'bts', vid: 'assets/video/reel-wine-doors.mp4', poster: 'assets/video/reel-wine-doors-poster.jpg', title: 'At the wine doors', line: 'On set, October 2026' },
-    { t: 'campaign', img: 'assets/img/editorial/port-lace.jpg', title: 'The lace hour', line: 'Sovereign campaign', href: '#/collection/sovereign' },
-    { t: 'campaign', img: 'assets/img/fortia/39-0.jpg', title: 'Fortia, on grey', line: 'The first chapter, in the studio', href: '#/collection/fortia' },
-    { t: 'bts', img: 'assets/img/editorial/port-cardigan.jpg', title: 'Fittings', line: 'Before the shoot, October 2026' },
-    { t: 'campaign', img: 'assets/img/lumiere/paris-street.jpg', title: 'Lumière, the street', line: 'Summer 2026 campaign', href: '#/collection/lumiere' },
-    { t: 'event', img: 'assets/img/editorial/port-fur.jpg', title: 'Winter evenings', line: 'Event photographs to follow' }
+    { t: 'campaign', img: 'assets/img/editorial/land-blazer-bag.jpg', wide: 1, title: 'Sovereign', line: 'Autumn–Winter 2026 campaign', href: '#/collection/sovereign' },
+    { t: 'bts', vid: 'assets/video/reel-atelier.mp4', poster: 'assets/video/reel-atelier-poster.jpg', title: 'Accessories', line: 'On set, October 2026' },
+    { t: 'event', img: 'assets/img/editorial/port-noir.jpg', title: 'Events', line: 'Photographs coming soon' },
+    { t: 'campaign', img: 'assets/img/editorial/port-knit-walnut.jpg', title: 'Sovereign knitwear', line: 'Autumn–Winter 2026', href: '#/collection/sovereign' },
+    { t: 'bts', vid: 'assets/video/reel-black-doors.mp4', poster: 'assets/video/reel-black-doors-poster.jpg', title: 'On set', line: 'October 2026' },
+    { t: 'campaign', img: 'assets/img/lumiere/paris-balcony.jpg', title: 'Lumière', line: 'Summer 2026, Paris', href: '#/collection/lumiere' },
+    { t: 'event', img: 'assets/img/editorial/port-leopard-sofa.jpg', title: 'Events', line: 'Photographs coming soon' },
+    { t: 'event', img: 'assets/img/editorial/land-suit-sofa.jpg', wide: 1, title: 'Events', line: 'Photographs coming soon' },
+    { t: 'bts', vid: 'assets/video/reel-wine-doors.mp4', poster: 'assets/video/reel-wine-doors-poster.jpg', title: 'Behind the camera', line: 'October 2026' },
+    { t: 'campaign', img: 'assets/img/editorial/port-lace.jpg', title: 'Sovereign evening', line: 'Autumn–Winter 2026', href: '#/collection/sovereign' },
+    { t: 'campaign', img: 'assets/img/fortia/39-0.jpg', title: 'Fortia', line: 'Autumn–Winter 2025', href: '#/collection/fortia' },
+    { t: 'bts', img: 'assets/img/editorial/port-cardigan.jpg', title: 'Fittings', line: 'October 2026' },
+    { t: 'campaign', img: 'assets/img/lumiere/paris-street.jpg', title: 'Lumière', line: 'Summer 2026', href: '#/collection/lumiere' },
+    { t: 'event', img: 'assets/img/editorial/port-fur.jpg', title: 'Events', line: 'Photographs coming soon' }
   ];
   function mo(x, page){
     var wide = page && x.wide, tag = x.href ? 'a' : 'div';
@@ -488,20 +419,20 @@ body:not([data-page=home]) .lv{display:none}
   var lifeF = 'all';
   function vLife(){
     lifeF = 'all';
-    return '<section class="ph"><p class="lab rv">Morganà life</p><h1 class="t1 rv d1">Out in the world</h1><p class="body rv d2">Campaigns, days on set and the evenings we go to. The latest from the house, in pictures and film.</p></section>' +
+    return '<section class="ph"><p class="lab rv">Morganà</p><h1 class="t1 rv d1">Life</h1><p class="body rv d2">Campaigns, behind the scenes and events.</p></section>' +
       '<div class="bar lab" id="lbar"></div><section class="wrap"><div class="life-g" id="lifeG"></div></section>' +
-      '<section class="life-end wrap"><p class="lab rv">Follow the house</p><h2 class="t2 rv d1">More, as it happens</h2><a class="ln rv d2" href="#">Instagram</a></section>';
+      '<section class="life-end wrap"><p class="lab rv">Follow us</p><h2 class="t2 rv d1">More on Instagram</h2><a class="ln rv d2" href="#">Instagram</a></section>';
   }
   function fillLife(){
     var list = LIFE.filter(function(x){ return lifeF === 'all' || x.t === lifeF; });
-    var names = { all: 'Everything', campaign: 'Campaigns', bts: 'Behind the scenes', event: 'Events' };
-    $('#lbar').innerHTML = '<div class="f">' + ['all', 'campaign', 'bts', 'event'].map(function(k){ return '<button data-lf="' + k + '" aria-pressed="' + (lifeF === k) + '">' + names[k] + '</button>'; }).join('') + '</div><span class="mute">' + list.length + ' moments</span>';
+    var names = { all: 'All', campaign: 'Campaigns', bts: 'Behind the scenes', event: 'Events' };
+    $('#lbar').innerHTML = '<div class="f">' + ['all', 'campaign', 'bts', 'event'].map(function(k){ return '<button data-lf="' + k + '" aria-pressed="' + (lifeF === k) + '">' + names[k] + '</button>'; }).join('') + '</div><span class="mute">' + list.length + ' posts</span>';
     $('#lifeG').innerHTML = list.map(function(x){ return mo(x, 1); }).join('');
     watch($('#lifeG'));
   }
 
   /* ---------- views ---------- */
-  var LOOK = { photo: 'assets/img/editorial/port-bordeaux.jpg', pieces: [['sov-19', 'assets/img/sov/19-1.jpg'], ['sov-18', 'assets/img/sov/18-1.jpg']], spots: [[17, 58], [55, 38]] };
+  var LOOK = { photo: 'assets/img/editorial/port-bordeaux.jpg', pieces: [['sov-19', 'assets/img/sov/19-1.jpg'], ['sov-18', 'assets/img/sov/18-1.jpg']] };
 
   function vHome(){
     var edit = ['sov-15','sov-06','sov-02','sov-12','sov-04','sov-05','sov-14','sov-09'].map(function(id){ return card(byId(id)); }).join('');
@@ -513,68 +444,32 @@ body:not([data-page=home]) .lv{display:none}
       '<span class="cue" aria-hidden="true"></span></section>' +
 
     '<section class="state"><p class="lab rv">Sovereign &nbsp;·&nbsp; Autumn–Winter 2026</p>' +
-      '<h2 class="t2 rv d1">Quiet authority, cut for the long evenings.</h2>' +
-      '<p class="body rv d2">Tailoring, knit and leather for the season of candlelight. The collection arrives on 19.11.26.</p></section>' +
+      '<h2 class="t2 rv d1">Made for the colder months.</h2>' +
+      '<p class="body rv d2">Tailoring, knitwear and coats for autumn and winter. Available from 19 November.</p></section>' +
 
     lookHTML(lp) +
 
-    chapter('Chapter I', 'The lace hour', 'assets/img/editorial/land-lace-recline.jpg', '50% 50%', '82% 50%', 'Lace-trimmed slip dress on a grey sofa', 'sov-02') +
+    chapter('Evening', 'Lace and silk', 'assets/img/editorial/land-lace-recline.jpg', '50% 50%', '82% 50%', 'Lace-trimmed slip dress on a grey sofa', 'sov-02') +
 
-    '<section class="sec wrap">' + sh('New in', 'The first pieces', '<a class="ln rv d2" href="#/collection/sovereign">View all twenty</a>') + '<div class="grid">' + edit + '</div></section>' +
+    '<section class="sec wrap">' + sh('New in', 'Autumn–Winter 2026', '<a class="ln rv d2" href="#/collection/sovereign">View all</a>') + '<div class="grid">' + edit + '</div></section>' +
 
-    chapter('Chapter II', 'Walnut and wool', 'assets/img/editorial/land-wrap-coat.jpg', '50% 40%', '50% 50%', 'Oatmeal wrap coat against walnut panelling', 'sov-06') +
+    chapter('Outerwear', 'Coats for the cold', 'assets/img/editorial/land-wrap-coat.jpg', '50% 40%', '50% 50%', 'Oatmeal wrap coat against walnut panelling', 'sov-06') +
 
-    '<section class="sec wrap" id="life">' + sh('Morganà life', 'Lately, from the house', '<div class="life-ctl rv d2"><button class="ar" data-dir="-1" aria-label="Earlier">&larr;</button><button class="ar" data-dir="1" aria-label="Later">&rarr;</button><a class="ln" href="#/life">See every moment</a></div>') +
+    '<section class="sec wrap" id="life">' + sh('Morganà life', 'The latest', '<div class="life-ctl rv d2"><button class="ar" data-dir="-1" aria-label="Earlier">&larr;</button><button class="ar" data-dir="1" aria-label="Later">&rarr;</button><a class="ln" href="#/life">See all</a></div>') +
       '<div class="life-rail" id="lifeRail">' + LIFE.filter(function(x){ return !x.wide; }).slice(0, 8).map(function(x){ return mo(x); }).join('') + '</div></section>' +
 
-    '<section class="sec wrap">' + sh('The archive', 'Earlier chapters', '<a class="ln rv d2" href="#/shop">Shop all collections</a>') +
+    '<section class="sec wrap">' + sh('Archive', 'Past collections', '<a class="ln rv d2" href="#/shop">Shop all</a>') +
       '<div class="dip">' + dipItem('lumiere', 'assets/img/lumiere/paris-door.jpg', 'Lumière in a Paris doorway') + dipItem('fortia', 'assets/img/fortia/39-0.jpg', 'Fortia tailoring on grey') + '</div></section>';
   }
-  /* The Look comes in versions for review: ?look=a (split), b (film to frame), c (strip), d (shop the photograph), 0 (f02 as it was) */
-  var LV = (function(){ var v = (location.search.match(/look=([a-d0])/i) || [])[1]; return v ? v.toLowerCase() : 'a'; })();
   var FILM = '<video muted autoplay loop playsinline preload="auto" poster="assets/final/film-wine-doors-poster.jpg" src="assets/final/film-wine-doors.mp4"></video>';
   function lookHTML(lp){
     var tot = gbp(lp.reduce(function(a, p){ return a + p.price; }, 0));
-    if (LV === 'a') return '' +
-    '<section class="lkA" id="look" aria-label="The look">' +
-      '<div class="lkA-film"><div class="lkA-stick">' + FILM + '<div class="lkA-cap"><p class="lab">N°01 &nbsp;·&nbsp; The look</p><h2 class="t2">The wine room</h2></div></div></div>' +
-      '<div class="lkA-r"><p class="lab rv">Look 18</p><h2 class="t2 rv d1">Black, bordeaux and lacquered doors.</h2><p class="body rv d2">Two pieces, worn together at the wine doors.</p>' +
-        '<div class="lkA-ps">' + lp.map(function(p, i){ return '<a class="lkA-p rv" href="#/product/' + p.id + '"><div class="f23 ri"><img src="' + LOOK.pieces[i][1] + '" alt="' + p.name + '"></div><div class="capr"><div><p class="lab">Piece ' + (i + 1) + '</p><p class="t3">' + p.name + '</p></div><span>' + gbp(p.price) + '</span></div></a>'; }).join('') + '</div>' +
-        '<div class="lkA-sum rv"><div class="row"><span class="lab">The look, two pieces</span><span>' + tot + '</span></div><a class="btn light" href="#/product/' + lp[0].id + '">Shop the look</a></div>' +
-      '</div></section>';
-    if (LV === 'c') return '' +
-    '<section class="lkC" id="look" aria-label="The look, frame by frame"><div class="lkC-stage">' +
-      '<div class="lkC-head"><div><p class="lab m">N°01 &nbsp;·&nbsp; The look</p><h2 class="t2">The wine room, frame by frame</h2></div><a class="ln" href="#/product/' + lp[0].id + '">Shop the look</a></div>' +
-      '<div class="lkC-track" id="lkTrack">' +
-        '<div class="lkC-fr"><div class="f23">' + FILM + '</div><div class="lkC-cap"><p class="t3">The film<span>On set at the wine doors</span></p><p class="lab m">I</p></div></div>' +
-        '<div class="lkC-fr"><div class="f23"><img src="' + LOOK.photo + '" alt="Black blazer and bordeaux roll-neck at the wine doors"></div><div class="lkC-cap"><p class="t3">The photograph<span>Look 18</span></p><p class="lab m">II</p></div></div>' +
-        lp.map(function(p, i){ return '<a class="lkC-fr" href="#/product/' + p.id + '"><div class="f23"><img src="' + LOOK.pieces[i][1] + '" alt="' + p.name + '"></div><div class="lkC-cap"><p class="t3">' + p.name + '<span>' + gbp(p.price) + '</span></p><p class="lab m">' + (i ? 'IV' : 'III') + '</p></div></a>'; }).join('') +
-        '<div class="lkC-fr"><div class="lkC-end"><p class="lab m">The look</p><p class="t2">Two pieces, ' + tot + '</p><a class="btn light" href="#/product/' + lp[0].id + '">Shop the look</a></div></div>' +
-      '</div><div class="lkC-bar"><i id="lkProg"></i></div></div></section>';
-    if (LV === 'd') return '' +
-    '<section class="lkD" id="look" aria-label="Shop the photograph"><div class="lkD-in">' +
-      '<div class="lkD-img"><div class="f23 ri"><img src="' + LOOK.photo + '" alt="Black blazer and bordeaux roll-neck at the wine doors"></div>' +
-        lp.map(function(p, i){ var at = LOOK.spots[i]; return '<button class="hs" data-i="' + i + '" style="left:' + at[0] + '%;top:' + at[1] + '%" aria-label="' + p.name + '">' + (i + 1) + '</button>' +
-          '<a class="hs-card" data-i="' + i + '" href="#/product/' + p.id + '" style="left:calc(' + at[0] + '% + 26px);top:calc(' + at[1] + '% - 40px)"><div class="f23"><img src="' + LOOK.pieces[i][1] + '" alt=""></div><div><p class="t3">' + p.name + '</p><small>' + gbp(p.price) + ' · View the piece</small></div></a>'; }).join('') +
-      '</div>' +
-      '<div class="lkD-t"><p class="lab m rv">N°01 &nbsp;·&nbsp; The look</p><h2 class="t2 rv d1">Shop the photograph</h2><p class="body rv d2">Look 18, the wine room. Touch a point on the picture, or choose a piece below.</p>' +
-        '<ol class="lkD-list rv d2">' + lp.map(function(p, i){ return '<li><a data-i="' + i + '" href="#/product/' + p.id + '"><span class="lab">0' + (i + 1) + '</span><span class="t3">' + p.name + '</span><span>' + gbp(p.price) + '</span></a></li>'; }).join('') + '</ol>' +
-        '<div class="row rv d3"><span class="lab">The look, two pieces</span><span>' + tot + '</span></div><a class="btn light rv d3" href="#/product/' + lp[0].id + '">Shop the look</a>' +
-        '<div class="lkD-film rv d3"><div class="f23">' + FILM + '</div><p class="lab m">The film<br>On set at the wine doors</p></div>' +
-      '</div></div></section>';
-    var b = LV === 'b';
     return '' +
-    '<section class="look" id="look" aria-label="The look: film, photograph, piece">' +
-      '<div class="lk-stage" id="lkStage">' +
-        '<div class="lk-box lk-film"><video muted autoplay loop playsinline preload="auto" poster="assets/final/film-wine-doors-poster.jpg" src="assets/final/film-wine-doors.mp4"></video></div>' +
-        (b ? '' : '<div class="lk-box lk-photo"><img src="' + LOOK.photo + '" alt="Black blazer and bordeaux roll-neck at the wine doors"></div>') +
-        LOOK.pieces.map(function(x, i){ return '<a class="lk-box lk-p" href="#/product/' + x[0] + '"><img src="' + x[1] + '" alt="' + lp[i].name + '"></a>'; }).join('') +
-        '<div class="lk-cap" data-k="0"><p class="lab">The look</p><p class="t3"><span>Look 18, the wine room</span></p></div>' +
-        lp.map(function(p, i){ return '<a class="lk-cap" data-k="' + (i + 1) + '" href="#/product/' + p.id + '"><p class="lab">Piece ' + (i + 1) + '</p><p class="t3"><span>' + p.name + '</span><span>' + gbp(p.price) + '</span></p></a>'; }).join('') +
-        '<div class="lk-list">' + lp.map(function(p){ return '<a href="#/product/' + p.id + '"><span>' + p.name + '</span><span>' + gbp(p.price) + '</span></a>'; }).join('') + '</div>' +
-        '<div class="lk-intro"><p class="lab">N°01 &nbsp;·&nbsp; The look</p><h2 class="t2">' + (b ? 'From film to piece.' : 'Film. Photograph. Piece.') + '</h2></div>' +
-        '<div class="lk-idx lab" id="lkIdx">' + (b ? '<span>I Film</span><span>II Pieces</span>' : '<span>I Film</span><span>II Photograph</span><span>III Piece</span>') + '</div>' +
-        '<a class="lk-cta ln" href="#/product/sov-19">Shop the look</a>' +
+    '<section class="lkA" id="look" aria-label="The look">' +
+      '<div class="lkA-film"><div class="lkA-stick">' + FILM + '<div class="lkA-cap"><p class="lab">Sovereign</p><h2 class="t2">The look</h2></div></div></div>' +
+      '<div class="lkA-r"><p class="lab rv">In the film</p><h2 class="t2 rv d1">Blazer and roll-neck</h2><p class="body rv d2">Two pieces, worn together.</p>' +
+        '<div class="lkA-ps">' + lp.map(function(p, i){ return '<a class="lkA-p rv" href="#/product/' + p.id + '"><div class="f23 ri"><img src="' + LOOK.pieces[i][1] + '" alt="' + p.name + '"></div><div class="capr"><div><p class="lab">Piece ' + (i + 1) + '</p><p class="t3">' + p.name + '</p></div><span>' + gbp(p.price) + '</span></div></a>'; }).join('') + '</div>' +
+        '<div class="lkA-sum rv"><div class="row"><span class="lab">Both pieces</span><span>' + tot + '</span></div><a class="btn light" href="#/product/' + lp[0].id + '">Shop the look</a></div>' +
       '</div></section>';
   }
   function dipItem(id, img, alt){
@@ -587,8 +482,8 @@ body:not([data-page=home]) .lv{display:none}
   function vList(col){
     var c = COL[col];
     shopState.col = col || 'all'; shopState.cat = 'All';
-    return '<section class="ph"><p class="lab rv">' + (c ? c.season : 'Every collection') + '</p><h1 class="t1 rv d1">' + (c ? c.name : 'Shop') + '</h1>' +
-      '<p class="body rv d2">' + (c ? c.line : 'Sovereign, Lumière and Fortia, in one place.') + '</p></section>' +
+    return '<section class="ph"><p class="lab rv">' + (c ? c.season : 'All collections') + '</p><h1 class="t1 rv d1">' + (c ? c.name : 'Shop') + '</h1>' +
+      '<p class="body rv d2">' + (c ? c.line : 'Sovereign, Lumière and Fortia.') + '</p></section>' +
       '<div class="bar lab" id="bar"></div><section class="wrap"><div class="grid" id="lGrid"></div></section>';
   }
   function fillList(){
@@ -597,7 +492,7 @@ body:not([data-page=home]) .lv{display:none}
     var cats = ['All'].concat(base.map(function(p){ return p.category; }).filter(function(x, i, a){ return a.indexOf(x) === i; }).sort());
     var list = base.filter(function(p){ return shopState.cat === 'All' || p.category === shopState.cat; });
     var cols = colOnly ? '' : ['all', 'sovereign', 'lumiere', 'fortia'].map(function(k){ return '<button data-c="' + k + '" aria-pressed="' + (shopState.col === k) + '">' + (k === 'all' ? 'All' : NAME[k]) + '</button>'; }).join('') + '<span class="sep"></span>';
-    $('#bar').innerHTML = '<div class="f">' + cols + cats.map(function(x){ return '<button data-k="' + x + '" aria-pressed="' + (shopState.cat === x) + '">' + (x === 'All' ? 'Every piece' : x) + '</button>'; }).join('') + '</div><span class="mute">' + list.length + (list.length === 1 ? ' piece' : ' pieces') + '</span>';
+    $('#bar').innerHTML = '<div class="f">' + cols + cats.map(function(x){ return '<button data-k="' + x + '" aria-pressed="' + (shopState.cat === x) + '">' + (x === 'All' ? 'All pieces' : x) + '</button>'; }).join('') + '</div><span class="mute">' + list.length + (list.length === 1 ? ' piece' : ' pieces') + '</span>';
     $('#lGrid').innerHTML = list.map(card).join('');
     watch($('#lGrid'));
   }
@@ -624,13 +519,13 @@ body:not([data-page=home]) .lv{display:none}
   }
 
   function vHouse(){
-    return '<section class="ph"><p class="lab rv">Morganà London</p><h1 class="t1 rv d1">The house</h1><p class="body rv d2">Womenswear for quiet authority. One year old on 19.11.26.</p></section>' +
-      '<section class="wrap"><div class="f169 ri" style="--mp:40% 50%"><img src="assets/img/editorial/land-cocoon.jpg" alt="Ivory cocoon coat by a wall sconce"></div></section>' +
-      '<section class="sec wrap"><div class="cols2"><p class="rv">Morganà London makes womenswear for quiet authority: tailoring, knit and the pieces that hold an evening together. Fortia, the first chapter, was photographed on grey in the studio.</p>' +
-      '<p class="rv d1">Lumière followed into the Paris summer, in linen and ivory. Sovereign returns indoors, to lacquered doors, walnut and candlelight, for the long evenings of autumn and winter.</p></div></section>' +
-      '<section class="sec wrap">' + sh('The rooms', 'Wine, walnut, ivory', '<a class="ln rv d2" href="#/collection/sovereign">Discover Sovereign</a>') +
-      '<div class="dip"><div><div class="f23 ri"><img src="assets/img/editorial/port-knit-walnut.jpg" alt="Espresso knit set against walnut"></div><div class="capr"><p class="lab">The walnut room</p></div></div>' +
-      '<div><div class="f23 ri"><img src="assets/img/editorial/port-cardigan.jpg" alt="Cream cardigan at the wine doors"></div><div class="capr"><p class="lab">The wine room</p></div></div></div></section>';
+    return '<section class="ph"><p class="lab rv">Morganà London</p><h1 class="t1 rv d1">About</h1><p class="body rv d2">Modern womenswear from London.</p></section>' +
+      '<section class="wrap"><div class="f169 ri" style="--mp:40% 50%"><img src="assets/img/editorial/land-cocoon.jpg" alt="Ivory cocoon coat"></div></section>' +
+      '<section class="sec wrap"><div class="cols2"><p class="rv">Morganà London makes womenswear: tailoring, knitwear, dresses and coats. Our first collection, Fortia, launched in November 2025.</p>' +
+      '<p class="rv d1">Lumière followed in summer 2026. Sovereign, for autumn and winter, arrives on 19 November 2026.</p></div></section>' +
+      '<section class="sec wrap">' + sh('Sovereign', 'Autumn–Winter 2026', '<a class="ln rv d2" href="#/collection/sovereign">Shop the collection</a>') +
+      '<div class="dip"><div><div class="f23 ri"><img src="assets/img/editorial/port-knit-walnut.jpg" alt="Knit set"></div><div class="capr"><p class="lab">Knitwear</p></div></div>' +
+      '<div><div class="f23 ri"><img src="assets/img/editorial/port-cardigan.jpg" alt="Cream cardigan"></div><div class="capr"><p class="lab">Layers</p></div></div></div></section>';
   }
 
   /* ---------- router ---------- */
@@ -674,59 +569,7 @@ body:not([data-page=home]) .lv{display:none}
   var lk = null;
   function mountHome(){
     $('#lifeRail') && $$('.life-ctl .ar').forEach(function(b){ b.onclick = function(){ var r = $('#lifeRail'); r.scrollBy({ left: +b.dataset.dir * r.clientWidth * .75, behavior: 'smooth' }); }; });
-    if (LV === 'a') { lk = null; return; }
-    if (LV === 'c') { lk = { c: 1, sec: $('#look'), tr: $('#lkTrack'), pr: $('#lkProg') }; return; }
-    if (LV === 'd') { lk = null; mountSpots(); return; }
-    var st = $('#lkStage');
-    lk = { sec: $('#look'), st: st, film: $('.lk-film', st), photo: $('.lk-photo', st), pieces: $$('.lk-p', st), caps: $$('.lk-cap', st),
-      list: $('.lk-list', st), intro: $('.lk-intro', st), idx: $$('#lkIdx span'), cta: $('.lk-cta', st) };
-  }
-  function lookRects(vw, vh){
-    var g = Math.max(16, Math.min(48, vw * .03)), gap = Math.max(10, Math.min(20, vw * .0125)), hd = vw < 761 ? 56 : 64;
-    if (vw < 761){
-      var W = vw - 2 * g, p = (W - gap - gap / 1.5) / 3, f = 2 * p + gap / 1.5, H = f * 1.5;
-      var top = Math.max(hd + 58, (vh - H) / 2 - 40), left = g;
-      return { photo: [left, top, f, H], a: [left + f + gap, top, p, p * 1.5], b: [left + f + gap, top + p * 1.5 + gap, p, p * 1.5], listTop: top + H + 22 };
-    }
-    var h = Math.min(vh * .62, (vw - 2 * g - 2 * gap) / 3 * 1.5), w = h * 2 / 3, tot = 3 * w + 2 * gap, l = (vw - tot) / 2, t = Math.max(hd + 70, (vh - h) / 2 - 10);
-    return { photo: [l, t, w, h], a: [l + w + gap, t, w, h], b: [l + 2 * (w + gap), t, w, h], capTop: t + h + 18 };
-  }
-  function place(el, r){ el.style.left = r[0] + 'px'; el.style.top = r[1] + 'px'; el.style.width = r[2] + 'px'; el.style.height = r[3] + 'px'; }
-  function mountSpots(){
-    var sec = $('#look');
-    function on(i){ $$('[data-i]', sec).forEach(function(el){ el.classList.toggle('on', +el.dataset.i === i); }); }
-    $$('.hs', sec).forEach(function(b){ b.onmouseenter = b.onfocus = b.onclick = function(){ on(+b.dataset.i); }; });
-    $$('.lkD-list a', sec).forEach(function(a){ a.onmouseenter = function(){ on(+a.dataset.i); }; });
-    sec.addEventListener('mouseleave', function(){ on(-1); });
-  }
-  function lookFrame(vh, vw){
-    if (!lk || !lk.sec.isConnected) return;
-    var r = lk.sec.getBoundingClientRect();
-    if (r.bottom < -vh || r.top > vh * 1.5) return;
-    if (lk.c){
-      var q = reduce ? 0 : clamp(-r.top / (r.height - vh)), mx = Math.max(0, lk.tr.scrollWidth - vw);
-      lk.tr.style.transform = 'translate3d(' + (-q * mx) + 'px,0,0)'; lk.pr.style.transform = 'scaleX(' + q + ')';
-      return;
-    }
-    var p = reduce ? 1 : clamp(-r.top / (r.height - vh)), R = lookRects(vw, vh);
-    var a = ease(clamp((p - .06) / .36));
-    place(lk.film, [lerp(0, R.photo[0], a), lerp(0, R.photo[1], a), lerp(vw, R.photo[2], a), lerp(vh, R.photo[3], a)]);
-    if (lk.photo){
-      place(lk.photo, R.photo);
-      lk.photo.style.opacity = clamp((p - .36) / .12); lk.film.style.opacity = 1 - clamp((p - .46) / .06);
-    }
-    [R.a, R.b].forEach(function(rr, i){
-      var q = ease(clamp((p - .5 - i * .08) / .16)), el = lk.pieces[i];
-      place(el, rr); el.style.opacity = q; el.style.transform = 'translate3d(0,' + (1 - q) * 40 + 'px,0)';
-    });
-    var c = clamp((p - .72) / .1);
-    if (R.capTop){
-      [R.photo, R.a, R.b].forEach(function(rr, i){ var e = lk.caps[i]; e.style.left = rr[0] + 'px'; e.style.width = rr[2] + 'px'; e.style.top = R.capTop + 'px'; e.style.opacity = i === 0 ? clamp((p - .5) / .1) : c; });
-    } else { lk.list.style.top = R.listTop + 'px'; lk.list.style.opacity = c; }
-    lk.cta.style.opacity = c;
-    lk.intro.style.opacity = 1 - clamp(p / .12);
-    var k = lk.photo ? (p < .36 ? 0 : p < .55 ? 1 : 2) : (p < .45 ? 0 : 1);
-    lk.idx.forEach(function(s, i){ s.classList.toggle('on', i === k); });
+    lk = { sec: $('#look') };
   }
 
   /* ---------- product page ---------- */
@@ -832,15 +675,11 @@ body:not([data-page=home]) .lv{display:none}
     lastY = y;
     if (home){
       var t = $('.hero-t'); if (t && !reduce && y < vh) { t.style.opacity = 1 - y / vh * 1.6; t.style.transform = 'translate3d(0,' + (-y * .15) + 'px,0)'; }
-      lookFrame(vh, vw);
     }
   }
   function onScroll(){ if (!ticking){ ticking = true; requestAnimationFrame(frame); } }
   addEventListener('scroll', onScroll, { passive: true });
   addEventListener('resize', onScroll);
-
-  /* ---------- concept switch for The Look ---------- */
-  $('#lv').innerHTML += [['a', 'A Split'], ['b', 'B Frame'], ['c', 'C Strip'], ['d', 'D Shop'], ['0', 'f02']].map(function(v){ return '<a href="?look=' + v[0] + '#/" class="' + (LV === v[0] ? 'on' : '') + '">' + v[1] + '</a>'; }).join('');
 
   /* ---------- start ---------- */
   $('#veilM').innerHTML = 'MORGANÀ'.split('').map(function(ch, i){ return '<span style="animation-delay:' + i * 70 + 'ms">' + ch + '</span>'; }).join('');
