@@ -1,0 +1,999 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MORGANÀ — Sovereign, a film</title>
+<meta name="description" content="Sovereign, Autumn–Winter 2026. The collection, scene by scene.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wdth,wght@0,62.5..100,200..700;1,62.5..100,200..700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ───────────────────────────── tokens ───────────────────────────── */
+:root{
+  --black:#070605; --ink:#0d0b0a; --panel:#121010;
+  --ivory:#F6F1E8; --ivory-70:rgba(246,241,232,.7); --ivory-45:rgba(246,241,232,.45); --ivory-18:rgba(246,241,232,.18); --ivory-08:rgba(246,241,232,.08);
+  --gold:rgb(200,168,112); --gold-deep:#A9782C; --wine:#4A0E1C;
+  --serif:"Noto Serif Display", "Times New Roman", serif;
+  --mono:"Courier Prime", "Courier New", monospace;
+  --gutter:clamp(16px, 4vw, 64px);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+html,body{max-width:100%; overflow-x:hidden}
+body{margin:0; background:var(--black); color:var(--ivory); font-family:var(--serif); font-weight:300; font-size:17px; line-height:1.5; font-variation-settings:"wdth" 100;}
+img,video{display:block; max-width:100%}
+a{color:inherit; text-decoration:none}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer; padding:0}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:1px solid var(--gold); outline-offset:3px}
+::selection{background:var(--gold); color:var(--black)}
+.sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)}
+
+/* type scale */
+.mono{font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ivory-70)}
+.mono.gold{color:var(--gold)}
+.title{font-family:var(--serif); font-variation-settings:"wdth" 68; font-weight:400; letter-spacing:.06em; text-transform:uppercase; line-height:.92}
+.wordmark{font-family:var(--serif); font-variation-settings:"wdth" 80; font-weight:400; letter-spacing:.32em; text-transform:uppercase; font-size:19px}
+.wordmark .a{position:relative}
+.rule{height:1px; background:var(--ivory-18)}
+.italic{font-style:italic; font-weight:300}
+
+/* ───────────────────────────── title sequence ───────────────────────────── */
+#titles{position:fixed; inset:0; z-index:200; background:var(--black); display:none; align-items:center; justify-content:center; overflow:hidden}
+#titles.on{display:flex}
+#titles .bar{position:absolute; left:0; right:0; height:14vh; background:#000; z-index:2}
+#titles .bar.t{top:0} #titles .bar.b{bottom:0}
+#titles .card{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; opacity:0; padding:0 var(--gutter)}
+#titles .card.show{animation:tcard 1.9s var(--ease) both}
+#titles .card .mono{margin-bottom:18px}
+#titles .card .big{font-size:clamp(56px, 11vw, 168px); font-variation-settings:"wdth" 64; letter-spacing:.14em; text-transform:uppercase; line-height:1; font-weight:300}
+#titles .card .presents{font-size:clamp(22px,2.6vw,34px); letter-spacing:.42em; text-transform:uppercase; font-weight:300}
+#titles .card .season{font-size:clamp(20px,2.2vw,30px); font-style:italic; letter-spacing:.08em}
+#titles .skip{position:absolute; right:var(--gutter); bottom:calc(14vh + 18px); z-index:3; font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--ivory-45); padding:8px 0}
+#titles .skip:hover{color:var(--ivory)}
+#titles .grain{position:absolute; inset:0; z-index:1; opacity:.06; pointer-events:none; background-image:radial-gradient(rgba(255,255,255,.5) .5px, transparent .6px); background-size:3px 3px}
+#titles.out{animation:tout 1.1s var(--ease) forwards}
+@keyframes tcard{0%{opacity:0; transform:translateY(6px) scale(.995)} 18%{opacity:1; transform:none} 82%{opacity:1} 100%{opacity:0}}
+@keyframes tout{to{opacity:0; visibility:hidden}}
+
+/* ───────────────────────────── header ───────────────────────────── */
+header{position:fixed; top:0; left:0; right:0; z-index:100; height:64px; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; padding:0 var(--gutter); background:linear-gradient(to bottom, rgba(7,6,5,.9), rgba(7,6,5,0)); transition:background .5s}
+header.solid{background:rgba(7,6,5,.92); border-bottom:1px solid var(--ivory-08); backdrop-filter:blur(8px)}
+header nav{display:flex; align-items:center; gap:26px; font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase}
+header nav .has-sub{display:inline-flex; align-items:center}
+header nav a{color:var(--ivory-70); transition:color .3s; position:relative; padding:6px 0}
+header nav a:hover,header nav a.cur{color:var(--ivory)}
+header nav a.cur::after{content:""; position:absolute; left:0; right:0; bottom:0; height:1px; background:var(--gold)}
+header .brand{text-align:center}
+header .right{display:flex; justify-content:flex-end; align-items:center; gap:22px; font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase}
+header .right button{display:flex; align-items:center; gap:8px; color:var(--ivory-70); transition:color .3s}
+header .right button:hover{color:var(--ivory)}
+header .right svg{width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:1.2}
+#bagCount{display:inline-block; min-width:18px; height:18px; border:1px solid var(--gold); color:var(--gold); border-radius:50%; font-size:10px; line-height:16px; text-align:center}
+#burger{display:none; color:var(--ivory); gap:6px; flex-direction:column; width:26px; padding:6px 0}
+#burger span{height:1px; background:currentColor; display:block}
+.scene-ind{font-family:var(--mono); font-size:11px; letter-spacing:.16em; color:var(--gold); white-space:nowrap}
+.has-sub{position:relative}
+.has-sub .sub{position:absolute; top:100%; left:-14px; padding:10px 14px; background:rgba(7,6,5,.96); border:1px solid var(--ivory-08); display:none; flex-direction:column; gap:10px; min-width:150px}
+.has-sub:hover .sub,.has-sub:focus-within .sub{display:flex}
+
+/* mobile menu */
+#mmenu{position:fixed; inset:0; z-index:150; background:var(--black); display:none; flex-direction:column; padding:90px var(--gutter) 40px; gap:8px}
+#mmenu.open{display:flex}
+#mmenu a{font-family:var(--serif); font-variation-settings:"wdth" 70; text-transform:uppercase; letter-spacing:.1em; font-size:40px; line-height:1.2; padding:4px 0; border-bottom:1px solid var(--ivory-08)}
+#mmenu a.small{font-family:var(--mono); font-size:12px; letter-spacing:.2em; padding:14px 0; color:var(--ivory-70)}
+#mmenu .close{position:absolute; top:18px; right:var(--gutter); font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; padding:10px}
+#mmenu .foot{margin-top:auto; font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ivory-45); line-height:2}
+
+/* search */
+#search{position:fixed; top:64px; left:0; right:0; z-index:99; background:rgba(7,6,5,.96); border-bottom:1px solid var(--ivory-08); padding:18px var(--gutter); display:none}
+#search.open{display:block}
+#search input{width:100%; background:none; border:0; border-bottom:1px solid var(--ivory-18); color:var(--ivory); font-family:var(--serif); font-size:28px; font-weight:300; padding:10px 0; font-style:italic}
+#search .res{display:flex; flex-wrap:wrap; gap:8px 22px; margin-top:12px; font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ivory-70)}
+#search .res button:hover{color:var(--gold)}
+
+/* ───────────────────────────── views ───────────────────────────── */
+.view{display:none}
+.view.on{display:block}
+section{position:relative}
+.wrap{padding:0 var(--gutter)}
+
+/* reveal */
+.rv{opacity:0; transform:translateY(22px); transition:opacity 1.1s var(--ease), transform 1.1s var(--ease)}
+.rv.in{opacity:1; transform:none}
+.rv.d1{transition-delay:.12s} .rv.d2{transition-delay:.24s} .rv.d3{transition-delay:.36s}
+
+/* ───────────────────────────── hero ───────────────────────────── */
+#hero{min-height:100vh; display:flex; flex-direction:column; justify-content:center; background:var(--black); padding-top:64px}
+#hero .box{position:relative; width:100%; aspect-ratio:2.39/1; max-height:calc(100vh - 64px); overflow:hidden; background:#000; margin:0 auto}
+#hero video{width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity 2.4s var(--ease)}
+#hero.up video{opacity:1}
+#hero .slate{position:absolute; left:var(--gutter); top:22px; display:flex; gap:28px}
+#hero .tc{position:absolute; right:var(--gutter); top:22px; font-family:var(--mono); font-size:11px; letter-spacing:.14em; color:var(--ivory-70); font-variant-numeric:tabular-nums}
+#hero .tc i{display:inline-block; width:7px; height:7px; border-radius:50%; background:#b4281e; margin-right:10px; vertical-align:middle; animation:rec 1.4s infinite}
+@keyframes rec{50%{opacity:.25}}
+#hero .lower{position:absolute; left:var(--gutter); right:var(--gutter); bottom:26px; display:flex; justify-content:space-between; align-items:flex-end; gap:24px}
+#hero .lower h1{margin:0; font-size:clamp(48px, 7.6vw, 118px); font-variation-settings:"wdth" 64; letter-spacing:.12em; text-transform:uppercase; line-height:.9; font-weight:300}
+#hero .lower .sub{margin:12px 0 0; font-style:italic; font-size:clamp(15px,1.3vw,19px); color:var(--ivory-70)}
+#hero .cta{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+.btn{display:inline-flex; align-items:center; gap:10px; font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; padding:14px 22px; border:1px solid var(--ivory-45); color:var(--ivory); transition:border-color .3s, background .3s, color .3s; background:rgba(7,6,5,.35)}
+.btn:hover{border-color:var(--gold); color:var(--gold)}
+.btn.fill{background:var(--ivory); color:var(--black); border-color:var(--ivory)}
+.btn.fill:hover{background:var(--gold); border-color:var(--gold); color:var(--black)}
+.btn.gold{border-color:var(--gold); color:var(--gold)}
+.btn.gold:hover{background:var(--gold); color:var(--black)}
+#hero .below{display:flex; justify-content:space-between; padding:16px var(--gutter) 0; font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ivory-45)}
+
+/* ───────────────────────────── intro ───────────────────────────── */
+#intro{padding:clamp(80px,12vh,140px) var(--gutter); display:grid; grid-template-columns:1fr 1.4fr; gap:48px; align-items:end; max-width:1400px; margin:0 auto}
+#intro p.lead{font-size:clamp(26px,3vw,44px); line-height:1.18; margin:0; font-weight:300; font-variation-settings:"wdth" 86}
+#intro p.lead em{color:var(--gold)}
+#intro .meta{font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ivory-70); line-height:2.2}
+#intro .meta b{color:var(--ivory); font-weight:400}
+
+/* ───────────────────────────── scenes ───────────────────────────── */
+.scene{padding:0 0 clamp(70px,10vh,130px)}
+.scene .slatebar{display:flex; justify-content:space-between; align-items:center; gap:20px; padding:16px var(--gutter); border-top:1px solid var(--ivory-18); border-bottom:1px solid var(--ivory-08); font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ivory-70); flex-wrap:wrap}
+.scene .slatebar .n{color:var(--gold)}
+.scene .slatebar .slug{color:var(--ivory)}
+.scene .slatebar .tc{font-variant-numeric:tabular-nums; color:var(--ivory-45)}
+.scene .frame{position:relative; overflow:hidden; background:#000}
+.scene .frame img,.scene .frame video{width:100%; height:100%; object-fit:cover; will-change:transform}
+.scene .frame.wide{aspect-ratio:2.39/1}
+.scene .frame.tall{aspect-ratio:9/16}
+.scene .frame .cap{position:absolute; left:var(--gutter); bottom:18px; font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ivory-70); text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.scene .frame .cap.r{left:auto; right:var(--gutter)}
+.scene .body{display:grid; grid-template-columns:1.25fr 1fr; gap:48px; padding:34px var(--gutter) 0; max-width:1400px; margin:0 auto}
+.scene .line{font-size:clamp(24px,2.6vw,38px); font-style:italic; line-height:1.2; margin:0; font-weight:300}
+.scene .line .say{display:block; font-style:normal; font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:14px}
+.credits h3{font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:400; margin:0 0 10px}
+.credits ul{list-style:none; margin:0; padding:0}
+.credits li{display:grid; grid-template-columns:1fr auto; gap:14px; align-items:baseline; border-top:1px solid var(--ivory-08); padding:10px 0}
+.credits li button{display:contents; text-align:left}
+.credits .nm{font-size:17px; letter-spacing:.02em; transition:color .3s}
+.credits .nm small{display:block; font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ivory-45); margin-top:2px}
+.credits li:hover .nm{color:var(--gold)}
+.credits .pr{font-family:var(--mono); font-size:12px; letter-spacing:.08em; color:var(--ivory-70)}
+.credits .pr::before{content:"…… "; color:var(--ivory-18)}
+.scene.two .pair{display:grid; grid-template-columns:1.2fr 1fr; gap:4px}
+.scene.two .pair .frame:first-child{aspect-ratio:3/4}
+.scene.two .pair .frame:last-child{min-height:0}
+.scene.three .trio{display:grid; grid-template-columns:1fr 1fr 1fr; gap:4px}
+.scene.three .trio .frame{aspect-ratio:2/3}
+.scene.split{display:grid; grid-template-columns:1fr 1fr; gap:4px}
+.scene.split .frame{aspect-ratio:1/1.1}
+
+/* ───────────────────────────── film strip lookbook ───────────────────────────── */
+#strip{padding:clamp(60px,9vh,110px) 0 0}
+#strip .head{display:flex; justify-content:space-between; align-items:baseline; padding:0 var(--gutter) 22px}
+#strip h2{margin:0; font-size:clamp(30px,3.6vw,54px); font-variation-settings:"wdth" 66; letter-spacing:.1em; text-transform:uppercase; font-weight:300}
+.film{position:relative; background:#000; overflow-x:auto; overflow-y:hidden; scroll-snap-type:x proximity; scrollbar-width:none; -webkit-overflow-scrolling:touch; cursor:grab}
+.film::-webkit-scrollbar{display:none}
+.film .track{display:flex; gap:12px; padding:34px var(--gutter); width:max-content}
+.film .sprk{position:sticky; left:0; height:22px; width:100%; border-top:1px solid var(--ivory-08); border-bottom:1px solid var(--ivory-08); background:repeating-linear-gradient(90deg, #000 0 16px, var(--ivory-18) 16px 28px, #000 28px 44px)}
+.film .sprk.t{top:0} .film .sprk.b{bottom:0}
+.frm{flex:0 0 auto; width:clamp(190px,22vw,300px); scroll-snap-align:start; position:relative}
+.frm .ph{aspect-ratio:2/3; overflow:hidden; background:#111}
+.frm img{width:100%; height:100%; object-fit:cover; transition:transform 1.2s var(--ease)}
+.frm:hover img{transform:scale(1.04)}
+.frm .lab{display:flex; justify-content:space-between; font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ivory-45); padding-top:8px}
+.frm .lab b{color:var(--gold); font-weight:400}
+.frm.wide{width:clamp(320px,38vw,520px)}
+.frm.wide .ph{aspect-ratio:16/9}
+.film .track .frm.wide{align-self:center}
+
+/* ───────────────────────────── dailies ───────────────────────────── */
+#dailies{padding:clamp(80px,12vh,140px) var(--gutter) 0; max-width:1400px; margin:0 auto}
+#dailies .head{display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:end; margin-bottom:34px}
+#dailies h2{margin:0; font-size:clamp(30px,3.6vw,54px); font-variation-settings:"wdth" 66; letter-spacing:.1em; text-transform:uppercase; font-weight:300}
+#dailies p{margin:0; font-style:italic; color:var(--ivory-70); max-width:46ch}
+.reels{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+.reel{position:relative; background:#000; overflow:hidden; aspect-ratio:9/16}
+.reel video{width:100%; height:100%; object-fit:cover}
+.reel .tag{position:absolute; top:14px; left:14px; right:14px; display:flex; justify-content:space-between; font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ivory-70); text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.reel .tag b{color:var(--gold); font-weight:400}
+.reel .under{position:absolute; left:14px; bottom:14px; font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ivory-70); text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.reel .corner{position:absolute; width:14px; height:14px; border:1px solid var(--ivory-45); pointer-events:none}
+.reel .corner.tl{top:8px; left:8px; border-right:0; border-bottom:0}
+.reel .corner.tr{top:8px; right:8px; border-left:0; border-bottom:0}
+.reel .corner.bl{bottom:8px; left:8px; border-right:0; border-top:0}
+.reel .corner.br{bottom:8px; right:8px; border-left:0; border-top:0}
+
+/* ───────────────────────────── shop ───────────────────────────── */
+#wardrobe,#shopview,#collview{padding:clamp(80px,12vh,140px) var(--gutter) 0; max-width:1400px; margin:0 auto}
+.shophead{display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap; margin-bottom:30px}
+.shophead h2{margin:0; font-size:clamp(30px,3.6vw,54px); font-variation-settings:"wdth" 66; letter-spacing:.1em; text-transform:uppercase; font-weight:300}
+.shophead .mono{margin-bottom:8px}
+.filters{display:flex; gap:22px; flex-wrap:wrap; font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ivory-45)}
+.filters button{font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ivory-45); padding:6px 0; border-bottom:1px solid transparent; transition:color .3s, border-color .3s}
+.filters button.on,.filters button:hover{color:var(--ivory); border-color:var(--gold)}
+.filters select{background:none; border:0; border-bottom:1px solid var(--ivory-18); color:var(--ivory-70); font:inherit; letter-spacing:.14em; text-transform:uppercase; padding:6px 0}
+.filters select option{background:#111}
+.grid{display:grid; grid-template-columns:repeat(4,1fr); gap:28px 18px}
+.card{position:relative}
+.card .ph{position:relative; aspect-ratio:2/3; overflow:hidden; background:#111}
+.card .ph img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:opacity .7s var(--ease), transform 1.4s var(--ease)}
+.card .ph img.b{opacity:0}
+.card:hover .ph img.b{opacity:1}
+.card:hover .ph img{transform:scale(1.03)}
+.card .ph .qv{position:absolute; left:10px; right:10px; bottom:10px; font-family:var(--mono); font-size:10px; letter-spacing:.2em; text-transform:uppercase; padding:11px; text-align:center; background:rgba(7,6,5,.78); color:var(--ivory); opacity:0; transform:translateY(6px); transition:opacity .4s, transform .4s; border:1px solid var(--ivory-18)}
+.card:hover .ph .qv,.card .ph .qv:focus-visible{opacity:1; transform:none}
+.card .ph .num{position:absolute; top:10px; left:10px; font-family:var(--mono); font-size:10px; letter-spacing:.14em; color:var(--ivory-70); text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.card .ph .new{position:absolute; top:10px; right:10px; font-family:var(--mono); font-size:10px; letter-spacing:.14em; color:var(--gold); text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.card .info{display:flex; justify-content:space-between; gap:12px; padding-top:10px; align-items:baseline}
+.card .nm{font-size:15.5px; letter-spacing:.02em}
+.card .nm small{display:block; font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ivory-45); margin-top:3px}
+.card .pr{font-family:var(--mono); font-size:12px; color:var(--ivory-70); white-space:nowrap}
+.more{display:flex; justify-content:center; padding:40px 0 0}
+
+/* collection view */
+.collposter{display:grid; grid-template-columns:1fr 1fr; gap:4px; margin-bottom:40px}
+.collposter .ph{aspect-ratio:4/5; overflow:hidden; background:#111}
+.collposter .ph img{width:100%; height:100%; object-fit:cover}
+.collposter .txt{display:flex; flex-direction:column; justify-content:flex-end; padding:40px; background:var(--panel); min-height:320px}
+.collposter h2{margin:14px 0 10px; font-size:clamp(44px,6vw,92px); font-variation-settings:"wdth" 64; letter-spacing:.12em; text-transform:uppercase; font-weight:300; line-height:.95}
+.collposter p{margin:0 0 24px; font-style:italic; font-size:clamp(17px,1.5vw,22px); color:var(--ivory-70); max-width:40ch}
+
+/* ───────────────────────────── premiere ───────────────────────────── */
+#premiere{padding:clamp(100px,14vh,170px) var(--gutter)}
+#premiere .card{max-width:1100px; margin:0 auto; border:1px solid var(--ivory-18); padding:clamp(28px,4vw,56px); position:relative; background:var(--panel)}
+#premiere .card::before,#premiere .card::after{content:""; position:absolute; left:14px; right:14px; height:1px; background:var(--gold); opacity:.5}
+#premiere .card::before{top:10px} #premiere .card::after{bottom:10px}
+#premiere .top{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap}
+#premiere h2{margin:22px 0 6px; font-size:clamp(44px,8vw,120px); font-variation-settings:"wdth" 62; letter-spacing:.14em; text-transform:uppercase; font-weight:300; line-height:.9; text-align:center}
+#premiere .one{text-align:center; font-style:italic; font-size:clamp(20px,2.4vw,32px); color:var(--ivory-70); margin:0 0 30px}
+#premiere .facts{display:grid; grid-template-columns:repeat(3,1fr); gap:24px; border-top:1px solid var(--ivory-18); border-bottom:1px solid var(--ivory-18); padding:24px 0; text-align:center}
+#premiere .facts .k{font-family:var(--mono); font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:8px}
+#premiere .facts .v{font-size:clamp(20px,2.4vw,30px); font-variation-settings:"wdth" 76; letter-spacing:.04em; line-height:1.15}
+#premiere .facts .v small{display:block; font-size:15px; font-style:italic; color:var(--ivory-70); margin-top:4px}
+#premiere .bottom{display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap; padding-top:28px}
+#premiere .bottom .mono{line-height:2}
+
+/* ───────────────────────────── double bill ───────────────────────────── */
+#also{padding:0 var(--gutter) clamp(80px,12vh,140px); max-width:1400px; margin:0 auto}
+#also .head{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:26px; padding-bottom:14px; border-bottom:1px solid var(--ivory-18)}
+#also h2{margin:0; font-size:clamp(26px,3vw,44px); font-variation-settings:"wdth" 66; letter-spacing:.1em; text-transform:uppercase; font-weight:300}
+.bill{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+.poster{position:relative; display:block; background:var(--panel); border:1px solid var(--ivory-18); padding:14px; transition:border-color .4s}
+.poster:hover{border-color:var(--gold)}
+.poster .ph{aspect-ratio:3/4; overflow:hidden; background:#111; position:relative}
+.poster .ph img{width:100%; height:100%; object-fit:cover; transition:transform 1.6s var(--ease)}
+.poster:hover .ph img{transform:scale(1.04)}
+.poster .ph .over{position:absolute; left:16px; right:16px; bottom:16px; text-shadow:0 1px 10px rgba(0,0,0,.6)}
+.poster .ph .over .mono{margin-bottom:6px}
+.poster .ph .over h3{margin:0; font-size:clamp(40px,5vw,84px); font-variation-settings:"wdth" 62; letter-spacing:.12em; text-transform:uppercase; font-weight:300; line-height:.9}
+.poster .foot{display:flex; justify-content:space-between; align-items:center; padding:14px 2px 2px; font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--ivory-70)}
+.poster .foot b{color:var(--gold); font-weight:400}
+.poster .foot .it{font-family:var(--serif); font-style:italic; text-transform:none; letter-spacing:0; font-size:15px; color:var(--ivory-70)}
+
+/* ───────────────────────────── end credits + footer ───────────────────────────── */
+#credits{position:relative; height:520px; overflow:hidden; background:#000; border-top:1px solid var(--ivory-18)}
+#credits .roll{position:absolute; left:0; right:0; top:100%; text-align:center; animation:roll 46s linear infinite; padding:0 var(--gutter)}
+#credits .roll .k{font-family:var(--mono); font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); margin:28px 0 6px}
+#credits .roll .v{font-size:clamp(20px,2.2vw,30px); font-variation-settings:"wdth" 74; letter-spacing:.08em; text-transform:uppercase; font-weight:300}
+#credits .roll .v.it{text-transform:none; font-style:italic; letter-spacing:.02em; font-variation-settings:"wdth" 100}
+#credits .roll .wm{font-size:clamp(36px,5vw,72px); letter-spacing:.32em; margin-top:60px; font-variation-settings:"wdth" 80}
+#credits .fade{position:absolute; left:0; right:0; height:90px; pointer-events:none; z-index:2}
+#credits .fade.t{top:0; background:linear-gradient(#000, transparent)}
+#credits .fade.b{bottom:0; background:linear-gradient(transparent, #000)}
+@keyframes roll{to{transform:translateY(calc(-100% - 520px))}}
+footer{border-top:1px solid var(--ivory-18); padding:48px var(--gutter) 28px; background:var(--black)}
+footer .top{display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:40px; max-width:1400px; margin:0 auto}
+footer h4{margin:0 0 14px; font-family:var(--mono); font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:400}
+footer ul{list-style:none; margin:0; padding:0; font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--ivory-70); line-height:2.3}
+footer ul a:hover{color:var(--ivory)}
+footer .news p{margin:0 0 14px; font-style:italic; color:var(--ivory-70); max-width:38ch}
+footer form{display:flex; border-bottom:1px solid var(--ivory-45); max-width:420px}
+footer input{flex:1; min-width:0; background:none; border:0; color:var(--ivory); font-family:var(--serif); font-size:17px; padding:10px 0}
+footer input::placeholder{color:var(--ivory-45)}
+footer form button{font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); padding:0 0 0 14px}
+footer .thanks{font-style:italic; color:var(--gold); padding:12px 0; display:none}
+footer .bottom{max-width:1400px; margin:40px auto 0; padding-top:18px; border-top:1px solid var(--ivory-08); display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ivory-45)}
+footer .tag{border:1px solid var(--ivory-18); padding:3px 8px; color:var(--ivory-45)}
+
+/* ───────────────────────────── quick view ───────────────────────────── */
+.ov{position:fixed; inset:0; z-index:180; background:rgba(0,0,0,.72); display:none; align-items:center; justify-content:center; padding:20px}
+.ov.open{display:flex}
+#qv .box{width:min(1040px, 100%); max-height:92vh; overflow:auto; background:var(--panel); border:1px solid var(--ivory-18); display:grid; grid-template-columns:1fr 1fr; position:relative}
+#qv .gal{position:relative; background:#000}
+#qv .gal img{width:100%; aspect-ratio:2/3; object-fit:cover; position:absolute; inset:0; height:100%; opacity:0; transition:opacity .5s}
+#qv .gal img.on{opacity:1}
+#qv .gal .holder{aspect-ratio:2/3; position:relative}
+#qv .thumbs{position:absolute; left:12px; bottom:12px; display:flex; gap:6px}
+#qv .thumbs button{width:34px; height:46px; overflow:hidden; border:1px solid var(--ivory-18); opacity:.65}
+#qv .thumbs button.on{opacity:1; border-color:var(--gold)}
+#qv .thumbs img{position:static; opacity:1; width:100%; height:100%; aspect-ratio:auto}
+#qv .txt{padding:36px; display:flex; flex-direction:column; gap:18px}
+#qv .txt h3{margin:0; font-size:clamp(28px,3vw,40px); font-variation-settings:"wdth" 72; letter-spacing:.06em; text-transform:uppercase; font-weight:300; line-height:1}
+#qv .txt .pr{font-family:var(--mono); font-size:13px; letter-spacing:.1em; color:var(--ivory-70)}
+#qv .txt p{margin:0; color:var(--ivory-70); font-size:16px}
+#qv .sizes{display:flex; gap:8px; flex-wrap:wrap}
+#qv .sizes button{min-width:46px; height:40px; border:1px solid var(--ivory-18); font-family:var(--mono); font-size:11px; letter-spacing:.12em; transition:border-color .3s, color .3s}
+#qv .sizes button:hover{border-color:var(--ivory)}
+#qv .sizes button.on{border-color:var(--gold); color:var(--gold)}
+#qv .klarna{font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; color:var(--ivory-45)}
+#qv .close,#bag .close{position:absolute; top:14px; right:14px; font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; padding:8px; color:var(--ivory-70); z-index:2}
+#qv .err{color:var(--gold); font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; display:none}
+
+/* ───────────────────────────── bag ───────────────────────────── */
+#bagov{position:fixed; inset:0; z-index:170; background:rgba(0,0,0,.6); display:none}
+#bagov.open{display:block}
+#bag{position:fixed; top:0; right:0; bottom:0; width:min(440px, 100%); background:var(--panel); border-left:1px solid var(--ivory-18); z-index:175; transform:translateX(100%); transition:transform .6s var(--ease); display:flex; flex-direction:column}
+#bag.open{transform:none}
+#bag .hd{padding:22px 26px; border-bottom:1px solid var(--ivory-08)}
+#bag .hd h3{margin:0; font-family:var(--mono); font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); font-weight:400}
+#bag .items{flex:1; overflow:auto; padding:10px 26px}
+#bag .it{display:grid; grid-template-columns:64px 1fr auto; gap:14px; padding:14px 0; border-bottom:1px solid var(--ivory-08); align-items:center}
+#bag .it img{width:64px; height:86px; object-fit:cover}
+#bag .it .nm{font-size:15px}
+#bag .it .nm small{display:block; font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ivory-45); margin-top:3px}
+#bag .qty{display:flex; align-items:center; gap:10px; font-family:var(--mono); font-size:12px; margin-top:8px}
+#bag .qty button{width:22px; height:22px; border:1px solid var(--ivory-18); line-height:20px; text-align:center}
+#bag .it .pr{font-family:var(--mono); font-size:12px; color:var(--ivory-70)}
+#bag .empty{padding:40px 0; font-style:italic; color:var(--ivory-45); text-align:center}
+#bag .ft{padding:20px 26px 26px; border-top:1px solid var(--ivory-18)}
+#bag .sum{display:flex; justify-content:space-between; font-family:var(--mono); font-size:12px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:6px}
+#bag .kl{font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; color:var(--ivory-45); margin-bottom:16px}
+#bag .kl b{color:var(--ivory-70); font-weight:400}
+#bag .btn{width:100%; justify-content:center}
+.toast{position:fixed; left:50%; bottom:28px; transform:translate(-50%, 20px); background:var(--ivory); color:var(--black); font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; padding:12px 18px; z-index:190; opacity:0; transition:opacity .4s, transform .4s; pointer-events:none}
+.toast.on{opacity:1; transform:translate(-50%,0)}
+
+/* ───────────────────────────── responsive ───────────────────────────── */
+@media (max-width:1100px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  footer .top{grid-template-columns:1.3fr 1fr 1fr}
+  header nav{gap:18px}
+}
+@media (max-width:860px){
+  header{grid-template-columns:auto 1fr auto; height:58px}
+  header nav{display:none}
+  header .brand{text-align:center}
+  #burger{display:flex}
+  header .right .lab{display:none}
+  header .scene-ind{display:none}
+  #hero{padding-top:58px}
+  #hero .box{aspect-ratio:auto; height:calc(100vh - 58px); max-height:none}
+  #hero .box::before,#hero .box::after{content:""; position:absolute; left:0; right:0; height:9vh; background:#000; z-index:2}
+  #hero .box::before{top:0} #hero .box::after{bottom:0}
+  #hero .slate,#hero .tc{top:calc(9vh + 14px); z-index:3}
+  #hero .lower{bottom:calc(9vh + 18px); flex-direction:column; align-items:flex-start; z-index:3}
+  #hero .cta{justify-content:flex-start}
+  #intro{grid-template-columns:1fr; gap:28px}
+  .scene .body{grid-template-columns:1fr; gap:26px}
+  .scene.two .pair,.scene.split{grid-template-columns:1fr}
+  .scene.two .pair .frame:last-child{aspect-ratio:3/4}
+  .scene .frame.wide{aspect-ratio:4/5}
+  #hero .slate .mono:last-child{display:none}
+  #also .head{flex-wrap:wrap; gap:8px}
+  .scene.three .trio{grid-template-columns:1fr 1fr 1fr}
+  .reels{grid-template-columns:1fr; gap:12px}
+  .reels{display:flex; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; margin:0 calc(-1 * var(--gutter)); padding:0 var(--gutter)}
+  .reels::-webkit-scrollbar{display:none}
+  .reel{flex:0 0 78%; scroll-snap-align:start}
+  #dailies .head{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2,1fr); gap:22px 10px}
+  .collposter{grid-template-columns:1fr}
+  .collposter .txt{padding:26px; min-height:0}
+  #premiere .facts{grid-template-columns:1fr; gap:18px}
+  .bill{grid-template-columns:1fr}
+  #qv .box{grid-template-columns:1fr; max-height:92vh}
+  #qv .gal .holder{aspect-ratio:3/3.4}
+  #qv .txt{padding:22px}
+  footer .top{grid-template-columns:1fr 1fr; gap:28px}
+  footer .news{grid-column:1 / -1}
+  #credits{height:400px}
+}
+@media (max-width:420px){
+  .grid{gap:18px 8px}
+  .card .nm{font-size:14px}
+  .scene .slatebar{gap:10px 16px}
+  .scene .slatebar .tc{display:none}
+}
+
+/* ───────────────────────────── reduced motion ───────────────────────────── */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1; transform:none; transition:none}
+  #hero video{opacity:1; transition:none}
+  #credits .roll{animation:none; position:static; padding:40px var(--gutter)}
+  #credits{height:auto}
+  #hero .tc i{animation:none}
+  .frm img,.card .ph img,.poster .ph img{transition:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ─────────── title sequence ─────────── -->
+<div id="titles" aria-hidden="true">
+  <div class="grain"></div>
+  <div class="bar t"></div><div class="bar b"></div>
+  <div class="card c1"><div class="mono">A collection in seven scenes</div><div class="presents">MORGANÀ presents</div></div>
+  <div class="card c2"><div class="big">Sovereign</div></div>
+  <div class="card c3"><div class="season">Autumn–Winter 2026</div></div>
+  <button class="skip" type="button" id="skipTitles">Skip titles →</button>
+</div>
+
+<!-- ─────────── header ─────────── -->
+<header id="hdr">
+  <div class="left" style="display:flex;align-items:center;gap:22px">
+    <button id="burger" type="button" aria-label="Open menu" aria-controls="mmenu"><span></span><span></span><span></span></button>
+    <nav aria-label="Main">
+      <a href="#/" data-r="home">Sovereign</a>
+      <a href="#/shop" data-r="shop">Shop</a>
+      <span class="has-sub"><a href="#/collection/sovereign" data-r="collection">Collections</a>
+        <span class="sub"><a href="#/collection/sovereign">Sovereign</a><a href="#/collection/lumiere">Lumière</a><a href="#/collection/fortia">Fortia</a></span></span>
+      <a href="#/#strip">Editorial</a>
+      <a href="#/#dailies">Story</a>
+      <a href="#/#premiere">Events</a>
+    </nav>
+  </div>
+  <a class="brand wordmark" href="#/" aria-label="MORGANÀ home">MORGAN<span class="a">À</span></a>
+  <div class="right">
+    <span class="scene-ind" id="sceneInd">SC. 00 · TITLES</span>
+    <button type="button" id="searchBtn" aria-label="Search" aria-expanded="false"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span class="lab">Search</span></button>
+    <button type="button" id="bagBtn" aria-label="Open bag"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="lab">Bag</span><span id="bagCount">0</span></button>
+  </div>
+</header>
+
+<div id="search" role="search">
+  <label class="sr" for="searchIn">Search the collection</label>
+  <input id="searchIn" type="search" placeholder="Search the collection…" autocomplete="off">
+  <div class="res" id="searchRes"></div>
+</div>
+
+<div id="mmenu" role="dialog" aria-label="Menu">
+  <button class="close" type="button" id="mclose">Close ✕</button>
+  <a href="#/">Sovereign</a>
+  <a href="#/shop">Shop</a>
+  <a href="#/collection/lumiere">Lumière</a>
+  <a href="#/collection/fortia">Fortia</a>
+  <a class="small" href="#/#strip">Editorial</a>
+  <a class="small" href="#/#dailies">Story</a>
+  <a class="small" href="#/#premiere">Events · 19.11.26</a>
+  <div class="foot">MORGANÀ · London<br>info@morgana.london</div>
+</div>
+
+<main>
+<!-- ═══════════════════════════ HOME: the film ═══════════════════════════ -->
+<div class="view on" id="view-home">
+
+  <section id="hero" aria-label="Sovereign, the film">
+    <div class="box">
+      <video id="heroVid" muted loop playsinline preload="auto" poster="assets/final/graded/hero-landscape-poster.jpg" src="assets/final/graded/hero-landscape.mp4" data-play></video>
+      <div class="slate"><span class="mono gold">SC. 00</span><span class="mono">INT. THE RAIL — MORNING</span></div>
+      <div class="tc" id="heroTc"><i></i>00:00:00:00</div>
+      <div class="lower">
+        <div>
+          <h1>Sovereign</h1>
+          <p class="sub">Autumn–Winter 2026 · a film in seven scenes · 2.39 : 1</p>
+        </div>
+        <div class="cta">
+          <a class="btn fill" href="#sc1">Play the collection</a>
+          <a class="btn" href="#/shop">Shop the film</a>
+        </div>
+      </div>
+    </div>
+    <div class="below"><span>MORGANÀ · London</span><span>Opens 19.11.26</span><span>Reel 1 of 1</span></div>
+  </section>
+
+  <section id="intro">
+    <div class="meta rv">
+      <div><b>Title</b> &nbsp; Sovereign</div>
+      <div><b>Season</b> &nbsp; Autumn–Winter 2026</div>
+      <div><b>Location</b> &nbsp; A London house, after dark</div>
+      <div><b>Wardrobe</b> &nbsp; Tailoring, knit, leather</div>
+      <div><b>Running time</b> &nbsp; One long evening</div>
+    </div>
+    <p class="lead rv d1">Quiet authority. A woman moves through <em>wine-lacquered doors</em> and walnut corridors, and the clothes do the talking.</p>
+  </section>
+
+  <!-- SC. 01 -->
+  <section class="scene two" id="sc1" data-scene="SC. 01 · WINE DOORS">
+    <div class="slatebar rv"><span><span class="n">SC. 01</span> &nbsp; <span class="slug">INT. WINE DOORS — EVENING</span></span><span class="tc">TC 00:00:14:08</span><span>Take 3 · Print</span></div>
+    <div class="pair">
+      <div class="frame rv"><video muted loop playsinline preload="metadata" poster="assets/final/graded/film-wine-doors-poster.jpg" src="assets/final/graded/film-wine-doors.mp4" data-play></video><span class="cap">A · the walk</span></div>
+      <div class="frame rv d1"><img src="assets/img/editorial/port-bordeaux.jpg" alt="Black blazer over a bordeaux roll-neck at the wine doors" loading="lazy"><span class="cap r">B · the turn</span></div>
+    </div>
+    <div class="body">
+      <p class="line rv"><span class="say">Pull line</span>She arrives the way she dresses. Without asking.</p>
+      <div class="credits rv d1"><h3>Worn in this scene</h3><ul data-credits="sov-19,sov-18,sov-20"></ul></div>
+    </div>
+  </section>
+
+  <!-- SC. 02 -->
+  <section class="scene" id="sc2" data-scene="SC. 02 · THE SOFA">
+    <div class="slatebar rv"><span><span class="n">SC. 02</span> &nbsp; <span class="slug">INT. THE GREY SOFA — NIGHT</span></span><span class="tc">TC 00:01:02:19</span><span>Take 1 · Print</span></div>
+    <div class="frame wide rv"><img src="assets/img/editorial/land-lace-recline.jpg" alt="Lace slip dress, reclining on a grey sofa" loading="lazy"><span class="cap">Wide · hold for 4 seconds</span></div>
+    <div class="body">
+      <p class="line rv"><span class="say">Pull line</span>Champagne lace, worn as if it were daywear.</p>
+      <div class="credits rv d1"><h3>Worn in this scene</h3><ul data-credits="sov-02,sov-03"></ul></div>
+    </div>
+  </section>
+
+  <!-- SC. 03 -->
+  <section class="scene split" id="sc3" data-scene="SC. 03 · WALNUT">
+    <div class="slatebar rv" style="grid-column:1/-1"><span><span class="n">SC. 03</span> &nbsp; <span class="slug">INT. WALNUT CORRIDOR — DUSK</span></span><span class="tc">TC 00:01:48:02</span><span>Take 2 · Print</span></div>
+    <div class="frame rv"><img src="assets/img/editorial/land-wrap-coat.jpg" alt="Oatmeal wrap coat against walnut panelling" loading="lazy" style="object-position:50% 30%"><span class="cap">A · the coat</span></div>
+    <div class="frame rv d1"><img src="assets/img/editorial/port-knit-walnut.jpg" alt="Espresso knit set in the walnut corridor" loading="lazy" style="object-position:50% 20%"><span class="cap r">B · the knit</span></div>
+    <div class="body" style="grid-column:1/-1">
+      <p class="line rv"><span class="say">Pull line</span>Double-face wool. A belt tied once, never adjusted.</p>
+      <div class="credits rv d1"><h3>Worn in this scene</h3><ul data-credits="sov-06,sov-05,sov-11"></ul></div>
+    </div>
+  </section>
+
+  <!-- SC. 04 -->
+  <section class="scene three" id="sc4" data-scene="SC. 04 · BLACK DOORS">
+    <div class="slatebar rv"><span><span class="n">SC. 04</span> &nbsp; <span class="slug">INT. BLACK DOORS — LATE</span></span><span class="tc">TC 00:02:31:11</span><span>Take 4 · Print</span></div>
+    <div class="trio">
+      <div class="frame rv"><img src="assets/img/editorial/port-fur.jpg" alt="Ivory coat with a dark fur collar at the black doors" loading="lazy"></div>
+      <div class="frame rv d1"><video muted loop playsinline preload="metadata" poster="assets/final/graded/reel-black-doors-poster.jpg" src="assets/final/graded/reel-black-doors.mp4" data-play></video><span class="cap">Moving · the doors</span></div>
+      <div class="frame rv d2"><img src="assets/img/editorial/port-noir.jpg" alt="Long black belted coat, worn open" loading="lazy"></div>
+    </div>
+    <div class="body">
+      <p class="line rv"><span class="say">Pull line</span>Black on black. The only light is the one she carries.</p>
+      <div class="credits rv d1"><h3>Worn in this scene</h3><ul data-credits="sov-15,sov-12,sov-19"></ul></div>
+    </div>
+  </section>
+
+  <!-- SC. 05 -->
+  <section class="scene" id="sc5" data-scene="SC. 05 · THE SCONCE">
+    <div class="slatebar rv"><span><span class="n">SC. 05</span> &nbsp; <span class="slug">INT. BY THE SCONCE — NIGHT</span></span><span class="tc">TC 00:03:10:00</span><span>Take 1 · Print</span></div>
+    <div class="frame wide rv"><img src="assets/img/editorial/land-cocoon.jpg" alt="Ivory cocoon coat beside a wall sconce" loading="lazy" style="object-position:50% 35%"><span class="cap">Wide · slow push in</span></div>
+    <div class="body">
+      <p class="line rv"><span class="say">Pull line</span>A collarless coat and a single lamp. Nothing else needed.</p>
+      <div class="credits rv d1"><h3>Worn in this scene</h3><ul data-credits="sov-12,sov-11,sov-08"></ul></div>
+    </div>
+  </section>
+
+  <!-- film strip lookbook -->
+  <section id="strip">
+    <div class="head rv"><h2>The Lookbook</h2><span class="mono">Contact strip · 35 mm · drag to scrub →</span></div>
+    <div class="film" id="film">
+      <div class="sprk t"></div>
+      <div class="track" id="filmTrack"></div>
+      <div class="sprk b"></div>
+    </div>
+  </section>
+
+  <!-- dailies -->
+  <section id="dailies">
+    <div class="head">
+      <h2 class="rv">Dailies</h2>
+      <p class="rv d1">Three unedited takes from the shoot, played side by side. The wine doors, the black doors and the atelier table, with the bags and the jewellery.</p>
+    </div>
+    <div class="reels">
+      <div class="reel rv"><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span><video muted loop playsinline preload="metadata" poster="assets/final/graded/reel-wine-doors-poster.jpg" src="assets/final/graded/reel-wine-doors.mp4" data-play></video><div class="tag"><span><b>Reel A</b> · wine doors</span><span>9 : 16</span></div><div class="under">Take 2 of 5</div></div>
+      <div class="reel rv d1"><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span><video muted loop playsinline preload="metadata" poster="assets/final/graded/reel-black-doors-poster.jpg" src="assets/final/graded/reel-black-doors.mp4" data-play></video><div class="tag"><span><b>Reel B</b> · black doors</span><span>9 : 16</span></div><div class="under">Take 4 of 6</div></div>
+      <div class="reel rv d2"><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span><video muted loop playsinline preload="metadata" poster="assets/final/graded/reel-atelier-poster.jpg" src="assets/final/graded/reel-atelier.mp4" data-play></video><div class="tag"><span><b>Reel C</b> · atelier</span><span>9 : 16</span></div><div class="under">Take 1 of 3</div></div>
+    </div>
+  </section>
+
+  <!-- wardrobe (home shop module) -->
+  <section id="wardrobe" data-scene="SC. 06 · WARDROBE">
+    <div class="shophead rv">
+      <div><div class="mono gold">SC. 06 · Wardrobe department</div><h2 style="margin-top:8px">Shop the film</h2></div>
+      <div class="filters" id="homeFilters">
+        <button type="button" data-cat="" class="on">All</button>
+        <button type="button" data-cat="Coats">Coats</button>
+        <button type="button" data-cat="Knitwear">Knitwear</button>
+        <button type="button" data-cat="Jackets">Jackets</button>
+        <button type="button" data-cat="Dresses">Dresses</button>
+      </div>
+    </div>
+    <div class="grid" id="homeGrid"></div>
+    <div class="more"><a class="btn" href="#/shop">All 78 pieces · Sovereign, Lumière, Fortia</a></div>
+  </section>
+
+  <!-- premiere -->
+  <section id="premiere" data-scene="SC. 07 · PREMIERE">
+    <div class="card rv">
+      <div class="top mono"><span class="gold">SC. 07 · Premiere</span><span>Admit one · by invitation</span></div>
+      <h2>One year<br>of Morganà</h2>
+      <p class="one">The Sovereign premiere. A private event.</p>
+      <div class="facts">
+        <div><div class="k">Date</div><div class="v">19.11.26<small>Thursday</small></div></div>
+        <div><div class="k">Doors</div><div class="v">7pm<small>Drinks · Canapés · DJ</small></div></div>
+        <div><div class="k">Venue</div><div class="v">102 Stamford New Road<small>Altrincham WA14 1DG</small></div></div>
+      </div>
+      <div class="bottom">
+        <div class="mono">RSVP · <a href="mailto:info@morgana.london" style="color:var(--ivory)">info@morgana.london</a><br>Dress · Sovereign, or black</div>
+        <a class="btn gold" href="mailto:info@morgana.london?subject=RSVP%20%E2%80%94%20One%20year%20of%20Morgan%C3%A0">RSVP by email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- double bill -->
+  <section id="also">
+    <div class="head rv"><h2>Also by MORGANÀ</h2><span class="mono">Double bill · now showing</span></div>
+    <div class="bill">
+      <a class="poster rv" href="#/collection/lumiere">
+        <div class="ph"><img src="assets/img/lumiere/paris-balcony.jpg" alt="Lumière, Paris in linen and ivory" loading="lazy"><div class="over"><div class="mono">Summer 2026</div><h3>Lumière</h3></div></div>
+        <div class="foot"><span><b>Paris</b> · linen &amp; ivory</span><span class="it">22 pieces →</span></div>
+      </a>
+      <a class="poster rv d1" href="#/collection/fortia">
+        <div class="ph"><img src="assets/img/fortia/39-0.jpg" alt="Fortia, studio tailoring on grey" loading="lazy"><div class="over"><div class="mono">Autumn–Winter 2025</div><h3>Fortia</h3></div></div>
+        <div class="foot"><span><b>The first chapter</b> · tailoring</span><span class="it">36 pieces →</span></div>
+      </a>
+    </div>
+  </section>
+
+</div>
+
+<!-- ═══════════════════════════ SHOP view ═══════════════════════════ -->
+<div class="view" id="view-shop">
+  <section id="shopview" style="padding-top:120px">
+    <div class="shophead rv in">
+      <div><div class="mono gold">Wardrobe department</div><h2 style="margin-top:8px" id="shopTitle">Shop</h2></div>
+      <div class="filters">
+        <span id="shopColl">
+          <button type="button" data-coll="" class="on">All</button>
+          <button type="button" data-coll="sovereign">Sovereign</button>
+          <button type="button" data-coll="lumiere">Lumière</button>
+          <button type="button" data-coll="fortia">Fortia</button>
+        </span>
+        <select id="shopCat" aria-label="Category"><option value="">All categories</option></select>
+        <select id="shopSort" aria-label="Sort"><option value="new">Newest</option><option value="lo">Price, low to high</option><option value="hi">Price, high to low</option></select>
+      </div>
+    </div>
+    <div class="mono" id="shopCount" style="margin-bottom:18px"></div>
+    <div class="grid" id="shopGrid"></div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════ COLLECTION view ═══════════════════════════ -->
+<div class="view" id="view-collection">
+  <section id="collview" style="padding-top:100px">
+    <div class="collposter" id="collPoster"></div>
+    <div class="shophead"><div class="mono gold" id="collCount"></div></div>
+    <div class="grid" id="collGrid"></div>
+  </section>
+</div>
+</main>
+
+<!-- ─────────── end credits ─────────── -->
+<section id="credits" aria-label="End credits">
+  <div class="fade t"></div><div class="fade b"></div>
+  <div class="roll">
+    <div class="k">A collection by</div><div class="v">MORGANÀ London</div>
+    <div class="k">Founder</div><div class="v">Angelica</div>
+    <div class="k">Title</div><div class="v">Sovereign</div>
+    <div class="k">Season</div><div class="v it">Autumn–Winter 2026</div>
+    <div class="k">Wardrobe</div><div class="v it">Tailoring · knitwear · leather · outerwear</div>
+    <div class="k">Locations</div><div class="v it">The wine doors · the black doors · the walnut corridor · the atelier</div>
+    <div class="k">Earlier chapters</div><div class="v">Lumière · Fortia</div>
+    <div class="k">Premiere</div><div class="v">19.11.26 · Altrincham</div>
+    <div class="k">Correspondence</div><div class="v it">info@morgana.london</div>
+    <div class="wm">MORGANÀ</div>
+    <div class="k" style="margin-bottom:120px">London · MMXXVI</div>
+  </div>
+</section>
+
+<footer>
+  <div class="top">
+    <div class="news">
+      <h4>The mailing list</h4>
+      <p>First look at new scenes, the premiere and private appointments.</p>
+      <form id="newsForm"><label class="sr" for="newsIn">Email address</label><input id="newsIn" type="email" placeholder="Your email" required><button type="submit">Join</button></form>
+      <div class="thanks" id="newsThanks">Thank you. You are on the list.</div>
+    </div>
+    <div><h4>Collections</h4><ul><li><a href="#/collection/sovereign">Sovereign</a></li><li><a href="#/collection/lumiere">Lumière</a></li><li><a href="#/collection/fortia">Fortia</a></li><li><a href="#/shop">All pieces</a></li></ul></div>
+    <div><h4>Client care</h4><ul><li><a href="mailto:info@morgana.london">info@morgana.london</a></li><li><a href="#">Delivery &amp; returns</a></li><li><a href="#">Size guide</a></li><li><a href="#">Private appointments</a></li></ul></div>
+    <div><h4>Follow</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">TikTok</a></li><li><a href="#">Pinterest</a></li></ul></div>
+  </div>
+  <div class="bottom">
+    <span>© MORGANÀ London · GBP £ · Klarna pay in 3</span>
+    <span>102 Stamford New Road, Altrincham WA14 1DG</span>
+    <span class="tag">Concept preview</span>
+  </div>
+</footer>
+
+<!-- ─────────── quick view ─────────── -->
+<div class="ov" id="qv" role="dialog" aria-modal="true" aria-label="Quick view">
+  <div class="box">
+    <button class="close" type="button" data-close="qv">Close ✕</button>
+    <div class="gal"><div class="holder" id="qvGal"></div><div class="thumbs" id="qvThumbs"></div></div>
+    <div class="txt">
+      <div class="mono gold" id="qvScene">Sovereign</div>
+      <h3 id="qvName"></h3>
+      <div class="pr" id="qvPrice"></div>
+      <p id="qvDesc"></p>
+      <div><div class="mono" style="margin-bottom:8px">Size</div><div class="sizes" id="qvSizes"></div><div class="err" id="qvErr" style="margin-top:8px">Choose a size first.</div></div>
+      <button class="btn fill" type="button" id="qvAdd" style="justify-content:center">Add to bag</button>
+      <div class="klarna" id="qvKlarna"></div>
+      <div class="mono" style="color:var(--ivory-45)">Composition and care to follow · Free UK delivery over £150</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────── bag ─────────── -->
+<div id="bagov"></div>
+<aside id="bag" aria-label="Your bag">
+  <button class="close" type="button" data-close="bag">Close ✕</button>
+  <div class="hd"><h3>Your bag · <span id="bagN">0</span></h3></div>
+  <div class="items" id="bagItems"></div>
+  <div class="ft">
+    <div class="sum"><span>Subtotal</span><span id="bagSub">£0</span></div>
+    <div class="kl" id="bagKl">Or 3 interest-free payments with <b>Klarna</b>.</div>
+    <button class="btn fill" type="button" id="checkout">Checkout</button>
+    <div class="mono" style="margin-top:12px; text-align:center; color:var(--ivory-45)">GBP · Duties included in the UK</div>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script src="assets/products.js"></script>
+<script>
+(function(){
+  'use strict';
+  var M = window.MORGANA, P = M.products, byId = {};
+  P.forEach(function(p){ byId[p.id] = p; });
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var gbp = function(n){ return '£' + n.toLocaleString('en-GB'); };
+  var collName = { sovereign:'Sovereign', lumiere:'Lumière', fortia:'Fortia' };
+  var $ = function(s, c){ return (c||document).querySelector(s); };
+  var $$ = function(s, c){ return Array.prototype.slice.call((c||document).querySelectorAll(s)); };
+
+  /* ── title sequence ── */
+  var titles = $('#titles'), hero = $('#hero'), heroVid = $('#heroVid');
+  function endTitles(){
+    if (!titles.classList.contains('on')) return;
+    titles.classList.add('out');
+    hero.classList.add('up');
+    setTimeout(function(){ titles.classList.remove('on','out'); document.body.style.overflow = ''; }, 1100);
+  }
+  function runTitles(){
+    var isHome = !location.hash || location.hash === '#/' || location.hash.indexOf('#/#') === 0;
+    if (reduce || !isHome) { hero.classList.add('up'); return; }
+    titles.classList.add('on');
+    document.body.style.overflow = 'hidden';
+    var cards = $$('#titles .card');
+    var t = [0, 2000, 4000];
+    cards.forEach(function(c, i){ setTimeout(function(){ c.classList.add('show'); }, t[i]); });
+    setTimeout(endTitles, 6000);
+    $('#skipTitles').addEventListener('click', endTitles);
+  }
+  runTitles();
+
+  /* ── hero timecode ── */
+  var tcEl = $('#heroTc');
+  function tc(){
+    var s = heroVid.currentTime || 0, f = Math.floor((s % 1) * 25);
+    var mm = String(Math.floor(s / 60)).padStart(2,'0'), ss = String(Math.floor(s % 60)).padStart(2,'0');
+    tcEl.lastChild.nodeValue = '00:' + mm + ':' + ss + ':' + String(f).padStart(2,'0');
+    if (!reduce) requestAnimationFrame(tc);
+  }
+  tc();
+
+  /* ── header ── */
+  var hdr = $('#hdr');
+  window.addEventListener('scroll', function(){ hdr.classList.toggle('solid', window.scrollY > 40); }, { passive:true });
+  var burger = $('#burger'), mmenu = $('#mmenu');
+  function closeMenu(){ mmenu.classList.remove('open'); burger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  burger.addEventListener('click', function(){ mmenu.classList.add('open'); burger.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; });
+  $('#mclose').addEventListener('click', closeMenu);
+  $$('#mmenu a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+
+  /* search */
+  var sBtn = $('#searchBtn'), sBox = $('#search'), sIn = $('#searchIn'), sRes = $('#searchRes');
+  sBtn.addEventListener('click', function(){ var o = sBox.classList.toggle('open'); sBtn.setAttribute('aria-expanded', o); if (o) sIn.focus(); });
+  sIn.addEventListener('input', function(){
+    var q = sIn.value.trim().toLowerCase(); sRes.innerHTML = '';
+    if (q.length < 2) return;
+    P.filter(function(p){ return (p.name + ' ' + p.category + ' ' + p.colour + ' ' + collName[p.collection]).toLowerCase().indexOf(q) > -1; }).slice(0, 10)
+      .forEach(function(p){ var b = document.createElement('button'); b.type='button'; b.textContent = p.name + ' · ' + gbp(p.price); b.addEventListener('click', function(){ openQV(p.id); }); sRes.appendChild(b); });
+    if (!sRes.children.length) sRes.textContent = 'Nothing in this reel. Try "coat" or "knit".';
+  });
+
+  /* ── reveals ── */
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin:'0px 0px -8% 0px' });
+  function watch(scope){ $$('.rv', scope).forEach(function(el){ io.observe(el); }); }
+  watch();
+
+  /* ── videos: only play in view ── */
+  var vio = new IntersectionObserver(function(es){ es.forEach(function(e){ var v = e.target; if (e.isIntersecting){ var pr = v.play(); if (pr && pr.catch) pr.catch(function(){}); } else { v.pause(); } }); }, { threshold:.2 });
+  $$('video[data-play]').forEach(function(v){ vio.observe(v); });
+
+  /* ── scene indicator ── */
+  var ind = $('#sceneInd');
+  var sio = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) ind.textContent = e.target.getAttribute('data-scene'); }); }, { rootMargin:'-40% 0px -50% 0px' });
+  $$('[data-scene]').forEach(function(s){ sio.observe(s); });
+  var hio = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) ind.textContent = 'SC. 00 · TITLES'; }); }, { rootMargin:'-40% 0px -50% 0px' });
+  hio.observe(hero);
+
+  /* ── credits lists ── */
+  $$('[data-credits]').forEach(function(ul){
+    ul.getAttribute('data-credits').split(',').forEach(function(id){
+      var p = byId[id]; if (!p) return;
+      var li = document.createElement('li');
+      li.innerHTML = '<button type="button" data-qv="' + p.id + '"><span class="nm">' + p.name + '<small>' + p.category + ' · ' + p.colour + '</small></span><span class="pr">' + gbp(p.price) + '</span></button>';
+      ul.appendChild(li);
+    });
+  });
+
+  /* ── film strip ── */
+  var track = $('#filmTrack');
+  var strip = [
+    { src:M.editorial.portrait[1], alt:'Lace slip' }, { src:M.editorial.portrait[3], alt:'Black coat' },
+    { src:M.editorial.landscape[1], alt:'Fur collar', wide:true }, { src:M.editorial.portrait[4], alt:'The suit' },
+    { src:M.editorial.portrait[5], alt:'Zip knit' }, { src:M.editorial.portrait[6], alt:'Olive leather' },
+    { src:M.editorial.landscape[5], alt:'Blazer and bag', wide:true }, { src:M.editorial.portrait[9], alt:'Houndstooth' },
+    { src:M.editorial.portrait[10], alt:'Poplin shirt' }, { src:M.editorial.portrait[11], alt:'Cardigan' },
+    { src:M.editorial.landscape[4], alt:'Knit on the sofa', wide:true }, { src:M.editorial.portrait[13], alt:'Leopard, sofa' },
+    { src:M.editorial.portrait[8], alt:'Cocoon coat' }, { src:M.editorial.portrait[0], alt:'Fur collar coat' }
+  ];
+  strip.forEach(function(f, i){
+    var d = document.createElement('div'); d.className = 'frm' + (f.wide ? ' wide' : '');
+    d.innerHTML = '<div class="ph"><img src="' + f.src + '" alt="' + f.alt + '" loading="lazy"></div><div class="lab"><span><b>' + String(i+1).padStart(2,'0') + 'A</b></span><span>' + f.alt + '</span><span>KODAK 5219</span></div>';
+    track.appendChild(d);
+  });
+  /* drag to scrub */
+  var film = $('#film'), dragging = false, sx = 0, sl = 0;
+  film.addEventListener('pointerdown', function(e){ dragging = true; sx = e.clientX; sl = film.scrollLeft; film.setPointerCapture(e.pointerId); });
+  film.addEventListener('pointermove', function(e){ if (dragging) film.scrollLeft = sl - (e.clientX - sx); });
+  film.addEventListener('pointerup', function(){ dragging = false; });
+  film.addEventListener('pointercancel', function(){ dragging = false; });
+  /* subtle parallax on wide frames */
+  if (!reduce){
+    var pf = $$('.scene .frame.wide img');
+    var raf = false;
+    window.addEventListener('scroll', function(){
+      if (raf) return; raf = true;
+      requestAnimationFrame(function(){
+        raf = false; var vh = window.innerHeight;
+        pf.forEach(function(im){ var r = im.parentNode.getBoundingClientRect(); if (r.bottom < 0 || r.top > vh) return; var p = (r.top + r.height/2 - vh/2) / vh; im.style.transform = 'scale(1.08) translateY(' + (p * -3) + '%)'; });
+      });
+    }, { passive:true });
+  }
+
+  /* ── product cards ── */
+  function card(p, i){
+    return '<article class="card"><div class="ph"><img src="' + p.images[0] + '" alt="' + p.name + '" loading="lazy"><img class="b" src="' + (p.images[1] || p.images[0]) + '" alt="" loading="lazy" aria-hidden="true">' +
+      '<span class="num">' + String(i+1).padStart(2,'0') + '</span>' + (p.isNew ? '<span class="new">New</span>' : '') +
+      '<button type="button" class="qv" data-qv="' + p.id + '">Quick view</button></div>' +
+      '<div class="info"><div class="nm">' + p.name + '<small>' + collName[p.collection] + ' · ' + p.category + '</small></div><div class="pr">' + gbp(p.price) + '</div></div></article>';
+  }
+  function fill(grid, list){ grid.innerHTML = list.map(card).join(''); }
+
+  /* home grid */
+  var sov = P.filter(function(p){ return p.collection === 'sovereign'; });
+  var homeGrid = $('#homeGrid');
+  function homeFilter(cat){ fill(homeGrid, (cat ? sov.filter(function(p){ return p.category === cat; }) : sov).slice(0, 8)); }
+  homeFilter('');
+  $$('#homeFilters button').forEach(function(b){ b.addEventListener('click', function(){ $$('#homeFilters button').forEach(function(x){ x.classList.remove('on'); }); b.classList.add('on'); homeFilter(b.getAttribute('data-cat')); }); });
+
+  /* shop view */
+  var shopState = { coll:'', cat:'', sort:'new' };
+  var catSel = $('#shopCat');
+  Array.from(new Set(P.map(function(p){ return p.category; }))).sort().forEach(function(c){ var o = document.createElement('option'); o.value = c; o.textContent = c; catSel.appendChild(o); });
+  function drawShop(){
+    var list = P.filter(function(p){ return (!shopState.coll || p.collection === shopState.coll) && (!shopState.cat || p.category === shopState.cat); });
+    if (shopState.sort === 'lo') list.sort(function(a,b){ return a.price - b.price; });
+    else if (shopState.sort === 'hi') list.sort(function(a,b){ return b.price - a.price; });
+    fill($('#shopGrid'), list);
+    $('#shopCount').textContent = list.length + ' pieces · ' + (shopState.coll ? collName[shopState.coll] : 'All collections') + (shopState.cat ? ' · ' + shopState.cat : '');
+    $('#shopTitle').textContent = shopState.coll ? collName[shopState.coll] : 'Shop';
+    $$('#shopColl button').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-coll') === shopState.coll); });
+  }
+  $$('#shopColl button').forEach(function(b){ b.addEventListener('click', function(){ shopState.coll = b.getAttribute('data-coll'); drawShop(); }); });
+  catSel.addEventListener('change', function(){ shopState.cat = catSel.value; drawShop(); });
+  $('#shopSort').addEventListener('change', function(){ shopState.sort = $('#shopSort').value; drawShop(); });
+
+  /* collection view */
+  var covers = {
+    sovereign: { img:'assets/img/editorial/port-bordeaux.jpg', mono:'Autumn–Winter 2026 · now showing', line:'Quiet authority. Tailoring, knit and leather for the long evenings. A London house after dark, scene by scene.', foot:'Premiere 19.11.26' },
+    lumiere:   { img:'assets/img/lumiere/paris-balcony.jpg', mono:'Summer 2026 · also by MORGANÀ', line:'Linen, light and the Paris summer. Shot outdoors, on balconies and by the sea, in ivory and sand.', foot:'22 pieces' },
+    fortia:    { img:'assets/img/fortia/39-0.jpg', mono:'Autumn–Winter 2025 · the first chapter', line:'The first chapter. Studio tailoring on grey, cut for strength.', foot:'36 pieces' }
+  };
+  function drawColl(id){
+    var c = covers[id] || covers.sovereign, name = collName[id] || 'Sovereign';
+    $('#collPoster').innerHTML = '<div class="ph"><img src="' + c.img + '" alt="' + name + '"></div><div class="txt"><div class="mono gold">' + c.mono + '</div><h2>' + name + '</h2><p>' + c.line + '</p><div class="mono">' + c.foot + '</div></div>';
+    var list = P.filter(function(p){ return p.collection === id; });
+    $('#collCount').textContent = list.length + ' pieces · ' + name;
+    fill($('#collGrid'), list);
+  }
+
+  /* ── router ── */
+  var views = { home:$('#view-home'), shop:$('#view-shop'), collection:$('#view-collection') };
+  function route(){
+    var h = location.hash || '#/';
+    var inner = null;
+    if (h.indexOf('#/#') === 0){ inner = h.slice(2); h = '#/'; }
+    var parts = h.replace(/^#\/?/, '').split('/');
+    var name = parts[0] || 'home';
+    if (name === 'collection'){ drawColl(parts[1] || 'sovereign'); }
+    else if (name === 'shop'){ shopState.coll = (parts[1] || ''); drawShop(); }
+    else name = 'home';
+    Object.keys(views).forEach(function(k){ views[k].classList.toggle('on', k === name); });
+    $$('header nav a[data-r]').forEach(function(a){ a.classList.toggle('cur', a.getAttribute('data-r') === name); });
+    document.title = 'MORGANÀ — ' + (name === 'home' ? 'Sovereign, a film' : name === 'shop' ? 'Shop' : collName[parts[1]] || 'Collections');
+    if (name === 'shop') ind.textContent = 'WARDROBE · ALL REELS';
+    else if (name === 'collection') ind.textContent = 'REEL · ' + (collName[parts[1]] || 'Sovereign').toUpperCase();
+    else ind.textContent = 'SC. 00 · TITLES';
+    if (name !== 'home') window.scrollTo(0, 0);
+    if (inner){ var t = $(inner); if (t) setTimeout(function(){ t.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); }, 30); }
+    watch();
+    $$('video[data-play]').forEach(function(v){ vio.observe(v); });
+  }
+  window.addEventListener('hashchange', route);
+  route();
+  /* in-page anchors inside home (e.g. #sc1) */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="#sc"], a[href="#sc1"]'); if (!a) return;
+    e.preventDefault(); var t = $(a.getAttribute('href')); if (t) t.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+  });
+
+  /* ── quick view ── */
+  var qv = $('#qv'), qvId = null, qvSize = null, lastFocus = null;
+  function openQV(id){
+    var p = byId[id]; if (!p) return; qvId = id; qvSize = null; lastFocus = document.activeElement;
+    $('#qvScene').textContent = collName[p.collection] + ' · ' + p.category + (p.colour ? ' · ' + p.colour : '');
+    $('#qvName').textContent = p.name; $('#qvPrice').textContent = gbp(p.price); $('#qvDesc').textContent = p.description;
+    $('#qvKlarna').textContent = 'Or 3 payments of ' + gbp(Math.round(p.price / 3 * 100) / 100) + ' with Klarna. No interest.';
+    var gal = $('#qvGal'), th = $('#qvThumbs'); gal.innerHTML = ''; th.innerHTML = '';
+    p.images.slice(0, 5).forEach(function(src, i){
+      var im = document.createElement('img'); im.src = src; im.alt = p.name + ' view ' + (i+1); if (!i) im.className = 'on'; gal.appendChild(im);
+      var b = document.createElement('button'); b.type='button'; b.className = i ? '' : 'on'; b.setAttribute('aria-label','View ' + (i+1)); b.innerHTML = '<img src="' + src + '" alt="">';
+      b.addEventListener('click', function(){ $$('img', gal).forEach(function(x, k){ x.classList.toggle('on', k === i); }); $$('button', th).forEach(function(x, k){ x.classList.toggle('on', k === i); }); });
+      th.appendChild(b);
+    });
+    var sz = $('#qvSizes'); sz.innerHTML = ''; $('#qvErr').style.display = 'none';
+    p.sizes.forEach(function(s){ var b = document.createElement('button'); b.type='button'; b.textContent = s; b.addEventListener('click', function(){ qvSize = s; $$('button', sz).forEach(function(x){ x.classList.toggle('on', x === b); }); $('#qvErr').style.display = 'none'; }); sz.appendChild(b); });
+    qv.classList.add('open'); document.body.style.overflow = 'hidden'; $('#qv .close').focus();
+  }
+  function closeQV(){ qv.classList.remove('open'); document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('[data-qv]'); if (b){ openQV(b.getAttribute('data-qv')); return; }
+    var c = e.target.closest('[data-close]'); if (c){ if (c.getAttribute('data-close') === 'qv') closeQV(); else closeBag(); }
+  });
+  qv.addEventListener('click', function(e){ if (e.target === qv) closeQV(); });
+  $('#qvAdd').addEventListener('click', function(){
+    if (!qvSize){ $('#qvErr').style.display = 'block'; return; }
+    addToBag(qvId, qvSize); closeQV(); openBag();
+  });
+
+  /* ── bag ── */
+  var bag = [];
+  try { bag = JSON.parse(localStorage.getItem('morgana-g03-bag') || '[]'); } catch(e){ bag = []; }
+  function save(){ try { localStorage.setItem('morgana-g03-bag', JSON.stringify(bag)); } catch(e){} }
+  function addToBag(id, size){
+    var f = bag.filter(function(x){ return x.id === id && x.size === size; })[0];
+    if (f) f.q++; else bag.push({ id:id, size:size, q:1 });
+    save(); drawBag(); toast(byId[id].name + ' · ' + size + ' added');
+  }
+  function drawBag(){
+    var n = 0, sub = 0, box = $('#bagItems'); box.innerHTML = '';
+    bag.forEach(function(x, i){
+      var p = byId[x.id]; if (!p) return; n += x.q; sub += p.price * x.q;
+      var d = document.createElement('div'); d.className = 'it';
+      d.innerHTML = '<img src="' + p.images[0] + '" alt=""><div><div class="nm">' + p.name + '<small>' + collName[p.collection] + ' · size ' + x.size + '</small></div><div class="qty"><button type="button" data-d="-1" aria-label="Fewer">−</button><span>' + x.q + '</span><button type="button" data-d="1" aria-label="More">+</button><button type="button" data-rm style="width:auto;border:0;letter-spacing:.14em;font-size:10px;color:var(--ivory-45);margin-left:6px">Remove</button></div></div><div class="pr">' + gbp(p.price * x.q) + '</div>';
+      $$('[data-d]', d).forEach(function(b){ b.addEventListener('click', function(){ x.q += +b.getAttribute('data-d'); if (x.q < 1) bag.splice(i, 1); save(); drawBag(); }); });
+      $('[data-rm]', d).addEventListener('click', function(){ bag.splice(i, 1); save(); drawBag(); });
+      box.appendChild(d);
+    });
+    if (!bag.length) box.innerHTML = '<div class="empty">Your bag is empty. The wardrobe is in Scene 06.</div>';
+    $('#bagCount').textContent = n; $('#bagN').textContent = n; $('#bagSub').textContent = gbp(sub);
+    $('#bagKl').innerHTML = sub ? 'Or 3 interest-free payments of <b>' + gbp(Math.round(sub / 3 * 100) / 100) + '</b> with <b>Klarna</b>.' : 'Or 3 interest-free payments with <b>Klarna</b>.';
+  }
+  var bagEl = $('#bag'), bagOv = $('#bagov');
+  function openBag(){ bagEl.classList.add('open'); bagOv.classList.add('open'); document.body.style.overflow = 'hidden'; $('#bag .close').focus(); }
+  function closeBag(){ bagEl.classList.remove('open'); bagOv.classList.remove('open'); document.body.style.overflow = ''; }
+  $('#bagBtn').addEventListener('click', openBag);
+  bagOv.addEventListener('click', closeBag);
+  $('#checkout').addEventListener('click', function(){ toast('Checkout is not wired in this preview'); });
+  drawBag();
+
+  /* ── toast ── */
+  var toastEl = $('#toast'), tt;
+  function toast(msg){ toastEl.textContent = msg; toastEl.classList.add('on'); clearTimeout(tt); tt = setTimeout(function(){ toastEl.classList.remove('on'); }, 2400); }
+
+  /* ── newsletter ── */
+  $('#newsForm').addEventListener('submit', function(e){ e.preventDefault(); $('#newsForm').style.display = 'none'; $('#newsThanks').style.display = 'block'; });
+
+  /* ── esc ── */
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape'){ closeQV(); closeBag(); closeMenu(); sBox.classList.remove('open'); endTitles(); } });
+})();
+</script>
+</body>
+</html>
