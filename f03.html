@@ -396,14 +396,14 @@ button{cursor:pointer}
   var TYPE = { campaign: 'Campaign', bts: 'Behind the scenes', event: 'Event' };
   var LIFE = [
     { t: 'campaign', img: 'assets/img/editorial/land-blazer-bag.jpg', wide: 1, title: 'Sovereign', line: 'Autumn–Winter 2026 campaign', href: '#/collection/sovereign' },
-    { t: 'bts', vid: 'assets/video/reel-atelier.mp4', poster: 'assets/video/reel-atelier-poster.jpg', title: 'Accessories', line: 'On set, October 2026' },
+    { t: 'bts', vid: 'assets/final/graded/reel-atelier.mp4', poster: 'assets/final/graded/reel-atelier-poster.jpg', title: 'Accessories', line: 'On set, October 2026' },
     { t: 'event', img: 'assets/img/editorial/port-noir.jpg', title: 'Events', line: 'Photographs coming soon' },
     { t: 'campaign', img: 'assets/img/editorial/port-knit-walnut.jpg', title: 'Sovereign knitwear', line: 'Autumn–Winter 2026', href: '#/collection/sovereign' },
-    { t: 'bts', vid: 'assets/video/reel-black-doors.mp4', poster: 'assets/video/reel-black-doors-poster.jpg', title: 'On set', line: 'October 2026' },
+    { t: 'bts', vid: 'assets/final/graded/reel-black-doors.mp4', poster: 'assets/final/graded/reel-black-doors-poster.jpg', title: 'On set', line: 'October 2026' },
     { t: 'campaign', img: 'assets/img/lumiere/paris-balcony.jpg', title: 'Lumière', line: 'Summer 2026, Paris', href: '#/collection/lumiere' },
     { t: 'event', img: 'assets/img/editorial/port-leopard-sofa.jpg', title: 'Events', line: 'Photographs coming soon' },
     { t: 'event', img: 'assets/img/editorial/land-suit-sofa.jpg', wide: 1, title: 'Events', line: 'Photographs coming soon' },
-    { t: 'bts', vid: 'assets/video/reel-wine-doors.mp4', poster: 'assets/video/reel-wine-doors-poster.jpg', title: 'Behind the camera', line: 'October 2026' },
+    { t: 'bts', vid: 'assets/final/graded/reel-wine-doors.mp4', poster: 'assets/final/graded/reel-wine-doors-poster.jpg', title: 'Behind the camera', line: 'October 2026' },
     { t: 'campaign', img: 'assets/img/editorial/port-lace.jpg', title: 'Sovereign evening', line: 'Autumn–Winter 2026', href: '#/collection/sovereign' },
     { t: 'campaign', img: 'assets/img/fortia/39-0.jpg', title: 'Fortia', line: 'Autumn–Winter 2025', href: '#/collection/fortia' },
     { t: 'bts', img: 'assets/img/editorial/port-cardigan.jpg', title: 'Fittings', line: 'October 2026' },
@@ -439,7 +439,7 @@ button{cursor:pointer}
     var lp = LOOK.pieces.map(function(x){ return byId(x[0]); });
     return '' +
     '<section class="hero" aria-label="Sovereign, Autumn–Winter 2026">' +
-      '<video muted autoplay loop playsinline preload="auto" poster="assets/video/hero-landscape-poster.jpg" src="assets/video/hero-landscape.mp4"></video>' +
+      '<video muted autoplay loop playsinline preload="auto" poster="assets/final/graded/hero-landscape-poster.jpg" src="assets/final/graded/hero-landscape.mp4"></video>' +
       '<div class="hero-t"><h1 class="t1">SOVEREIGN</h1><p class="lab">Autumn–Winter 2026 &nbsp;·&nbsp; 19.11.26</p><a class="ln" href="#/collection/sovereign">Discover the collection</a></div>' +
       '<span class="cue" aria-hidden="true"></span></section>' +
 
@@ -461,7 +461,7 @@ button{cursor:pointer}
     '<section class="sec wrap">' + sh('Archive', 'Past collections', '<a class="ln rv d2" href="#/shop">Shop all</a>') +
       '<div class="dip">' + dipItem('lumiere', 'assets/img/lumiere/paris-door.jpg', 'Lumière in a Paris doorway') + dipItem('fortia', 'assets/img/fortia/39-0.jpg', 'Fortia tailoring on grey') + '</div></section>';
   }
-  var FILM = '<video muted autoplay loop playsinline preload="auto" poster="assets/final/film-wine-doors-poster.jpg" src="assets/final/film-wine-doors.mp4"></video>';
+  var FILM = '<video muted autoplay loop playsinline preload="auto" poster="assets/final/graded/film-wine-doors-poster.jpg" src="assets/final/graded/film-wine-doors.mp4"></video>';
   function lookHTML(lp){
     var tot = gbp(lp.reduce(function(a, p){ return a + p.price; }, 0));
     return '' +
