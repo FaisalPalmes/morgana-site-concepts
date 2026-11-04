@@ -589,6 +589,13 @@ em{font-style:italic}
   P.forEach(function(p){ var o = p.collection === 'sovereign' && LEAD[p.id.slice(4)]; if (!o) return;
     var rest = p.images.filter(function(x){ return o.every(function(n){ return x.indexOf('/' + n + '.jpg') < 0; }); });
     p.images = o.map(function(n){ return 'assets/img/sov-card/' + n + '.jpg'; }).concat(rest); });
+  /* graded versions (quick grade, 4 Nov) where they exist */
+  var GRADED = { card: ["15-0", "16-0", "17-4", "19-2"], full: ["01-4", "05-2", "06-3", "06-5", "07-3", "10-4", "12-4", "15-0", "16-0", "16-2", "17-4", "18-5", "19-2"] };
+  P.forEach(function(p){ if (p.collection !== 'sovereign') return; p.images = p.images.map(function(src){
+    var m = src.match(/assets\/img\/(sov|sov-card)\/(\d\d-\d)\.jpg$/); if (!m) return src;
+    if (m[1] === 'sov-card' && GRADED.card.indexOf(m[2]) > -1) return 'assets/img/sov-card-g/' + m[2] + '.jpg';
+    if (m[1] === 'sov' && GRADED.full.indexOf(m[2]) > -1) return 'assets/img/sov-g/' + m[2] + '.jpg';
+    return src; }); });
   var COL = {}; M.collections.forEach(function(c){ COL[c.id] = c; });
   var LINES = { sovereign: 'Tailoring, knitwear and coats for autumn and winter.', lumiere: 'Linen and light layers for summer.', fortia: 'Our first collection. Tailoring and suiting.' };
   M.collections.forEach(function(c){ if (LINES[c.id]) c.line = LINES[c.id]; });
@@ -668,7 +675,7 @@ em{font-style:italic}
   }
 
   /* ---------- views ---------- */
-  var LOOK = { photo: 'assets/img/hb/hb-00271.jpg', pieces: [['sov-19', 'assets/img/sov-card/19-2.jpg'], ['sov-18', 'assets/img/sov-card/18-0.jpg']] };
+  var LOOK = { photo: 'assets/img/hb/hb-00271.jpg', pieces: [['sov-19', 'assets/img/sov-card-g/19-2.jpg'], ['sov-18', 'assets/img/sov-card/18-0.jpg']] };
 
   function ecard(id, cls, big){
     var p = byId(id);
