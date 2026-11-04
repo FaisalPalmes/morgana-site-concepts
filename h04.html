@@ -619,7 +619,6 @@ em{font-style:italic}
     { img: 'assets/img/hb/hb-00152.jpg', o: 'l', title: 'At the bar', place: 'Hill Bark', date: 'November 2026', href: '#/product/sov-04' },
     { img: 'assets/img/hb/hb-00210.jpg', o: 'p', title: 'The dining room', place: 'Hill Bark', date: 'November 2026' },
     { img: 'assets/img/hb/hb-00443.jpg', o: 'p', title: 'After dark', place: 'Hill Bark', date: 'November 2026', href: '#/product/sov-15' },
-    { img: 'assets/img/hb/hb-00398.jpg', o: 'l', title: 'Golden hour', place: 'Hill Bark', date: 'November 2026', note: 'The last of the light on the window seat.' },
     { img: 'assets/img/hb/hb-00162.jpg', o: 'p', title: 'Houndstooth', place: 'Hill Bark', date: 'November 2026', href: '#/product/sov-04' },
     { img: 'assets/img/hb/hb-00303.jpg', o: 'p', title: 'The drawing room', place: 'Hill Bark', date: 'November 2026', note: 'Before anyone arrived.' },
     { img: 'assets/img/hb/hb-00385.jpg', o: 'l', title: 'Wrapped', place: 'Hill Bark', date: 'November 2026' },
@@ -706,7 +705,7 @@ em{font-style:italic}
          'assets/img/hb/hb-00162.jpg', 'Houndstooth jacket at the bar') +
 
     /* full screen, no words */
-    '<section class="sec"><div class="fs ri" style="--dp:50% 32%;--mp:50% 40%"><img src="assets/img/hb/hb-00398.jpg" alt="Window seat at sunset, Hill Bark" loading="lazy"></div></section>' +
+    '<section class="sec"><div class="fs ri" style="--dp:50% 55%;--mp:68% 50%"><img src="assets/img/hb/hb-00371.jpg" alt="Morganà cards and envelopes on a leather desk" loading="lazy"></div></section>' +
 
     /* Look II: the dark moment */
     '<div class="sec">' + lookHTML(lp) + '</div>' +
@@ -730,7 +729,7 @@ em{font-style:italic}
 
     /* journal */
     '<section class="sec wrap" id="journal"><div class="row-h"><h2 class="t1 rl"><span class="lr"><span><em>Journal</em></span></span></h2><a class="ln rv" href="#/journal">Open the journal</a></div>' +
-      '<div class="jt">' + [JOURNAL[3], JOURNAL[7], JOURNAL[9], JOURNAL[14]].map(function(x, i){
+      '<div class="jt">' + [JOURNAL[3], JOURNAL[6], JOURNAL[8], JOURNAL[13]].map(function(x, i){
         return '<a class="rv j' + (i + 1) + '" href="#/journal"><div class="fr ri"><img src="' + x.img + '" alt="' + x.title + '" loading="lazy"></div><div class="cap"><span class="no">' + pad(i + 1) + '</span><span>' + x.title + '</span></div></a>'; }).join('') +
       '</div></section>' +
 
