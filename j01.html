@@ -1,0 +1,1724 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MORGANÀ London</title>
+<meta name="description" content="Morganà London. Sovereign, the collection for Autumn–Winter 2026.">
+<meta name="theme-color" content="#FBFAF7">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FBFAF7'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' text-anchor='middle' fill='%234A0E1C'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..500;1,6..96,400&family=Hanken+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FBFAF7;--ivory:#F3EFE8;--tint:#ECE8E1;--ink:#191714;--soft:#48443E;--mute:#6B655C;--rule:#E3DED5;--wine:#4A0E1C;
+  --serif:"Bodoni Moda","Bodoni 72","Didot","Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:"Hanken Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --pm:40px;--g:20px;--hd:60px;
+  --m:max(var(--pm),calc((100vw - 1600px)/2));
+  --sec:clamp(96px,11.5vw,184px);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --shade:0 0 18px rgba(0,0,0,.6),0 1px 3px rgba(0,0,0,.4);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scrollbar-gutter:stable;-webkit-text-size-adjust:100%;background:var(--paper)}
+html.lock{overflow:hidden}
+body{background:var(--paper);color:var(--ink);font:400 13px/1.7 var(--sans);letter-spacing:.012em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;overflow-x:clip;min-height:100vh}
+img,video{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;border-radius:0;cursor:pointer;letter-spacing:inherit;text-transform:inherit;text-align:inherit}
+input,select{font:inherit;color:inherit;letter-spacing:inherit;border-radius:0}
+ul,ol{list-style:none}
+table{border-collapse:collapse;width:100%}
+:focus{outline:none}
+:focus-visible{outline:1px solid currentColor;outline-offset:4px}
+main:focus-visible{outline:none}
+::selection{background:var(--wine);color:#fff}
+.skip{position:fixed;left:var(--m);top:-60px;z-index:200;background:var(--ink);color:var(--paper);padding:10px 16px;transition:top .2s}
+.skip:focus{top:10px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- type: everything small and exact, one serif peak per page ---------- */
+.cap{font-size:11px;line-height:1.55;letter-spacing:.15em;text-transform:uppercase;font-weight:400}
+.mute{color:var(--mute)}
+.disp{font:400 clamp(40px,6.3vw,98px)/1 var(--serif);letter-spacing:-.024em;text-wrap:balance;font-optical-sizing:auto}
+.disp.s{font-size:clamp(38px,4.9vw,76px)}
+.disp.xl{font-size:clamp(60px,11.2vw,176px);line-height:.9;letter-spacing:-.034em}
+.stmt{font:400 clamp(22px,2.1vw,31px)/1.3 var(--serif);letter-spacing:-.004em;text-wrap:balance}
+.ttl{font:400 clamp(15px,1.3vw,18px)/1.5 var(--serif);letter-spacing:.34em;text-transform:uppercase}
+.h3{font:400 clamp(19px,1.55vw,23px)/1.32 var(--serif);letter-spacing:0;text-wrap:balance}
+.num{font:400 clamp(60px,9.4vw,148px)/.92 var(--serif);letter-spacing:-.022em;font-variant-numeric:lining-nums}
+.copy{max-width:46ch;color:var(--soft)}
+.copy p+p{margin-top:1.05em}
+.copy a,.tl{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:var(--mute)}
+.ln{display:inline-block;font-size:11px;line-height:1.55;letter-spacing:.15em;text-transform:uppercase;padding-bottom:5px;background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;transition:background-size .55s var(--ease),opacity .4s}
+.ln:hover{background-size:0 1px;background-position:100% 100%}
+.btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:50px;padding:0 24px;background:var(--ink);color:var(--paper);font-size:11px;letter-spacing:.18em;text-transform:uppercase;text-align:center;border:1px solid var(--ink);transition:background-color .45s var(--ease),color .45s var(--ease)}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+
+/* ---------- layout ---------- */
+.wrap{padding-inline:var(--m)}
+.g12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--g)}
+.sec{padding-block:var(--sec)}
+.rule{border-top:1px solid var(--rule)}
+main{display:block;min-height:70vh;transition:opacity .38s var(--ease)}
+main.out{opacity:0}
+body:not([data-page="home"]) main{padding-top:var(--hd)}
+.ph{position:relative;overflow:hidden;background:var(--tint)}
+.ph img{opacity:0;transition:opacity 1.5s var(--ease)}
+.ph img.ld{opacity:1}
+.r23{aspect-ratio:2/3}.r34{aspect-ratio:3/4}.r32{aspect-ratio:3/2}.r916{aspect-ratio:9/16}
+.rv{opacity:0;transform:translate3d(0,10px,0);transition:opacity 1.4s var(--ease),transform 1.4s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}
+.row-h{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding-bottom:22px}
+.fig-c{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-top:14px;font-size:12.5px}
+.fig-c .mute{font-size:12px}
+
+/* ---------- header ---------- */
+.hd{position:fixed;inset:0 0 auto 0;z-index:60;height:var(--hd);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding-inline:var(--m);background:var(--paper);border-bottom:1px solid var(--rule);transition:background-color .5s var(--ease),color .5s var(--ease),border-color .5s var(--ease)}
+.hd.clear{background:transparent;border-color:transparent;color:#fff;text-shadow:var(--shade)}
+.hd-l,.hd-r{display:flex;align-items:center;gap:30px}
+.hd-r{justify-content:flex-end}
+.hd .nv{font-size:11px;letter-spacing:.15em;text-transform:uppercase;line-height:1;padding:12px 0;position:relative;white-space:nowrap}
+.hd .nv::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:0 50%;transition:transform .5s var(--ease)}
+.hd .nv:hover::after,.hd .nv[aria-expanded="true"]::after,.hd .nv.cur::after{transform:scaleX(1)}
+.hd .nv.dt{letter-spacing:.1em;font-variant-numeric:lining-nums}
+.mark{font:500 17px/1 var(--serif);letter-spacing:.44em;padding-left:.44em;text-transform:uppercase;white-space:nowrap}
+.hd .mark{justify-self:center;padding-block:10px;transform-origin:50% 50%;transition:opacity .6s var(--ease)}
+.hd.lift .mark{color:#fff;text-shadow:var(--shade)}
+.hd.lift.mega-on .mark,.hd .mark.hide{opacity:0}
+#bagN.has{color:var(--wine)}
+.hd.clear #bagN.has{color:inherit}
+.only-m{display:none}
+.mega{position:absolute;left:0;right:0;top:100%;margin-top:1px;background:var(--paper);color:var(--ink);text-shadow:none;border-bottom:1px solid var(--rule);padding:44px var(--m) 52px;visibility:hidden;opacity:0;transition:opacity .4s var(--ease),visibility 0s .4s}
+.mega.on{visibility:visible;opacity:1;transition-delay:0s}
+.mega h3{color:var(--mute);margin-bottom:18px}
+.mega li{margin-bottom:9px}
+.mega li a{font-size:13px;transition:opacity .3s}
+.mega ul:hover a{opacity:.45}.mega ul a:hover{opacity:1}
+.mega .mg-a{grid-column:1/span 2}.mega .mg-b{grid-column:4/span 4}.mega .mg-b ul{columns:2;column-gap:var(--g)}.mega .mg-c{grid-column:8/span 2}
+.mega .mg-i{grid-column:11/span 2}
+.mega sup{font-size:9px;color:var(--mute);margin-left:5px;letter-spacing:.04em}
+
+/* ---------- hero: the film settles from full-bleed to the page margins ---------- */
+.hero{position:relative;--run:58vh;height:calc(100vh + var(--run));height:calc(100svh + var(--run));color:#fff}
+.hero-s{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.hero-f{position:absolute;inset:0;overflow:hidden;transform-origin:0 0;background:#211d1a}
+.hero-i{position:absolute;inset:0;transform-origin:0 0;background:#211d1a center/cover no-repeat}
+.hero-i video{position:absolute;inset:0;opacity:0;transition:opacity 1.2s var(--ease)}
+.hero-i video.on{opacity:1}
+.hero-i video.top{z-index:1}
+@keyframes rise{from{opacity:0}to{opacity:1}}
+.hero-b{position:absolute;z-index:2;left:var(--m);right:var(--m);bottom:30px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;text-shadow:var(--shade);animation:rise 1.8s .5s var(--ease) both}
+.hero-b h1{font:inherit;font-size:11px;letter-spacing:.15em;text-transform:uppercase;line-height:1.55;padding-bottom:5px}
+.hero-b h1 span{display:inline-block;margin-left:18px;opacity:.86}
+.hero-b h1{transform:translateX(var(--in,0px))}
+.hero-r{transform:translateX(calc(var(--in,0px)*-1))}
+.hero-r{display:flex;gap:30px;align-items:flex-end}
+.hero-r button{font-size:11px;letter-spacing:.15em;text-transform:uppercase;line-height:1.55;padding-bottom:5px;min-width:44px;text-shadow:inherit}
+.still .hero{height:100vh;height:100svh}
+.still .hero-f{inset:var(--hd) var(--m) var(--pm) var(--m)}
+.still .hero-i{inset:calc(var(--hd)*-1) calc(var(--m)*-1) calc(var(--pm)*-1) calc(var(--m)*-1)}
+.still .hero-b{left:calc(var(--m) + 20px);right:calc(var(--m) + 20px);bottom:calc(var(--pm) + 24px)}
+
+/* ---------- home ---------- */
+.open .lab{grid-column:1/-1;margin-bottom:30px}
+.open .disp{grid-column:1/span 11}
+.open .tx{grid-column:8/span 4;margin-top:clamp(40px,4.6vw,72px)}
+.open .ln{margin-top:28px}
+.dp{align-items:end}
+.dp-a{grid-column:1/span 6}
+.dp-b{grid-column:9/span 3;grid-row:1}
+.dp-t{grid-column:9/span 4;align-self:start;grid-row:1;padding-top:6px}
+.dp-t .h3{margin:14px 0 18px}
+.wide>a>.ph{aspect-ratio:3/2}
+.inph{margin-top:46px}
+.inph .lab{grid-column:1/span 4}
+.inph .lab .h3{margin-top:12px;max-width:16em}
+.inph .set{grid-column:7/span 6;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--g)}
+.film{background:var(--ivory)}
+.film .tx{grid-column:2/span 4;align-self:center}
+.film .tx .stmt{margin:14px 0 20px}
+.film .tx .ln{margin-top:28px}
+.film .vf{grid-column:8/span 4}
+.film .vf .ph{background:#1d1917}
+.film .vf button{margin-top:12px;color:var(--mute);font-size:11px;letter-spacing:.15em;text-transform:uppercase;padding:6px 0}
+.eve{align-items:end}
+.eve .im{grid-column:8/span 5;grid-row:1}
+.eve .tx{grid-column:1/span 6;grid-row:1}
+.eve .num,.ev .num{margin:22px 0 26px}
+.eve .el,.ev .el{max-width:calc((100% - 5*var(--g))/6*5 + 4*var(--g))}
+.dl{margin-top:36px;border-top:1px solid var(--rule)}
+.dl div{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.dl dt{color:var(--mute)}
+.dl dd{font-size:13px}
+.dl .br{display:none}
+.acts{display:flex;gap:28px;flex-wrap:wrap;margin-top:34px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--g);row-gap:64px}
+.je{display:block}
+.je .ph{margin-bottom:16px}
+.je .h3{margin:8px 0 6px}
+.je p.d{color:var(--soft);max-width:38ch}
+.je .h3 span{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .6s var(--ease)}
+.je:hover .h3 span{background-size:100% 1px}
+.past .tx{grid-column:1/span 3}
+.past .tx .copy{margin:18px 0 26px}
+.past .a{grid-column:5/span 4}.past .b{grid-column:9/span 4}
+
+/* ---------- cards and grid ---------- */
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--g);row-gap:60px;grid-auto-flow:dense}
+.card{display:block}
+.card .ph img.alt{position:absolute;inset:0;opacity:0;transition:opacity .8s var(--ease)}
+.card-t{display:flex;justify-content:space-between;gap:14px;padding-top:14px;font-size:12.5px;line-height:1.5}
+.card-p{white-space:nowrap}
+.card-s{font-size:12px;line-height:1.5;color:var(--mute);margin-top:2px}
+@media (hover:hover){.card:hover .ph img.alt.ld{opacity:1}}
+.card:focus-visible .ph img.alt.ld{opacity:1}
+.gdiv{grid-column:1/-1;display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding-top:18px;border-top:1px solid var(--rule);margin-top:36px}
+.gdiv:first-child{margin-top:0;border-top:0;padding-top:0}
+.gdiv h2{font:400 clamp(19px,1.55vw,23px)/1.32 var(--serif)}
+.fr{display:flex;flex-direction:column}
+.fr .ph{aspect-ratio:2/3}
+.fr.big{grid-column:1/span 2;grid-row:1/span 2}
+.fr.big.rt{grid-column:3/span 2}
+.fr.big .ph{flex:1;aspect-ratio:auto;min-height:0}
+.fr.big .ph img{position:absolute;inset:0}
+.tcell{display:flex;flex-direction:column}
+.tcell .in{aspect-ratio:2/3;background:var(--ivory);display:flex;flex-direction:column;justify-content:flex-end;padding:22px 20px 24px}
+.tcell .h3{margin:10px 0 18px}
+.tcell .ln{align-self:flex-start}
+.tcell.wd{grid-column:span 2}
+.tcell.wd .in{aspect-ratio:11/8}
+
+/* ---------- page heads and bars ---------- */
+.pgh{padding:clamp(56px,7vw,104px) var(--m) clamp(36px,4vw,56px);align-items:end}
+.pgh .l{grid-column:1/span 7}
+.pgh .r{grid-column:9/span 4;padding-bottom:10px}
+.pgh .disp{margin-top:14px}
+.bar{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin-bottom:44px}
+.bar-1{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:54px}
+.bar-2{display:flex;gap:26px;min-height:50px;align-items:center;border-top:1px solid var(--rule);overflow-x:auto;scrollbar-width:none}
+.bar-2::-webkit-scrollbar,.tabs::-webkit-scrollbar,.care nav::-webkit-scrollbar,.inph .set::-webkit-scrollbar{display:none}
+.tabs{display:flex;gap:26px;min-width:0}
+.tb{font-size:11px;letter-spacing:.15em;text-transform:uppercase;line-height:1;padding:14px 0;color:var(--mute);white-space:nowrap;position:relative;transition:color .4s}
+.tb:hover,.tb[aria-pressed="true"]{color:var(--ink)}
+.tb[aria-pressed="true"]::after{content:"";position:absolute;left:0;right:0;bottom:8px;height:1px;background:var(--ink)}
+.tb sup{font-size:9px;margin-left:4px;letter-spacing:.04em}
+.bar-r{display:flex;align-items:center;gap:28px;flex:none}
+.sel{position:relative;display:flex;align-items:center;gap:8px}
+.sel select{appearance:none;-webkit-appearance:none;background:transparent;border:0;font-size:11px;letter-spacing:.15em;text-transform:uppercase;padding:12px 18px 12px 0;cursor:pointer;max-width:100%}
+.sel select option{text-transform:none;letter-spacing:0;font-size:13px;color:#191714;background:#FBFAF7}
+.sel::after{content:"";position:absolute;right:2px;top:50%;width:5px;height:5px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:translateY(-70%) rotate(45deg);pointer-events:none}
+.empty{grid-column:1/-1;padding:80px 0;text-align:center;color:var(--mute)}
+.lst{padding-bottom:var(--sec)}
+
+/* ---------- collections ---------- */
+.sov-o .ph{aspect-ratio:3/2;max-height:calc(100vh - var(--hd));max-height:calc(100svh - var(--hd));width:100%}
+.sov-t{padding-top:clamp(36px,4.4vw,64px);padding-bottom:clamp(56px,6.4vw,104px);align-items:end}
+.sov-t .k{grid-column:1/-1;margin-bottom:18px}
+.sov-t .disp{grid-column:1/span 8}
+.sov-t .r{grid-column:9/span 4;padding-bottom:clamp(6px,1.2vw,20px)}
+.sov-t .meta{display:flex;gap:28px;margin-top:22px;color:var(--mute)}
+.ch{padding:clamp(56px,7vw,104px) var(--m) clamp(48px,5vw,80px);align-items:end}
+.ch .tx{grid-column:1/span 6;padding-bottom:4px}
+.ch .disp{margin:14px 0 28px}
+.ch .stmt{max-width:17em}
+.ch .meta{display:flex;gap:28px;margin-top:30px;color:var(--mute)}
+.ch .i1{grid-column:7/span 3}.ch .i2{grid-column:10/span 3}
+.chap{padding-top:20px;border-top:1px solid var(--rule)}
+.chap+.chap{margin-top:clamp(80px,8.6vw,136px)}
+#lv>.chap:first-child{border-top:0;padding-top:28px}
+.chap-h{align-items:baseline;padding-bottom:clamp(36px,3.6vw,52px)}
+.chap-h h2{grid-column:1/span 6;font:400 clamp(26px,2.5vw,38px)/1.1 var(--serif);letter-spacing:-.012em}
+.chap-h p.t{grid-column:7/span 4;color:var(--soft)}
+.chap-h .c{grid-column:11/span 2;text-align:right;color:var(--mute)}
+.looks{display:grid;row-gap:clamp(96px,10vw,168px);padding-top:28px}
+.look{align-items:end}
+.look .im{grid-column:1/span 5;grid-row:1;display:block;width:100%;max-width:max(300px,calc((100vh - var(--hd) - 56px)*2/3));max-width:max(300px,calc((100svh - var(--hd) - 56px)*2/3))}
+.look .tx{grid-column:7/span 4;grid-row:1}
+.look.alt .im{grid-column:8/span 5;justify-self:end}
+.look.alt .tx{grid-column:3/span 4}
+.look-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-bottom:18px}
+.look li a{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,5fr) auto;column-gap:16px;align-items:baseline;padding:11px 0;border-top:1px solid var(--rule);font-size:12.5px;transition:opacity .3s}
+.look li:last-child a{border-bottom:1px solid var(--rule)}
+.look li a .mute{font-size:12px}
+.look ul:hover a{opacity:.5}.look ul a:hover{opacity:1}
+.lst-end{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:clamp(96px,10vw,168px);padding-top:22px;border-top:1px solid var(--rule)}
+.cx{padding-bottom:var(--sec)}
+.cx a{display:block}
+.cx .h2{font:400 clamp(26px,2.5vw,38px)/1.1 var(--serif);letter-spacing:-.012em;margin:22px 0 10px}
+.cx .copy{margin:14px 0 20px;max-width:34ch}
+
+/* ---------- product ---------- */
+.pdp{align-items:start}
+.pdp-g{grid-column:1/span 7;grid-row:1;display:grid;grid-template-columns:1fr 1fr;gap:6px;max-width:860px}
+.pdp-g button{display:block;width:100%;cursor:zoom-in}
+.pdp-g .w,.pdp-g .hbf{grid-column:1/-1}
+.pdp-g .x2{display:none}
+.pdp-g.all .x2{display:block}
+.pdp-g .hbf figcaption{padding:12px 0 22px;font-size:12px;color:var(--mute)}
+.pdp-more{grid-column:1/-1;padding:22px 0 0}
+.pdp-g .pdp-more button{display:inline-block;width:auto;cursor:pointer}
+.pdp-g.all .pdp-more{display:none}
+.pdp-i{grid-column:9/span 4;grid-row:1/span 2;position:sticky;top:var(--hd);padding:36px 0 40px}
+.crumb{display:flex;gap:10px;color:var(--mute);margin-bottom:22px}
+.crumb a:hover{color:var(--ink)}
+.pdp-i h1{font:400 clamp(26px,2.3vw,34px)/1.14 var(--serif);letter-spacing:-.008em}
+.pdp-i .sub{color:var(--mute);margin-top:10px}
+.pdp-pr{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:5px 16px;margin-top:22px;padding-bottom:20px;border-bottom:1px solid var(--rule);font-size:14px}
+.pdp-pr .mute{font-size:12.5px}
+.pdp-pr .av{flex:0 0 100%;font-variant-numeric:lining-nums}
+.sz-h{display:flex;align-items:baseline;gap:14px;margin:22px 0 12px}
+.msg{flex:1;font-size:12px;color:var(--wine)}
+.sizes{display:grid;grid-template-columns:repeat(5,1fr);border-left:1px solid var(--rule);border-top:1px solid var(--rule)}
+.sizes.n4{grid-template-columns:repeat(4,1fr)}
+.sizes button{height:46px;text-align:center;text-transform:none;font-size:12px;letter-spacing:.08em;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);position:relative;transition:background-color .35s,color .35s}
+.sizes button:hover{background:var(--ivory)}
+.sizes button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.sizes button:focus-visible{outline-offset:-4px}
+.pdp-i .btn{margin-top:16px}
+.klarna{font-size:12px;color:var(--mute);margin-top:14px}
+.pdp-d{margin-top:30px;color:var(--soft)}
+.pdp-d p+p{margin-top:1.05em}
+.pdp-d .more{display:none;margin-top:12px;font-size:12.5px;color:var(--ink)}
+.pdp-d.cl p:nth-of-type(n+2){display:none}
+.pdp-d.cl .more{display:inline-block}
+.pdp-l{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:28px}
+.pdp-n{grid-column:1/span 7;grid-row:2;max-width:860px;margin-top:clamp(64px,7vw,104px);padding-top:20px;border-top:1px solid var(--rule);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--g);scroll-margin-bottom:36px}
+.pdp-n summary{list-style:none;color:var(--mute);padding-bottom:16px;pointer-events:none}
+.pdp-n summary::-webkit-details-marker{display:none}
+.pdp-n .in{color:var(--soft);padding-right:14px}
+.pdp-n .in li{position:relative;padding-left:16px;margin-bottom:6px}
+.pdp-n .in li::before{content:"";position:absolute;left:0;top:.82em;width:6px;height:1px;background:var(--mute)}
+.pdp-n .in p+p{margin-top:.9em}
+.pdp-c{display:none}
+.with{padding-top:clamp(88px,9vw,144px);padding-bottom:var(--sec)}
+.buybar{display:none}
+
+/* ---------- journal ---------- */
+.jl{padding-bottom:var(--sec)}
+.jf{align-items:end;padding-bottom:clamp(72px,7vw,112px)}
+.jf .im{grid-column:1/span 5}
+.jf .tx{grid-column:7/span 5;padding-bottom:6px}
+.jf .tx .disp{margin:16px 0 22px}
+.jf .tx .ln{margin-top:26px}
+.art-h{padding:clamp(64px,8vw,120px) var(--m) clamp(44px,5vw,72px)}
+.art-h>div{grid-column:5/span 7}
+.art-h .disp{max-width:11em;margin:18px 0 24px}
+.art-h .copy{max-width:40ch}
+.art p.tx,.art h2.tx{grid-column:5/span 5}
+.art p.tx{color:var(--soft);font-size:14px;line-height:1.8}
+.art h2.tx{margin:28px 0 16px}
+.art .blk{margin-bottom:72px}
+.art .one-l{grid-column:1/-1}
+.art .one-p{grid-column:5/span 4}
+.art .one-w{grid-column:5/span 6}
+.art .pa{grid-column:3/span 4}.art .pb{grid-column:7/span 4}
+.art figcaption{padding-top:12px;font-size:12px;color:var(--mute);display:flex;justify-content:space-between;gap:16px}
+.art figcaption a{color:var(--ink)}
+.art-f{border-top:1px solid var(--rule);padding:44px var(--m) var(--sec);display:flex;justify-content:space-between;gap:24px;align-items:baseline}
+.art-f .h3{margin-top:8px}
+
+/* ---------- text pages ---------- */
+.hs-i{padding-bottom:var(--sec);align-items:end}
+.hs-i .a{grid-column:1/span 5}.hs-i .tx{grid-column:7/span 5;padding-bottom:4px}
+.hs-i .tx .stmt{margin-bottom:30px}
+.hs-f{background:var(--ivory)}
+.hs-f .tx{grid-column:2/span 4;align-self:center}
+.hs-f .tx .stmt{margin:14px 0 22px}
+.hs-f .im{grid-column:8/span 4}
+.tl-r{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--g);padding:26px 0;border-top:1px solid var(--rule);align-items:baseline}
+.tl-r:last-child{border-bottom:1px solid var(--rule)}
+.tl-r .c1{grid-column:1/span 3;color:var(--mute)}.tl-r .c2{grid-column:5/span 3}.tl-r .c3{grid-column:8/span 3;color:var(--soft)}.tl-r .c4{grid-column:11/span 2;text-align:right}
+.ev{padding-top:clamp(56px,7vw,104px);padding-bottom:var(--sec);align-items:end}
+.ev .l{grid-column:1/span 6}
+.ev .l .copy{margin-top:22px}
+.ev .r{grid-column:8/span 5}
+.care{padding-bottom:var(--sec)}
+.care nav{grid-column:1/span 3}
+.care nav a{display:block;padding:9px 0;color:var(--mute);transition:color .3s}
+.care nav a:hover,.care nav a.cur{color:var(--ink)}
+.care .tx{grid-column:5/span 6}
+.care .tx h2{margin:44px 0 12px}
+.care .tx h2:first-child{margin-top:0}
+.care .copy{max-width:56ch}
+.szt{margin-top:8px;font-size:12.5px}
+.szt th,.szt td{text-align:left;padding:13px 8px 13px 0;border-bottom:1px solid var(--rule);font-weight:400}
+.szt thead th{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--mute)}
+.nf{min-height:72vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px var(--m)}
+.nf .disp{margin:18px 0 18px}
+.nf .acts{justify-content:center}
+.co{padding-bottom:var(--sec)}
+.co .items{grid-column:1/span 7}
+.co .sum{grid-column:9/span 4;position:sticky;top:calc(var(--hd) + 32px);align-self:start}
+.co .li{border-top:1px solid var(--rule);border-bottom:0}
+.co .li:last-child{border-bottom:1px solid var(--rule)}
+.tot div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--rule)}
+.tot{border-top:1px solid var(--rule);margin-bottom:26px}
+.note{font-size:12px;color:var(--mute);margin-top:14px}
+.co-b{margin-top:30px}
+
+/* ---------- footer ---------- */
+.ft{border-top:1px solid var(--rule);padding:clamp(56px,6vw,88px) var(--m) 26px}
+.ft .nlc{grid-column:1/span 4}
+.ft .nlc .h3{margin:12px 0 22px;max-width:18em}
+.nl{display:flex;border-bottom:1px solid var(--ink);max-width:380px}
+.nl input{flex:1;min-width:0;background:transparent;border:0;padding:12px 0;font-size:13px}
+.nl input::placeholder{color:var(--mute)}
+.nl button{font-size:11px;letter-spacing:.15em;text-transform:uppercase;padding:12px 0 12px 16px}
+.nl-ok{display:none;max-width:380px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.nl-e{font-size:12px;color:var(--wine);min-height:20px;margin-top:8px}
+.ft .fc{grid-column:span 2}
+.ft .fc.f1{grid-column:7/span 2}
+.ft h4{font-weight:400;color:var(--mute);margin-bottom:14px}
+.ft li a{display:block;padding:4.5px 0;transition:opacity .3s}.ft li a:hover{opacity:.55}
+.ft-b{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:clamp(56px,6vw,96px);padding-top:22px;border-top:1px solid var(--rule);color:var(--mute)}
+
+/* ---------- overlays ---------- */
+.scrim{position:fixed;inset:0;z-index:70;display:none}
+.scrim.on{display:block}
+.drawer{position:fixed;top:0;right:0;bottom:0;z-index:80;width:min(460px,100vw);background:var(--paper);border-left:1px solid var(--rule);display:flex;flex-direction:column;transform:translate3d(100%,0,0);visibility:hidden;transition:transform .7s var(--ease),visibility 0s .7s}
+.drawer.on{transform:none;visibility:visible;transition-delay:0s}
+.dr-h{display:flex;justify-content:space-between;align-items:center;height:var(--hd);padding:0 28px;border-bottom:1px solid var(--rule);flex:none}
+.x{font-size:11px;letter-spacing:.15em;text-transform:uppercase;padding:12px 0}
+.dr-b{flex:1;overflow-y:auto;padding:0 28px;overscroll-behavior:contain}
+.dr-f{flex:none;padding:22px 28px 28px;border-top:1px solid var(--rule)}
+.dr-f:empty{display:none}
+.dr-f .row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;font-size:14px}
+.dr-f .btn{margin-top:18px}
+.bag-e{padding:88px 0;text-align:center}
+.bag-e p{color:var(--mute);margin-bottom:22px}
+.li{display:grid;grid-template-columns:84px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--rule)}
+.li .ph img{opacity:1}
+.li-t{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.li-n{font:400 17px/1.3 var(--serif)}
+.li small{display:block;font-size:12px;color:var(--mute);margin-top:4px}
+.li-r{display:flex;justify-content:space-between;align-items:center;margin-top:16px}
+.qty{display:flex;align-items:center;border:1px solid var(--rule)}
+.qty button{width:34px;height:32px;text-align:center;font-size:14px;text-transform:none}
+.qty span{min-width:24px;text-align:center;font-size:12px}
+.rm{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;padding:6px 0}
+.rm:hover{color:var(--ink)}
+.dr-b .szt{margin:26px 0 22px}
+.dr-b .copy{margin:26px 0}
+.panel{position:fixed;inset:0;z-index:90;background:var(--paper);overflow-y:auto;visibility:hidden;opacity:0;transition:opacity .45s var(--ease),visibility 0s .45s;overscroll-behavior:contain}
+.panel.on{visibility:visible;opacity:1;transition-delay:0s}
+.pn-h{position:sticky;top:0;z-index:2;background:var(--paper);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:var(--hd);padding-inline:var(--m);border-bottom:1px solid var(--rule)}
+.pn-h .x{justify-self:end}
+.sr-in{display:block;padding:clamp(40px,6vw,88px) var(--m) 0}
+.sr-in input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--ink);padding:14px 0;font:400 clamp(24px,3vw,40px)/1.2 var(--serif)}
+.sr-in input::placeholder{color:#8A8479}
+.sr-in input:focus-visible,.nl input:focus-visible{outline:none}
+.sr-in input:focus-visible{box-shadow:0 1px 0 var(--ink)}
+.nl:focus-within{box-shadow:0 1px 0 var(--ink)}
+.sr-in input::-webkit-search-cancel-button{display:none}
+.sr-s{display:flex;gap:22px;flex-wrap:wrap;align-items:baseline;padding:20px var(--m) 0}
+.sr-s button{font-size:13px;text-transform:none;letter-spacing:.012em;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:var(--mute)}
+.sr-m{padding:44px var(--m) 18px;color:var(--mute)}
+.sr-g{padding:0 var(--m) 96px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--g);row-gap:60px}
+.sr-g .card.rv{opacity:1;transform:none}
+.mn-b{min-height:calc(100% - var(--hd));padding:30px var(--m) 28px;display:flex;flex-direction:column}
+.mn-p a{display:block;font:400 20px/1.3 var(--serif);letter-spacing:.3em;text-transform:uppercase;padding:13px 0}
+.mn-s{margin-top:28px;padding-top:24px;border-top:1px solid var(--rule)}
+.mn-s a,.mn-s button{display:block;padding:12px 0;width:100%}
+.mn-f{margin-top:auto;padding-top:30px;display:flex;justify-content:space-between;color:var(--mute)}
+.mn-f a{padding:12px 0}
+.lb{position:fixed;inset:0;z-index:95;background:var(--paper);overflow-y:auto;overscroll-behavior:contain;visibility:hidden;opacity:0;transition:opacity .45s var(--ease),visibility 0s .45s}
+.lb.on{visibility:visible;opacity:1;transition-delay:0s}
+.lb-h{position:sticky;top:0;z-index:2;height:var(--hd);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding-inline:var(--m);background:var(--paper);border-bottom:1px solid var(--rule)}
+.lb-h>.x{justify-self:end}
+.lb-n{display:flex;gap:30px}
+.lb-b{display:flex;justify-content:center;min-height:calc(100% - var(--hd));padding:var(--pm) var(--pm) calc(var(--pm)*2)}
+.lb img{width:auto;height:auto;min-width:0;max-width:min(100%,1200px);align-self:flex-start;object-fit:contain;cursor:pointer;opacity:0;transition:opacity .6s var(--ease)}
+.lb img.ld{opacity:1}
+
+/* ---------- tablet ---------- */
+@media (max-width:1100px){
+  :root{--pm:28px;--g:16px}
+  .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .pdp-i{grid-column:8/span 5;padding-left:12px}
+  .hd-l,.hd-r{gap:22px}
+  .mega .mg-a{grid-column:1/span 3}.mega .mg-b{grid-column:4/span 5}.mega .mg-c{grid-column:9/span 4}.mega .mg-i{display:none}
+  .open .tx{grid-column:7/span 6}
+  .dp-b{grid-column:8/span 4}.dp-t{grid-column:8/span 5}
+  .inph .set{grid-column:6/span 7}
+  .inph .card-t{flex-direction:column;gap:1px}
+  .film .tx{grid-column:1/span 5}.film .vf{grid-column:7/span 5}
+  .eve .el,.ev .el{max-width:none}
+  .look .tx{grid-column:7/span 5}.look.alt .tx{grid-column:2/span 5}
+  .hs-f .tx{grid-column:1/span 5}.hs-f .im{grid-column:7/span 5}
+  .ft .nlc{grid-column:1/span 5}.ft .fc.f1{grid-column:7/span 2}
+  .care .tx{grid-column:5/span 8}
+  .art p.tx,.art h2.tx,.art-h>div{grid-column:3/span 8}.art .one-p{grid-column:3/span 5}.art .one-w{grid-column:3/span 8}
+  .art .pa{grid-column:1/span 6}.art .pb{grid-column:7/span 6}
+  .chap-h h2{grid-column:1/span 6}.chap-h p.t{grid-column:7/span 4}
+  .sov-t .disp{grid-column:1/span 7}.sov-t .r{grid-column:8/span 5}
+}
+
+/* ---------- phone ---------- */
+@media (max-width:760px){
+  :root{--pm:16px;--g:12px;--hd:54px;--sec:88px}
+  body{font-size:14px}
+  .no-m{display:none!important}.only-m{display:block}
+  .mark{font-size:15px;letter-spacing:.36em;padding-left:.36em}
+  .hd .nv{padding:17px 0;min-width:44px}
+  .hd .nv::after{bottom:11px}
+  .hd-r .nv{text-align:right}
+  .x{padding:17px 0;min-width:44px;text-align:right}
+  .tb{padding:18px 0}
+  .tb[aria-pressed="true"]::after{bottom:12px}
+  .qty button{width:40px;height:40px}
+  .rm{padding:12px 0}
+  .ln{padding-top:14px;margin-top:-14px;padding-bottom:14px;margin-bottom:-9px;background-position:0 calc(100% - 9px)}
+  .ln:hover{background-position:100% calc(100% - 9px)}
+  .mega{display:none}
+  .hero{--run:46vh}
+  .hero-b{bottom:22px;flex-direction:column;align-items:flex-start;gap:14px}
+  .hero-b h1 span{display:block;margin:2px 0 0}
+  .hero-r{width:100%;justify-content:space-between;transform:none}
+  .hero-r button{transform:translateX(var(--in,0px))}
+  .hero-r a{transform:translateX(calc(var(--in,0px)*-1))}
+  .hero-r button{padding:12px 0;margin:-12px 0 -7px;min-height:44px}
+  .still .hero-b{left:calc(var(--m) + 14px);right:calc(var(--m) + 14px)}
+  .g12>*{grid-column:1/-1!important}
+  .disp{letter-spacing:-.018em}
+  .open .lab{margin-bottom:22px}
+  .open .tx{margin-top:34px}
+  .dp-a,.dp-t,.dp-b{grid-row:auto}
+  .dp-t{padding:44px 0 26px}
+  .dp-b{width:64%;margin-left:auto}
+  .wide{padding-inline:0}
+  .wide>a>.ph{aspect-ratio:4/5}
+  .wide .fig-c{padding-inline:var(--m)}
+  .inph{margin-top:40px;padding-inline:0}
+  .inph .lab{padding-inline:var(--m)}
+  .inph .set{margin-top:24px;display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-inline:var(--m);scroll-padding-inline:var(--m)}
+  .inph .set .card{flex:0 0 62vw;scroll-snap-align:start}
+  .inph .set .card.rv{opacity:1;transform:none}
+  .film .vf{margin-top:44px;padding-inline:9%}
+  .film .vf button{min-width:44px;min-height:44px;margin-top:4px}
+  .eve .im,.eve .tx{grid-row:auto}
+  .eve .tx{margin-top:36px}
+  .copy a,.note a,.in a,.tl{display:inline-block;padding-block:13px;margin-block:-13px}
+  .dl div{grid-template-columns:84px 1fr}
+  .dl .br{display:block}
+  .g3{grid-template-columns:1fr;row-gap:52px}
+  .g12>.past-a{grid-column:1/span 6!important}.g12>.past-b{grid-column:7/span 6!important}
+  .past .tx{margin-bottom:34px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:40px}
+  .grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card-t{flex-direction:column;gap:1px;padding-top:11px;font-size:13px}
+  .card-s{display:none}
+  .gdiv{margin-top:20px}
+  .gdiv h2 a{display:inline-block;padding:10px 0;margin:-10px 0}
+  .tcell.wd{grid-column:1/-1}
+  .fr.big,.fr.big.rt{grid-column:1/-1;grid-row:auto}
+  .fr.big .ph{flex:none;aspect-ratio:2/3}
+  .fr.big .ph img{position:static}
+  .tcell .in{padding:16px 14px 18px}
+  .pgh .r{margin-top:20px;padding-bottom:0}
+  .bar{margin-bottom:28px}
+  .bar-1{flex-wrap:wrap;gap:0 20px}
+  .tabs{gap:20px;overflow-x:auto;scrollbar-width:none;max-width:100%}
+  .bar-r{width:100%;justify-content:space-between;border-top:1px solid var(--rule);min-height:48px}
+  .bar-2{gap:22px;margin-inline:calc(var(--m)*-1);padding-inline:var(--m)}
+  .sov-o .ph{aspect-ratio:4/5}
+  .sov-t .r{margin-top:26px}
+  .g12>.ch-i1{grid-column:1/span 6!important;margin-top:40px}.g12>.ch-i2{grid-column:7/span 6!important;margin-top:40px}
+  .chap-h{row-gap:8px;padding-bottom:26px}
+  .chap-h .c{text-align:left}
+  .looks{row-gap:72px;padding-top:0}
+  .look .im,.look .tx{grid-row:auto}
+  .look .im,.look.alt .im{max-width:none}
+  .look .tx{margin-top:20px}
+  .look li a{grid-template-columns:1fr auto;padding:14px 0}
+  .look li a .mute{display:none}
+  .lst-end{margin-top:72px}
+  .cx.g3{row-gap:64px}
+  .pdp{padding-inline:0}
+  .pdp-g,.pdp-i,.pdp-n{grid-row:auto}
+  .pdp-g{display:flex;gap:4px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;max-width:none}
+  .pdp-g::-webkit-scrollbar{display:none}
+  .pdp-g>button,.pdp-g .hbf{flex:0 0 88%;scroll-snap-align:start}
+  .pdp-g .x2{display:block}
+  .pdp-g .hbf figcaption,.pdp-more,.no-ph{display:none}
+  .pdp-c{display:block;padding:12px var(--m) 0;color:var(--mute)}
+  .pdp-i{position:static;padding:22px var(--m) 0}
+  .crumb{margin-bottom:18px}
+  .crumb a{padding:14px 0;margin:-14px 0}
+  .pdp-n{display:block;max-width:none;margin:34px var(--m) 0;padding-top:0}
+  .pdp-n details{border-bottom:1px solid var(--rule)}
+  .pdp-n summary{display:flex;justify-content:space-between;align-items:center;padding:17px 0;cursor:pointer;pointer-events:auto;color:var(--ink)}
+  .pdp-n summary::after{content:"+";font:300 16px/1 var(--sans);letter-spacing:0}
+  .pdp-n details[open] summary::after{content:"\2013"}
+  .pdp-n .in{padding:0 0 22px}
+  .buybar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;background:var(--paper);border-top:1px solid var(--rule);padding:10px var(--m);padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));gap:14px;align-items:center;justify-content:space-between;transform:translate3d(0,102%,0);visibility:hidden;transition:transform .6s var(--ease),visibility 0s .6s}
+  .buybar.on{transform:none;visibility:visible;transition-delay:0s}
+  .buybar .t{min-width:0;font-size:12.5px;line-height:1.4}
+  .buybar .t b{display:block;font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .buybar .btn{width:auto;flex:none;min-height:44px;padding:0 20px}
+  body[data-page="product"] .ft{padding-bottom:92px}
+  .jf{padding-bottom:56px}.jf .tx{margin-top:24px;padding-bottom:0}
+  .art .blk{margin-bottom:48px}
+  .g12>.pb{width:64%;margin-left:auto}
+  .art .pa{margin-bottom:12px}
+  .art .one-l{margin-inline:calc(var(--m)*-1)}
+  .art .one-l figcaption{padding-inline:var(--m)}
+  .art-f{flex-direction:column}
+  .hs-i .tx,.hs-f .im{margin-top:40px}
+  .tl-r{grid-template-columns:1fr auto;row-gap:6px;padding:22px 0}
+  .tl-r .c1{grid-column:1/-1}.tl-r .c2{grid-column:1}.tl-r .c4{grid-column:2;grid-row:2;align-self:baseline}.tl-r .c3{grid-column:1/-1}
+  .ev .r{margin-top:44px}
+  .past .fig-c{flex-direction:column;gap:4px}
+  .art figcaption{flex-direction:column;gap:2px}
+  .care nav{display:flex;gap:20px;overflow-x:auto;border-bottom:1px solid var(--rule);margin-bottom:36px;scrollbar-width:none}
+  .care nav a{white-space:nowrap;padding:14px 0}
+  .co .sum{position:static;margin-top:40px}
+  .g12>.fc{grid-column:span 6!important;margin-top:44px}
+  .ft h4{margin-bottom:8px}
+  .ft li a{padding:11px 0}
+  .ft-b{flex-direction:column;gap:6px}
+  .dr-h,.dr-b,.dr-f{padding-inline:var(--m)}
+  .sr-g{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nl input{font-size:16px}
+  .sr-in input{font-size:26px}
+  .lb-b{padding:0 0 var(--pm)}
+  .lb-n{gap:22px}
+}
+/* short windows: the panel beside the photographs tightens so the buy block and the description still fit */
+@media (min-width:761px) and (max-height:820px){
+  .pdp-i{padding:20px 0 24px}
+  .crumb{margin-bottom:14px}
+  .pdp-pr{margin-top:16px;padding-bottom:16px}
+  .sz-h{margin:16px 0 10px}
+  .sizes button{height:42px}
+  .pdp-i .btn{min-height:46px;margin-top:14px}
+  .pdp-d{margin-top:22px}
+  .pdp-l{margin-top:20px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;transition-delay:0s!important;animation-delay:0s!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<button class="skip" id="skip" type="button">Skip to content</button>
+
+<header class="hd" id="hd">
+  <div class="hd-l">
+    <button class="nv only-m" id="menuBtn" type="button" aria-haspopup="dialog">Menu</button>
+    <nav class="hd-l no-m" aria-label="Main">
+      <button class="nv" id="shopBtn" type="button" aria-expanded="false" aria-controls="mega">Shop</button>
+      <div class="mega g12" id="mega"></div>
+      <a class="nv" href="#/collection/sovereign">Sovereign</a>
+      <a class="nv" href="#/journal">Journal</a>
+      <a class="nv" href="#/house">The House</a>
+    </nav>
+  </div>
+  <a class="mark" id="mark" href="#/" aria-label="Morganà London, home">MORGANÀ</a>
+  <div class="hd-r">
+    <a class="nv dt no-m" href="#/evening" aria-label="The launch evening, 19.11.26">19.11.26</a>
+    <button class="nv no-m" id="searchBtn" type="button" aria-haspopup="dialog">Search</button>
+    <button class="nv" id="bagBtn" type="button" aria-haspopup="dialog" aria-label="Open bag">Bag <span id="bagN">(0)</span></button>
+  </div>
+</header>
+
+<main id="view" tabindex="-1"></main>
+
+<footer class="ft">
+  <div class="g12">
+    <div class="nlc">
+      <p class="cap mute">Newsletter</p>
+      <p class="h3">New collections and news from Morganà.</p>
+      <form class="nl" id="nl" novalidate>
+        <label class="sr" for="nlI">Email address</label>
+        <input id="nlI" type="email" placeholder="Email address" autocomplete="email">
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="nl-ok" id="nlOk" role="status">Thank you. You are on the list.</p>
+      <p class="nl-e" id="nlE" aria-live="polite"></p>
+    </div>
+    <div class="fc f1">
+      <h4 class="cap">Client care</h4>
+      <ul><li><a href="#/care/delivery">Delivery</a></li><li><a href="#/care/returns">Returns</a></li><li><a href="#/care/size-guide">Size guide</a></li><li><a href="#/care/contact">Contact</a></li></ul>
+    </div>
+    <div class="fc">
+      <h4 class="cap">Collections</h4>
+      <ul><li><a href="#/collection/sovereign">Sovereign</a></li><li><a href="#/collection/lumiere">Lumière</a></li><li><a href="#/collection/fortia">Fortia</a></li><li><a href="#/shop">Shop all</a></li></ul>
+    </div>
+    <div class="fc">
+      <h4 class="cap">Morganà</h4>
+      <ul><li><a href="#/house">The House</a></li><li><a href="#/journal">Journal</a></li><li><a href="#/evening">The launch evening</a></li><li><a href="https://www.instagram.com/morgana.london/" target="_blank" rel="noopener">Instagram</a></li></ul>
+    </div>
+  </div>
+  <div class="ft-b cap"><span>© 2026 Morganà London</span><span>GBP £ &nbsp;·&nbsp; Pay in 3 with Klarna</span><span>Concept preview</span></div>
+</footer>
+
+<div class="buybar" id="buybar" aria-hidden="true">
+  <p class="t"><b id="bbN"></b><span class="mute" id="bbP"></span></p>
+  <button type="button" class="btn" id="bbA" tabindex="-1">Add to bag</button>
+</div>
+
+<div class="scrim" id="scrim"></div>
+
+<aside class="drawer" id="bag" role="dialog" aria-modal="true" aria-label="Your bag">
+  <div class="dr-h"><span class="cap">Bag <span id="bagN2">(0)</span></span><button class="x" type="button" data-close>Close</button></div>
+  <div class="dr-b" id="bagItems"></div>
+  <div class="dr-f" id="bagF"></div>
+</aside>
+
+<aside class="drawer" id="guide" role="dialog" aria-modal="true" aria-label="Size guide">
+  <div class="dr-h"><span class="cap">Size guide</span><button class="x" type="button" data-close>Close</button></div>
+  <div class="dr-b" id="guideB"></div>
+</aside>
+
+<div class="panel" id="srch" role="dialog" aria-modal="true" aria-label="Search">
+  <div class="pn-h"><span class="cap">Search</span><span class="mark" aria-hidden="true">MORGANÀ</span><button class="x" type="button" data-close>Close</button></div>
+  <label class="sr-in"><span class="sr">Search the collections</span><input id="sIn" type="search" placeholder="Search" autocomplete="off" spellcheck="false"></label>
+  <div class="sr-s" id="sSug"></div>
+  <p class="sr-m cap" id="sMeta" aria-live="polite"></p>
+  <div class="sr-g" id="sGrid"></div>
+</div>
+
+<div class="panel" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="pn-h"><span class="cap">Menu</span><span class="mark" aria-hidden="true">MORGANÀ</span><button class="x" type="button" data-close>Close</button></div>
+  <div class="mn-b">
+    <nav class="mn-p" aria-label="Shop">
+      <a href="#/collection/sovereign">Sovereign</a>
+      <a href="#/shop">Shop all</a>
+      <a href="#/collection/lumiere">Lumière</a>
+      <a href="#/collection/fortia">Fortia</a>
+    </nav>
+    <nav class="mn-s cap" aria-label="More">
+      <button type="button" id="menuSearch">Search</button>
+      <a href="#/collection/sovereign?view=looks">The looks</a>
+      <a href="#/collections">Collections</a>
+      <a href="#/journal">Journal</a>
+      <a href="#/house">The House</a>
+      <a href="#/evening">The launch evening &nbsp;·&nbsp; 19.11.26</a>
+      <a href="#/care/delivery">Client care</a>
+    </nav>
+    <div class="mn-f cap"><a href="mailto:info@morgana.london">info@morgana.london</a><a href="https://www.instagram.com/morgana.london/" target="_blank" rel="noopener">Instagram</a></div>
+  </div>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photograph">
+  <div class="lb-h"><span class="cap" id="lbC"></span><div class="lb-n"><button class="x" type="button" id="lbP">Previous</button><button class="x" type="button" id="lbN">Next</button></div><button class="x" type="button" data-close>Close</button></div>
+  <div class="lb-b"><img id="lbI" alt=""></div>
+</div>
+
+<script src="assets/products.js"></script>
+<script>
+(function(){
+  'use strict';
+  var M = window.MORGANA;
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var view = $('#view');
+  if (!M || !M.products){
+    view.innerHTML = '<section class="nf"><p class="cap mute">Morganà London</p><p class="stmt">The catalogue could not be loaded.</p><p class="copy">Please check that the assets folder sits beside this file.</p></section>';
+    return;
+  }
+  var P = M.products.filter(function(p){ return !p.hidden; });
+  var esc = function(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+  var gbp = function(n){ return '£' + Number(n).toLocaleString('en-GB', { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }); };
+  var byId = function(id){ for (var i = 0; i < P.length; i++) if (P[i].id === id) return P[i]; return null; };
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var phone = matchMedia('(max-width: 760px)');
+  if (reduce) document.documentElement.classList.add('still');
+  var WORDS = ['No', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen', 'Twenty'];
+  var word = function(n){ return WORDS[n] || String(n); };
+  var pcs = function(n){ return n + (n === 1 ? ' piece' : ' pieces'); };
+
+  /* ---------- Sovereign photographs ----------
+     Every card is a studio frame: the closer one first, a second on hover. Pieces worn together do not share a lead.
+     Galleries are set by hand. w is the frame that takes the full width (large files only); the rest run in pairs. */
+  var VENUE = 'Hill Bark';
+  var CARDS = '01-0 01-1 02-1 02-5 03-1 03-2 04-0 04-1 05-0 05-1 06-0 06-4 07-0 07-4 08-0 08-4 09-1 09-2 10-0 10-1 11-0 11-1 12-0 12-1 13-0 13-1 14-1 14-2 15-0 15-1 16-0 16-1 17-2 17-4 18-0 18-1 19-0 19-2'.split(' ');
+  var GRADED = { card: ['15-0', '16-0', '17-4', '19-2'], full: ['01-4', '05-2', '06-3', '06-5', '07-3', '10-4', '12-4', '15-0', '16-0', '16-2', '17-4', '18-5', '19-2'] };
+  var LEAD = { '01': ['01-1', '01-0'], '02': ['02-5', '02-1'], '03': ['03-2', '03-1'], '04': ['04-1', '04-0'], '05': ['05-0', '05-6'], '06': ['06-4', '06-0'], '07': ['07-0', '07-4'], '08': ['08-0', '08-3'],
+    '09': ['09-2', '09-1'], '10': ['10-5', '10-0'], '11': ['11-4', '11-1'], '12': ['12-0', '12-1'], '13': ['13-0', '13-6'], '14': ['14-2', '14-1'], '15': ['15-1', '15-0'], '16': ['16-0', '16-1'],
+    '17': ['17-4', '17-2'], '18': ['18-2', '18-4'], '19': ['19-2', '19-0'], '21': ['05-1', '05-5'] };
+  var GAL = {
+    '01': { w: '01-4', f: '01-1 01-2 01-6 01-5 01-3 01-7' }, '02': { f: '02-1 02-5 02-4 02-2 02-3 02-6' }, '03': { f: '03-1 03-2 03-0 03-4 03-3 03-6' },
+    '04': { f: '04-0 04-1 04-2 04-3 04-4 04-6' }, '05': { f: '05-0 05-1 05-2 05-3 05-4 05-5' }, '06': { w: '06-5', f: '06-0 06-4 06-1 06-2 06-3 06-6' },
+    '07': { f: '07-0 07-2 07-3 07-5 07-4 07-1' }, '08': { f: '08-0 08-4 08-1 08-3' }, '09': { f: '09-1 09-2 09-3 09-6 09-4 09-5' },
+    '10': { w: '10-4', f: '10-0 10-1 10-2 10-5' }, '11': { f: '11-1 11-4 11-0 11-5 11-2 11-3' }, '12': { f: '12-1 12-0 12-4 12-2 12-3 12-6' },
+    '13': { f: '13-0 13-1 13-2 13-5 13-4 13-3' }, '14': { f: '14-1 14-2 14-3 14-5 14-0 14-4' }, '15': { w: '15-0', f: '15-1 15-4 15-2 15-5 15-3 15-6' },
+    '16': { w: '16-0', f: '16-1 16-4 16-2 16-6 16-3 16-5' }, '17': { w: '17-4', f: '17-0 17-1 17-2 17-5' }, '18': { w: '18-5', f: '18-1 18-0 18-2 18-4' },
+    '19': { w: '19-2', f: '19-0 19-4 19-1 20-2 20-0 20-4 19-5 20-5' }, '21': { f: '05-1 05-5 05-0 05-2 05-4 05-6' }
+  };
+  /* what each frame shows, by frame number, for the alt text */
+  var SHOWS = { '01': 'FTBSFBDS', '02': 'FFDPCTR', '03': 'TFTSTTR', '04': 'FCBDTDB', '05': 'FTBDFTD', '06': 'FODTCFT', '07': 'TCCBSD', '08': 'TSTDT', '09': 'TFOBTOP', '10': 'TCBTTP',
+    '11': 'CTBTTC', '12': 'TTBTPBT', '13': 'TTDTTDD', '14': 'TFCBTBT', '15': 'FCBSTPT', '16': 'CFDSTSK', '17': 'FDFKTD', '18': 'CFC-TP', '19': 'FBC-CB', '20': 'F-D-TD' };
+  var VIEWS = { F: 'full length', T: 'three-quarter length', C: 'a closer view', B: 'from behind', D: 'a detail', S: 'seated', P: 'in profile', O: 'worn open', R: 'reclining', K: 'crouching' };
+  function sovSrc(n, lead){
+    if (n.indexOf('/') > -1) return n;
+    if (lead && CARDS.indexOf(n) > -1) return 'assets/img/sov-card' + (GRADED.card.indexOf(n) > -1 ? '-g' : '') + '/' + n + '.jpg';
+    return 'assets/img/sov' + (GRADED.full.indexOf(n) > -1 ? '-g' : '') + '/' + n + '.jpg';
+  }
+  P.forEach(function(p){
+    if (p.collection !== 'sovereign') return;
+    var o = LEAD[p.id.slice(4)]; if (o) p.images = o.map(function(n){ return sovSrc(n, true); });
+  });
+  /* the order of the collection: outerwear, tailoring, knitwear */
+  var SOV_ORDER = ['06', '12', '15', '01', '04', '16', '19', '03', '14', '17', '10', '05', '08', '13', '07', '09', '18', '02', '11', '21'];
+  (function(){
+    var rank = function(p){ var i = SOV_ORDER.indexOf(p.id.slice(4)); return i < 0 ? 99 : i; };
+    var sovs = P.filter(function(p){ return p.collection === 'sovereign'; }).sort(function(a, b){ return rank(a) - rank(b); }), k = 0;
+    P = P.map(function(p){ return p.collection === 'sovereign' ? sovs[k++] : p; });
+  })();
+
+  var COL = {}; M.collections.forEach(function(c){ COL[c.id] = c; });
+  var ORDER = ['sovereign', 'lumiere', 'fortia'].filter(function(id){ return COL[id]; });
+  /* one line for each placement */
+  var LINE = {
+    sovereign: 'The third collection: tailoring, fine knitwear and three coats.',
+    lumiere: 'Linen and ivory for the summer, in Paris and on the coast.',
+    fortia: 'The first collection. Tailoring on studio grey.'
+  };
+  var BRIEFLY = {
+    sovereign: 'Twenty pieces for the colder months, launching 19.11.26.',
+    lumiere: 'The summer collection: linen, ivory and light layers.',
+    fortia: 'Where the house began: suits, coats and knitwear.'
+  };
+  var inCol = function(id){ return P.filter(function(p){ return p.collection === id; }); };
+  var SOV_N = inCol('sovereign').length;
+  var HB = VENUE + ', November 2026';
+
+  /* ---------- small builders ---------- */
+  function img(src, alt, o){
+    o = o || {};
+    return '<img src="' + src + '" alt="' + esc(alt) + '"' + (o.eager ? ' fetchpriority="high"' : ' loading="lazy"') + ' decoding="async"' +
+      (o.cls ? ' class="' + o.cls + '"' : '') + (o.pos ? ' style="object-position:' + o.pos + '"' : '') + '>';
+  }
+  function subOf(p){ return p.sub || (COL[p.collection].name + ' · ' + COL[p.collection].season); }
+  function card(p, cls){
+    var a = p.images[0], b = p.images[1] || a;
+    return '<a class="card rv ' + (cls || '') + '" href="#/product/' + p.id + '">' +
+      '<div class="ph r23">' + img(a, p.name + (p.colour ? ', ' + p.colour.toLowerCase() : '')) + (b !== a ? img(b, '', { cls: 'alt' }) : '') + '</div>' +
+      '<div class="card-t"><span class="card-n">' + esc(p.name) + '</span><span class="card-p">' + gbp(p.price) + '</span></div>' +
+      '<p class="card-s">' + esc(subOf(p)) + '</p></a>';
+  }
+  function fig(x, cls, ratio){
+    /* x: [src, alt, caption, href] */
+    var inner = '<div class="ph ' + (ratio || 'r23') + '">' + img(x[0], x[1]) + '</div>';
+    return '<figure class="' + cls + ' rv">' + (x[3] ? '<a href="' + x[3] + '">' + inner + '</a>' : inner) +
+      (x[2] ? '<figcaption><span>' + esc(x[2]) + '</span>' + (x[3] ? '<a class="tl" href="' + x[3] + '">View the piece</a>' : '') + '</figcaption>' : '') + '</figure>';
+  }
+  function frameCell(f, cls){
+    /* f: [src, alt, product id] : the large photograph that opens a chapter */
+    var p = byId(f[2]);
+    return '<a class="fr rv ' + (cls || '') + '" href="#/product/' + p.id + '"><div class="ph">' + img(f[0], f[1]) + '</div>' +
+      '<div class="card-t"><span>' + esc(p.name) + '</span><span class="mute">' + VENUE + '</span></div><p class="card-s">&nbsp;</p></a>';
+  }
+  function sizeTable(){
+    var rows = [['XS', '6', '34', '80', '62', '88'], ['S', '8', '36', '84', '66', '92'], ['M', '10', '38', '88', '70', '96'], ['L', '12', '40', '93', '75', '101'], ['XL', '14', '42', '98', '80', '106']];
+    return '<table class="szt"><caption class="sr">Size guide, body measurements in centimetres</caption><thead><tr><th scope="col">Size</th><th scope="col">UK</th><th scope="col">EU</th><th scope="col">Bust</th><th scope="col">Waist</th><th scope="col">Hips</th></tr></thead><tbody>' +
+      rows.map(function(r){ return '<tr><th scope="row">' + r[0] + '</th>' + r.slice(1).map(function(c){ return '<td>' + c + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table>';
+  }
+  var SIZE_NOTE = '<p>Body measurements, in centimetres. If you are between two sizes, write to us and we will advise on the piece you have in mind.</p><p><a href="mailto:info@morgana.london">info@morgana.london</a></p>';
+
+  /* ---------- home ---------- */
+  var HERO = {
+    wide: { src: 'assets/hero-2026-11-10/hero-rail-clothes.mp4', poster: 'assets/hero-2026-11-10/hero-rail-clothes-poster.jpg', end: 4.4, rate: 0.6 },
+    /* both cuts loop on the well-lit rail and fade into themselves; the wide cut runs a little slower, so the pan is barely there */
+    tall: { src: 'assets/hero-2026-11-10/hero-rail-montage-mobile.mp4', poster: 'assets/hero-2026-11-10/hero-rail-montage-mobile-poster.jpg', end: 7.9 }
+  };
+  function eveningList(){
+    return '<dl class="dl"><div><dt class="cap">Date</dt><dd>Thursday 19 November 2026, 7pm</dd></div>' +
+      '<div><dt class="cap">Address</dt><dd>102 Stamford New Road, <span class="br"></span>Altrincham WA14&nbsp;1DG</dd></div>' +
+      '<div><dt class="cap">Evening</dt><dd>Drinks · Canapés · DJ</dd></div>' +
+      '<div><dt class="cap">RSVP</dt><dd><a class="tl" href="mailto:info@morgana.london?subject=RSVP%3A%20One%20year%20of%20Morgan%C3%A0%2C%2019.11.26">info@morgana.london</a></dd></div></dl>';
+  }
+  function entryCard(e, cls){
+    return '<a class="je rv ' + (cls || '') + '" href="#/journal/' + e.slug + '"><div class="ph r23">' + img(e.cover[0], e.cover[1], { pos: e.cover[2] }) + '</div>' +
+      '<p class="cap mute">' + e.date + '</p><h3 class="h3"><span>' + esc(e.title) + '</span></h3><p class="d">' + esc(e.dek) + '</p></a>';
+  }
+  function vHome(){
+    var h = phone.matches ? HERO.tall : HERO.wide;
+    var sloan = byId('sov-06'), flo = byId('sov-12'), reg = byId('sov-19');
+    var feat = ['sov-01', 'sov-15', 'sov-07', 'sov-03'].map(byId).filter(Boolean);
+    var inph = ['sov-04', 'sov-05', 'sov-21'].map(byId).filter(Boolean);
+    return { page: 'home', title: '', mount: function(){ heroFilm(h); }, html:
+      '<section class="hero" id="hero" aria-label="Sovereign, Autumn–Winter 2026"><div class="hero-s">' +
+        '<div class="hero-f" id="heroF"><div class="hero-i" id="heroI" style="background-image:url(\'' + h.poster + '\')">' +
+          '<video id="heroA" data-own src="' + h.src + '" poster="' + h.poster + '" muted loop playsinline preload="auto"' + (reduce ? '' : ' autoplay') + ' aria-label="The Sovereign collection on the rail"></video>' +
+          '<video id="heroB" data-own muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>' +
+        '</div></div>' +
+        '<div class="hero-b" id="heroT"><h1>Sovereign <span>Autumn–Winter 2026</span></h1>' +
+        '<div class="hero-r"><button type="button" id="heroP">' + (reduce ? 'Play' : 'Pause') + '</button><a class="ln" href="#/collection/sovereign">Discover the collection</a></div></div>' +
+      '</div></section>' +
+
+      '<section class="sec wrap open"><div class="g12">' +
+        '<p class="lab cap mute rv">Sovereign &nbsp;·&nbsp; Autumn–Winter 2026</p>' +
+        '<h2 class="disp rv">Tailoring, knitwear and coats for the long evenings.</h2>' +
+        '<div class="tx rv d1"><div class="copy"><p>' + word(SOV_N) + ' pieces, worn with quiet authority. Sovereign is the third collection from Morganà London.</p></div>' +
+        '<a class="ln" href="#/collection/sovereign">View the collection</a></div>' +
+      '</div></section>' +
+
+      '<section class="wrap g12 dp">' +
+        '<a class="dp-a rv" href="#/product/sov-06"><div class="ph r23">' + img('assets/img/hb/hb-00018.jpg', 'The Sloan Coat in oatmeal cashmere, belted, worn with a grey cap and brown leather gloves beside a leaded window') + '</div>' +
+          '<div class="fig-c"><span>' + esc(sloan.name) + '</span><span class="mute">' + esc(sloan.sub) + ' &nbsp;·&nbsp; ' + gbp(sloan.price) + '</span></div></a>' +
+        '<div class="dp-t rv"><p class="cap mute">Outerwear</p><h2 class="h3">Oatmeal cashmere, black wool, an ivory cocoon.</h2><a class="ln" href="#/shop?collection=sovereign&amp;category=coats">The coats</a></div>' +
+        '<a class="dp-b rv d1" href="#/product/sov-12"><div class="ph r23">' + img('assets/j01/florence-room.jpg', 'The Florence Coat in ivory, seen from behind in a white room') + '</div>' +
+          '<div class="fig-c"><span>' + esc(flo.name) + '</span><span class="mute">' + gbp(flo.price) + '</span></div></a>' +
+      '</section>' +
+
+      '<section class="sec wrap"><div class="row-h"><h2 class="cap rv">From the collection</h2><a class="ln rv" href="#/collection/sovereign">View all ' + word(SOV_N).toLowerCase() + '</a></div>' +
+        '<div class="grid four">' + feat.map(function(p){ return card(p); }).join('') + '</div></section>' +
+
+      '<section class="wrap wide" style="padding-bottom:var(--sec)"><a class="rv" href="#/collection/sovereign?view=looks" style="display:block"><div class="ph">' + img('assets/img/hb/hb-hound-graded.jpg', 'The Kensington Jacket and Estelle Pencil Skirt in an oak-panelled room with orange chairs', { pos: '62% 30%' }) + '</div></a>' +
+        '<div class="g12 inph"><div class="lab rv"><p class="cap mute">In this photograph</p><p class="h3">A cropped check jacket over a pencil skirt and a fine roll-neck.</p><a class="ln" style="margin-top:22px" href="#/collection/sovereign?view=looks">All the looks</a></div>' +
+        '<div class="set">' + inph.map(function(p){ return card(p); }).join('') + '</div></div></section>' +
+
+      '<section class="film sec"><div class="wrap g12">' +
+        '<div class="tx rv"><p class="cap mute">Film</p><h2 class="stmt">' + esc(reg.name) + '</h2><div class="copy"><p>' + esc(reg.paras ? reg.paras[0] : reg.description) + '</p></div><a class="ln" href="#/product/' + reg.id + '">View the piece</a></div>' +
+        '<div class="vf rv d1"><div class="ph r916"><video id="filmV" src="assets/final/graded/film-wine-doors.mp4" poster="assets/final/graded/film-wine-doors-poster.jpg" muted loop playsinline preload="metadata" aria-label="A black blazer worn over a bordeaux roll-neck, in front of wine-lacquered doors"></video></div>' +
+        '<button type="button" class="vt" data-v="filmV">' + (reduce ? 'Play' : 'Pause') + '</button></div>' +
+      '</div></section>' +
+
+      '<section class="sec wrap g12 eve">' +
+        '<a class="im rv d1" href="#/evening"><div class="ph r32">' + img('assets/j01/cards-monogram.jpg', 'Morganà cards in deep wine, each with the MÀ monogram, on a leather-topped desk') + '</div></a>' +
+        '<div class="tx"><p class="cap mute rv">A private event</p><p class="num rv">19.11.26</p><h2 class="stmt rv d1">One year of Morganà</h2>' +
+        '<div class="el rv d1">' + eveningList() + '<div class="acts"><a class="ln" href="#/evening">The evening</a></div></div></div>' +
+      '</section>' +
+
+      '<section class="wrap rule" style="padding-top:28px;padding-bottom:var(--sec)"><div class="row-h" style="padding-bottom:36px"><h2 class="cap rv">Journal</h2><a class="ln rv" href="#/journal">All entries</a></div>' +
+        '<div class="g3">' + [JOURNAL[0], JOURNAL[1], JOURNAL[3]].map(function(e, i){ return entryCard(e, i ? 'd' + i : ''); }).join('') + '</div></section>' +
+
+      '<section class="wrap g12 past rule" style="padding-top:28px;padding-bottom:var(--sec)">' +
+        '<div class="tx rv"><h2 class="cap">Earlier collections</h2><div class="copy"><p>Lumière and Fortia remain in the shop.</p></div><a class="ln" href="#/collections">All collections</a></div>' +
+        pastTile('lumiere', 'a past-a', 'assets/img/lumiere/paris-stairs.jpg', 'A pale blue dress on a stone staircase with an iron balustrade') +
+        pastTile('fortia', 'b past-b d1', 'assets/img/fortia/47-0.jpg', 'A long brown wrap coat on studio grey') +
+      '</section>'
+    };
+  }
+  function pastTile(id, cls, src, alt){
+    var c = COL[id];
+    return '<a class="' + cls + ' rv" href="#/collection/' + id + '"><div class="ph r23">' + img(src, alt) + '</div>' +
+      '<div class="fig-c"><span class="ttl" style="font-size:14px">' + esc(c.name) + '</span><span class="mute">' + esc(c.season) + '</span></div></a>';
+  }
+
+  /* the hero film: fades in over its poster, and crossfades into itself at the loop */
+  var HF = null;
+  function heroFilm(h){
+    var a = $('#heroA'), b = $('#heroB'), btn = $('#heroP');
+    if (!a || !b) return;
+    var s = HF = { act: a, idle: b, held: reduce, inView: true, fading: false, raf: 0, dead: false };
+    var FADE = 950, RATE = h.rate || 1;
+    [a, b].forEach(function(v){ v.muted = true; v.defaultMuted = true; v.defaultPlaybackRate = RATE; v.playbackRate = RATE; });
+    a.addEventListener('playing', function first(){ a.removeEventListener('playing', first); a.classList.add('on'); if (!b.getAttribute('src')){ b.preload = 'auto'; b.src = h.src; } });
+    function play(v){ var pr = v.play(); if (pr && pr.catch) pr.catch(function(){}); }
+    function sync(){
+      if (s.dead) return;
+      if (s.inView && !s.held){ play(s.act); if (!s.raf) s.raf = requestAnimationFrame(tick); }
+      else { s.act.pause(); if (s.fading) s.idle.pause(); }
+    }
+    function tick(){
+      s.raf = 0;
+      if (s.dead || !a.isConnected){ s.dead = true; return; }
+      if (!s.inView || s.held) return;
+      var v = s.act, end = h.end || v.duration || 0;
+      if (!s.fading && end && v.currentTime >= end - FADE / 1000 * RATE - 0.15){
+        var n = s.idle;
+        if (!n.getAttribute('src')){ n.src = h.src; n.load(); }
+        s.fading = true;
+        try { n.currentTime = 0; } catch (e) {}
+        v.classList.remove('top'); n.classList.add('top');
+        var late = setTimeout(function(){ n.removeEventListener('playing', go); s.fading = false; try { v.currentTime = 0; } catch (e) {} }, 1600);
+        var go = function(){
+          n.removeEventListener('playing', go); clearTimeout(late);
+          n.classList.add('on');
+          setTimeout(function(){
+            if (s.dead) return;
+            v.pause(); v.classList.remove('on'); try { v.currentTime = 0; } catch (e) {}
+            s.act = n; s.idle = v; s.fading = false; sync();
+          }, reduce ? 60 : FADE);
+        };
+        n.addEventListener('playing', go);
+        play(n);
+      }
+      s.raf = requestAnimationFrame(tick);
+    }
+    if ('IntersectionObserver' in window){
+      var ob = new IntersectionObserver(function(es){ if (s.dead || !a.isConnected){ ob.disconnect(); return; } s.inView = es[0].isIntersecting; sync(); }, { threshold: .05 });
+      ob.observe($('#hero'));
+    }
+    btn.onclick = function(){ s.held = !s.held; btn.textContent = s.held ? 'Play' : 'Pause'; sync(); };
+    sync();
+  }
+
+  /* ---------- shop and collections ---------- */
+  var CH = {
+    lumiere: [['assets/img/lumiere/paris-balcony.jpg', 'An ivory slip dress on a Paris balcony, seen from behind'], ['assets/img/lumiere/riviera.jpg', 'A pale shirt and shorts at a stone balustrade above the sea, seen from behind']],
+    fortia: [['assets/img/fortia/39-0.jpg', 'A grey coat with a fur collar on studio grey'], ['assets/img/fortia/43-0.jpg', 'A taupe trouser suit on studio grey']]
+  };
+  var CX = {
+    sovereign: ['assets/j01/regina-light.jpg', 'The Regina Set with the Colette Roll-Neck, in low sun by a tall window'],
+    lumiere: ['assets/img/lumiere/paris-columns.jpg', 'An ivory shirt and trousers among stone columns in Paris'],
+    fortia: ['assets/img/fortia/45-0.jpg', 'A wine jacket and pencil skirt on studio grey']
+  };
+  /* Sovereign in three chapters. Each opens on one large photograph from the house; the cells are studio cards and a line of text. */
+  var CHAPTERS = [
+    { t: 'Outerwear', line: 'Three coats, from a belted cashmere to a collarless cocoon.',
+      big: ['assets/j01/sloan-gallery.jpg', 'The Sloan Coat, full length, at the head of an oak staircase', 'sov-06'], side: '',
+      cells: ['sov-06', 'sov-12', 'sov-15', { text: ['Journal', 'Three coats', 'Read the entry', '#/journal/three-coats'] }] },
+    { t: 'Tailoring', line: 'Suits and separates, a white shirt, leather and suede.',
+      big: ['assets/j01/kensington-mirror.jpg', 'The Kensington Jacket and Estelle Pencil Skirt in a dining room, a gilt mirror behind', 'sov-04'], side: 'rt',
+      cells: ['sov-01', 'sov-04', 'sov-16', 'sov-19', 'sov-03', 'sov-14', 'sov-17', 'sov-10', 'sov-05', 'sov-08', 'sov-13', { text: ['The looks', 'Six looks at ' + VENUE, 'View the looks', '#/collection/sovereign?view=looks'] }] },
+    { t: 'Knitwear', line: 'Three fine roll-necks, two cardigans and a knitted slip dress.',
+      big: ['assets/j01/dorothy-dining.jpg', 'The Dorothy Roll-Neck in espresso, beside a laid table and a white cabinet', 'sov-21'], side: '',
+      cells: ['sov-07', 'sov-09', 'sov-18', 'sov-11', 'sov-02', 'sov-21', { wide: 1, text: ['Journal', 'Sovereign at ' + VENUE, 'Read the entry', '#/journal/sovereign-at-hill-bark'] }] }
+  ];
+  /* the looks: each photograph with the pieces worn in it */
+  var LOOKS = [
+    { src: 'assets/j01/sloan-stairs.jpg', alt: 'The Sloan Coat on the staircase, worn with a grey cap and dark leather gloves', ids: ['sov-06', 'sov-08'] },
+    { src: 'assets/img/hb/hb-00141.jpg', alt: 'The Kensington Jacket over the Estelle Pencil Skirt, among orange chairs in an oak-panelled room', ids: ['sov-04', 'sov-05', 'sov-21'] },
+    { src: 'assets/j01/florence-landing.jpg', alt: 'The Florence Coat with a roll-neck and suede shorts, on the landing', ids: ['sov-12', 'sov-21', 'sov-10'] },
+    { src: 'assets/j01/regina-dining.jpg', alt: 'The Regina Set with the Colette Roll-Neck, walking through a dining room in low sun', ids: ['sov-19', 'sov-18'] },
+    { src: 'assets/j01/isadora-boot.jpg', alt: 'The Isadora Coat in black wool, with a black hat, sunglasses and wine leather boots', ids: ['sov-15', 'sov-18'] },
+    { src: 'assets/j01/kiara-wardrobe.jpg', alt: 'The Kiara Pencil Skirt with a fine black roll-neck and a beret, beside a walnut wardrobe', ids: ['sov-03', 'sov-11'] }
+  ];
+  var LOOKOF = {}; LOOKS.forEach(function(l, i){ l.ids.forEach(function(id){ if (!LOOKOF[id]) LOOKOF[id] = i + 1; }); });
+  var two = function(n){ return (n < 10 ? '0' : '') + n; };
+  var SORTS = [['featured', 'Featured'], ['price-asc', 'Price, low to high'], ['price-desc', 'Price, high to low'], ['name', 'Name, A to Z']];
+  var st = { kind: 'shop', col: 'all', cat: 'all', sort: 'featured', view: 'pieces' };
+
+  function vList(kind, colId, q){
+    st.kind = kind;
+    st.col = kind === 'collection' ? colId : (COL[q.collection] ? q.collection : 'all');
+    st.cat = (q.category || 'all').toLowerCase();
+    st.sort = SORTS.some(function(s){ return s[0] === q.sort; }) ? q.sort : 'featured';
+    st.view = kind === 'collection' && colId === 'sovereign' && q.view === 'looks' ? 'looks' : 'pieces';
+    var head, c = COL[colId];
+    if (kind === 'collection' && colId === 'sovereign'){
+      head = '<section class="sov-o"><div class="ph">' + img('assets/img/hb/hb-00277.jpg', 'The Regina Set worn with the Colette Roll-Neck in a dining room, tall windows and autumn trees behind', { eager: true, pos: '50% 30%' }) + '</div></section>' +
+        '<section class="wrap g12 sov-t"><p class="k cap mute rv">' + esc(c.season) + '</p><h1 class="disp xl rv">' + esc(c.name) + '</h1>' +
+        '<div class="r rv d1"><p class="stmt">' + esc(LINE.sovereign) + '</p><p class="meta cap"><span>' + word(SOV_N) + ' pieces</span><span>' + esc(c.launch) + '</span></p></div></section>';
+    } else if (kind === 'collection'){
+      var im = CH[colId];
+      head = '<section class="g12 ch"><div class="tx"><p class="cap mute rv">' + esc(c.season) + '</p><h1 class="disp rv">' + esc(c.name) + '</h1>' +
+        '<p class="stmt rv d1">' + esc(LINE[colId] || c.line) + '</p>' +
+        '<p class="meta cap rv d2"><span>' + pcs(inCol(colId).length) + '</span></p></div>' +
+        '<div class="i1 ch-i1 rv"><div class="ph r23">' + img(im[0][0], im[0][1], { eager: true }) + '</div></div>' +
+        '<div class="i2 ch-i2 rv d1"><div class="ph r23">' + img(im[1][0], im[1][1], { eager: true }) + '</div></div></section>';
+    } else {
+      head = '<section class="g12 pgh"><div class="l"><p class="cap mute rv">Morganà London</p><h1 class="disp s rv">Shop</h1></div>' +
+        '<div class="r copy rv d1"><p>Every piece from Sovereign, Lumière and Fortia. Prices in pounds sterling.</p></div></section>';
+    }
+    var look = st.view === 'looks' ? parseInt(q.look, 10) : 0;
+    return { page: kind, title: kind === 'collection' ? COL[colId].name : 'Shop', html: head + '<section class="wrap lst"><div class="bar" id="bar"></div><div id="lv"></div></section>', mount: fillList,
+      after: look ? function(){ var el = document.getElementById('look-' + look); if (el) scrollTo(0, Math.max(0, el.getBoundingClientRect().top + scrollY - hd.offsetHeight - 28)); } : null };
+  }
+  function looksHtml(){
+    return '<div class="looks">' + LOOKS.map(function(l, i){
+      var ps = l.ids.map(byId).filter(Boolean), no = two(i + 1);
+      return '<article class="look g12' + (i % 2 ? ' alt' : '') + '" id="look-' + (i + 1) + '" aria-label="Look ' + no + '">' +
+        '<a class="im rv" href="#/product/' + ps[0].id + '"><div class="ph r23">' + img(l.src, l.alt, { eager: i < 1 }) + '</div></a>' +
+        '<div class="tx rv d1"><div class="look-h"><h2 class="stmt">Look ' + no + '</h2><span class="cap mute">' + HB + '</span></div>' +
+        '<ul>' + ps.map(function(p){ return '<li><a href="#/product/' + p.id + '"><span>' + esc(p.name) + '</span><span class="mute">' + esc(p.sub || p.category) + '</span><span>' + gbp(p.price) + '</span></a></li>'; }).join('') + '</ul></div></article>';
+    }).join('') + '</div>' +
+    '<div class="lst-end rv"><a class="ln" href="#/collection/sovereign">View the ' + word(SOV_N).toLowerCase() + ' pieces</a><a class="ln" href="#/journal/sovereign-at-hill-bark">Sovereign at ' + VENUE + '</a></div>';
+  }
+  function chaptersHtml(){
+    return CHAPTERS.map(function(ch){
+      var n = 0;
+      var cells = ch.cells.map(function(c){
+        if (typeof c === 'string'){ var p = byId(c); if (!p) return ''; n++; return card(p); }
+        return '<a class="tcell rv' + (c.wide ? ' wd' : '') + '" href="' + c.text[3] + '"><div class="in"><p class="cap mute">' + c.text[0] + '</p><p class="h3">' + c.text[1] + '</p><span class="ln">' + c.text[2] + '</span></div></a>';
+      }).join('');
+      return '<section class="chap" aria-label="' + ch.t + '"><header class="g12 chap-h rv"><h2>' + ch.t + '</h2><p class="t">' + ch.line + '</p><p class="c cap">' + pcs(n) + '</p></header>' +
+        '<div class="grid four">' + (ch.big ? frameCell(ch.big, 'big ' + (ch.side || '')) : '') + cells + '</div></section>';
+    }).join('');
+  }
+  function fillList(){
+    var sov = st.kind === 'collection' && st.col === 'sovereign', looks = sov && st.view === 'looks';
+    var base = st.col === 'all' ? P.slice() : inCol(st.col);
+    var cats = []; base.forEach(function(p){ if (cats.indexOf(p.category) < 0) cats.push(p.category); }); cats.sort();
+    if (st.cat !== 'all' && !cats.some(function(c){ return c.toLowerCase() === st.cat; })) st.cat = 'all';
+    var list = base.filter(function(p){ return st.cat === 'all' || p.category.toLowerCase() === st.cat; });
+    if (st.sort === 'price-asc') list.sort(function(a, b){ return a.price - b.price; });
+    else if (st.sort === 'price-desc') list.sort(function(a, b){ return b.price - a.price; });
+    else if (st.sort === 'name') list.sort(function(a, b){ return a.name.localeCompare(b.name, 'en-GB'); });
+    var n = function(k){ return base.filter(function(p){ return p.category === k; }).length; };
+    var tb = function(attr, val, on, label){ return '<button type="button" class="tb" ' + attr + '="' + esc(val) + '" aria-pressed="' + on + '">' + label + '</button>'; };
+    var kset = ['all'].concat(cats).map(function(k){
+      var on = k === 'all' ? st.cat === 'all' : k.toLowerCase() === st.cat;
+      return tb('data-k', k.toLowerCase(), on, (k === 'all' ? 'All pieces' : esc(k)) + '<sup>' + (k === 'all' ? base.length : n(k)) + '</sup>'); }).join('');
+    var sort = '<label class="sel"><span class="sr">Sort by</span><select id="sort" aria-label="Sort by">' + SORTS.map(function(s){ return '<option value="' + s[0] + '"' + (st.sort === s[0] ? ' selected' : '') + '>' + s[1] + '</option>'; }).join('') + '</select></label>';
+    var count = '<span class="cap mute" id="count" role="status" aria-live="polite">' + (looks ? word(LOOKS.length) + ' looks' : pcs(list.length)) + '</span>';
+    var left, row2 = '';
+    if (st.kind === 'shop'){
+      left = '<div class="tabs" role="group" aria-label="Collection">' + ['all'].concat(ORDER).map(function(k){ return tb('data-c', k, st.col === k, k === 'all' ? 'All' : esc(COL[k].name)); }).join('') + '</div>';
+      row2 = kset;
+    } else if (sov){
+      left = '<div class="tabs" role="group" aria-label="View">' + tb('data-v', 'pieces', !looks, 'Pieces') + tb('data-v', 'looks', looks, 'Looks') + '</div>';
+      row2 = looks ? '' : kset;
+    } else left = '<div class="tabs" role="group" aria-label="Category">' + kset + '</div>';
+    $('#bar').innerHTML = '<div class="bar-1">' + left + '<div class="bar-r">' + count + (looks ? '' : sort) + '</div></div>' +
+      (row2 ? '<div class="bar-2" role="group" aria-label="Category">' + row2 + '</div>' : '');
+
+    var lv = $('#lv'), plain = st.cat === 'all' && st.sort === 'featured';
+    if (looks) lv.innerHTML = looksHtml();
+    else if (sov && plain) lv.innerHTML = chaptersHtml();
+    else if (!list.length) lv.innerHTML = '<div class="grid"><p class="empty">Nothing here at present.</p></div>';
+    else if (st.kind === 'shop' && st.col === 'all' && st.sort === 'featured'){
+      /* all three collections: a hairline and a name between them */
+      lv.innerHTML = '<div class="grid">' + ORDER.map(function(id){
+        var part = list.filter(function(p){ return p.collection === id; });
+        if (!part.length) return '';
+        return '<div class="gdiv rv"><h2><a href="#/collection/' + id + '">' + esc(COL[id].name) + '</a></h2><span class="cap mute">' + esc(COL[id].season) + ' &nbsp;·&nbsp; ' + pcs(part.length) + '</span></div>' + part.map(function(p){ return card(p); }).join('');
+      }).join('') + '</div>';
+    } else lv.innerHTML = '<div class="grid">' + list.map(function(p){ return card(p); }).join('') + '</div>';
+    watch(lv);
+    /* keep the address in step without re-rendering */
+    var qs = [];
+    if (st.kind === 'shop' && st.col !== 'all') qs.push('collection=' + st.col);
+    if (looks) qs.push('view=looks');
+    if (!looks && st.cat !== 'all') qs.push('category=' + encodeURIComponent(st.cat));
+    if (!looks && st.sort !== 'featured') qs.push('sort=' + st.sort);
+    var to = (st.kind === 'shop' ? '#/shop' : '#/collection/' + st.col) + (qs.length ? '?' + qs.join('&') : '');
+    if (location.hash !== to){ try { history.replaceState(null, '', to); lastHash = to; } catch (e) {} }
+  }
+  view.addEventListener('click', function(e){
+    var b = e.target.closest('#bar button.tb'); if (!b) return;
+    var key;
+    if (b.dataset.c){ st.col = b.dataset.c; st.cat = 'all'; key = '[data-c="' + b.dataset.c + '"]'; }
+    else if (b.dataset.v){ st.view = b.dataset.v; key = '[data-v="' + b.dataset.v + '"]'; }
+    else { st.cat = b.dataset.k; key = '[data-k="' + b.dataset.k + '"]'; }
+    fillList();
+    var again = $('#bar ' + key); if (again) again.focus({ preventScroll: true });
+  });
+  view.addEventListener('change', function(e){
+    if (e.target.id !== 'sort') return;
+    st.sort = e.target.value; fillList();
+    var s = $('#sort'); if (s) s.focus({ preventScroll: true });
+  });
+
+  function vCollections(){
+    return { page: 'collections', title: 'Collections', html:
+      '<section class="g12 pgh"><div class="l"><p class="cap mute rv">Morganà London</p><h1 class="disp s rv">Collections</h1></div>' +
+      '<div class="r copy rv d1"><p>Three collections, newest first.</p></div></section>' +
+      '<section class="wrap g3 cx">' + ORDER.map(function(id, i){
+        var c = COL[id];
+        return '<a class="rv' + (i ? ' d' + i : '') + '" href="#/collection/' + id + '"><div class="ph r23">' + img(CX[id][0], CX[id][1], { eager: true }) + '</div>' +
+          '<h2 class="h2">' + esc(c.name) + '</h2><p class="cap mute">' + esc(c.season) + ' &nbsp;·&nbsp; ' + pcs(inCol(id).length) + '</p>' +
+          '<div class="copy"><p>' + esc(BRIEFLY[id]) + '</p></div><span class="ln">Discover ' + esc(c.name) + '</span></a>';
+      }).join('') + '</section>'
+    };
+  }
+
+  /* ---------- product ---------- */
+  /* worn with: chosen by hand from the looks and the studio pairings. Never the same category, and never a second bottom or jacket with a set. */
+  var WITH = { '01': ['11', '16', '06', '18'], '02': ['15', '09', '12', '07'], '03': ['11', '15', '04', '18'], '04': ['05', '21', '08', '11'], '05': ['04', '21', '06', '16'],
+    '06': ['08', '11', '21', '05'], '07': ['10', '08', '05', '06'], '08': ['07', '06', '21', '16'], '09': ['10', '13', '02', '16'], '10': ['21', '12', '09', '07'],
+    '11': ['03', '13', '10', '12'], '12': ['21', '10', '13', '11'], '13': ['11', '12', '16', '04'], '14': ['15', '09', '04', '12'], '15': ['18', '03', '13', '02'],
+    '16': ['17', '08', '05', '15'], '17': ['16', '18', '15', '04'], '18': ['19', '15', '17', '03'], '19': ['18', '15', '11', '16'], '21': ['05', '04', '10', '12'] };
+  /* one photograph from the house sits in the gallery of the pieces worn there */
+  var HBF = {
+    '06': ['assets/j01/sloan-stairs.jpg', 'The Sloan Coat on the staircase, worn with a grey cap and dark leather gloves'],
+    '12': ['assets/j01/florence-room.jpg', 'The Florence Coat in ivory, seen from behind in a white room'],
+    '15': ['assets/j01/isadora-pillar.jpg', 'The Isadora Coat, belted, over a bordeaux roll-neck, beside a dark carved pillar'],
+    '04': ['assets/j01/kensington-lamp.jpg', 'The Kensington Jacket and Estelle Pencil Skirt beside a tall white lamp, oak panelling behind'],
+    '05': ['assets/j01/kensington-mirror.jpg', 'The Estelle Pencil Skirt beneath the Kensington Jacket in a dining room, a gilt mirror behind'],
+    '21': ['assets/j01/dorothy-dining.jpg', 'The Dorothy Roll-Neck in espresso, beside a laid table and a white cabinet'],
+    '10': ['assets/j01/dorothy-room.jpg', 'The Margot Shorts with the Dorothy Roll-Neck and long suede boots, seated on a white bed'],
+    '19': ['assets/j01/regina-dining.jpg', 'The Regina Set with the Colette Roll-Neck, walking through a dining room in low sun'],
+    '03': ['assets/j01/kiara-wardrobe.jpg', 'The Kiara Pencil Skirt with a fine black roll-neck and a beret, beside a walnut wardrobe'],
+    '11': ['assets/img/hb/hb-00348.jpg', 'A fine black roll-neck with the Kiara Pencil Skirt, a Morganà London bag in hand, beside a walnut wardrobe'],
+    '18': ['assets/img/hb/hb-00273.jpg', 'The Colette Roll-Neck in bordeaux beneath a black blazer, by a tall window']
+  };
+  function wearWith(p){
+    if (p.collection === 'sovereign' && WITH[p.id.slice(4)]) return WITH[p.id.slice(4)].map(function(n){ return byId('sov-' + n); }).filter(Boolean).slice(0, 4);
+    var all = inCol(p.collection), pool = all.filter(function(x){ return x.id !== p.id && x.category !== p.category; }), out = [];
+    var start = pool.length ? (all.indexOf(p) * 5) % pool.length : 0;
+    for (var i = 0; i < pool.length && out.length < 4; i++){ var x = pool[(start + i * 3) % pool.length]; if (out.indexOf(x) < 0) out.push(x); }
+    return out;
+  }
+  /* the gallery, in the order it is shown: { src, alt, w: full width, x: shown on request, cap } */
+  function galleryOf(p){
+    var c = COL[p.collection], k = p.id.slice(4), g = p.collection === 'sovereign' ? GAL[k] : null;
+    if (!g) return p.images.map(function(s, i){ return { src: s, alt: p.name + ', ' + c.name + ', view ' + (i + 1), w: p.images.length === 1 }; });
+    var seen = {}, tone = p.colour ? ' in ' + p.colour.toLowerCase().replace(' / ', ' and ') : '';
+    var mk = function(n, w){
+      var lab = VIEWS[(SHOWS[n.slice(0, 2)] || '').charAt(+n.slice(3))] || 'view', r = seen[lab] = (seen[lab] || 0) + 1;
+      return { src: sovSrc(n, false), alt: p.name + tone + ', ' + lab + (r > 1 ? ' (' + r + ')' : ''), w: !!w };
+    };
+    var out = g.w ? [mk(g.w, true)] : [], f = g.f.split(' ').map(function(n){ return mk(n); }), hb = HBF[k];
+    var H = hb ? { src: hb[0], alt: hb[1], w: true, cap: p.name + ' at ' + VENUE } : null;
+    var first = g.w ? 4 : 2, shown = g.w || H ? 4 : 6;
+    out = out.concat(f.slice(0, first)); if (H) out.push(H);
+    out = out.concat(f.slice(first, shown));
+    f.slice(shown).forEach(function(x){ x.x = true; out.push(x); });
+    return out;
+  }
+  function vProduct(p){
+    var c = COL[p.collection], sov = p.collection === 'sovereign';
+    var G = galleryOf(p), total = G.length, more = G.some(function(x){ return x.x; });
+    var catHref = '#/shop?collection=' + p.collection + '&amp;category=' + encodeURIComponent(p.category.toLowerCase());
+    var paras = p.paras && p.paras.length ? p.paras : [p.description || ('From ' + c.name + ', ' + c.season + '.')];
+    var desc = paras.map(function(x){ return '<p>' + esc(x) + '</p>'; }).join('') + (paras.length > 1 ? '<button type="button" class="tl more" id="descM">Read more</button>' : '');
+    var hasFabric = !!p.fabric && !/to follow/i.test(p.fabric), toFollow = /to follow/i.test(p.fabric || '');
+    var care = '<p>Care instructions are given on the label of each piece.</p>';
+    var comp = hasFabric ? '<p>' + esc(p.fabric) + '.</p>' + care : (toFollow ? '<p class="mute">Composition to follow.</p>' : care);
+    var hasDetails = p.details && p.details.length, look = sov ? LOOKOF[p.id] : 0;
+    var shots = G.map(function(x, i){
+      var cls = (x.w && !x.cap ? 'w' : '') + (x.x ? ' x2' : '');
+      var b = '<button type="button"' + (cls ? ' class="' + cls.trim() + '"' : '') + ' data-i="' + i + '" aria-label="Enlarge photograph ' + (i + 1) + ' of ' + total + '"><div class="ph r23">' + img(x.src, x.alt, { eager: i < 2 }) + '</div></button>';
+      return x.cap ? '<figure class="hbf">' + b + '<figcaption>' + esc(x.cap) + '</figcaption></figure>' : b;
+    }).join('');
+    return { page: 'product', title: p.name, mount: mountProduct, html:
+      '<section class="wrap g12 pdp"><div class="pdp-g" id="gal">' + shots +
+        (more ? '<p class="pdp-more"><button type="button" class="ln" id="galAll">View all ' + total + ' photographs</button></p>' : '') + '</div>' +
+      '<p class="pdp-c cap" id="galC" aria-hidden="true">1 / ' + total + '</p>' +
+      '<div class="pdp-i" id="info">' +
+        '<p class="crumb cap"><a href="#/collection/' + p.collection + '">' + esc(c.name) + '</a><span>/</span><a href="' + catHref + '">' + esc(p.category) + '</a></p>' +
+        '<h1>' + esc(p.name) + '</h1><p class="sub cap">' + esc(subOf(p)) + '</p>' +
+        '<div class="pdp-pr"><span>' + gbp(p.price) + '</span>' + (p.colour ? '<span class="mute">Colour: ' + esc(p.colour) + '</span>' : '') +
+          (sov && c.launch ? '<span class="av mute">Available from ' + esc(c.launch) + '</span>' : '') + '</div>' +
+        '<div class="sz-h"><span class="cap" id="szL">Size</span><span class="msg" id="msg" role="status"></span><button type="button" class="ln" id="szG">Size guide</button></div>' +
+        '<div class="sizes' + (p.sizes.length === 4 ? ' n4' : '') + '" id="szs" role="group" aria-labelledby="szL">' + p.sizes.map(function(s){ return '<button type="button" aria-pressed="false">' + esc(s) + '</button>'; }).join('') + '</div>' +
+        '<button type="button" class="btn" id="add">Add to bag</button>' +
+        '<p class="klarna">Or 3 interest-free payments of ' + gbp(Math.round(p.price / 3 * 100) / 100) + ' with Klarna.</p>' +
+        '<div class="pdp-d" id="desc">' + desc + '</div>' +
+        '<p class="pdp-l"><button type="button" class="ln no-ph" id="toNotes">' + (hasDetails ? 'Details and composition' : 'Care and delivery') + '</button>' +
+          (look ? '<a class="ln" href="#/collection/sovereign?view=looks&amp;look=' + look + '">Seen in Look ' + two(look) + '</a>' : '') +
+          (sov ? '' : '<a class="ln" href="#/collection/' + p.collection + '">View ' + esc(c.name) + '</a>') + '</p>' +
+      '</div>' +
+      '<div class="pdp-n' + (hasDetails ? '' : ' n2') + '" id="notes">' +
+        (hasDetails ? '<details data-o><summary class="cap">Details</summary><div class="in"><ul>' + p.details.map(function(d){ return '<li>' + esc(d) + '</li>'; }).join('') + '</ul></div></details>' : '') +
+        '<details' + (hasFabric ? ' data-o' : '') + '><summary class="cap">' + (hasFabric || toFollow ? 'Composition &amp; care' : 'Care') + '</summary><div class="in">' + comp + '</div></details>' +
+        '<details><summary class="cap">Delivery &amp; returns</summary><div class="in"><p>Delivery and returns are confirmed by email with your order.</p><p>See <a class="tl" href="#/care/delivery">Delivery</a> and <a class="tl" href="#/care/returns">Returns</a>, or write to <a class="tl" href="mailto:info@morgana.london">info@morgana.london</a>.</p></div></details>' +
+      '</div></section>' +
+      '<section class="wrap with"><div class="row-h"><h2 class="cap rv">' + (sov ? 'Wear it with' : 'More from ' + esc(c.name)) + '</h2><a class="ln rv" href="#/collection/' + p.collection + '">' + (sov ? esc(c.name) : 'View all') + '</a></div>' +
+      '<div class="grid four">' + wearWith(p).map(function(x){ return card(x); }).join('') + '</div></section>',
+      data: p, set: G
+    };
+  }
+  var cur = null;
+  /* the panel stays under the header beside the photographs; on a short window the description folds to its first paragraph so the panel still fits */
+  function stick(){
+    var el = $('#info'), d = $('#desc'); if (!el || !d) return;
+    if (d.dataset.open) return;
+    d.classList.remove('cl');
+    if (!phone.matches && d.children.length > 2 && el.offsetHeight > innerHeight - hd.offsetHeight) d.classList.add('cl');
+  }
+  /* beside the photographs the notes are set open as three columns; on phones they fold */
+  function notesMode(){
+    $$('#notes details').forEach(function(d){
+      var s = d.firstElementChild;
+      if (phone.matches){ d.open = d.hasAttribute('data-o'); s.removeAttribute('tabindex'); }
+      else { d.open = true; s.tabIndex = -1; }
+    });
+  }
+  function buySet(on){ var b = $('#buybar'); if (b.classList.contains('on') === on) return; b.classList.toggle('on', on); b.setAttribute('aria-hidden', on ? 'false' : 'true'); $('#bbA').tabIndex = on ? 0 : -1; }
+  function buyOff(){ buySet(false); }
+  function mountProduct(v){
+    var p = v.data, size = null; cur = p;
+    $('#guideB').innerHTML = sizeTable() + '<div class="copy">' + SIZE_NOTE + '</div>';
+    $('#szG').onclick = function(){ open($('#guide')); };
+    $$('#szs button').forEach(function(b){ b.onclick = function(){
+      $$('#szs button').forEach(function(x){ x.setAttribute('aria-pressed', 'false'); });
+      b.setAttribute('aria-pressed', 'true'); size = b.textContent; $('#msg').textContent = ''; }; });
+    var add = function(){
+      if (!size){
+        $('#msg').textContent = 'Please choose a size'; var f = $('#szs button');
+        if (f){ if (phone.matches) $('#szL').scrollIntoView({ block: 'center', behavior: reduce ? 'auto' : 'smooth' }); f.focus({ preventScroll: phone.matches }); }
+        return;
+      }
+      addBag(p.id, size); openBag();
+    };
+    $('#add').onclick = add;
+    /* phones: a slim bar once the main button has scrolled away */
+    $('#bbN').textContent = p.name; $('#bbP').textContent = gbp(p.price); $('#bbA').onclick = add;
+    var gal = $('#gal');
+    gal.addEventListener('click', function(e){
+      if (e.target.closest('#galAll')){ gal.classList.add('all'); var nx = $('.x2', gal); if (nx) nx.focus({ preventScroll: true }); watch(gal); return; }
+      var b = e.target.closest('button[data-i]'); if (!b) return; lightbox(v.set, +b.dataset.i); });
+    gal.addEventListener('scroll', function(){
+      var w = gal.firstElementChild ? gal.firstElementChild.offsetWidth + 4 : 1;
+      $('#galC').textContent = Math.min(v.set.length, Math.round(gal.scrollLeft / w) + 1) + ' / ' + v.set.length;
+    }, { passive: true });
+    /* the notes come up to the foot of the window, so the buy block stays beside them */
+    $('#toNotes').onclick = function(){ $('#notes').scrollIntoView({ block: 'end', behavior: reduce ? 'auto' : 'smooth' }); };
+    var dm = $('#descM'); if (dm) dm.onclick = function(){ var d = $('#desc'); d.dataset.open = '1'; d.classList.remove('cl'); };
+    notesMode(); stick(); setTimeout(stick, 400);
+  }
+
+  /* ---------- journal ---------- */
+  var JOURNAL = [
+    { slug: 'sovereign-at-hill-bark', title: 'Sovereign at ' + VENUE, date: 'November 2026', dek: 'The collection among oak panelling, long windows and an open fire.',
+      cover: ['assets/j01/regina-dining.jpg', 'The Regina Set with the Colette Roll-Neck, walking through a dining room in low sun'],
+      body: [
+        ['p', VENUE + ', this November. The rooms are panelled in dark oak, with tall leaded windows and a fire in the grate. Against them the collection reads clearly: oatmeal cashmere, an ivory cocoon coat, a fine check.'],
+        ['l', 'assets/j01/sloan-mirror.jpg', 'The Sloan Coat, belted, a gloved hand at the collar, before a gilt mirror in an oak-panelled gallery', 'Sloan Coat', '#/product/sov-06'],
+        ['p', 'The Sloan Coat is worn belted over a roll-neck, with wide tailored trousers beneath. A grey cap and dark leather gloves finish it.'],
+        ['pair', ['assets/j01/sloan-profile.jpg', 'The Sloan Coat in profile, looking towards the window', 'Towards the window', ''], ['assets/j01/sloan-bay.jpg', 'The Sloan Coat beside an oak balustrade, a bay window behind', 'At the bay window', '']],
+        ['p', 'By the fire, the Kensington Jacket sits cropped above the Estelle Pencil Skirt, with the Dorothy Roll-Neck beneath.'],
+        ['pair', ['assets/j01/kensington-fire.jpg', 'The Kensington Jacket and Estelle Pencil Skirt beside an open fire, with floral wallpaper behind', 'Kensington Jacket', '#/product/sov-04'], ['assets/img/hb/hb-00175.jpg', 'The Kensington Jacket and Estelle Pencil Skirt at a carved white mantelpiece', 'Estelle Pencil Skirt', '#/product/sov-05']],
+        ['p', 'The Florence Coat is the lightest moment of the collection: an ivory cocoon line over an espresso roll-neck and suede shorts.'],
+        ['pair', ['assets/j01/florence-landing.jpg', 'The Florence Coat with a roll-neck and suede shorts, on the landing', 'Florence Coat', '#/product/sov-12'], ['assets/j01/dorothy-room.jpg', 'The Dorothy Roll-Neck with suede shorts and long boots, seated on a white bed with a Morganà bag on the table behind', 'Dorothy Roll-Neck and Margot Shorts', '#/product/sov-21']],
+        ['p', 'In the dining room, in the last of the sun, the Regina Set is worn open over the Colette Roll-Neck.'],
+        ['one', 'assets/j01/regina-dining.jpg', 'The Regina Set with the Colette Roll-Neck, walking through a dining room in low sun', 'Regina Set', '#/product/sov-19'],
+        ['cta', 'The six looks', '#/collection/sovereign?view=looks']
+      ] },
+    { slug: 'three-coats', title: 'Three coats', date: 'November 2026', dek: 'The outerwear of Sovereign, piece by piece.',
+      cover: ['assets/j01/sloan-panel.jpg', 'The Sloan Coat, belted, against oak panelling'],
+      body: [
+        ['p', 'Sovereign has three coats: one in cashmere, one in wool, and one cut as a cocoon.'],
+        ['coat', 'sov-06', ['assets/j01/sloan-panel.jpg', 'The Sloan Coat, belted, against oak panelling']],
+        ['coat', 'sov-15', ['assets/j01/isadora-pillar.jpg', 'The Isadora Coat, belted, over a bordeaux roll-neck, beside a dark carved pillar']],
+        ['coat', 'sov-12', ['assets/j01/florence-lamp.jpg', 'The Florence Coat in ivory with over-the-knee boots, beside a lamp in a panelled room']],
+        ['cta', 'All coats', '#/shop?collection=sovereign&category=coats']
+      ] },
+    { slug: 'one-year-of-morgana', title: 'One year of Morganà', date: 'November 2026', dek: 'A private evening in Altrincham on 19.11.26.',
+      cover: ['assets/img/hb/hb-00351.jpg', 'A Morganà London bag hung from a brass rail of knitwear, beside a walnut wardrobe'],
+      body: [
+        ['p', 'On Thursday 19 November 2026 we mark one year of Morganà with a private evening at 102 Stamford New Road, Altrincham. Sovereign, our collection for Autumn–Winter 2026, launches the same day.'],
+        ['land', 'assets/j01/cards-monogram.jpg', 'Morganà cards in deep wine, each with the MÀ monogram, on a leather-topped desk', '', ''],
+        ['p', 'Drinks · Canapés · DJ. From 7pm. To reply, write to info@morgana.london.'],
+        ['cta', 'The evening', '#/evening']
+      ] },
+    { slug: 'lumiere-looking-back', title: 'Lumière, looking back', date: 'Summer 2026', dek: 'A summer in Paris and on the coast.',
+      cover: ['assets/img/lumiere/sea.jpg', 'A white linen shirt and trousers on the rocks above a clear sea'],
+      body: [
+        ['p', 'Lumière was our collection for the summer of 2026: linen, ivory and light layers, first in Paris and then on the coast.'],
+        ['pair', ['assets/img/lumiere/paris-sofa.jpg', 'A pale blue top and skirt, seated on a red velvet sofa at the foot of a staircase', 'Paris, at the foot of the stairs', ''], ['assets/img/lumiere/paris-rose.jpg', 'A sheer pale blue top, seen over the shoulder beside climbing roses', 'Paris, by the roses', '']],
+        ['p', 'On the coast the palette stayed the same and the cuts loosened: an open linen shirt, wide trousers, the rocks above clear water.'],
+        ['one', 'assets/img/lumiere/sea.jpg', 'A white linen shirt and trousers on the rocks above a clear sea', 'The coast', ''],
+        ['p', 'Lumière remains in the shop.'],
+        ['cta', 'Shop Lumière', '#/collection/lumiere']
+      ] }
+  ];
+  var JMAP = {}; JOURNAL.forEach(function(e){ JMAP[e.slug] = e; });
+  function vJournal(){
+    var f = JOURNAL[0];
+    return { page: 'journal', title: 'Journal', html:
+      '<section class="g12 pgh"><div class="l"><p class="cap mute rv">Morganà London</p><h1 class="disp s rv">Journal</h1></div>' +
+      '<div class="r copy rv d1"><p>Notes and photographs from the house.</p></div></section>' +
+      '<section class="wrap jl"><a class="g12 jf" href="#/journal/' + f.slug + '"><div class="im rv"><div class="ph r23">' + img(f.cover[0], f.cover[1], { eager: true }) + '</div></div>' +
+      '<div class="tx rv d1"><p class="cap mute">' + f.date + '</p><h2 class="stmt" style="margin:14px 0 16px">' + esc(f.title) + '</h2><p class="copy">' + esc(f.dek) + '</p><span class="ln">Read</span></div></a>' +
+      '<div class="g3">' + JOURNAL.slice(1).map(function(e, i){ return entryCard(e, i ? 'd' + i : ''); }).join('') + '</div></section>'
+    };
+  }
+  function vEntry(e){
+    var i = JOURNAL.indexOf(e), next = JOURNAL[(i + 1) % JOURNAL.length];
+    var body = e.body.map(function(b){
+      if (b[0] === 'p') return '<p class="tx blk rv">' + esc(b[1]) + '</p>';
+      if (b[0] === 'l') return fig([b[1], b[2], b[3], b[4]], 'blk one-l', 'r32');
+      if (b[0] === 'one') return fig([b[1], b[2], b[3], b[4]], 'blk one-p');
+      if (b[0] === 'land') return fig([b[1], b[2], b[3], b[4]], 'blk one-w', 'r32');
+      if (b[0] === 'pair') return fig(b[1], 'blk pa') + fig(b[2], 'blk pb d1');
+      if (b[0] === 'coat'){
+        var p = byId(b[1]);
+        return '<h2 class="tx stmt rv">' + esc(p.name) + '</h2><p class="tx blk rv">' + esc(p.paras ? p.paras[0] : p.description) + '</p>' +
+          fig([b[2][0], b[2][1], p.sub + ' · ' + gbp(p.price), '#/product/' + p.id], 'blk pa') +
+          fig([p.images[1], p.name + (p.colour ? ' in ' + p.colour.toLowerCase() : ''), p.colour, ''], 'blk pb d1');
+      }
+      if (b[0] === 'cta') return '<p class="tx blk rv"><a class="ln" href="' + b[2].replace(/&/g, '&amp;') + '">' + esc(b[1]) + '</a></p>';
+      return '';
+    }).join('');
+    return { page: 'journal', title: e.title, html:
+      '<article><header class="art-h g12"><div><p class="cap mute rv"><a href="#/journal">Journal</a> &nbsp;·&nbsp; ' + e.date + '</p><h1 class="disp s rv">' + esc(e.title) + '</h1><p class="copy rv d1">' + esc(e.dek) + '</p></div></header>' +
+      '<div class="wrap g12 art">' + body + '</div></article>' +
+      '<a class="art-f" href="#/journal/' + next.slug + '"><div><p class="cap mute">Next entry</p><p class="h3">' + esc(next.title) + '</p></div><span class="ln">Read</span></a>'
+    };
+  }
+
+  /* ---------- the house, the evening, client care ---------- */
+  function vHouse(){
+    return { page: 'house', title: 'The House', html:
+      '<section class="g12 pgh"><div class="l"><p class="cap mute rv">Morganà London</p><h1 class="disp s rv">The House</h1></div></section>' +
+      '<section class="wrap g12 hs-i"><div class="a rv"><div class="ph r23">' + img('assets/j01/florence-lamp.jpg', 'The Florence Coat in ivory with over-the-knee boots, beside a lamp in a panelled room', { eager: true }) + '</div></div>' +
+        '<div class="tx"><h2 class="stmt rv">Morganà London makes elegant, modern womenswear: tailoring, knitwear, dresses and coats.</h2>' +
+        '<div class="copy rv d1"><p>The house was founded by Angelica. Its first collection, Fortia, arrived for Autumn–Winter 2025: tailoring on studio grey.</p>' +
+        '<p>Lumière followed in the summer of 2026, in linen and ivory, in Paris and on the coast.</p>' +
+        '<p>Sovereign is the third collection. It launches on 19 November 2026, as the house marks its first year.</p></div></div></section>' +
+      '<section class="hs-f sec"><div class="wrap g12"><div class="tx rv"><p class="cap mute">Founder</p><h2 class="stmt">Angelica</h2>' +
+        '<div class="copy"><p>Angelica founded Morganà London and leads the house.</p>' +
+        '<p>Lumière, the summer collection, was founder-led, in Paris and on the coast.</p></div></div>' +
+        '<div class="im rv d1"><div class="ph r23">' + img('assets/img/lumiere/paris-street.jpg', 'An ivory belted jacket and shorts on a Paris street') + '</div></div></div></section>' +
+      '<section class="sec wrap"><div class="row-h"><h2 class="cap rv">The collections</h2><a class="ln rv" href="#/collections">All collections</a></div>' +
+        ORDER.slice().reverse().map(function(id, i){ var c = COL[id];
+          return '<a class="tl-r rv" href="#/collection/' + id + '"><span class="c1 cap">' + ['I', 'II', 'III'][i] + '</span><span class="c2 h3">' + esc(c.name) + '</span><span class="c3">' + esc(c.season) + (c.launch ? ' &nbsp;·&nbsp; ' + c.launch : '') + '</span><span class="c4 cap">' + pcs(inCol(id).length) + '</span></a>'; }).join('') +
+      '</section>' +
+      '<section class="wrap g12" style="padding-bottom:var(--sec)"><div class="rv" style="grid-column:1/span 4"><h2 class="cap mute">Write to us</h2></div>' +
+        '<div class="rv d1" style="grid-column:5/span 7"><p class="stmt"><a class="tl" href="mailto:info@morgana.london">info@morgana.london</a></p><div class="acts"><a class="ln" href="#/care/contact">Contact</a><a class="ln" href="#/evening">The launch evening</a></div></div></section>'
+    };
+  }
+  function vEvening(){
+    return { page: 'evening', title: 'One year of Morganà', mount: function(){ $('#ics').onclick = ics; }, html:
+      '<section class="wrap g12 ev">' +
+        '<div class="l"><p class="cap mute rv">A private event</p><p class="num rv">19.11.26</p><h1 class="stmt rv d1">One year of Morganà</h1>' +
+        '<div class="copy rv d1"><p>We mark our first year with a private evening in Altrincham. Sovereign, the collection for Autumn–Winter 2026, launches the same day.</p></div>' +
+        '<div class="el rv d2">' + eveningList() +
+        '<div class="acts"><a class="ln" href="mailto:info@morgana.london?subject=RSVP%3A%20One%20year%20of%20Morgan%C3%A0%2C%2019.11.26">RSVP by email</a><button type="button" class="ln" id="ics">Add to calendar</button><a class="ln" href="https://www.google.com/maps/search/?api=1&amp;query=102+Stamford+New+Road+Altrincham+WA14+1DG" target="_blank" rel="noopener">Map</a></div></div></div>' +
+        '<div class="r rv d1"><div class="ph r23">' + img('assets/img/hb/hb-00064.jpg', 'A Morganà London bag on a window sill, with a lawn beyond the glass', { eager: true }) + '</div></div>' +
+      '</section>' +
+      '<section class="wrap rule" style="padding-top:28px;padding-bottom:var(--sec)"><div class="row-h" style="padding-bottom:36px"><h2 class="cap rv">Launching that evening</h2><a class="ln rv" href="#/collection/sovereign">Sovereign</a></div>' +
+        '<div class="grid four">' + ['sov-06', 'sov-19', 'sov-04', 'sov-02'].map(byId).filter(Boolean).map(function(p){ return card(p); }).join('') + '</div></section>'
+    };
+  }
+  function ics(){
+    var t = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Morganà London//Launch evening//EN', 'BEGIN:VEVENT', 'UID:one-year-of-morgana-20261119@morgana.london', 'DTSTAMP:20261110T090000Z',
+      'DTSTART:20261119T190000Z', 'SUMMARY:One year of Morganà', 'LOCATION:102 Stamford New Road\\, Altrincham WA14 1DG', 'DESCRIPTION:A private event. Drinks · Canapés · DJ. RSVP info@morgana.london', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
+    try {
+      var url = URL.createObjectURL(new Blob([t], { type: 'text/calendar;charset=utf-8' }));
+      var a = document.createElement('a'); a.href = url; a.download = 'one-year-of-morgana.ics'; document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(function(){ URL.revokeObjectURL(url); }, 2000);
+    } catch (e) {}
+  }
+  var MAIL = '<a href="mailto:info@morgana.london">info@morgana.london</a>';
+  var CARE = {
+    delivery: ['Delivery', function(){ return '<h2 class="stmt">Delivery</h2><div class="copy"><p>Delivery is confirmed by email with your order: the options, the cost and the estimated date.</p><p>Nothing is charged until you have agreed them.</p></div>' +
+      '<h2 class="cap">Outside the United Kingdom</h2><div class="copy"><p>Please write to ' + MAIL + ' before ordering and we will confirm what is possible.</p></div>' +
+      '<h2 class="cap">Payment</h2><div class="copy"><p>Prices are in pounds sterling. Klarna is available, with the option to pay in 3 interest-free payments.</p></div>' +
+      '<h2 class="cap">Questions</h2><div class="copy"><p>For anything about an order on its way, write to ' + MAIL + ' with your order number.</p></div>'; }],
+    returns: ['Returns', function(){ return '<h2 class="stmt">Returns</h2><div class="copy"><p>If a piece is not right, write to us and we will help.</p><p>The terms for returns are confirmed by email with your order.</p></div>' +
+      '<h2 class="cap">How to return</h2><div class="copy"><p>Write to ' + MAIL + ' with your order number and the piece you wish to return. We will reply with the next steps.</p></div>' +
+      '<h2 class="cap">Exchanges</h2><div class="copy"><p>To exchange for another size, tell us when you write.</p></div>'; }],
+    'size-guide': ['Size guide', function(){ return '<h2 class="stmt">Size guide</h2>' + sizeTable() + '<div class="copy" style="margin-top:26px">' + SIZE_NOTE + '</div>' +
+      '<h2 class="cap">How to measure</h2><div class="copy"><p>Bust: around the fullest part, keeping the tape level.</p><p>Waist: around the narrowest part of the natural waist.</p><p>Hips: around the fullest part, with feet together.</p></div>'; }],
+    contact: ['Contact', function(){ return '<h2 class="stmt">Contact</h2><div class="copy"><p>For orders, sizing and anything else, write to us and we will reply by email.</p></div>' +
+      '<h2 class="cap">Email</h2><p class="h3"><a class="tl" href="mailto:info@morgana.london">info@morgana.london</a></p>' +
+      '<h2 class="cap">Orders</h2><div class="copy"><p>Please include your order number so that we can find your order quickly.</p></div>' +
+      '<h2 class="cap">The launch evening</h2><div class="copy"><p>To reply to the invitation for 19.11.26, see <a href="#/evening">the evening</a>.</p></div>' +
+      '<h2 class="cap">Instagram</h2><div class="copy"><p><a href="https://www.instagram.com/morgana.london/" target="_blank" rel="noopener">@morgana.london</a></p></div>'; }]
+  };
+  function vCare(k){
+    return { page: 'care', title: CARE[k][0], html:
+      '<section class="g12 pgh"><div class="l"><p class="cap mute rv">Morganà London</p><h1 class="disp s rv">Client care</h1></div></section>' +
+      '<section class="wrap g12 care"><nav class="cap rv" aria-label="Client care">' + Object.keys(CARE).map(function(x){ return '<a href="#/care/' + x + '"' + (x === k ? ' class="cur" aria-current="page"' : '') + '>' + CARE[x][0] + '</a>'; }).join('') + '</nav>' +
+      '<div class="tx rv d1">' + CARE[k][1]() + '</div></section>'
+    };
+  }
+  function vNotFound(){
+    return { page: 'missing', title: 'Page not found', html:
+      '<section class="nf"><p class="cap mute rv">Morganà London</p><h1 class="disp s rv">This page could not be found.</h1><p class="copy rv d1">It may have moved, or the address may be mistyped.</p>' +
+      '<div class="acts rv d2"><a class="ln" href="#/">Home</a><a class="ln" href="#/collection/sovereign">Sovereign</a><a class="ln" href="#/shop">Shop</a></div></section>'
+    };
+  }
+  function vCheckout(){
+    return { page: 'checkout', title: 'Your order', mount: paintCheckout, html:
+      '<section class="g12 pgh"><div class="l"><p class="cap mute rv">Morganà London</p><h1 class="disp s rv">Your order</h1></div></section><section class="wrap g12 co" id="co"></section>' };
+  }
+  function paintCheckout(){
+    var el = $('#co'); if (!el) return;
+    if (!bag.length){ el.innerHTML = '<div style="grid-column:1/-1" class="bag-e"><p>Your bag is empty.</p><a class="ln" href="#/collection/sovereign">Shop Sovereign</a></div>'; return; }
+    var sub = 0;
+    var items = bag.map(function(l){ var p = byId(l.id); sub += p.price * l.q;
+      return '<div class="li"><a class="ph r23" href="#/product/' + p.id + '"><img src="' + p.images[0] + '" alt="' + esc(p.name) + '"></a><div><div class="li-t"><a class="li-n" href="#/product/' + p.id + '">' + esc(p.name) + '</a><span>' + gbp(p.price * l.q) + '</span></div>' +
+        '<small>Size ' + esc(l.size) + (p.colour ? ' · ' + esc(p.colour) : '') + ' · Quantity ' + l.q + '</small></div></div>'; }).join('');
+    var lines = bag.map(function(l){ var p = byId(l.id); return p.name + ', size ' + l.size + (p.colour ? ', ' + p.colour : '') + ', quantity ' + l.q + ', ' + gbp(p.price * l.q); });
+    var mail = 'mailto:info@morgana.london?subject=' + encodeURIComponent('Order request') + '&body=' +
+      encodeURIComponent('Order request\r\n\r\n' + lines.join('\r\n') + '\r\n\r\nSubtotal: ' + gbp(sub) + '\r\n\r\nName:\r\nDelivery address:\r\nTelephone:\r\n');
+    el.innerHTML = '<div class="items"><h2 class="cap" style="padding-bottom:18px">Pieces</h2>' + items + '<p class="note"><button type="button" class="tl" id="coEdit">Edit bag</button></p></div>' +
+      '<div class="sum"><h2 class="cap" style="padding-bottom:18px">Summary</h2><div class="tot"><div><span>Subtotal</span><span>' + gbp(sub) + '</span></div><div><span>Delivery</span><span class="mute">Confirmed by email</span></div><div><span>Total</span><span>' + gbp(sub) + '</span></div></div>' +
+      '<a class="btn" id="coSend" href="' + esc(mail) + '">Send order request</a><p class="klarna">Or 3 interest-free payments of ' + gbp(Math.round(sub / 3 * 100) / 100) + ' with Klarna.</p>' +
+      '<p class="note">Your request opens as an email to info@morgana.london with these pieces listed. We reply to confirm delivery and payment.</p>' +
+      '<p class="co-b"><a class="ln" href="#/shop">Continue shopping</a></p></div>';
+    $('#coEdit').onclick = openBag;
+  }
+
+  /* ---------- router ---------- */
+  function parse(){
+    var h = (location.hash || '#/').replace(/^#\/?/, ''), cut = h.indexOf('?');
+    var path = cut < 0 ? h : h.slice(0, cut), qs = cut < 0 ? '' : h.slice(cut + 1), q = {};
+    var dec = function(s){ try { return decodeURIComponent(s); } catch (e) { return s; } };
+    qs.split('&').forEach(function(kv){ if (!kv) return; var i = kv.indexOf('='); q[dec(i < 0 ? kv : kv.slice(0, i))] = i < 0 ? '' : dec(kv.slice(i + 1)); });
+    return { parts: path.split('/').filter(Boolean).map(dec), q: q };
+  }
+  var first = true, token = 0, navClick = false, lastHash = location.hash || '#/', pos = {};
+  var mark = $('#mark');
+  try { history.scrollRestoration = 'manual'; } catch (e) {}
+  function go(h){ navClick = true; location.hash = h; }
+  function route(){
+    pos[lastHash.split('?')[0]] = scrollY; lastHash = location.hash || '#/';
+    var toY = navClick || first ? 0 : (pos[lastHash.split('?')[0]] || 0); navClick = false;
+    var r = parse(), a = r.parts, n = a.length, v;
+    if (!n) v = vHome();
+    else if (a[0] === 'shop' && n === 1) v = vList('shop', null, r.q);
+    else if (a[0] === 'collections' && n === 1) v = vCollections();
+    else if (a[0] === 'collection' && n === 2 && COL[a[1]]) v = vList('collection', a[1], r.q);
+    else if (a[0] === 'product' && n === 2 && byId(a[1])) v = vProduct(byId(a[1]));
+    else if (a[0] === 'journal' && n === 1) v = vJournal();
+    else if (a[0] === 'journal' && n === 2 && JMAP[a[1]]) v = vEntry(JMAP[a[1]]);
+    else if (a[0] === 'house' && n === 1) v = vHouse();
+    else if (a[0] === 'evening' && n === 1) v = vEvening();
+    else if (a[0] === 'care' && n <= 2 && CARE[a[1] || 'delivery']) v = vCare(a[1] || 'delivery');
+    else if (a[0] === 'checkout' && n === 1) v = vCheckout();
+    else v = vNotFound();
+    closeAll(true); megaOff();
+    var mine = ++token;
+    var swap = function(){
+      if (mine !== token) return;
+      cur = null; buyOff();
+      if (HF) HF.dead = true; HF = null;
+      var was = document.body.dataset.page, jump = !first && (was === 'home') !== (v.page === 'home');
+      if (jump) mark.classList.add('hide');
+      view.innerHTML = v.html;
+      document.body.dataset.page = v.page;
+      document.title = (v.title ? v.title + ' · ' : '') + 'MORGANÀ London';
+      var h = location.hash || '#/', sovPage = h.indexOf('#/collection/sovereign') === 0 || (v.page === 'product' && v.data.collection === 'sovereign');
+      $$('.hd a.nv').forEach(function(l){ var on = h.indexOf(l.getAttribute('href')) === 0 || (sovPage && l.getAttribute('href') === '#/collection/sovereign'); l.classList.toggle('cur', on); if (on) l.setAttribute('aria-current', 'page'); else l.removeAttribute('aria-current'); });
+      shopBtn.classList.toggle('cur', !sovPage && ['shop', 'collection', 'collections', 'product'].indexOf(v.page) > -1);
+      if (v.mount) v.mount(v);
+      watch(view);
+      heroMeasure();
+      scrollTo(0, toY); if (v.after) v.after(); frame();
+      if (jump) requestAnimationFrame(function(){ requestAnimationFrame(function(){ mark.classList.remove('hide'); }); });
+      view.classList.remove('out');
+      if (!first) view.focus({ preventScroll: true });
+      first = false;
+    };
+    if (first || reduce) swap(); else { view.classList.add('out'); setTimeout(swap, 380); }
+  }
+  addEventListener('hashchange', route);
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="#/"]'); if (!a) return;
+    navClick = true;
+    if (a.getAttribute('href') === (location.hash || '#/')){ navClick = false; e.preventDefault(); closeAll(); megaOff(); scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); }
+  });
+  $('#skip').onclick = function(){ view.focus(); };
+
+  /* ---------- reveals, images, films ---------- */
+  document.addEventListener('load', function(e){ if (e.target && e.target.tagName === 'IMG') e.target.classList.add('ld'); }, true);
+  document.addEventListener('error', function(e){ if (e.target && e.target.tagName === 'IMG') e.target.classList.add('ld'); }, true);
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){ es.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }); }, { rootMargin: '0px 0px -5% 0px' }) : null;
+  var vio = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){ es.forEach(function(en){ var v = en.target; v._in = en.isIntersecting; syncVideo(v); }); }, { threshold: .15 }) : null;
+  function syncVideo(v){
+    if (v._in && !v._held){ var pr = v.play(); if (pr && pr.catch) pr.catch(function(){}); } else v.pause();
+  }
+  function watch(root){
+    $$('img', root).forEach(function(im){ if (im.complete && im.naturalWidth) im.classList.add('ld'); });
+    $$('.grid, .g3, .looks', root).forEach(function(g){
+      var k = 0; Array.prototype.forEach.call(g.children, function(el){ if (el.classList.contains('rv') && !el.classList.contains('in')){ el.style.transitionDelay = (k % 4) * 0.07 + 's'; k++; } }); });
+    $$('.rv:not(.in)', root).forEach(function(el){ if (io) io.observe(el); else el.classList.add('in'); });
+    $$('video:not([data-own])', root).forEach(function(v){ v.muted = true; v.defaultMuted = true; v._held = reduce; v._in = !vio; if (vio) vio.observe(v); else syncVideo(v); });
+  }
+  view.addEventListener('click', function(e){
+    var b = e.target.closest('.vt'); if (!b) return;
+    var v = document.getElementById(b.dataset.v); if (!v) return;
+    v._held = !v._held; if (!vio) v._in = true; syncVideo(v);
+    b.textContent = v._held ? 'Play' : 'Pause';
+  });
+
+  /* ---------- overlays ---------- */
+  var hd = $('#hd'), scrim = $('#scrim'), stack = [], lastFocus = null;
+  var FOCUS = 'a[href],button:not([disabled]),input,select,textarea,summary,[tabindex]:not([tabindex="-1"])';
+  function open(el){
+    if (stack.indexOf(el) > -1) return;
+    if (!stack.length) lastFocus = document.activeElement;
+    stack.push(el); el.classList.add('on'); document.documentElement.classList.add('lock');
+    scrim.classList.toggle('on', stack.some(function(s){ return s.classList.contains('drawer'); }));
+    var f = el.querySelector('[data-focus]') || el.querySelector('[data-close]');
+    if (f) setTimeout(function(){ f.focus({ preventScroll: true }); }, 80);
+  }
+  function close(el, quiet){
+    el = el || stack[stack.length - 1]; if (!el) return;
+    el.classList.remove('on'); stack = stack.filter(function(s){ return s !== el; });
+    scrim.classList.toggle('on', stack.some(function(s){ return s.classList.contains('drawer'); }));
+    if (!stack.length){
+      document.documentElement.classList.remove('lock');
+      if (!quiet && lastFocus && lastFocus.isConnected) lastFocus.focus({ preventScroll: true });
+      lastFocus = null;
+    }
+  }
+  function closeAll(quiet){ stack.slice().forEach(function(s){ close(s, quiet); }); }
+  scrim.onclick = function(){ close(); };
+  $$('[data-close]').forEach(function(b){ b.onclick = function(){ close(b.closest('.panel,.drawer,.lb')); }; });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){ if (stack.length) close(); else megaOff(true); return; }
+    if (e.key !== 'Tab' || !stack.length) return;
+    var top = stack[stack.length - 1], els = $$(FOCUS, top).filter(function(x){ return x.offsetParent !== null; });
+    if (!els.length) return;
+    var a = els[0], z = els[els.length - 1];
+    if (!top.contains(document.activeElement)){ e.preventDefault(); a.focus(); }
+    else if (e.shiftKey && document.activeElement === a){ e.preventDefault(); z.focus(); }
+    else if (!e.shiftKey && document.activeElement === z){ e.preventDefault(); a.focus(); }
+  });
+
+  /* shop panel under the header */
+  var mega = $('#mega'), shopBtn = $('#shopBtn'), megaT = null;
+  (function(){
+    var cats = []; inCol('sovereign').forEach(function(p){ if (cats.indexOf(p.category) < 0) cats.push(p.category); }); cats.sort();
+    mega.innerHTML =
+      '<div class="mg-a"><h3 class="cap">Shop</h3><ul><li><a href="#/shop">All pieces</a></li>' + ORDER.map(function(id){ return '<li><a href="#/collection/' + id + '">' + esc(COL[id].name) + '</a></li>'; }).join('') + '<li><a href="#/collections">Collections</a></li></ul></div>' +
+      '<div class="mg-b"><h3 class="cap">Sovereign</h3><ul><li><a href="#/collection/sovereign?view=looks">The looks</a></li>' + cats.map(function(k){ return '<li><a href="#/shop?collection=sovereign&amp;category=' + encodeURIComponent(k.toLowerCase()) + '">' + esc(k) + '<sup>' + inCol('sovereign').filter(function(p){ return p.category === k; }).length + '</sup></a></li>'; }).join('') + '</ul></div>' +
+      '<div class="mg-c"><h3 class="cap">Morganà</h3><ul><li><a href="#/house">The House</a></li><li><a href="#/journal">Journal</a></li><li><a href="#/evening">The launch evening</a></li><li><a href="#/care/delivery">Client care</a></li></ul></div>' +
+      '<a class="mg-i" href="#/collection/sovereign"><div class="ph r23"><img src="assets/j01/sloan-window.jpg" alt="The Sloan Coat, belted, in front of tall leaded windows" loading="lazy" decoding="async"></div><div class="fig-c"><span>Sovereign</span><span class="mute">AW26</span></div></a>';
+  })();
+  function megaOn(){ clearTimeout(megaT); mega.classList.add('on'); shopBtn.setAttribute('aria-expanded', 'true'); frame(); }
+  function megaOff(back){ clearTimeout(megaT); if (!mega.classList.contains('on')) return; mega.classList.remove('on'); shopBtn.setAttribute('aria-expanded', 'false'); frame(); if (back === true) shopBtn.focus(); }
+  var fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
+  shopBtn.addEventListener('click', function(){ mega.classList.contains('on') ? megaOff() : megaOn(); });
+  if (fine){
+    shopBtn.addEventListener('mouseenter', megaOn);
+    hd.addEventListener('mouseleave', function(){ megaT = setTimeout(megaOff, 240); });
+    hd.addEventListener('mouseenter', function(){ clearTimeout(megaT); });
+    $$('.hd .nv').forEach(function(n){ if (n !== shopBtn) n.addEventListener('mouseenter', function(){ megaOff(); }); });
+  }
+  document.addEventListener('click', function(e){ if (!e.target.closest('#mega,#shopBtn')) megaOff(); });
+  document.addEventListener('focusin', function(e){ if (mega.classList.contains('on') && !e.target.closest('#mega,#shopBtn')) megaOff(); });
+  mega.addEventListener('click', function(e){ if (e.target.closest('a')) megaOff(); });
+
+  /* menu (phones) */
+  $('#menuBtn').onclick = function(){ open($('#menu')); };
+  $('#menuSearch').onclick = function(){ close($('#menu'), true); openSearch(); };
+
+  /* search: accents are ignored, terms match at the start of a word, and a few everyday words are understood */
+  var sIn = $('#sIn');
+  var SUG = ['Coat', 'Knitwear', 'Cashmere', 'Black', 'Suit', 'Lumière'];
+  var norm = function(s){ return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); };
+  var SYN = { jumper: ['knitwear', 'roll-neck', 'cardigan'], sweater: ['knitwear', 'roll-neck', 'cardigan'], knit: ['knitwear'], knits: ['knitwear'], blazer: ['jacket', 'suit'], trouser: ['trousers'], pants: ['trousers'],
+    top: ['shirt', 'roll-neck', 'camisole'], polo: ['roll-neck'], poloneck: ['roll-neck'], turtleneck: ['roll-neck'], rollneck: ['roll-neck'], skort: ['shorts'], dress: ['dresses'], cream: ['ivory'], brown: ['espresso', 'chocolate', 'mocha'], red: ['bordeaux'], burgundy: ['bordeaux'], wine: ['bordeaux'],
+    grey: ['charcoal', 'dove'], gray: ['grey', 'charcoal', 'dove'], aw26: ['sovereign'], aw25: ['fortia'], summer: ['lumiere'], winter: ['sovereign', 'fortia'] };
+  var HAY = {}; P.forEach(function(p){ var c = COL[p.collection]; HAY[p.id] = norm([p.name, p.sub || '', p.category, c.name, c.season, p.colour || '', p.fabric || ''].join(' ')); });
+  $('#sSug').innerHTML = '<span class="cap mute">Suggested</span>' + SUG.map(function(s){ return '<button type="button">' + s + '</button>'; }).join('');
+  $('#sSug').addEventListener('click', function(e){ var b = e.target.closest('button'); if (!b) return; sIn.value = b.textContent; doSearch(); sIn.focus(); });
+  function doSearch(){
+    var q = norm(sIn.value.trim()), res;
+    if (!q){ res = ['sov-06', 'sov-01', 'sov-04', 'sov-15', 'sov-19', 'sov-07', 'sov-12', 'sov-03'].map(byId).filter(Boolean); $('#sMeta').textContent = 'From Sovereign'; }
+    else {
+      var tests = q.split(/\s+/).map(function(t){
+        var alts = [t].concat(SYN[t] || []);
+        if (t.length > 3 && /s$/.test(t)){ alts.push(t.slice(0, -1)); alts = alts.concat(SYN[t.slice(0, -1)] || []); }
+        return alts.map(function(a){ return new RegExp('(^|[\\s\\-&/,·])' + a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')); });
+      });
+      res = P.filter(function(p){ var hay = HAY[p.id]; return tests.every(function(rs){ return rs.some(function(r){ return r.test(hay); }); }); });
+      $('#sMeta').textContent = res.length ? pcs(res.length) : 'Nothing found for “' + sIn.value.trim() + '”. Try coat, knitwear or Lumière.';
+    }
+    $('#sGrid').innerHTML = res.slice(0, 24).map(function(p){ return card(p); }).join('');
+    $$('#sGrid img').forEach(function(im){ if (im.complete && im.naturalWidth) im.classList.add('ld'); });
+  }
+  sIn.addEventListener('input', doSearch);
+  sIn.addEventListener('keydown', function(e){ if (e.key === 'Enter'){ var a = $('#sGrid a'); if (a){ e.preventDefault(); go(a.getAttribute('href')); } } });
+  sIn.setAttribute('data-focus', '');
+  function openSearch(){ doSearch(); open($('#srch')); }
+  $('#searchBtn').onclick = openSearch;
+
+  /* lightbox: the photograph at its full width, on a page that scrolls */
+  var lb = $('#lb'), lbI = $('#lbI'), lbSet = [], lbAt = 0;
+  function lbShow(i){
+    lbAt = (i + lbSet.length) % lbSet.length; var x = lbSet[lbAt];
+    if (lbI.getAttribute('src') !== x.src){ lbI.classList.remove('ld'); lbI.src = x.src; }
+    lbI.alt = x.alt; $('#lbC').textContent = (lbAt + 1) + ' / ' + lbSet.length; lb.scrollTop = 0;
+  }
+  function lightbox(set, i){ lbSet = set; $('#lbP').hidden = $('#lbN').hidden = set.length < 2; lbShow(i); open(lb); }
+  $('#lbP').onclick = function(){ lbShow(lbAt - 1); };
+  $('#lbN').onclick = function(){ lbShow(lbAt + 1); };
+  lbI.onclick = function(){ if (lbSet.length > 1) lbShow(lbAt + 1); };
+  document.addEventListener('keydown', function(e){ if (!lb.classList.contains('on')) return; if (e.key === 'ArrowRight') lbShow(lbAt + 1); if (e.key === 'ArrowLeft') lbShow(lbAt - 1); });
+
+  /* bag */
+  var bag = [], KEY = 'morgana-j01-bag';
+  try { bag = JSON.parse(localStorage.getItem(KEY) || '[]').filter(function(l){ return l && byId(l.id) && l.q > 0; }); } catch (e) { bag = []; }
+  function saveBag(){ try { localStorage.setItem(KEY, JSON.stringify(bag)); } catch (e) {} }
+  function addBag(id, size){ var l = bag.filter(function(x){ return x.id === id && x.size === size; })[0]; if (l) l.q++; else bag.push({ id: id, size: size, q: 1 }); saveBag(); paintBag(); }
+  function paintBag(){
+    var n = bag.reduce(function(a, l){ return a + l.q; }, 0), sub = 0;
+    $('#bagN').textContent = '(' + n + ')'; $('#bagN').classList.toggle('has', n > 0); $('#bagN2').textContent = '(' + n + ')';
+    $('#bagBtn').setAttribute('aria-label', 'Open bag, ' + pcs(n));
+    if (!bag.length){
+      $('#bagItems').innerHTML = '<div class="bag-e"><p>Your bag is empty.</p><a class="ln" href="#/collection/sovereign">Shop Sovereign</a></div>';
+      $('#bagF').innerHTML = '';
+    } else {
+      $('#bagItems').innerHTML = bag.map(function(l, i){
+        var p = byId(l.id); sub += p.price * l.q;
+        return '<div class="li"><a class="ph r23" href="#/product/' + p.id + '"><img src="' + p.images[0] + '" alt="' + esc(p.name) + '"></a><div>' +
+          '<div class="li-t"><a class="li-n" href="#/product/' + p.id + '">' + esc(p.name) + '</a><span>' + gbp(p.price * l.q) + '</span></div>' +
+          '<small>Size ' + esc(l.size) + (p.colour ? ' · ' + esc(p.colour) : '') + '</small>' +
+          '<div class="li-r"><div class="qty"><button type="button" data-dq="' + i + '" data-d="-1" aria-label="One fewer ' + esc(p.name) + '">−</button><span aria-label="Quantity">' + l.q + '</span><button type="button" data-dq="' + i + '" data-d="1" aria-label="One more ' + esc(p.name) + '">+</button></div>' +
+          '<button type="button" class="rm" data-rm="' + i + '">Remove</button></div></div></div>';
+      }).join('');
+      $('#bagF').innerHTML = '<div class="row"><span class="cap">Subtotal</span><span>' + gbp(sub) + '</span></div>' +
+        '<p class="klarna" style="margin-top:6px">Or 3 interest-free payments of ' + gbp(Math.round(sub / 3 * 100) / 100) + ' with Klarna.</p>' +
+        '<a class="btn" href="#/checkout">Review order</a>';
+    }
+    if (document.body.dataset.page === 'checkout') paintCheckout();
+  }
+  $('#bagItems').addEventListener('click', function(e){
+    var d = e.target.closest('[data-dq]'), r = e.target.closest('[data-rm]');
+    if (d){ var l = bag[+d.dataset.dq]; l.q += +d.dataset.d; if (l.q < 1) bag.splice(+d.dataset.dq, 1); }
+    else if (r) bag.splice(+r.dataset.rm, 1); else return;
+    saveBag(); paintBag();
+    var f = $('#bag [data-close]'); if (f && !$('#bag').contains(document.activeElement)) f.focus();
+  });
+  function openBag(){ paintBag(); open($('#bag')); }
+  $('#bagBtn').onclick = openBag;
+
+  /* newsletter */
+  $('#nl').addEventListener('submit', function(e){
+    e.preventDefault();
+    var v = $('#nlI').value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){ $('#nlE').textContent = 'Please enter a valid email address.'; $('#nlI').focus(); return; }
+    $('#nlE').textContent = ''; this.style.display = 'none'; $('#nlOk').style.display = 'block';
+  });
+
+  /* ---------- scroll: the one moving part ----------
+     On the home page the wordmark begins large over the film and settles into the header,
+     while the film eases from full-bleed to the page margins. Transform and opacity only. */
+  var ticking = false, HM = null;
+  var ease = function(t){ return t * t * (3 - 2 * t); };
+  function heroMeasure(){
+    var hero = $('#hero');
+    if (!hero){ HM = null; return; }
+    var s = hero.firstElementChild, W = s.offsetWidth, H = s.offsetHeight;
+    HM = { f: $('#heroF'), i: $('#heroI'), t: $('#heroT'), W: W, H: H, R: Math.max(1, hero.offsetHeight - H),
+      m: parseFloat(getComputedStyle(hd).paddingLeft) || 0, pm: parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--pm')) || 40,
+      hh: hd.offsetHeight, S: phone.matches ? 2.3 : Math.min(3.8, Math.max(2.8, W / 420)) };
+  }
+  function frame(){
+    ticking = false;
+    var on = mega.classList.contains('on');
+    hd.classList.toggle('mega-on', on);
+    if (cur){ var ab = $('#add'); buySet(!!ab && phone.matches && ab.getBoundingClientRect().bottom < 0); }
+    if (document.body.dataset.page !== 'home' || !HM || reduce){
+      hd.classList.remove('clear', 'lift'); mark.style.transform = '';
+      return;
+    }
+    var p = Math.min(1, Math.max(0, scrollY / HM.R)), e = ease(p), em = ease(Math.min(1, p / 0.72));
+    var tx = HM.m * e, sx = 1 - (2 * HM.m / HM.W) * e, sy = 1 - (HM.pm / HM.H) * e;
+    HM.f.style.transform = 'translate3d(' + tx.toFixed(2) + 'px,0,0) scale(' + sx.toFixed(5) + ',' + sy.toFixed(5) + ')';
+    HM.i.style.transform = 'scale(' + (1 / sx).toFixed(5) + ',' + (1 / sy).toFixed(5) + ') translate3d(' + (-tx).toFixed(2) + 'px,0,0)';
+    HM.t.style.transform = 'translate3d(0,' + (-(HM.pm + 2) * e).toFixed(2) + 'px,0)';
+    HM.t.style.setProperty('--in', (Math.min(20, HM.pm) * e).toFixed(2) + 'px');
+    var dy = (HM.H / 2 - HM.hh / 2) * (1 - em), sc = 1 + (HM.S - 1) * (1 - em);
+    mark.style.transform = em < 1 ? 'translate3d(0,' + dy.toFixed(2) + 'px,0) scale(' + sc.toFixed(4) + ')' : '';
+    hd.classList.toggle('lift', em < 1);
+    hd.classList.toggle('clear', p < 0.8 && !on);
+  }
+  function onScroll(){ if (!ticking){ ticking = true; requestAnimationFrame(frame); } }
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', function(){ heroMeasure(); onScroll(); stick(); });
+  var onPhoneP = function(){ if (cur){ notesMode(); stick(); } };
+  if (phone.addEventListener) phone.addEventListener('change', onPhoneP); else if (phone.addListener) phone.addListener(onPhoneP);
+  /* the hero takes the upright cut on phones and the wide cut elsewhere, also when the window changes */
+  var onPhone = function(){
+    var h = phone.matches ? HERO.tall : HERO.wide, a = $('#heroA'), b = $('#heroB');
+    if (document.body.dataset.page !== 'home' || !a || a.getAttribute('src') === h.src) return;
+    if (HF) HF.dead = true;
+    [a, b].forEach(function(v){ v.pause(); v.classList.remove('on', 'top'); });
+    b.removeAttribute('src'); b.load();
+    $('#heroI').style.backgroundImage = "url('" + h.poster + "')";
+    a.poster = h.poster; a.src = h.src;
+    heroFilm(h); heroMeasure(); frame();
+  };
+  if (phone.addEventListener) phone.addEventListener('change', onPhone); else if (phone.addListener) phone.addListener(onPhone);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(stick);
+
+  /* ---------- start ---------- */
+  paintBag();
+  route();
+})();
+</script>
+</body>
+</html>
