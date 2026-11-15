@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MORGANÀ London · Sovereign</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b0b0b;--paper:#fff;--mute:#6f6b66;--line:rgba(11,11,11,.12);--stone:#eceae6;--gold:#c8a870;
+  --sans:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;--serif:"Cormorant Garamond",Georgia,serif;
+  --hh:72px;--pad:40px;--gut:6px;--ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+html.lock{overflow:hidden}
+body{background:var(--paper);color:var(--ink);font:400 13px/1.6 var(--sans);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+a{color:inherit;text-decoration:none}
+img,video{display:block;width:100%;height:100%;object-fit:cover}
+picture{display:block;width:100%;height:100%}
+button{font:inherit;background:none;border:0;color:inherit;cursor:pointer;border-radius:0}
+ul{list-style:none}
+:focus{outline:none}
+:focus-visible{outline:1px solid currentColor;outline-offset:4px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:fixed;left:16px;top:-60px;z-index:40;background:#fff;color:var(--ink);padding:12px 16px;font-size:12px}
+.skip:focus{top:16px}
+
+/* type */
+.lbl{font:500 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase}
+.wm{font:400 26px/1 var(--serif);letter-spacing:.42em;margin-right:-.42em;text-transform:uppercase;white-space:nowrap}
+.ul{border-bottom:1px solid currentColor;padding-bottom:3px;transition:opacity .25s}
+a:hover>.ul,a.ul:hover{opacity:.55}
+
+/* header */
+.hd{position:fixed;inset:0 0 auto;z-index:20;height:var(--hh);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 var(--pad);color:#fff;transition:background-color .4s,color .4s,box-shadow .4s}
+.hd.solid{background:#fff;color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.hd:not(.solid){text-shadow:0 1px 12px rgba(0,0,0,.28)}
+.hd nav{display:flex;gap:28px;align-items:center;font-size:12px;letter-spacing:.04em}
+.hd .r{justify-content:flex-end}
+.hd nav>a,.hd nav>button{display:inline-flex;align-items:center;gap:8px;height:40px;transition:opacity .25s}
+.hd nav>a:hover,.hd nav>button:hover{opacity:.6}
+.hd .ico{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.1;flex:none}
+.hd .mob{display:none}
+.hd .cnt{font-size:11px;letter-spacing:.04em}
+#menuBtn .x{display:none}
+.hd.open #menuBtn .x{display:block}
+.hd.open #menuBtn .bars{display:none}
+
+/* overlays */
+.ov{position:fixed;inset:0;z-index:15;background:#fff;color:var(--ink);padding-top:var(--hh);overflow-y:auto;overscroll-behavior:contain;opacity:0;visibility:hidden;transition:opacity .4s,visibility 0s .4s}
+.ov.open{opacity:1;visibility:visible;transition:opacity .4s}
+.ov .in{padding:64px var(--pad) 56px;min-height:100%;display:flex;flex-direction:column;transform:translateY(10px);transition:transform .6s var(--ease)}
+.ov.open .in{transform:none}
+.ov h2{color:var(--mute);margin-bottom:28px}
+.mgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;flex:1}
+.mbig a{display:inline-flex;align-items:baseline;gap:14px;font:400 44px/1.25 var(--serif);letter-spacing:.01em;transition:opacity .25s}
+.mbig small{font:400 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.mlist a{display:inline-flex;align-items:baseline;gap:8px;font-size:15px;line-height:1;padding:9px 0;transition:opacity .25s}
+.mlist sup{font-size:10px;color:var(--mute);letter-spacing:.04em}
+.mbig a:hover,.mlist a:hover{opacity:.55}
+.mfoot{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:12px;color:var(--mute)}
+.mfoot a{color:var(--ink)}
+
+.sbox{max-width:1312px;width:100%;margin:0 auto}
+.sfield{display:flex;align-items:center;gap:16px;border-bottom:1px solid var(--ink);padding-bottom:12px}
+.sfield .ico{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.1;flex:none}
+.sfield input{flex:1;min-width:0;border:0;background:none;font:400 30px/1.2 var(--serif);color:var(--ink);padding:4px 0}
+.sfield input::placeholder{color:#a8a49e}
+.sfield input:focus-visible,.news input:focus-visible{outline:none}
+.sfield input::-webkit-search-cancel-button{display:none}
+.snote{margin:28px 0 20px;color:var(--mute)}
+.sres{display:grid;grid-template-columns:repeat(6,1fr);gap:32px 16px}
+.empty{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:24px;padding-bottom:10vh}
+.empty p{font:400 30px/1.2 var(--serif)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;font:500 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:16px 24px;text-shadow:none;transition:background-color .3s,color .3s,box-shadow .3s}
+.btn.solid{background:#fff;color:var(--ink)}
+.btn.solid:hover{background:var(--ink);color:#fff}
+.btn.line{color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.9)}
+.btn.line:hover{background:#fff;color:var(--ink)}
+.btn.ink,.light .btn.line{color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.btn.ink:hover,.light .btn.line:hover{background:var(--ink);color:#fff}
+
+/* tiles */
+.tile{position:relative;overflow:hidden;background:var(--stone)}
+.tile a.fill{position:absolute;inset:0}
+.tile img{transition:transform 1.8s var(--ease)}
+@media (hover:hover){.tile a.fill:hover img{transform:scale(1.03)}}
+.tile .cap{position:absolute;left:0;right:0;bottom:32px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.32);pointer-events:none}
+.tile .cap a{pointer-events:auto}
+.tile .cap h2{font:400 16px/1.25 var(--sans);letter-spacing:.02em}
+.tile.wide{aspect-ratio:16/9}
+.tile.light,.tile.wide.light,.grid2 .tile.light{aspect-ratio:auto;background:#fff}
+.tile.light a.fill{position:relative;display:block;aspect-ratio:1/1;overflow:hidden;background:var(--stone)}
+.tile.wide.light a.fill{aspect-ratio:3/2}
+.tile.light .cap{position:static;color:var(--ink);text-shadow:none;padding:24px 0 48px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:var(--gut)}
+.grid2 .tile{aspect-ratio:3/4}
+.stack{display:grid;gap:var(--gut)}
+
+/* hero */
+.hero{height:100vh;height:100svh;min-height:560px;background:#15120f url(assets/hero-2026-11-10/hero-rail-montage-poster.jpg) center/cover no-repeat}
+.hero video{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+.hero video.on{opacity:1}
+.hero .cap{bottom:40px;gap:20px}
+.hero .cap h1{font:400 16px/1.25 var(--sans);letter-spacing:.02em}
+.pause{position:absolute;right:var(--pad);bottom:40px;width:36px;height:36px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.75);display:grid;place-items:center;color:#fff;transition:background-color .3s,color .3s}
+.pause:hover{background:#fff;color:var(--ink)}
+.pause svg{width:10px;height:10px;fill:currentColor}
+.scroll{position:absolute;left:var(--pad);bottom:50px;color:#fff;font-size:12px;line-height:1;letter-spacing:.04em;text-shadow:0 1px 10px rgba(0,0,0,.32)}
+
+/* text modules */
+.txt{padding:56px 24px;text-align:center}
+.txt p{max-width:760px;margin:0 auto;text-wrap:balance}
+.txt .lbl{margin-bottom:18px}
+
+/* carousel */
+.car{padding:88px 0 96px}
+.car .top{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding:0 var(--pad);margin-bottom:32px}
+.car h2{font:400 34px/1.1 var(--serif);letter-spacing:.01em}
+.car .ctl{display:flex;align-items:center;gap:12px}
+.car .ctl a{font-size:12px;margin-right:16px}
+.arw{width:40px;height:40px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--line);display:grid;place-items:center;transition:background-color .3s,color .3s,opacity .3s}
+.arw svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:1.1}
+.arw:hover:not(:disabled){background:var(--ink);color:#fff}
+.arw:disabled{opacity:.3;cursor:default}
+.track{display:flex;gap:var(--gut);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:var(--pad);padding:0 var(--pad);scrollbar-width:none;-ms-overflow-style:none}
+.track::-webkit-scrollbar{display:none}
+.track .pc{flex:0 0 calc((100% - 3 * var(--gut)) / 4.25);scroll-snap-align:start}
+.pc{display:block}
+.pc .im{aspect-ratio:2/3;overflow:hidden;background:var(--stone)}
+.pc img{transition:transform 1.8s var(--ease)}
+@media (hover:hover){.pc:hover img{transform:scale(1.03)}}
+.pc .nm{display:block;margin-top:16px;font-size:14px;line-height:1.3}
+.pc .sb{display:block;font-size:12px;line-height:1.5;color:var(--mute)}
+.pc .pr{display:block;margin-top:6px;font-size:12px;line-height:1.5}
+
+/* house */
+.house{padding:96px 0 104px}
+.house .txt{padding:0 24px 48px}
+.mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1312px;margin:0 auto;padding:0 var(--pad)}
+.mosaic a{display:block;text-align:center}
+.mosaic .im{aspect-ratio:1/1;overflow:hidden;background:var(--stone)}
+.mosaic img{transition:transform 1.8s var(--ease)}
+@media (hover:hover){.mosaic a:hover img{transform:scale(1.03)}}
+.mosaic h3{margin:24px 0 14px}
+.mosaic .ul{font-size:12px}
+
+/* sign-up + footer */
+.dark{background:#000;color:#fff}
+.news{text-align:center;padding:96px 24px 88px}
+.news .lbl{margin-bottom:28px;color:rgba(255,255,255,.6)}
+.news p{font:300 clamp(21px,2.1vw,30px)/1.35 var(--sans);max-width:780px;margin:0 auto 36px}
+.news form{display:inline-flex;align-items:center;border-bottom:1px solid rgba(255,255,255,.5);transition:border-color .3s}
+.news form:focus-within{border-color:#fff}
+.news input{background:none;border:0;color:#fff;font:400 14px/20px var(--sans);height:48px;padding:0;width:min(320px,58vw)}
+.news input::placeholder{color:rgba(255,255,255,.55)}
+.news form button.lbl{height:48px;margin:0;color:#fff;padding:0 0 0 20px;transition:opacity .25s}
+.news form button:hover{opacity:.6}
+.news .ok{min-height:20px;margin-top:20px;font-size:12px;color:var(--gold)}
+.ft{display:grid;grid-template-columns:repeat(3,1fr) 1.5fr;gap:40px;padding:64px var(--pad) 48px;border-top:1px solid rgba(255,255,255,.14)}
+.ft h3{color:rgba(255,255,255,.55);margin-bottom:22px;font-size:10px}
+.ft li{margin-bottom:10px}
+.ft li a{font-size:13px;transition:opacity .25s}
+.ft li a:hover{opacity:.6}
+.ft .ev{font:400 24px/1.25 var(--serif);margin-bottom:12px}
+.ft .evc p{font-size:13px;line-height:1.7;color:rgba(255,255,255,.72)}
+.ft .evc p a{color:#fff}
+.base{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;padding:40px var(--pad) 36px}
+.base .wm{font-size:clamp(34px,7vw,96px);letter-spacing:.3em;margin-right:0}
+.base small{font-size:10px;line-height:1.6;color:rgba(255,255,255,.5);letter-spacing:.06em;white-space:nowrap}
+
+/* reveal */
+.rv{opacity:0;transition:opacity 1.1s ease}
+.rv.up{transform:translateY(12px);transition:opacity 1.1s ease,transform 1.1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.still .rv,.still.rv{opacity:1!important;transform:none!important}
+.still *{transition:none!important}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+  .tile a.fill:hover img,.pc:hover img,.mosaic a:hover img{transform:none}
+}
+
+@media (max-width:1100px){
+  .mgrid{grid-template-columns:1fr 1fr;gap:48px 32px}
+  .sres{grid-template-columns:repeat(4,1fr)}
+  .track .pc{flex-basis:calc((100% - 2 * var(--gut)) / 3.2)}
+}
+@media (max-width:760px){
+  :root{--hh:56px;--pad:18px;--gut:4px}
+  .hd nav{gap:4px}
+  .hd .desk{display:none}
+  .hd .mob{display:inline-flex}
+  .hd nav>button{width:36px;justify-content:center}
+  .hd .l{margin-left:-10px}.hd .r{margin-right:-10px}
+  .hd .cnt{display:none}
+  .wm{font-size:20px;letter-spacing:.34em;margin-right:-.34em}
+  .hero{background-image:url(assets/hero-2026-11-10/hero-rail-montage-mobile-poster.jpg)}
+  .hero .cap{bottom:36px}
+  .scroll{display:none}
+  .pause{bottom:36px;width:32px;height:32px}
+  .txt{padding:44px 28px}
+  .grid2{grid-template-columns:1fr}
+  .tile.wide{aspect-ratio:3/4}
+  .tile.wide.light a.fill{aspect-ratio:1/1}
+  .tile.light .cap{padding:20px 0 40px}
+  .tile .cap{bottom:28px}
+  .car{padding:56px 0 64px}
+  .car .top{margin-bottom:24px}
+  .car h2{font-size:28px}
+  .car .arw{display:none}
+  .car .ctl a{margin-right:0}
+  .track .pc{flex-basis:68%}
+  .house{padding:64px 0 72px}
+  .house .txt{padding-bottom:36px}
+  .mosaic{grid-template-columns:1fr;gap:44px}
+  .news{padding:72px 24px 64px}
+  .ft{grid-template-columns:1fr 1fr;padding:48px var(--pad) 32px;gap:36px 24px}
+  .ft .evc{grid-column:1/-1}
+  .base{flex-direction:column;align-items:flex-start;gap:18px;padding:28px var(--pad) 28px}
+  .ov .in{padding:36px var(--pad) 40px}
+  .mgrid{grid-template-columns:1fr 1fr;gap:40px 20px}
+  .mgrid>div:first-child{grid-column:1/-1}
+  .mbig a{font-size:36px}
+  .ov h2{margin-bottom:18px}
+  .mfoot{margin-top:40px;flex-direction:column;gap:8px}
+  .sfield input{font-size:24px}
+  .sres{grid-template-columns:1fr 1fr;gap:28px var(--gut)}
+  .empty p{font-size:26px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hd" id="hd">
+  <nav class="l" aria-label="Primary">
+    <a class="desk" href="j01.html#/care/contact">+ Contact us</a>
+    <a class="desk" href="j01.html#/collection/sovereign">Sovereign</a>
+    <button class="mob" type="button" data-open="search" aria-label="Search" aria-haspopup="dialog"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11l4 4"/></svg></button>
+  </nav>
+  <a class="wm" href="k02.html" aria-label="Morganà, home">Morganà</a>
+  <nav class="r" aria-label="Shop and menu">
+    <a class="desk" href="j01.html#/shop">Shop</a>
+    <button class="desk" type="button" data-open="search" aria-label="Search" aria-haspopup="dialog"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11l4 4"/></svg></button>
+    <button type="button" data-open="bag" aria-label="Bag, 0 items" aria-haspopup="dialog"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 5h10l-1 10H4z"/><path d="M5.5 5V4a2.5 2.5 0 015 0v1"/></svg><span class="cnt" aria-hidden="true">(0)</span></button>
+    <button type="button" id="menuBtn" data-open="menu" aria-label="Menu" aria-haspopup="dialog" aria-expanded="false"><svg class="ico bars" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4.5h12M2 8h12M2 11.5h12"/></svg><svg class="ico x" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg><span class="desk" id="menuTxt">Menu</span></button>
+  </nav>
+</header>
+
+<!-- Menu -->
+<div class="ov" id="ov-menu" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="in">
+    <div class="mgrid">
+      <div>
+        <h2 class="lbl">Collections</h2>
+        <ul class="mbig">
+          <li><a href="j01.html#/collection/sovereign">Sovereign <small>Autumn–Winter 2026</small></a></li>
+          <li><a href="j01.html#/collection/lumiere">Lumière <small>Summer 2026</small></a></li>
+          <li><a href="j01.html#/collection/fortia">Fortia <small>Winter 2025</small></a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="lbl">Shop by category</h2>
+        <ul class="mlist" id="cats"><li><a href="j01.html#/shop">All pieces</a></li></ul>
+      </div>
+      <div>
+        <h2 class="lbl">The house</h2>
+        <ul class="mlist">
+          <li><a href="j01.html#/house">About Morganà</a></li>
+          <li><a href="j01.html#/evening">The evening, 19.11.26</a></li>
+          <li><a href="j01.html#/journal">Journal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="lbl">Client care</h2>
+        <ul class="mlist">
+          <li><a href="j01.html#/care/contact">Contact us</a></li>
+          <li><a href="j01.html#/care/contact">Private appointments</a></li>
+          <li><a href="j01.html#/care/delivery">Delivery</a></li>
+          <li><a href="j01.html#/care/returns">Returns</a></li>
+          <li><a href="j01.html#/care/size-guide">Size guide</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mfoot"><span>One year of Morganà. Thursday 19.11.26, 7pm, 102 Stamford New Road, Altrincham. A private event.</span><a class="ul" href="mailto:info@morgana.london">info@morgana.london</a></div>
+  </div>
+</div>
+
+<!-- Search -->
+<div class="ov" id="ov-search" role="dialog" aria-modal="true" aria-label="Search">
+  <div class="in">
+    <div class="sbox">
+      <form class="sfield" id="sform" role="search" autocomplete="off">
+        <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11l4 4"/></svg>
+        <label class="sr" for="q">Search pieces</label>
+        <input type="search" id="q" placeholder="Search pieces" enterkeyhint="search">
+      </form>
+      <p class="lbl snote" id="snote" aria-live="polite">Suggested</p>
+      <div class="sres" id="sres"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Bag -->
+<div class="ov" id="ov-bag" role="dialog" aria-modal="true" aria-label="Bag">
+  <div class="in">
+    <h2 class="lbl">Bag (0)</h2>
+    <div class="empty"><p>Your bag is empty.</p><a class="btn ink" href="j01.html#/collection/sovereign">Discover Sovereign</a></div>
+  </div>
+</div>
+
+<main id="main">
+  <!-- 1. Hero film -->
+  <section class="tile hero" data-shot aria-label="Sovereign, Autumn–Winter 2026">
+    <video id="film" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"
+      data-desk="assets/hero-2026-11-10/hero-rail-rail-only.mp4" data-mob="assets/hero-2026-11-10/hero-rail-rail-only-mobile.mp4"></video>
+    <div class="cap"><h1>Sovereign, Autumn–Winter 2026</h1><a class="btn solid" href="j01.html#/collection/sovereign">Shop now</a></div>
+    <span class="scroll" aria-hidden="true">Scroll to discover more</span>
+    <button class="pause" id="pause" type="button" aria-label="Pause film"><svg viewBox="0 0 10 10" id="pi" aria-hidden="true"><rect x="1.5" y="0" width="2.4" height="10"/><rect x="6.1" y="0" width="2.4" height="10"/></svg></button>
+  </section>
+
+  <!-- 2. One line -->
+  <section class="txt rv up" data-shot><p>Tailoring, knitwear and coats for the long evenings. Sovereign arrives on 19.11.26, one year of Morganà.</p></section>
+
+  <div class="stack">
+    <!-- 3. Two up -->
+    <div class="grid2" data-shot>
+      <section class="tile rv"><a class="fill" href="j01.html#/product/sov-06" tabindex="-1" aria-hidden="true"><img src="assets/img/hb/hb-00018.jpg" alt="" loading="lazy" decoding="async" style="object-position:50% 22%"></a>
+        <div class="cap"><h2>The Sloan Coat</h2><a class="btn line" href="j01.html#/product/sov-06" aria-label="Shop the Sloan Coat">Shop now</a></div></section>
+      <section class="tile rv"><a class="fill" href="j01.html#/product/sov-21" tabindex="-1" aria-hidden="true"><img src="assets/img/hb/hb-00210.jpg" alt="" loading="lazy" decoding="async" style="object-position:50% 30%"></a>
+        <div class="cap"><h2>The Dorothy Roll-Neck</h2><a class="btn line" href="j01.html#/product/sov-21" aria-label="Shop the Dorothy Roll-Neck">Shop now</a></div></section>
+    </div>
+
+    <!-- 4. Wide still life -->
+    <section class="tile wide light rv" data-shot><a class="fill" href="j01.html#/product/sov-07" tabindex="-1" aria-hidden="true"><img src="assets/k01/still-charlie.jpg" srcset="assets/k01/still-charlie-s.jpg 1200w, assets/k01/still-charlie.jpg 2400w" sizes="(max-width:760px) 150vw, 100vw" alt="" loading="lazy" decoding="async"></a>
+      <div class="cap"><h2>The Charlie Cardigan</h2><a class="btn line" href="j01.html#/product/sov-07" aria-label="Shop the Charlie Cardigan">Shop now</a></div></section>
+
+    <!-- 5. Two up, still lifes -->
+    <div class="grid2" data-shot>
+      <section class="tile light rv"><a class="fill" href="j01.html#/product/sov-09" tabindex="-1" aria-hidden="true"><img src="assets/k01/still-ana.jpg" srcset="assets/k01/still-ana-s.jpg 1200w, assets/k01/still-ana.jpg 2400w" sizes="(max-width:760px) 150vw, 75vw" alt="" loading="lazy" decoding="async"></a>
+        <div class="cap"><h2>The Ana Cardigan</h2><a class="btn line" href="j01.html#/product/sov-09" aria-label="Shop the Ana Cardigan">Shop now</a></div></section>
+      <section class="tile light rv"><a class="fill" href="j01.html#/product/sov-16" tabindex="-1" aria-hidden="true"><img src="assets/k01/still-vivienne.jpg" srcset="assets/k01/still-vivienne-s.jpg 1200w, assets/k01/still-vivienne.jpg 2400w" sizes="(max-width:760px) 150vw, 75vw" alt="" loading="lazy" decoding="async"></a>
+        <div class="cap"><h2>The Vivienne Shirt</h2><a class="btn line" href="j01.html#/product/sov-16" aria-label="Shop the Vivienne Shirt">Shop now</a></div></section>
+    </div>
+  </div>
+
+  <!-- 6. New in Sovereign -->
+  <section class="car" data-shot aria-labelledby="carh">
+    <div class="top rv up">
+      <h2 id="carh">New in Sovereign</h2>
+      <div class="ctl"><a class="ul" href="j01.html#/collection/sovereign">View all</a>
+        <button class="arw" id="prev" type="button" aria-label="Previous pieces" disabled><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M8 1L3 6l5 5"/></svg></button>
+        <button class="arw" id="next" type="button" aria-label="Next pieces"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4 1l5 5-5 5"/></svg></button></div>
+    </div>
+    <div class="track rv" id="track" role="list" aria-label="New in Sovereign" tabindex="0"></div>
+  </section>
+
+  <div class="stack">
+    <!-- 7. Wide, the office -->
+    <section class="tile wide rv" data-shot><a class="fill" href="j01.html#/product/sov-01" tabindex="-1" aria-hidden="true"><picture>
+        <source media="(max-width:760px)" srcset="assets/k01/office-v-s.jpg 900w, assets/k01/office-v.jpg 1600w" sizes="100vw">
+        <img id="office" src="assets/k01/office-h.jpg" srcset="assets/k01/office-h-s.jpg 1440w, assets/k01/office-h.jpg 2880w" sizes="100vw" alt="" loading="lazy" decoding="async"></picture></a>
+      <div class="cap"><h2>The Anabelle Suit</h2><a class="btn line" href="j01.html#/product/sov-01" aria-label="Shop the Anabelle Suit">Shop now</a></div></section>
+
+    <!-- 8. Two up -->
+    <div class="grid2" data-shot>
+      <section class="tile rv"><a class="fill" href="j01.html#/product/sov-04" tabindex="-1" aria-hidden="true"><img src="assets/img/hb/hb-00140.jpg" alt="" loading="lazy" decoding="async" style="object-position:50% 20%"></a>
+        <div class="cap"><h2>The Kensington Jacket</h2><a class="btn line" href="j01.html#/product/sov-04" aria-label="Shop the Kensington Jacket">Shop now</a></div></section>
+      <section class="tile rv"><a class="fill" href="j01.html#/product/sov-03" tabindex="-1" aria-hidden="true"><img src="assets/img/hb/hb-00348.jpg" alt="" loading="lazy" decoding="async" style="object-position:50% 45%"></a>
+        <div class="cap"><h2>The Kiara Pencil Skirt</h2><a class="btn line" href="j01.html#/product/sov-03" aria-label="Shop the Kiara Pencil Skirt">Shop now</a></div></section>
+    </div>
+  </div>
+
+  <!-- 9. House services -->
+  <section class="house" data-shot>
+    <div class="txt rv up"><h2 class="lbl">The House of Morganà</h2><p>From the first fitting to the final detail, we are here to help you choose with confidence.</p></div>
+    <div class="mosaic">
+      <a class="rv" href="j01.html#/evening"><div class="im"><img src="assets/img/hb/hb-00371-band.jpg" alt="Invitation cards for One year of Morganà" loading="lazy" decoding="async" style="object-position:62% 50%"></div><h3 class="lbl">One year of Morganà</h3><span class="ul">Thursday 19.11.26</span></a>
+      <a class="rv" href="j01.html#/care/contact"><div class="im"><img src="assets/img/hb/hb-00385.jpg" alt="Morganà bags on a window seat" loading="lazy" decoding="async"></div><h3 class="lbl">Private appointments</h3><span class="ul">Book an appointment</span></a>
+      <a class="rv" href="j01.html#/care/delivery"><div class="im"><img src="assets/img/hb/hb-00064.jpg" alt="A Morganà bag by the window" loading="lazy" decoding="async" style="object-position:50% 72%"></div><h3 class="lbl">Client care</h3><span class="ul">Discover more</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="dark" id="foot">
+  <section class="news" data-shot aria-labelledby="newsh">
+    <h2 class="lbl" id="newsh">Sign up for Morganà updates</h2>
+    <p>Be the first to hear about new collections, private evenings and the latest from the house.</p>
+    <form id="nf"><label class="sr" for="em">Email address</label><input type="email" id="em" placeholder="Email address" autocomplete="email" required><button class="lbl" type="submit">Subscribe</button></form>
+    <div class="ok" id="ok" role="status"></div>
+  </section>
+  <div class="ft">
+    <div><h3 class="lbl">May we help you?</h3><ul><li><a href="j01.html#/care/contact">Contact us</a></li><li><a href="j01.html#/care/delivery">Delivery</a></li><li><a href="j01.html#/care/returns">Returns</a></li><li><a href="j01.html#/care/size-guide">Size guide</a></li></ul></div>
+    <div><h3 class="lbl">The house</h3><ul><li><a href="j01.html#/house">About Morganà</a></li><li><a href="j01.html#/journal">Journal</a></li><li><a href="j01.html#/collection/sovereign">Sovereign</a></li><li><a href="j01.html#/collection/lumiere">Lumière</a></li><li><a href="j01.html#/collection/fortia">Fortia</a></li></ul></div>
+    <div><h3 class="lbl">Follow</h3><ul><li><a href="https://www.instagram.com/" rel="noopener">Instagram</a></li><li><a href="mailto:info@morgana.london">info@morgana.london</a></li></ul></div>
+    <div class="evc"><h3 class="lbl">One year of Morganà</h3><div class="ev">Thursday 19.11.26, 7pm</div><p>A private event. Drinks · Canapés · DJ.<br>102 Stamford New Road, Altrincham WA14 1DG.<br>RSVP <a class="ul" href="mailto:info@morgana.london">info@morgana.london</a></p></div>
+  </div>
+  <div class="base"><span class="wm" aria-hidden="true">Morganà</span><small>© Morganà London Ltd · Concept preview</small></div>
+</footer>
+
+<script src="assets/products.js"></script>
+<script>
+(function(){
+  var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var mob=matchMedia('(max-width:760px)');
+  var qs={};location.search.replace(/^\?/,'').split('&').forEach(function(kv){if(!kv)return;var i=kv.indexOf('=');qs[i<0?kv:kv.slice(0,i)]=i<0?'':decodeURIComponent(kv.slice(i+1))});
+  var shot=qs.shot;                         /* test-only: ?shot=N | menu | search | bag */
+  if(shot!==undefined){document.documentElement.classList.add('still');$$('img[loading]').forEach(function(i){i.loading='eager';i.decoding='sync'})}
+  var lz=shot===undefined?' loading="lazy" decoding="async"':'';
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+
+  /* ---- catalogue ---- */
+  var M=window.MORGANA||{}, all=(M.products||[]).filter(function(p){return !p.hidden});
+  var byId={};all.forEach(function(p){byId[p.id]=p});
+  function card(p,role){
+    return '<a class="pc" href="j01.html#/product/'+esc(p.id)+'"'+(role?' role="listitem"':'')+'><div class="im"><img src="'+esc(p.images[0])+'" alt="'+esc(p.name+(p.colour?', '+p.colour.toLowerCase():''))+'"'+lz+' width="800" height="1200"></div>'+
+      '<span class="nm">'+esc(p.name)+'</span>'+(p.sub?'<span class="sb">'+esc(p.sub)+'</span>':'')+'<span class="pr">£'+esc(p.price)+'</span></a>';
+  }
+
+  /* ---- header ---- */
+  var hd=$('#hd'), openId=null, opener=null;
+  function paint(){hd.classList.toggle('solid',scrollY>40||!!openId)}
+  addEventListener('scroll',paint,{passive:true});
+
+  /* ---- overlays ---- */
+  var menuBtn=$('#menuBtn'), menuTxt=$('#menuTxt'), outside=[$('#main'),$('#foot')];
+  function setOpen(id,from){
+    if(openId){$('#ov-'+openId).classList.remove('open')}
+    openId=id||null;
+    var de=document.documentElement, sb=de.classList.contains('lock')?parseFloat(de.style.paddingRight)||0:innerWidth-de.clientWidth;
+    de.classList.toggle('lock',!!openId);
+    de.style.paddingRight=hd.style.right=openId&&sb>0?sb+'px':'';
+    hd.classList.toggle('open',!!openId);
+    outside.forEach(function(el){el.inert=!!openId});
+    menuBtn.setAttribute('aria-label',openId?'Close':'Menu');
+    menuBtn.setAttribute('aria-expanded',openId?'true':'false');
+    menuTxt.textContent=openId?'Close':'Menu';
+    paint();
+    if(openId){
+      if(from)opener=from;
+      var ov=$('#ov-'+openId);ov.classList.add('open');ov.scrollTop=0;
+      if(openId==='search'){var q=$('#q');setTimeout(function(){q.focus()},60)}
+    } else if(opener){opener.focus();opener=null}
+  }
+  $$('[data-open]').forEach(function(b){b.addEventListener('click',function(){
+    var id=b.getAttribute('data-open');
+    if(b===menuBtn&&openId){setOpen(null);return}
+    setOpen(openId===id?null:id,b);
+  })});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&openId)setOpen(null)});
+  $$('.ov a').forEach(function(a){a.addEventListener('click',function(){setOpen(null)})});
+
+  /* menu: categories with counts */
+  (function(){
+    var order=['Coats','Jackets','Suits','Knitwear','Dresses','Skirts','Trousers','Shorts','Shirts','Sets'],n={};
+    all.forEach(function(p){if(p.category){n[p.category]=(n[p.category]||0)+1;if(order.indexOf(p.category)<0)order.push(p.category)}});
+    var h=order.filter(function(c){return n[c]}).map(function(c){return '<li><a href="j01.html#/shop?category='+encodeURIComponent(c)+'">'+esc(c)+' <sup>'+n[c]+'</sup></a></li>'}).join('');
+    if(all.length)$('#cats').innerHTML=h+'<li><a href="j01.html#/shop">All pieces <sup>'+all.length+'</sup></a></li>';
+    $$('#cats a').forEach(function(a){a.addEventListener('click',function(){setOpen(null)})});
+  })();
+
+  /* search */
+  var sres=$('#sres'), snote=$('#snote'), qIn=$('#q');
+  var suggest=['sov-06','sov-01','sov-09','sov-02'].map(function(i){return byId[i]}).filter(Boolean);
+  function norm(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')}
+  function find(t){
+    var words=norm(t).split(/\s+/).filter(Boolean);
+    return all.map(function(p){
+      var name=norm(p.name), hay=norm([p.name,p.sub,p.category,p.colour,p.collection].join(' ')), s=0;
+      for(var i=0;i<words.length;i++){var w=words[i];if(hay.indexOf(w)<0)return null;s+=name.indexOf(w)===0?3:name.indexOf(w)>=0?2:1}
+      if(p.collection==='sovereign')s+=.5;
+      return {p:p,s:s};
+    }).filter(Boolean).sort(function(a,b){return b.s-a.s}).map(function(x){return x.p});
+  }
+  function search(){
+    var t=qIn.value.trim(), list, total;
+    if(!t){list=suggest;snote.textContent='Suggested'}
+    else{list=find(t);total=list.length;list=list.slice(0,8);
+      snote.textContent=total?(total+(total===1?' piece':' pieces')+(total>8?', showing 8':'')):'Nothing found for “'+t+'”'}
+    sres.innerHTML=list.map(function(p){return card(p)}).join('')||'<a class="btn ink" style="justify-self:start" href="j01.html#/shop">View all pieces</a>';
+    $$('a',sres).forEach(function(a){a.addEventListener('click',function(){setOpen(null)})});
+    return list;
+  }
+  qIn.addEventListener('input',search);
+  $('#sform').addEventListener('submit',function(e){e.preventDefault();var l=qIn.value.trim()?search():[];if(l.length){setOpen(null);location.href='j01.html#/product/'+l[0].id}});
+  search();
+
+  /* ---- carousel ---- */
+  var track=$('#track'), prev=$('#prev'), next=$('#next');
+  track.innerHTML=['sov-06','sov-01','sov-02','sov-04','sov-12','sov-11','sov-15','sov-19'].map(function(i){return byId[i]}).filter(Boolean).map(function(p){return card(p,true)}).join('');
+  function step(d){var c=track.firstElementChild;if(!c)return;var w=c.getBoundingClientRect().width+parseFloat(getComputedStyle(track).columnGap||0);
+    var n=Math.max(1,Math.floor(track.clientWidth/w)-1);track.scrollBy({left:d*n*w,behavior:reduce?'auto':'smooth'})}
+  function arrows(){prev.disabled=track.scrollLeft<4;next.disabled=track.scrollLeft>track.scrollWidth-track.clientWidth-4}
+  prev.onclick=function(){step(-1)};next.onclick=function(){step(1)};
+  track.addEventListener('scroll',arrows,{passive:true});addEventListener('resize',arrows);arrows();
+
+  /* ---- hero film ---- */
+  var v=$('#film'), b=$('#pause'), pi=$('#pi'), wanted=!reduce, loaded=false;
+  function load(){if(loaded)return;loaded=true;v.src=mob.matches?v.dataset.mob:v.dataset.desk;v.load()}
+  function icon(){var paused=v.paused||!loaded;
+    pi.innerHTML=paused?'<path d="M2 0l8 5-8 5z"/>':'<rect x="1.5" y="0" width="2.4" height="10"/><rect x="6.1" y="0" width="2.4" height="10"/>';
+    b.setAttribute('aria-label',paused?'Play film':'Pause film')}
+  function play(){load();var p=v.play();if(p&&p.catch)p.catch(function(){icon()})}
+  v.addEventListener('playing',function(){v.classList.add('on');icon()});
+  v.addEventListener('pause',icon);
+  v.addEventListener('error',function(){v.classList.remove('on');icon()});
+  b.onclick=function(){if(v.paused||!loaded){wanted=true;play()}else{wanted=false;v.pause()}};
+  icon();
+  if(wanted&&shot===undefined)play();
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){es.forEach(function(e){if(!loaded)return;if(e.isIntersecting){if(wanted)play()}else v.pause()})},{threshold:.05}).observe(v);
+  }
+
+  /* ---- reveal ---- */
+  var rv=$$('.rv');
+  if(shot===undefined&&!reduce&&'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    rv.forEach(function(el){io.observe(el)});
+  } else rv.forEach(function(el){el.classList.add('in')});
+
+  /* ---- sign-up ---- */
+  $('#nf').addEventListener('submit',function(e){e.preventDefault();this.hidden=true;this.style.display='none';$('#ok').textContent='Thank you. You are on the list.'});
+
+  /* ---- test-only views ---- */
+  if(shot!==undefined){
+    if(/^(menu|search|bag)$/.test(shot)){setOpen(shot);if(shot==='search'&&qs.q){qIn.value=qs.q;search()}}
+    else{var t=$$('[data-shot]')[+shot||0];if(t&&+shot){var go=function(){document.body.style.marginTop='0px';var y=Math.max(0,t.getBoundingClientRect().top+scrollY-hd.offsetHeight);document.body.style.marginTop=-y+'px';document.documentElement.classList.add('lock');hd.classList.add('solid')};go();addEventListener('load',go);addEventListener('resize',go);[200,800,2500].forEach(function(ms){setTimeout(go,ms)})}}
+    if(parent!==window)addEventListener('load',function(){parent.postMessage('k02 inner '+innerWidth+' scroll '+document.documentElement.scrollWidth+' body '+document.body.scrollWidth,'*')});
+  }
+  paint();
+})();
+</script>
+</body>
+</html>

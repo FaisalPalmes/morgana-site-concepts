@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MORGANÀ London · Sovereign</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0b0b'/%3E%3Cpath d='M8 23V9l8 10 8-10v14' fill='none' stroke='%23fff' stroke-width='1.6'/%3E%3C/svg%3E">
+<script>document.documentElement.className='js'</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b0b0b;--paper:#fff;--mute:#6f6b66;--line:rgba(11,11,11,.12);--stone:#eceae6;--gold:#c8a870;
+  --sans:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;--serif:"Cormorant Garamond",Georgia,serif;
+  --hh:72px;--pad:40px;--gut:6px;--ease:cubic-bezier(.2,.7,.2,1);
+  --s1:8px;--s2:16px;--s3:24px;--s4:32px;--s5:48px;--s6:72px;--s7:96px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+html.lock{overflow:hidden}
+body{background:var(--paper);color:var(--ink);font:400 13px/1.6 var(--sans);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+a{color:inherit;text-decoration:none}
+img,video{display:block;width:100%;height:100%;object-fit:cover}
+img{transition:opacity .5s ease,transform 1.8s var(--ease)}
+.js img:not(.ld){opacity:0}
+picture{display:block;width:100%;height:100%}
+button{font:inherit;background:none;border:0;color:inherit;cursor:pointer;border-radius:0}
+ul{list-style:none}
+[hidden]{display:none!important}
+:focus{outline:none}
+:focus-visible{outline:1px solid currentColor;outline-offset:4px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:fixed;left:16px;top:-60px;z-index:40;background:#fff;color:var(--ink);padding:12px 16px;font-size:12px}
+.skip:focus{top:16px}
+
+/* type */
+.lbl{font:500 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase}
+.wm{font:400 26px/1 var(--serif);letter-spacing:.42em;margin-right:-.42em;text-transform:uppercase;white-space:nowrap}
+.ul{border-bottom:1px solid currentColor;padding-bottom:3px;transition:opacity .25s}
+a:hover>.ul,a.ul:hover,button.ul:hover{opacity:.55}
+.h1{font:400 46px/1.08 var(--serif);letter-spacing:.005em}
+
+/* header */
+.hd{position:fixed;inset:0 0 auto;z-index:20;height:var(--hh);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 var(--pad);color:#fff;transition:background-color .4s,color .4s,box-shadow .4s}
+.hd.solid{background:#fff;color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.hd:not(.solid){text-shadow:0 1px 12px rgba(0,0,0,.28)}
+.hd nav{display:flex;gap:28px;align-items:center;font-size:12px;letter-spacing:.04em}
+.hd .r{justify-content:flex-end}
+.hd nav>a,.hd nav>button{display:inline-flex;align-items:center;gap:8px;height:40px;transition:opacity .25s}
+.hd nav>a:hover,.hd nav>button:hover{opacity:.6}
+.hd .ico{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.1;flex:none}
+.hd .mob{display:none}
+.hd .cnt{font-size:11px;letter-spacing:.04em}
+#menuBtn .x{display:none}
+.hd.open #menuBtn .x{display:block}
+.hd.open #menuBtn .bars{display:none}
+
+/* overlays */
+.ov{position:fixed;inset:0;z-index:15;background:#fff;color:var(--ink);padding-top:var(--hh);overflow-y:auto;overscroll-behavior:contain;opacity:0;visibility:hidden;transition:opacity .4s,visibility 0s .4s}
+.ov.open{opacity:1;visibility:visible;transition:opacity .4s}
+.ov .in{padding:56px var(--pad) 40px;min-height:100%;display:flex;flex-direction:column;transform:translateY(10px);transition:transform .6s var(--ease)}
+.ov.open .in{transform:none}
+.ov h2{color:var(--mute);margin-bottom:28px}
+.mgrid{display:grid;grid-template-columns:2.1fr 1fr 1fr 1fr 1.15fr;gap:48px;flex:1}
+.mbig a{display:inline-flex;align-items:baseline;gap:14px;font:400 58px/1.16 var(--serif);letter-spacing:0;transition:opacity .25s}
+.mbig small{font:400 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);white-space:nowrap}
+.mlist a{display:inline-flex;align-items:baseline;gap:8px;font-size:15px;line-height:1;padding:9px 0;transition:opacity .25s}
+.mlist sup{font-size:10px;color:var(--mute);letter-spacing:.04em}
+.mbig a:hover,.mlist a:hover{opacity:.55}
+.mimg{display:block;align-self:start}
+.mimg .im{aspect-ratio:3/4;overflow:hidden;background:var(--stone)}
+.mimg span{display:inline-block;margin-top:14px;font-size:12px}
+.mfoot{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:12px;color:var(--mute)}
+.mfoot a{color:var(--ink)}
+
+.sbox{max-width:1312px;width:100%;margin:0 auto}
+.sfield{display:flex;align-items:center;gap:16px;border-bottom:1px solid var(--ink);padding-bottom:12px}
+.sfield .ico{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.1;flex:none}
+.sfield input{flex:1;min-width:0;border:0;background:none;font:400 30px/1.2 var(--serif);color:var(--ink);padding:4px 0}
+.sfield input::placeholder{color:#a8a49e}
+.sfield input:focus-visible,.news input:focus-visible{outline:none}
+.sfield input::-webkit-search-cancel-button{display:none}
+.snote{margin:28px 0 20px;color:var(--mute)}
+.sres{display:grid;grid-template-columns:repeat(6,1fr);gap:32px var(--gut)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;font:500 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:16px 24px;text-shadow:none;transition:background-color .3s,color .3s,box-shadow .3s}
+.btn.solid{background:#fff;color:var(--ink)}
+.btn.solid:hover{background:var(--ink);color:#fff}
+.btn.line{color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.9)}
+.btn.line:hover{background:#fff;color:var(--ink)}
+.btn.ink,.tile.ink .btn.line{color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.btn.ink:hover,.tile.ink .btn.line:hover{background:var(--ink);color:#fff}
+.btn.fill{background:var(--ink);color:#fff;box-shadow:inset 0 0 0 1px var(--ink);width:100%}
+.btn.fill:hover{background:#fff;color:var(--ink)}
+.btn.fill.auto{width:auto}
+
+/* tiles */
+.tile{position:relative;overflow:hidden;background:var(--stone)}
+.tile a.fill{position:absolute;inset:0}
+@media (hover:hover){.tile a.fill:hover img{transform:scale(1.03)}}
+.tile .cap{position:absolute;left:0;right:0;bottom:32px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.32);pointer-events:none}
+.tile .cap a{pointer-events:auto}
+.tile .cap h2{font:400 16px/1.25 var(--sans);letter-spacing:.02em}
+.tile.ink .cap{color:var(--ink);text-shadow:none}
+.tile.wide{height:56.25vw;max-height:calc(100vh - var(--hh));max-height:calc(100svh - var(--hh))}
+.tile.push img{transition:opacity .5s ease,transform 16s linear}
+.tile.push.in img{transform:scale(1.06)}
+@media (hover:hover){.tile.push a.fill:hover img{transform:scale(1.06)}}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:var(--gut)}
+.grid2 .tile{aspect-ratio:3/4}
+.stack{display:grid;gap:var(--gut)}
+
+/* film */
+.film{background:#15120f center/cover no-repeat}
+.film video{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+.film video.on{opacity:1}
+.hero{height:100vh;height:100svh;min-height:560px;background-image:url(assets/hero-2026-11-10/hero-rail-montage-poster.jpg)}
+.hero.still{background-image:url(assets/img/hb/hb-hound-graded.jpg);background-position:58% 50%}
+.hero.still video,.hero.still .pause{display:none}
+.hero .cap{bottom:40px;gap:20px}
+.hero .cap h1{font:400 16px/1.25 var(--sans);letter-spacing:.02em}
+.pause{position:absolute;right:var(--pad);bottom:40px;width:40px;height:40px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.75);display:grid;place-items:center;color:#fff;transition:background-color .3s,color .3s}
+.pause:hover{background:#fff;color:var(--ink)}
+.pause svg{width:10px;height:10px;fill:currentColor}
+.scroll{position:absolute;left:var(--pad);bottom:52px;color:#fff;font-size:12px;line-height:1;letter-spacing:.04em;text-shadow:0 1px 10px rgba(0,0,0,.32)}
+
+/* text modules */
+.txt{padding:var(--s6) var(--s3);text-align:center}
+.txt p{max-width:760px;margin:0 auto;text-wrap:balance}
+.txt .lbl{margin-bottom:18px}
+
+/* rails and product cards */
+.car{padding:var(--s6) 0}
+.car .top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 var(--pad);margin-bottom:28px;min-height:40px}
+.car .ctl{display:flex;align-items:center;gap:12px}
+.car .ctl a{font-size:12px;margin-right:16px}
+.arw{width:40px;height:40px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--line);display:grid;place-items:center;transition:background-color .3s,color .3s,opacity .3s}
+.arw svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:1.1}
+.arw:hover:not(:disabled){background:var(--ink);color:#fff}
+.arw:disabled{opacity:.3;cursor:default}
+.track{display:flex;gap:var(--gut);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:var(--pad);padding:0 var(--pad);scrollbar-width:none;-ms-overflow-style:none}
+.track::-webkit-scrollbar{display:none}
+.track>*{flex:0 0 calc((100% - 3 * var(--gut)) / 4.25);scroll-snap-align:start}
+.pc{display:block}
+.pc .im{aspect-ratio:2/3;overflow:hidden;background:var(--stone)}
+@media (hover:hover){.pc:hover img{transform:scale(1.03)}}
+.pc .nm{display:block;margin-top:14px;font-size:14px;line-height:1.3}
+.pc .pr{display:block;margin-top:4px;font-size:12px;line-height:1.5;color:var(--mute)}
+
+/* house */
+.house{padding:var(--s7) 0}
+.house .txt{padding:0 var(--s3) var(--s5)}
+.mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3);max-width:1312px;margin:0 auto;padding:0 var(--pad)}
+.mosaic a{display:block;text-align:center}
+.mosaic .im{aspect-ratio:1/1;overflow:hidden;background:var(--stone)}
+@media (hover:hover){.mosaic a:hover img{transform:scale(1.03)}}
+.mosaic h3{margin:24px 0 14px}
+.mosaic .ul{font-size:12px}
+
+/* the evening, on the home page */
+.eve .band{aspect-ratio:2400/608;background:var(--stone);overflow:hidden}
+.eve .tx{padding:var(--s6) var(--s3) var(--s7);text-align:center;border-bottom:1px solid var(--line)}
+.eve .lbl{color:var(--mute)}
+.eve h2{font:400 46px/1.08 var(--serif);margin:var(--s2) 0}
+.eve{margin-top:var(--s6,96px)}
+@media (max-width:760px){.eve{margin-top:var(--s5,64px)}}
+.eve p{font-size:14px;line-height:1.7}
+.eve .acts{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:var(--s4)}
+
+/* pages */
+.pg{padding-top:var(--hh);min-height:100vh;animation:fade .32s ease both}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.ph{padding:56px var(--pad) 30px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px 40px;flex-wrap:wrap}
+.ph .lbl{color:var(--mute);margin-bottom:16px}
+.ph>p{color:var(--mute);max-width:420px;text-align:right}
+.filt{display:flex;gap:0 26px;flex-wrap:wrap;padding:0 var(--pad);font-size:12px;letter-spacing:.04em}
+.filt+.filt{margin-top:2px}
+.filt a{padding:9px 0;color:var(--mute);white-space:nowrap;transition:color .25s}
+.filt a:hover{color:var(--ink)}
+.filt a span{padding-bottom:3px}
+.filt a.on{color:var(--ink)}
+.filt a.on span{border-bottom:1px solid currentColor}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px var(--gut);padding:22px 0 104px}
+.pgrid .pc .nm,.pgrid .pc .pr,.sres .pc .nm,.sres .pc .pr{padding:0 14px}
+.none{padding:96px 24px 160px;text-align:center}
+.none p{font:400 28px/1.2 var(--serif);margin-bottom:24px}
+
+.pdp{display:grid;grid-template-columns:minmax(0,1fr) 480px;align-items:start}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:var(--gut)}
+.gal .im{display:block;width:100%;aspect-ratio:2/3;background:var(--stone);overflow:hidden;cursor:zoom-in}
+.gcount{display:none}
+.info{position:sticky;top:var(--hh);max-height:calc(100vh - var(--hh));overflow-y:auto;scrollbar-width:none;padding:44px 56px 56px}
+.info::-webkit-scrollbar{display:none}
+.info .lbl{color:var(--mute)}
+.info h1{font:400 38px/1.08 var(--serif);margin:16px 0 6px}
+.info .sub{color:var(--mute);font-size:14px}
+.info .price{font-size:15px;margin-top:14px}
+.meta{margin:24px 0;border-top:1px solid var(--line)}
+.meta div{display:flex;justify-content:space-between;gap:24px;padding:11px 0;border-bottom:1px solid var(--line);font-size:12px}
+.meta dt{color:var(--mute)}
+.meta dd{text-align:right}
+.szh{display:flex;align-items:baseline;gap:14px;margin-bottom:12px}
+.szh #szn{font-size:12px;color:#8a2b2b;flex:1}
+.szh .sg{font-size:12px;margin-left:auto}
+.sz{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.sz button{flex:1 0 52px;height:44px;font-size:12px;letter-spacing:.06em;box-shadow:inset 0 0 0 1px var(--line);transition:box-shadow .25s,background-color .25s,color .25s}
+.sz button:hover{box-shadow:inset 0 0 0 1px var(--ink)}
+.sz button[aria-pressed="true"]{background:var(--ink);color:#fff;box-shadow:inset 0 0 0 1px var(--ink)}
+.copy{margin-top:30px;font-size:14px;line-height:1.7}
+.copy p+p,.copy div p{margin-top:12px}
+.copy button{margin-top:14px;font-size:12px}
+.acc{margin-top:28px;border-top:1px solid var(--line)}
+.acc details{border-bottom:1px solid var(--line)}
+.acc summary{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:17px 0;cursor:pointer}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:"+";font:300 18px/1 var(--sans)}
+.acc details[open] summary::after{content:"–"}
+.acc .in{padding:0 0 20px;font-size:13px;line-height:1.7}
+.acc li{position:relative;padding-left:14px}
+.acc li::before{content:"";position:absolute;left:0;top:.78em;width:5px;height:1px;background:currentColor}
+.acc .in a{border-bottom:1px solid currentColor}
+
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - var(--hh))}
+.split .im{background:var(--stone);overflow:hidden;position:relative;min-height:520px}
+.split .im img{position:absolute;inset:0}
+.split .tx{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:72px clamp(32px,7vw,112px)}
+.split .lbl{color:var(--mute);margin-bottom:22px}
+.split .when{font:400 24px/1.3 var(--serif);margin:22px 0 22px}
+.split p{font-size:14px;line-height:1.75;max-width:440px}
+.split p+p{margin-top:12px}
+.split p a,.tp p a{border-bottom:1px solid currentColor}
+.split .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.cols{width:100%;max-width:440px;margin-top:36px;border-top:1px solid var(--line)}
+.cols a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);transition:opacity .25s}
+.cols a:hover{opacity:.55}
+.cols b{font:400 24px/1 var(--serif)}
+.cols span{font-size:12px;color:var(--mute)}
+
+.tp{max-width:620px;margin:0 auto;padding:var(--s6) var(--s3) 120px}
+.tp .filt{padding:0;margin-bottom:44px;justify-content:flex-start}
+.tp h1{margin-bottom:26px}
+.tp p{font-size:15px;line-height:1.75}
+.tp p+p{margin-top:12px}
+.tp h2{margin:40px 0 14px;color:var(--mute)}
+.tp .big{font:400 26px/1.2 var(--serif)}
+
+/* product: buy bar (phone) and enlarged view */
+.bar{display:none}
+.lb{position:fixed;inset:0;z-index:40;background:#fff;color:var(--ink);opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s .3s}
+.lb.open{opacity:1;visibility:visible;transition:opacity .3s}
+.lb .st{position:absolute;inset:0;overflow:auto;display:flex;scrollbar-width:none;overscroll-behavior:contain}
+.lb .st::-webkit-scrollbar{display:none}
+.lb img{margin:auto;width:auto;height:100%;max-width:100%;object-fit:contain;cursor:zoom-in;flex:none}
+.lb .st.zoom img{height:min(170vh,1500px);max-width:none;cursor:zoom-out}
+.lb button{position:absolute;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 1px var(--line);transition:background-color .3s,color .3s}
+.lb button:hover{background:var(--ink);color:#fff}
+.lb svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.1}
+.lb .cl{top:var(--s2);right:var(--s2)}
+.lb .pv{left:var(--s2);top:50%;margin-top:-22px}
+.lb .nx{right:var(--s2);top:50%;margin-top:-22px}
+.lb .ct{position:absolute;left:0;right:0;bottom:var(--s3);text-align:center;pointer-events:none}
+.lb .ct span{display:inline-block;background:#fff;padding:8px 12px}
+
+/* bag */
+.catch{position:fixed;inset:0;z-index:29;display:none}
+.catch.on{display:block}
+.drw{position:fixed;top:0;right:0;bottom:0;z-index:30;width:min(460px,100%);background:#fff;color:var(--ink);border-left:1px solid var(--line);display:flex;flex-direction:column;transform:translateX(100%);visibility:hidden;transition:transform .5s var(--ease),visibility 0s .5s}
+.drw.open{transform:none;visibility:visible;transition:transform .5s var(--ease)}
+.drw header{display:flex;justify-content:space-between;align-items:center;height:var(--hh);padding:0 28px;border-bottom:1px solid var(--line);flex:none}
+.drw header button{width:44px;height:44px;display:grid;place-items:center;margin-right:-14px}
+.drw header svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.1}
+.drw .body{flex:1;overflow-y:auto;padding:0 28px}
+.drw .empty{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:24px;padding-bottom:8vh}
+.drw .empty p{font:400 28px/1.2 var(--serif)}
+.bi{display:grid;grid-template-columns:96px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.bi .im{aspect-ratio:2/3;background:var(--stone);overflow:hidden}
+.bi .nm{font-size:14px;line-height:1.3}
+.bi .sm{font-size:12px;color:var(--mute);margin-top:4px}
+.bi .row{display:flex;justify-content:space-between;align-items:center;margin-top:16px;font-size:12px}
+.qty{display:inline-flex;align-items:center;box-shadow:inset 0 0 0 1px var(--line)}
+.qty button{width:40px;height:40px}
+.qty span{min-width:22px;text-align:center}
+.drw footer{flex:none;padding:22px 28px 28px;border-top:1px solid var(--line)}
+.drw .sum{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px}
+.drw .nt{font-size:12px;color:var(--mute);margin-bottom:18px;min-height:19px}
+
+/* sign-up + footer */
+.dark{background:#000;color:#fff}
+.news{text-align:center;padding:96px 24px 88px}
+.news .lbl{margin-bottom:28px;color:rgba(255,255,255,.6)}
+.news p{font:300 clamp(21px,2.1vw,30px)/1.35 var(--sans);max-width:780px;margin:0 auto 36px}
+.news form{display:inline-flex;align-items:center;border-bottom:1px solid rgba(255,255,255,.5);transition:border-color .3s}
+.news form:focus-within{border-color:#fff}
+.news input{background:none;border:0;color:#fff;font:400 14px/20px var(--sans);height:48px;padding:0;width:min(320px,58vw)}
+.news input::placeholder{color:rgba(255,255,255,.55)}
+.news form button.lbl{height:48px;margin:0;color:#fff;padding:0 0 0 20px;transition:opacity .25s}
+.news form button:hover{opacity:.6}
+.news .ok{min-height:20px;margin-top:20px;font-size:12px;color:var(--gold)}
+.ft{display:grid;grid-template-columns:repeat(3,1fr) 1.5fr;gap:40px;padding:64px var(--pad) 48px;border-top:1px solid rgba(255,255,255,.14)}
+.ft h3{color:rgba(255,255,255,.55);margin-bottom:22px;font-size:10px}
+.ft li{margin-bottom:10px}
+.ft li a{font-size:13px;transition:opacity .25s}
+.ft li a:hover{opacity:.6}
+.ft .ev{font:400 24px/1.25 var(--serif);margin-bottom:12px}
+.ft .evc p{font-size:13px;line-height:1.7;color:rgba(255,255,255,.72)}
+.ft .evc p a{color:#fff}
+.base{display:flex;flex-direction:column;align-items:flex-start;gap:22px;padding:48px var(--pad) 36px}
+.base .wm{font-size:clamp(44px,11.5vw,190px);letter-spacing:.22em;line-height:.9;margin-right:0}
+.base small{font-size:10px;line-height:1.6;color:rgba(255,255,255,.5);letter-spacing:.06em;white-space:nowrap}
+
+/* reveal */
+.rv{opacity:0;transition:opacity 1.1s ease}
+.rv.up{transform:translateY(12px);transition:opacity 1.1s ease,transform 1.1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+  .tile a.fill:hover img,.pc:hover img,.mosaic a:hover img,.tile.push.in img{transform:none}
+}
+
+@media (max-width:1100px){
+  .mgrid{grid-template-columns:1fr 1fr;gap:48px 32px}
+  .mimg{display:none}
+  .sres{grid-template-columns:repeat(4,1fr)}
+  .track>*{flex-basis:calc((100% - 2 * var(--gut)) / 3.2)}
+  .pgrid{grid-template-columns:repeat(3,1fr)}
+  .pdp{grid-template-columns:minmax(0,1fr) 400px}
+  .gal{grid-template-columns:1fr}
+  .info{padding:36px 32px 48px}
+}
+@media (max-width:760px){
+  :root{--hh:56px;--pad:18px;--gut:4px}
+  .hd nav{gap:4px}
+  .hd .desk{display:none}
+  .hd .mob{display:inline-flex}
+  .hd nav>button{width:44px;height:44px;justify-content:center}
+  .hd .l{margin-left:-14px}.hd .r{margin-right:-14px}
+  .hd .cnt{display:none}
+  .wm{font-size:20px;letter-spacing:.34em;margin-right:-.34em}
+  .h1{font-size:36px}
+  .hero{background-image:url(assets/hero-2026-11-10/hero-rail-montage-mobile-poster.jpg)}
+  .hero .cap{bottom:36px}
+  .scroll{display:none}
+  .pause{bottom:36px;width:44px;height:44px}
+  .txt{padding:var(--s5) 28px}
+  .grid2{grid-template-columns:1fr}
+  .grid2 .tile,.tile.wide{height:auto;aspect-ratio:4/5;max-height:none}
+  .grid2.duo{grid-template-columns:1fr 1fr}
+  .grid2.duo .tile{aspect-ratio:3/4}
+  .duo .cap{bottom:14px;gap:0}
+  .duo .cap h2{font-size:13px}
+  .duo .cap .btn{position:absolute;width:1px;height:1px;min-height:0;padding:0;overflow:hidden;clip:rect(0 0 0 0)}
+  .eve .band{aspect-ratio:2/1}
+  .eve .tx{padding:var(--s5) var(--s3) var(--s6)}
+  .eve h2{font-size:36px}
+  .tile .cap{bottom:28px}
+  .car{padding:var(--s5) 0 56px}
+  .car .top{margin-bottom:20px}
+  .car .arw{display:none}
+  .car .ctl a{margin-right:0}
+  .track>*{flex-basis:68%}
+  .house{padding:var(--s6) 0}
+  .house .txt{padding-bottom:32px}
+  .mosaic{display:flex;gap:var(--gut);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:var(--pad);scrollbar-width:none}
+  .mosaic::-webkit-scrollbar{display:none}
+  .mosaic a{flex:0 0 72%;scroll-snap-align:start}
+  .mosaic h3{margin:18px 0 12px}
+  .news{padding:72px 24px 64px}
+  .ft{grid-template-columns:1fr 1fr;padding:48px var(--pad) 32px;gap:36px 24px}
+  .ft .evc{grid-column:1/-1}
+  .ft li{margin-bottom:0}
+  .ft li a{display:inline-block;padding:7px 0}
+  .mlist a{padding:13px 0}
+  .base{flex-direction:column;align-items:flex-start;gap:18px;padding:28px var(--pad) 28px}
+  .ov .in{padding:32px var(--pad) 36px}
+  .mgrid{grid-template-columns:1fr 1fr;gap:36px 20px}
+  .mgrid>div:first-child{grid-column:1/-1}
+  .mbig a{font-size:40px}
+  .ov h2{margin-bottom:16px}
+  .mfoot{margin-top:36px;flex-direction:column;gap:8px}
+  .sfield input{font-size:24px}
+  .sres{grid-template-columns:1fr 1fr;gap:28px var(--gut)}
+  .ph{padding:36px var(--pad) 20px;flex-direction:column;align-items:flex-start}
+  .ph>p{text-align:left}
+  .filt{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:0 22px}
+  .filt a{display:inline-flex;align-items:center;min-height:44px;padding:0}
+  .filt::-webkit-scrollbar{display:none}
+  .pgrid{grid-template-columns:1fr 1fr;gap:28px var(--gut);padding:16px 0 72px}
+  .pgrid .pc .nm,.pgrid .pc .pr,.sres .pc .nm,.sres .pc .pr{padding:0 10px}
+  .pc .nm{font-size:13px;margin-top:12px}
+  .pdp{grid-template-columns:1fr}
+  .gal{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+  .gal::-webkit-scrollbar{display:none}
+  .gal .im{flex:0 0 86%;scroll-snap-align:start}
+  .gcount{display:block;padding:14px var(--pad) 0;color:var(--mute)}
+  .bar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:14;background:#fff;border-top:1px solid var(--line);padding:10px var(--pad) calc(10px + env(safe-area-inset-bottom));transform:translateY(100%);visibility:hidden;transition:transform .35s var(--ease),visibility 0s .35s}
+  .bar.on{transform:none;visibility:visible;transition:transform .35s var(--ease)}
+  .bar .row{display:flex;align-items:center;gap:var(--s2)}
+  .bar .who{flex:1;min-width:0;line-height:1.35}
+  .bar .who b{display:block;font-weight:400;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bar .who span{font-size:12px;color:var(--mute)}
+  .bar .btn{width:auto;flex:none;padding:16px 22px}
+  .bar .pick{padding:6px 0 12px}
+  .bar .pick .lbl{display:block;color:var(--mute);margin:6px 0 12px}
+  .bar .sz{margin:0}
+  .lb .pv,.lb .nx{top:auto;bottom:var(--s2);margin:0}
+  .info{position:static;max-height:none;overflow:visible;padding:28px var(--pad) 48px}
+  .info h1{font-size:32px}
+  .split{grid-template-columns:1fr;min-height:0}
+  .split .im{min-height:0;aspect-ratio:1/1}
+  .split .tx{padding:44px 24px 72px}
+  .tp{padding:40px var(--s3) 88px}
+  .tp .filt{margin-bottom:32px}
+  .drw header,.drw .body{padding-left:20px;padding-right:20px}
+  .drw footer{padding:18px 20px 22px}
+}
+
+/* footer: Morganà wine, gold detail, full-width wordmark */
+#foot{background:#3a0e17;color:#f6f1e7}
+#foot .news .lbl,#foot .ft h3{color:var(--gold)}
+#foot .news input{color:#f6f1e7}
+#foot .news form{border-bottom-color:rgba(200,168,112,.6)}
+#foot .news form:focus-within{border-color:var(--gold)}
+#foot .news form button.lbl{color:#f6f1e7}
+#foot .ft{border-top-color:rgba(200,168,112,.3)}
+#foot .ft .evc p{color:rgba(246,241,231,.75)}
+#foot .ft .evc p a,#foot a{color:#f6f1e7}
+#foot .base{display:block;padding:64px var(--pad) 30px;border-top:1px solid rgba(200,168,112,.3)}
+#foot .wmsvg{display:block;width:100%;height:auto;overflow:visible}
+#foot .wmsvg text{font-family:var(--serif);font-weight:400;fill:#f6f1e7}
+#foot .base small{display:block;margin-top:26px;color:rgba(246,241,231,.55)}
+@media (max-width:760px){#foot .base{padding:40px var(--pad) 24px}#foot .base small{margin-top:18px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hd" id="hd">
+  <nav class="l" aria-label="Primary">
+    <a class="desk" href="#/care/contact">+ Contact us</a>
+    <a class="desk" href="#/collection/sovereign">Sovereign</a>
+    <button class="mob" type="button" data-open="search" aria-label="Search" aria-haspopup="dialog"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11l4 4"/></svg></button>
+  </nav>
+  <a class="wm" href="#/" aria-label="Morganà, home">Morganà</a>
+  <nav class="r" aria-label="Shop and menu">
+    <a class="desk" href="#/shop">Shop</a>
+    <button class="desk" type="button" data-open="search" aria-label="Search" aria-haspopup="dialog"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11l4 4"/></svg></button>
+    <button type="button" id="bagBtn" data-open="bag" aria-label="Bag, 0 items" aria-haspopup="dialog"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 5h10l-1 10H4z"/><path d="M5.5 5V4a2.5 2.5 0 015 0v1"/></svg><span class="cnt" id="bagCnt" aria-hidden="true">(0)</span></button>
+    <button type="button" id="menuBtn" data-open="menu" aria-label="Menu" aria-haspopup="dialog" aria-expanded="false"><svg class="ico bars" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4.5h12M2 8h12M2 11.5h12"/></svg><svg class="ico x" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg><span class="desk" id="menuTxt">Menu</span></button>
+  </nav>
+</header>
+
+<!-- Menu -->
+<div class="ov" id="ov-menu" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="in">
+    <div class="mgrid">
+      <div>
+        <h2 class="lbl">Collections</h2>
+        <ul class="mbig">
+          <li><a href="#/collection/sovereign">Sovereign <small>Autumn–Winter 2026</small></a></li>
+          <li><a href="#/collection/lumiere">Lumière <small>Summer 2026</small></a></li>
+          <li><a href="#/collection/fortia">Fortia <small>Autumn–Winter 2025</small></a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="lbl">Shop by category</h2>
+        <ul class="mlist" id="cats"><li><a href="#/shop">All pieces</a></li></ul>
+      </div>
+      <div>
+        <h2 class="lbl">The house</h2>
+        <ul class="mlist">
+          <li><a href="#/house">About Morganà</a></li>
+          <li><a href="#/evening">The evening, 19.11.26</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="lbl">Client care</h2>
+        <ul class="mlist">
+          <li><a href="#/care/contact">Contact us</a></li>
+          <li><a href="#/care/appointments">Private appointments</a></li>
+          <li><a href="#/care/delivery">Delivery</a></li>
+          <li><a href="#/care/returns">Returns</a></li>
+        </ul>
+      </div>
+      <a class="mimg" href="#/collection/sovereign"><div class="im"><img src="assets/k04/menu.jpg" alt="Angelica in a check jacket and long skirt, standing at a bar" loading="lazy" decoding="async"></div><span class="ul">Sovereign, Autumn–Winter 2026</span></a>
+    </div>
+    <div class="mfoot"><span>One year of Morganà. Thursday 19.11.26, 7pm, 102 Stamford New Road, Altrincham. A private event.</span><a class="ul" href="mailto:info@morgana.london">info@morgana.london</a></div>
+  </div>
+</div>
+
+<!-- Search -->
+<div class="ov" id="ov-search" role="dialog" aria-modal="true" aria-label="Search">
+  <div class="in">
+    <div class="sbox">
+      <form class="sfield" id="sform" role="search" autocomplete="off">
+        <svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M11 11l4 4"/></svg>
+        <label class="sr" for="q">Search pieces</label>
+        <input type="search" id="q" placeholder="Search pieces" enterkeyhint="search">
+      </form>
+      <p class="lbl snote" id="snote" aria-live="polite">Suggested</p>
+      <div class="sres" id="sres"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Bag -->
+<div class="catch" id="catch"></div>
+<!-- Enlarged view -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Enlarged photograph">
+  <div class="st" id="lbSt"><img id="lbImg" alt=""></div>
+  <button type="button" class="cl" id="lbClose" aria-label="Close"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
+  <button type="button" class="pv" id="lbPrev" aria-label="Previous photograph"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M8 1L3 6l5 5"/></svg></button>
+  <button type="button" class="nx" id="lbNext" aria-label="Next photograph"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4 1l5 5-5 5"/></svg></button>
+  <p class="ct lbl" aria-live="polite"><span id="lbCt"></span></p>
+</div>
+
+<aside class="drw" id="ov-bag" role="dialog" aria-modal="true" aria-label="Bag">
+  <header><h2 class="lbl" id="bagTitle">Bag (0)</h2><button type="button" id="bagClose" aria-label="Close bag"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button></header>
+  <div class="body" id="bagBody"></div>
+  <footer id="bagFoot" hidden>
+    <div class="sum"><span>Subtotal</span><span id="bagSum">£0</span></div>
+    <p class="nt" id="bagNote" role="status">Delivery is confirmed by email with your order.</p>
+    <button type="button" class="btn fill" id="checkout">Checkout</button>
+  </footer>
+</aside>
+
+<main id="main" tabindex="-1">
+<div id="home">
+  <!-- 1. Hero film -->
+  <section class="tile film hero" id="hero" aria-label="Sovereign, Autumn–Winter 2026">
+    <video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"
+      data-desk="assets/hero-2026-11-10/hero-rail-rail-only.mp4" data-mob="assets/hero-2026-11-10/hero-rail-rail-only-mobile.mp4"></video>
+    <div class="cap"><h1>Sovereign, Autumn–Winter 2026</h1><a class="btn solid" href="#/collection/sovereign">Shop now</a></div>
+    <span class="scroll" aria-hidden="true">Scroll to discover more</span>
+    <button class="pause" type="button" aria-label="Pause film"><svg viewBox="0 0 10 10" aria-hidden="true"></svg></button>
+  </section>
+
+  <!-- 2. One line -->
+  <section class="txt rv up"><p>Tailoring, knitwear and coats for the long evenings. Sovereign arrives on 19.11.26, one year of Morganà.</p></section>
+
+  <div class="stack">
+    <!-- 3. Two coats -->
+    <div class="grid2">
+      <section class="tile rv"><a class="fill" href="#/product/sov-06" tabindex="-1" aria-hidden="true"><img src="assets/k04/coat-sloan.jpg" alt="" loading="lazy" decoding="async" style="object-position:50% 60%"></a>
+        <div class="cap"><h2>Sloan Coat</h2><a class="btn line" href="#/product/sov-06" aria-label="Shop the Sloan Coat">Shop now</a></div></section>
+      <section class="tile rv"><a class="fill" href="#/product/sov-15" tabindex="-1" aria-hidden="true"><img src="assets/k04/coat-isadora-2.jpg" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></a>
+        <div class="cap"><h2>Isadora Coat</h2><a class="btn line" href="#/product/sov-15" aria-label="Shop the Isadora Coat">Shop now</a></div></section>
+    </div>
+
+    <!-- 4. Wide, the office -->
+    <section class="tile wide rv"><a class="fill" href="#/product/sov-01" tabindex="-1" aria-hidden="true"><picture>
+        <source media="(max-width:760px)" srcset="assets/k01/office-v-s.jpg 900w, assets/k01/office-v.jpg 1600w" sizes="100vw">
+        <img src="assets/k01/office-h.jpg" srcset="assets/k01/office-h-s.jpg 1440w, assets/k01/office-h.jpg 2880w" sizes="100vw" alt="" loading="lazy" decoding="async"></picture></a>
+      <div class="cap"><h2>Anabelle Suit</h2><a class="btn line" href="#/product/sov-01" aria-label="Shop the Anabelle Suit">Shop now</a></div></section>
+
+    <!-- 5. Two still lifes -->
+    <div class="grid2 duo">
+      <section class="tile ink rv"><a class="fill" href="#/product/sov-09" tabindex="-1" aria-hidden="true"><img src="assets/k04/still-ana-p.jpg" alt="" loading="lazy" decoding="async" style="object-position:50% 100%"></a>
+        <div class="cap"><h2>Ana Cardigan</h2><a class="btn line" href="#/product/sov-09" aria-label="Shop the Ana Cardigan">Shop now</a></div></section>
+      <section class="tile ink rv"><a class="fill" href="#/product/sov-16" tabindex="-1" aria-hidden="true"><img src="assets/k04/still-vivienne-p.jpg" alt="" loading="lazy" decoding="async" style="object-position:50% 100%"></a>
+        <div class="cap"><h2>Vivienne Shirt</h2><a class="btn line" href="#/product/sov-16" aria-label="Shop the Vivienne Shirt">Shop now</a></div></section>
+    </div>
+
+    <!-- 6. Wide, Hill Bark -->
+    <section class="tile wide push rv"><a class="fill" href="#/collection/sovereign" tabindex="-1" aria-hidden="true"><img src="assets/img/hb/hb-00402.jpg" alt="" loading="lazy" decoding="async" style="object-position:50% 45%"></a>
+      <div class="cap"><h2>The Sovereign collection</h2><a class="btn line" href="#/collection/sovereign" aria-label="Discover the Sovereign collection">Discover</a></div></section>
+  </div>
+
+  <!-- 7. New in Sovereign -->
+  <section class="car" id="newIn" aria-label="New in Sovereign"></section>
+
+  <div class="stack">
+    <!-- 8. Wide still life -->
+    <section class="tile wide ink rv"><a class="fill" href="#/product/sov-07" tabindex="-1" aria-hidden="true"><picture>
+        <source media="(max-width:760px)" srcset="assets/k04/still-charlie-p.jpg">
+        <img src="assets/k04/still-charlie-w.jpg" alt="" loading="lazy" decoding="async" style="object-position:50% 100%"></picture></a>
+      <div class="cap"><h2>Charlie Cardigan</h2><a class="btn line" href="#/product/sov-07" aria-label="Shop the Charlie Cardigan">Shop now</a></div></section>
+
+    <!-- 9. Two up, studio -->
+    <div class="grid2 duo">
+      <section class="tile rv"><a class="fill" href="#/product/sov-19" tabindex="-1" aria-hidden="true"><img src="assets/img/sov-g/19-2.jpg" alt="" loading="lazy" decoding="async" style="object-position:50% 40%"></a>
+        <div class="cap"><h2>Regina Set</h2><a class="btn line" href="#/product/sov-19" aria-label="Shop the Regina Set">Shop now</a></div></section>
+      <section class="tile rv"><a class="fill" href="#/product/sov-21" tabindex="-1" aria-hidden="true"><img src="assets/img/sov-g/05-2.jpg" alt="" loading="lazy" decoding="async" style="object-position:50% 22%"></a>
+        <div class="cap"><h2>Dorothy Roll-Neck</h2><a class="btn line" href="#/product/sov-21" aria-label="Shop the Dorothy Roll-Neck">Shop now</a></div></section>
+    </div>
+  </div>
+
+  <!-- 10. The evening -->
+  <section class="eve" aria-labelledby="eveh">
+    <a class="band rv" href="#/evening" tabindex="-1" aria-hidden="true" style="display:block"><img src="assets/img/hb/hb-00371-band.jpg" alt="" loading="lazy" decoding="async"></a>
+    <div class="tx rv up"><p class="lbl">A private event</p><h2 id="eveh">One year of Morganà</h2>
+      <p>Thursday 19.11.26, 7pm<br>102 Stamford New Road, Altrincham WA14 1DG<br>Drinks · Canapés · DJ</p>
+      <div class="acts"><a class="btn fill auto" href="mailto:info@morgana.london?subject=RSVP%3A%20One%20year%20of%20Morgan%C3%A0%2C%2019.11.26">RSVP</a><a class="btn ink" href="#/evening">The evening</a></div></div>
+  </section>
+
+  <!-- 11. House services -->
+  <section class="house">
+    <div class="txt rv up"><h2 class="lbl">The House of Morganà</h2><p>From the first fitting to the final detail, we are here to help you choose with confidence.</p></div>
+    <div class="mosaic">
+      <a class="rv" href="#/care/appointments"><div class="im"><img src="assets/k04/svc-appointments.jpg" alt="Knitwear on the rail" loading="lazy" decoding="async"></div><h3 class="lbl">Private appointments</h3><span class="ul">Book an appointment</span></a>
+      <a class="rv" href="#/care/contact"><div class="im"><img src="assets/k04/svc-care.jpg" alt="A Morganà London bag on a window sill" loading="lazy" decoding="async"></div><h3 class="lbl">Client care</h3><span class="ul">Discover more</span></a>
+      <a class="rv" href="#/house"><div class="im"><img src="assets/k04/card-house.jpg" alt="Angelica in a check jacket beside a lit fireplace" loading="lazy" decoding="async"></div><h3 class="lbl">The house</h3><span class="ul">About Morganà</span></a>
+    </div>
+  </section>
+</div>
+<div id="view" hidden></div>
+</main>
+
+<footer class="dark" id="foot">
+  <section class="news" aria-labelledby="newsh">
+    <h2 class="lbl" id="newsh">Sign up for Morganà updates</h2>
+    <p>Be the first to hear about new collections, private evenings and the latest from the house.</p>
+    <form id="nf"><label class="sr" for="em">Email address</label><input type="email" id="em" placeholder="Email address" autocomplete="email" required><button class="lbl" type="submit">Subscribe</button></form>
+    <div class="ok" id="ok" role="status"></div>
+  </section>
+  <div class="ft">
+    <div><h3 class="lbl">May we help you?</h3><ul><li><a href="#/care/contact">Contact us</a></li><li><a href="#/care/appointments">Private appointments</a></li><li><a href="#/care/delivery">Delivery</a></li><li><a href="#/care/returns">Returns</a></li><li><a href="mailto:info@morgana.london">info@morgana.london</a></li></ul></div>
+    <div><h3 class="lbl">The house</h3><ul><li><a href="#/house">About Morganà</a></li><li><a href="#/evening">The evening</a></li><li><a href="https://www.instagram.com/morgana.london/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+    <div class="c3"><h3 class="lbl">Collections</h3><ul><li><a href="#/collection/sovereign">Sovereign</a></li><li><a href="#/collection/lumiere">Lumière</a></li><li><a href="#/collection/fortia">Fortia</a></li><li><a href="#/shop">All pieces</a></li></ul></div>
+    <div class="evc"><h3 class="lbl">One year of Morganà</h3><div class="ev">Thursday 19.11.26, 7pm</div><p>A private event. Drinks · Canapés · DJ.<br>102 Stamford New Road, Altrincham WA14 1DG.<br>RSVP <a class="ul" href="mailto:info@morgana.london">info@morgana.london</a></p></div>
+  </div>
+  <div class="base"><svg class="wmsvg" viewBox="0 0 1000 152" aria-hidden="true" focusable="false"><text x="0" y="146" font-size="160" textLength="1000" lengthAdjust="spacing">MORGANÀ</text></svg><small>© Morganà London Ltd · Concept preview</small></div>
+</footer>
+
+<script src="assets/products.js"></script>
+<script>
+(function(){
+  var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var mob=matchMedia('(max-width:760px)');
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function gbp(n){return '£'+Number(n||0).toLocaleString('en-GB')}
+  /* images fade in once loaded, so nothing flashes */
+  function seen(root){$$('img',root).forEach(function(i){if(i.complete&&i.getAttribute('src'))i.classList.add('ld')})}
+  function onImg(e){var el=e.target;if(el&&el.tagName==='IMG')el.classList.add('ld')}
+  document.addEventListener('load',onImg,true);document.addEventListener('error',onImg,true);
+  seen(document);
+  if(/[?&]hero=still\b/.test(location.search))$('#hero').classList.add('still');
+
+  /* ---- catalogue ---- */
+  var M=window.MORGANA||{}, all=(M.products||[]).filter(function(p){return !p.hidden});
+  var byId={};all.forEach(function(p){byId[p.id]=p});
+  var COL={};(M.collections||[]).forEach(function(c){COL[c.id]=c});
+  var COLS=['sovereign','lumiere','fortia'].filter(function(id){return COL[id]});
+  var CATS=['Coats','Jackets','Suits','Knitwear','Dresses','Skirts','Trousers','Shorts','Shirts','Sets'];
+  all.forEach(function(p){if(p.category&&CATS.indexOf(p.category)<0)CATS.push(p.category)});
+  function pick(ids){return ids.map(function(i){return byId[i]}).filter(Boolean)}
+  function alt(p){return p.name+(p.colour?', '+p.colour.toLowerCase():'')}
+  function card(p,o){o=o||{};
+    return '<a class="pc" href="#/product/'+esc(p.id)+'"'+(o.role?' role="listitem"':'')+'><div class="im"><img src="'+esc(p.id==='sov-21'&&p.images[2]?p.images[2]:p.images[0])+'" alt="'+esc(alt(p))+'"'+(o.eager?'':' loading="lazy" decoding="async"')+' width="800" height="1200"></div>'+
+      '<span class="nm">'+esc(p.name)+'</span>'+(o.price===false?'':'<span class="pr">'+gbp(p.price)+'</span>')+'</a>';
+  }
+  function rail(title,list,o){o=o||{};
+    return '<div class="top"><h2 class="lbl">'+esc(title)+'</h2><div class="ctl">'+(o.all?'<a class="ul" href="'+o.all+'">View all</a>':'')+
+      '<button class="arw" data-d="-1" type="button" aria-label="Previous pieces" disabled><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M8 1L3 6l5 5"/></svg></button>'+
+      '<button class="arw" data-d="1" type="button" aria-label="Next pieces"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4 1l5 5-5 5"/></svg></button></div></div>'+
+      '<div class="track" role="list" aria-label="'+esc(title)+'" tabindex="0">'+list.map(function(p){return card(p,{role:1,price:o.price})}).join('')+'</div>';
+  }
+  function bindRail(root){
+    var track=$('.track',root), btn=$$('.arw',root); if(!track)return;
+    function arrows(){btn[0].disabled=track.scrollLeft<4;btn[1].disabled=track.scrollLeft>track.scrollWidth-track.clientWidth-4}
+    btn.forEach(function(b){b.onclick=function(){var c=track.firstElementChild;if(!c)return;
+      var w=c.getBoundingClientRect().width+parseFloat(getComputedStyle(track).columnGap||0), n=Math.max(1,Math.floor(track.clientWidth/w)-1);
+      track.scrollBy({left:+b.dataset.d*n*w,behavior:reduce?'auto':'smooth'})}});
+    track.addEventListener('scroll',arrows,{passive:true});addEventListener('resize',arrows);arrows();
+  }
+
+  /* ---- header and overlays ---- */
+  var hd=$('#hd'), openId=null, opener=null, isHome=true, tidy=null;
+  function paint(){hd.classList.toggle('solid',!isHome||scrollY>40||(!!openId&&openId!=='bag'))}
+  addEventListener('scroll',paint,{passive:true});
+  var menuBtn=$('#menuBtn'), menuTxt=$('#menuTxt'), outside=[$('#main'),$('#foot')], lastHash='#/';
+  function setOpen(id,from){
+    if(openId){$('#ov-'+openId).classList.remove('open')}
+    var was=openId; openId=id||null;
+    var de=document.documentElement, sb=de.classList.contains('lock')?parseFloat(de.style.paddingRight)||0:innerWidth-de.clientWidth, full=openId&&openId!=='bag';
+    de.classList.toggle('lock',!!openId);
+    de.style.paddingRight=hd.style.right=openId&&sb>0?sb+'px':'';
+    hd.classList.toggle('open',!!full);
+    hd.inert=openId==='bag';
+    $('#catch').classList.toggle('on',openId==='bag');
+    outside.forEach(function(el){el.inert=!!openId});
+    menuBtn.setAttribute('aria-label',full?'Close':'Menu');
+    menuBtn.setAttribute('aria-expanded',openId==='menu'?'true':'false');
+    menuTxt.textContent=full?'Close':'Menu';
+    paint();
+    if(openId){
+      if(from)opener=from;
+      var ov=$('#ov-'+openId);ov.classList.add('open');ov.scrollTop=0;
+      if(openId==='search'){var q=$('#q');setTimeout(function(){q.focus()},60)}
+      if(openId==='bag'){setTimeout(function(){$('#bagClose').focus()},60)}
+    } else {
+      if(was==='bag'&&/^#\/bag/.test(location.hash)){try{history.replaceState(null,'',lastHash)}catch(e){}}
+      if(opener&&document.contains(opener)){opener.focus()}opener=null;
+    }
+  }
+  $$('[data-open]').forEach(function(b){b.addEventListener('click',function(){
+    var id=b.getAttribute('data-open');
+    if(b===menuBtn&&openId){setOpen(null);return}
+    setOpen(openId===id?null:id,b);
+  })});
+  addEventListener('keydown',function(e){
+    if(lbOpen){if(e.key==='Escape')lbClose();else if(e.key==='ArrowRight')lbShow(lbI+1);else if(e.key==='ArrowLeft')lbShow(lbI-1);return}
+    if(e.key==='Escape'&&openId)setOpen(null)});
+
+  /* enlarged view */
+  var lb=$('#lb'), lbSt=$('#lbSt'), lbImg=$('#lbImg'), lbList=[], lbI=0, lbOpen=false, lbFrom=null, lbName='';
+  function lbShow(i){
+    var n=lbList.length; if(!n)return; lbI=(i%n+n)%n;
+    lbSt.classList.remove('zoom');lbImg.classList.remove('ld');
+    lbImg.src=lbList[lbI];lbImg.alt=lbName+', view '+(lbI+1);
+    if(lbImg.complete)lbImg.classList.add('ld');
+    $('#lbCt').textContent=(lbI+1)+' / '+n;
+    $('#lbPrev').hidden=$('#lbNext').hidden=n<2;
+  }
+  function lbStart(list,i,name,from){
+    lbList=list;lbName=name;lbFrom=from;lbOpen=true;lbShow(i);
+    lb.classList.add('open');document.documentElement.classList.add('lock');
+    outside.concat([hd]).forEach(function(el){el.inert=true});
+    setTimeout(function(){$('#lbClose').focus()},60);
+  }
+  function lbClose(){
+    if(!lbOpen)return; lbOpen=false;
+    lb.classList.remove('open');lbSt.classList.remove('zoom');
+    if(!openId){document.documentElement.classList.remove('lock');outside.concat([hd]).forEach(function(el){el.inert=false})}
+    if(lbFrom&&document.contains(lbFrom)){try{lbFrom.focus({preventScroll:true})}catch(e){}}lbFrom=null;
+  }
+  function lbPan(e){
+    var r=lbSt.getBoundingClientRect(), x=(e.clientX-r.left)/r.width, y=(e.clientY-r.top)/r.height;
+    lbSt.scrollLeft=(lbSt.scrollWidth-lbSt.clientWidth)*x;lbSt.scrollTop=(lbSt.scrollHeight-lbSt.clientHeight)*y;
+  }
+  lbImg.addEventListener('click',function(e){var z=lbSt.classList.toggle('zoom');if(z)lbPan(e)});
+  lbSt.addEventListener('mousemove',function(e){if(lbSt.classList.contains('zoom')&&matchMedia('(hover:hover)').matches)lbPan(e)});
+  lbSt.addEventListener('click',function(e){if(e.target===lbSt)lbClose()});
+  $('#lbClose').addEventListener('click',lbClose);
+  $('#lbPrev').addEventListener('click',function(){lbShow(lbI-1)});
+  $('#lbNext').addEventListener('click',function(){lbShow(lbI+1)});
+  $('#catch').addEventListener('click',function(){setOpen(null)});
+  $('#bagClose').addEventListener('click',function(){setOpen(null)});
+  var navClick=false;
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="#/"]'); if(!a)return;
+    navClick=true;
+    if(openId)setOpen(null);
+    if(a.getAttribute('href')===location.hash)route();
+  });
+
+  /* menu: categories with counts */
+  (function(){
+    var n={};all.forEach(function(p){if(p.category)n[p.category]=(n[p.category]||0)+1});
+    if(all.length)$('#cats').innerHTML=CATS.filter(function(c){return n[c]}).map(function(c){return '<li><a href="#/shop?category='+encodeURIComponent(c)+'">'+esc(c)+' <sup>'+n[c]+'</sup></a></li>'}).join('')+
+      '<li><a href="#/shop">All pieces <sup>'+all.length+'</sup></a></li>';
+  })();
+
+  /* search */
+  var sres=$('#sres'), snote=$('#snote'), qIn=$('#q');
+  var suggest=pick(['sov-10','sov-14','sov-18','sov-17','lum-12','for-27']);
+  function norm(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')}
+  function find(t){
+    var words=norm(t).split(/\s+/).filter(Boolean);
+    return all.map(function(p){
+      var name=norm(p.name), hay=norm([p.name,p.sub,p.category,p.colour,p.collection].join(' ')), s=0;
+      var hw=hay.split(/[^a-z0-9]+/), nw=name.split(/[^a-z0-9]+/);
+      function starts(list,w){return list.some(function(x){return x.indexOf(w)===0})}
+      for(var i=0;i<words.length;i++){var w=words[i];if(!starts(hw,w))return null;s+=name.indexOf(w)===0?3:starts(nw,w)?2:1}
+      if(p.collection==='sovereign')s+=.5;
+      return {p:p,s:s};
+    }).filter(Boolean).sort(function(a,b){return b.s-a.s}).map(function(x){return x.p});
+  }
+  function search(){
+    var t=qIn.value.trim(), list, total;
+    if(!t){list=suggest;snote.textContent='Suggested'}
+    else{list=find(t);total=list.length;list=list.slice(0,12);
+      snote.textContent=total?(total+(total===1?' piece':' pieces')+(total>12?', showing 12':'')):'Nothing found for “'+t+'”'}
+    sres.innerHTML=list.map(function(p){return card(p)}).join('')||'<a class="btn ink" style="justify-self:start" href="#/shop">View all pieces</a>';
+    return list;
+  }
+  qIn.addEventListener('input',search);
+  $('#sform').addEventListener('submit',function(e){e.preventDefault();var l=qIn.value.trim()?search():[];if(l.length){setOpen(null);navClick=true;location.hash='#/product/'+l[0].id}});
+  search();
+
+  /* ---- bag ---- */
+  var bag=[];
+  try{bag=(JSON.parse(sessionStorage.getItem('k04bag'))||[]).filter(function(i){return byId[i.id]})}catch(e){bag=[]}
+  function bagCount(){return bag.reduce(function(n,i){return n+i.qty},0)}
+  function drawBag(){
+    var n=bagCount(), sum=0;
+    try{sessionStorage.setItem('k04bag',JSON.stringify(bag))}catch(e){}
+    $('#bagCnt').textContent='('+n+')';
+    $('#bagBtn').setAttribute('aria-label','Bag, '+n+(n===1?' item':' items'));
+    $('#bagTitle').textContent='Bag ('+n+')';
+    $('#bagFoot').hidden=!n;
+    $('#bagNote').textContent='Delivery is confirmed by email with your order.';
+    $('#bagBody').innerHTML=n?bag.map(function(it,k){var p=byId[it.id];sum+=p.price*it.qty;
+      return '<div class="bi"><a class="im" href="#/product/'+esc(p.id)+'"><img src="'+esc(p.images[0])+'" alt="'+esc(alt(p))+'"></a><div>'+
+        '<a class="nm" href="#/product/'+esc(p.id)+'">'+esc(p.name)+'</a><div class="sm">'+esc([p.colour,'Size '+it.size].filter(Boolean).join(' · '))+'</div>'+
+        '<div class="row"><span class="qty"><button type="button" data-k="'+k+'" data-q="-1" aria-label="Fewer">−</button><span>'+it.qty+'</span><button type="button" data-k="'+k+'" data-q="1" aria-label="More">+</button></span><span>'+gbp(p.price*it.qty)+'</span></div>'+
+        '<div class="row"><button type="button" class="ul" data-k="'+k+'" data-q="0">Remove</button></div></div></div>'}).join('')
+      :'<div class="empty"><p>Your bag is empty.</p><a class="btn ink" href="#/collection/sovereign">Discover Sovereign</a></div>';
+    $('#bagSum').textContent=gbp(sum);
+  }
+  $('#bagBody').addEventListener('click',function(e){
+    var b=e.target.closest('button[data-k]'); if(!b)return;
+    var k=+b.dataset.k, d=+b.dataset.q; if(!bag[k])return;
+    if(d===0)bag.splice(k,1);else{bag[k].qty+=d;if(bag[k].qty<1)bag.splice(k,1)}
+    drawBag();$('#bagClose').focus();
+  });
+  $('#checkout').addEventListener('click',function(){$('#bagNote').textContent='Checkout is not part of this preview.'});
+  function addToBag(id,size){
+    var it=bag.filter(function(i){return i.id===id&&i.size===size})[0];
+    if(it)it.qty++;else bag.push({id:id,size:size,qty:1});
+    drawBag();
+  }
+  drawBag();
+
+  /* ---- films ---- */
+  $$('.film').forEach(function(tile,idx){
+    if(tile.classList.contains('still'))return;
+    var v=$('video',tile), b=$('.pause',tile), pi=$('svg',b), wanted=!reduce, loaded=false;
+    function load(){if(loaded)return;loaded=true;v.src=mob.matches&&v.dataset.mob?v.dataset.mob:v.dataset.desk;v.load()}
+    function icon(){var paused=v.paused||!loaded;
+      pi.innerHTML=paused?'<path d="M2 0l8 5-8 5z"/>':'<rect x="1.5" y="0" width="2.4" height="10"/><rect x="6.1" y="0" width="2.4" height="10"/>';
+      b.setAttribute('aria-label',paused?'Play film':'Pause film')}
+    function play(){load();var p=v.play();if(p&&p.catch)p.catch(function(){icon()})}
+    v.addEventListener('playing',function(){v.classList.add('on');icon()});
+    v.addEventListener('pause',icon);
+    v.addEventListener('error',function(){v.classList.remove('on');icon()});
+    b.onclick=function(){if(v.paused||!loaded){wanted=true;play()}else{wanted=false;v.pause()}};
+    icon();
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){if(wanted)play()}else if(loaded)v.pause()})},{threshold:.05}).observe(tile);
+    } else if(wanted&&idx===0)play();
+  });
+
+  /* ---- home rail and reveal ---- */
+  var newIn=$('#newIn');
+  newIn.innerHTML=rail('New in Sovereign',pick(['sov-02','sov-03','sov-04','sov-11','sov-13','sov-12','sov-05','sov-08']),{all:'#/collection/sovereign',price:false});
+  bindRail(newIn);
+  var rv=$$('.rv');
+  if(!reduce&&'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    rv.forEach(function(el){io.observe(el)});
+  } else rv.forEach(function(el){el.classList.add('in')});
+
+  /* ---- views ---- */
+  function shopHref(base,col,cat){var q=[];if(col)q.push('collection='+col);if(cat)q.push('category='+encodeURIComponent(cat));return base+(q.length?'?'+q.join('&'):'')}
+  function vList(colRoute,q){
+    var col=colRoute||(COL[q.collection]?q.collection:''), base=colRoute?'#/collection/'+colRoute:'#/shop';
+    var inCol=all.filter(function(p){return !col||p.collection===col});
+    var cats=CATS.filter(function(c){return inCol.some(function(p){return p.category===c})});
+    var cat=cats.indexOf(q.category)>=0?q.category:'';
+    var list=inCol.filter(function(p){return !cat||p.category===cat}), c=COL[colRoute];
+    function f(href,label,on){return '<a href="'+href+'"'+(on?' class="on" aria-current="true"':'')+'><span>'+esc(label)+'</span></a>'}
+    var h='<div class="pg"><div class="ph"><div><p class="lbl">'+(c?esc(c.season):'Morganà London')+'</p><h1 class="h1">'+(c?esc(c.name):'All pieces')+'</h1></div>'+
+      '<p>'+(c&&c.line?esc(c.line)+' ':'')+list.length+(list.length===1?' piece':' pieces')+'</p></div>';
+    if(!colRoute)h+='<nav class="filt" aria-label="Collection">'+f(shopHref(base,'',cat),'All collections',!col)+COLS.map(function(id){
+      var keep=cat&&all.some(function(p){return p.collection===id&&p.category===cat});
+      return f(shopHref(base,id,keep?cat:''),COL[id].name,col===id)}).join('')+'</nav>';
+    h+='<nav class="filt" aria-label="Category">'+f(shopHref(base,colRoute?'':col,''),'All',!cat)+cats.map(function(x){return f(shopHref(base,colRoute?'':col,x),x,cat===x)}).join('')+'</nav>';
+    h+=list.length?'<div class="pgrid">'+list.map(function(p,i){return card(p,{eager:i<8})}).join('')+'</div>'
+      :'<div class="none"><p>Nothing here yet.</p><a class="btn ink" href="#/shop">View all pieces</a></div>';
+    return {title:(c?c.name:'Shop')+(cat?', '+cat:''),html:h+'</div>'};
+  }
+  function vProduct(p){
+    var c=COL[p.collection]||{}, paras=p.paras||(p.description?[p.description]:[]);
+    var fabric=p.fabric&&!/to follow/i.test(p.fabric)?p.fabric:'';
+    var like=all.filter(function(x){return x.collection===p.collection&&x.id!==p.id});
+    like=like.filter(function(x){return x.category===p.category}).concat(like.filter(function(x){return x.category!==p.category})).slice(0,8);
+    var n=p.images.length;
+    function sizes(){return (p.sizes||[]).map(function(s){return '<button type="button" aria-pressed="false" data-s="'+esc(s)+'">'+esc(s)+'</button>'}).join('')}
+    var h='<div class="pg"><div class="pdp"><div><div class="gal" id="gal" aria-label="Photographs of the '+esc(p.name)+'">'+
+      p.images.map(function(s,i){return '<button type="button" class="im" data-i="'+i+'" aria-label="Enlarge view '+(i+1)+' of '+n+'"><img src="'+esc(s)+'" alt="'+esc(alt(p)+', view '+(i+1))+'"'+(i<2?'':' loading="lazy" decoding="async"')+' width="800" height="1200"></button>'}).join('')+'</div>'+
+      (n>1?'<p class="gcount lbl" id="gcount" aria-hidden="true">1 / '+n+'</p>':'')+'</div>'+
+      '<div class="info"><p class="lbl"><a href="#/collection/'+esc(p.collection)+'">'+esc(c.name||'')+'</a> · <a href="'+shopHref('#/shop',p.collection,p.category)+'">'+esc(p.category)+'</a></p>'+
+      '<h1>'+esc(p.name)+'</h1>'+(p.sub?'<p class="sub">'+esc(p.sub)+'</p>':'')+'<p class="price">'+gbp(p.price)+'</p>'+
+      '<dl class="meta">'+(p.colour?'<div><dt>Colour</dt><dd>'+esc(p.colour)+'</dd></div>':'')+(fabric?'<div><dt>Fabric</dt><dd>'+esc(fabric)+'</dd></div>':'')+'</dl>'+
+      '<div class="szh"><span class="lbl" id="szl">Size</span><span id="szn" role="status"></span><a class="ul sg" href="#/care/contact">Size guide</a></div>'+
+      '<div class="sz" role="group" aria-labelledby="szl">'+sizes()+'</div>'+
+      '<button type="button" class="btn fill" id="add">Add to bag</button>'+
+      (paras.length?'<div class="copy"><p>'+esc(paras[0])+'</p>'+(paras.length>1?'<div id="more" hidden>'+paras.slice(1).map(function(t){return '<p>'+esc(t)+'</p>'}).join('')+'</div><button type="button" class="ul" id="moreBtn" aria-expanded="false" aria-controls="more">Read more</button>':'')+'</div>':'')+
+      '<div class="acc">'+
+      (p.details&&p.details.length?'<details open><summary class="lbl">Details</summary><div class="in"><ul>'+p.details.map(function(d){return '<li>'+esc(d)+'</li>'}).join('')+'</ul></div></details>':'')+
+      '<details><summary class="lbl">Delivery and returns</summary><div class="in"><p>Delivery and returns are confirmed by email with your order. See <a href="#/care/delivery">Delivery</a> and <a href="#/care/returns">Returns</a>.</p></div></details>'+
+      '<details><summary class="lbl">Private appointments</summary><div class="in"><p>To see the piece in person, <a href="#/care/appointments">book a private appointment</a>.</p></div></details>'+
+      '</div></div></div>'+
+      (like.length?'<section class="car" id="like" aria-label="You may also like">'+rail('You may also like',like,{})+'</section>':'')+
+      '<div class="bar" id="bar"><div class="pick" id="barPick" hidden><span class="lbl">Choose a size</span><div class="sz" role="group" aria-label="Size">'+sizes()+'</div></div>'+
+      '<div class="row"><div class="who"><b>'+esc(p.name)+'</b><span>'+gbp(p.price)+'</span></div><button type="button" class="btn fill" id="barAdd">Add to bag</button></div></div></div>';
+    return {title:p.name,html:h,mount:function(root){
+      var size='', note=$('#szn',root), add=$('#add',root), bar=$('#bar',root), barAdd=$('#barAdd',root), pickEl=$('#barPick',root), gal=$('#gal',root), gc=$('#gcount',root);
+      function choose(s){size=s;note.textContent='';$$('.sz button',root).forEach(function(x){x.setAttribute('aria-pressed',x.dataset.s===s?'true':'false')})}
+      function put(from){addToBag(p.id,size);pickEl.hidden=true;setOpen('bag',from)}
+      $$('.info .sz button',root).forEach(function(b){b.onclick=function(){choose(b.dataset.s)}});
+      $$('.bar .sz button',root).forEach(function(b){b.onclick=function(){choose(b.dataset.s);put(barAdd)}});
+      add.onclick=function(){if(!size){note.textContent='Please choose a size';return}put(add)};
+      barAdd.onclick=function(){if(!size){pickEl.hidden=!pickEl.hidden;return}put(barAdd)};
+      gal.addEventListener('click',function(e){var b=e.target.closest('.im');if(b)lbStart(p.images,+b.dataset.i,alt(p),b)});
+      if(gc)gal.addEventListener('scroll',function(){var w=gal.firstElementChild.getBoundingClientRect().width||1;
+        var end=gal.scrollLeft>=gal.scrollWidth-gal.clientWidth-4;
+        gc.textContent=(end?n:Math.min(n,Math.round(gal.scrollLeft/w)+1))+' / '+n},{passive:true});
+      var mb=$('#moreBtn',root);
+      if(mb)mb.onclick=function(){var m=$('#more',root);m.hidden=!m.hidden;mb.textContent=m.hidden?'Read more':'Read less';mb.setAttribute('aria-expanded',m.hidden?'false':'true')};
+      var l=$('#like',root); if(l)bindRail(l);
+      if('IntersectionObserver' in window){
+        var a=true, f=false, io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.target===add)a=e.isIntersecting;else f=e.isIntersecting});
+          var on=!a&&!f;bar.classList.toggle('on',on);if(!on)pickEl.hidden=true});
+        io2.observe(add);io2.observe($('#foot'));
+        tidy=function(){io2.disconnect()};
+      }
+    }};
+  }
+  function evLines(){return '<p class="when">Thursday 19.11.26, 7pm</p><p>102 Stamford New Road, Altrincham WA14 1DG</p><p>Drinks · Canapés · DJ</p>'}
+  function vEvening(){
+    return {title:'One year of Morganà',html:'<div class="pg"><section class="split">'+
+      '<div class="im"><img src="assets/k04/evening.jpg" alt="A Morganà London bag and invitation cards on a table by the window at dusk"></div>'+
+      '<div class="tx"><p class="lbl">A private event</p><h1 class="h1">One year of Morganà</h1>'+evLines()+
+      '<p>Sovereign, the collection for Autumn–Winter 2026, arrives the same day.</p>'+
+      '<div class="acts"><a class="btn fill auto" href="mailto:info@morgana.london?subject=RSVP%3A%20One%20year%20of%20Morgan%C3%A0%2C%2019.11.26">RSVP</a><a class="btn ink" href="#/collection/sovereign">Discover Sovereign</a></div>'+
+      '</div></section></div>'};
+  }
+  function vHouse(){
+    return {title:'The House',html:'<div class="pg"><section class="split">'+
+      '<div class="im"><img src="assets/img/hb/hb-00018.jpg" alt="Angelica in the Sloan Coat, standing by a leaded window" style="object-position:50% 12%"></div>'+
+      '<div class="tx"><p class="lbl">Morganà London</p><h1 class="h1">The House</h1>'+
+      '<p style="margin-top:24px">Morganà London makes elegant, modern womenswear: tailoring, knitwear, dresses and coats. The house was founded by Angelica.</p>'+
+      '<p>Sovereign is the third collection. It launches on 19 November 2026, as the house marks its first year.</p>'+
+      '<div class="cols">'+COLS.map(function(id){return '<a href="#/collection/'+id+'"><b>'+esc(COL[id].name)+'</b><span>'+esc(COL[id].season)+'</span></a>'}).join('')+'</div>'+
+      '<div class="acts"><a class="btn ink" href="#/evening">The evening, 19.11.26</a></div></div></section></div>'};
+  }
+  var MAIL='<a href="mailto:info@morgana.london">info@morgana.london</a>';
+  var CARE={
+    contact:['Contact','<p>For orders, sizing and anything else, write to us and we will reply by email.</p><h2 class="lbl">Email</h2><p class="big">'+MAIL+'</p>'+
+      '<h2 class="lbl">Private appointments</h2><p>To see pieces in person, <a href="#/care/appointments">book a private appointment</a>.</p>'+
+      '<h2 class="lbl">The evening</h2><p>To reply to the invitation for 19.11.26, see <a href="#/evening">One year of Morganà</a>.</p>'],
+    appointments:['Private appointments','<p>See Sovereign in person, by appointment.</p><p>Tell us which pieces you would like to see and when, and we will arrange a time.</p>'+
+      '<h2 class="lbl">Book by email</h2><p class="big"><a href="mailto:info@morgana.london?subject=Private%20appointment">info@morgana.london</a></p>'+
+      '<h2 class="lbl">Sizing</h2><p>If you are between sizes, tell us when you write and we will have both ready.</p>'],
+    delivery:['Delivery','<p>Delivery is confirmed by email with your order: the options, the cost and the estimated date.</p><p>Nothing is charged until you have agreed them.</p>'+
+      '<h2 class="lbl">Outside the United Kingdom</h2><p>Please write to '+MAIL+' before ordering and we will confirm what is possible.</p>'],
+    returns:['Returns','<p>If a piece is not right, write to us and we will help.</p><p>The terms for returns are confirmed by email with your order.</p>'+
+      '<h2 class="lbl">How to return</h2><p>Write to '+MAIL+' with your order number and the piece you wish to return. We will reply with the next steps.</p>'+
+      '<h2 class="lbl">Exchanges</h2><p>To exchange for another size, tell us when you write.</p>']
+  };
+  function vCare(k){
+    return {title:CARE[k][0],html:'<div class="pg"><div class="tp"><nav class="filt" aria-label="Client care">'+['contact','appointments','delivery','returns'].map(function(x){
+      return '<a href="#/care/'+x+'"'+(x===k?' class="on" aria-current="page"':'')+'><span>'+(x==='appointments'?'Appointments':CARE[x][0])+'</span></a>'}).join('')+'</nav>'+
+      '<h1 class="h1">'+CARE[k][0]+'</h1>'+CARE[k][1]+'</div></div>'};
+  }
+
+  /* ---- router ---- */
+  var home=$('#home'), view=$('#view'), main=$('#main'), pos={}, cur=null, curBase='';
+  try{history.scrollRestoration='manual'}catch(e){}
+  function parse(){
+    var h=location.hash.replace(/^#\/?/,''), i=h.indexOf('?'), path=i<0?h:h.slice(0,i), q={};
+    if(i>=0)h.slice(i+1).split('&').forEach(function(kv){if(!kv)return;var j=kv.indexOf('=');try{q[decodeURIComponent(j<0?kv:kv.slice(0,j))]=j<0?'':decodeURIComponent(kv.slice(j+1).replace(/\+/g,' '))}catch(e){}});
+    var a=path.split('/').filter(Boolean).map(function(s){try{return decodeURIComponent(s)}catch(e){return s}});
+    return {a:a,q:q};
+  }
+  function route(){
+    var r=parse(), a=r.a, n=a.length, v=null, base=a.join('/'), click=navClick; navClick=false;
+    if(a[0]==='bag'&&n===1){if(cur===null)show(null,'');setOpen('bag');return}
+    if(n===0)v=null;
+    else if(a[0]==='shop'&&n===1)v=vList('',r.q);
+    else if(a[0]==='collection'&&n===2&&COL[a[1]])v=vList(a[1],r.q);
+    else if(a[0]==='product'&&n===2&&byId[a[1]])v=vProduct(byId[a[1]]);
+    else if(a[0]==='evening'&&n===1)v=vEvening();
+    else if(a[0]==='house'&&n===1)v=vHouse();
+    else if(a[0]==='care'&&n===2&&CARE[a[1]])v=vCare(a[1]);
+    else{try{history.replaceState(null,'','#/')}catch(e){location.hash='#/'}base=''}
+    if(cur!==null)pos[cur]=scrollY;
+    var same=cur!==null&&base===curBase&&/^(shop|collection\/)/.test(base);
+    lbClose();
+    if(openId)setOpen(null);
+    show(v,base);
+    cur=lastHash=location.hash||'#/';
+    if(!same)scrollTo(0,click?0:(pos[cur]||0));
+    if(click&&!same){try{main.focus({preventScroll:true})}catch(e){}}
+  }
+  function show(v,base){
+    isHome=!v; curBase=base;
+    home.hidden=!isHome; view.hidden=isHome;
+    if(tidy){tidy();tidy=null}
+    view.innerHTML=v?v.html:'';
+    document.title=v?v.title+' · MORGANÀ London':'MORGANÀ London · Sovereign';
+    if(v&&v.mount)v.mount(view);
+    seen(view);
+    if(cur===null)cur=location.hash||'#/';
+    paint();
+  }
+  addEventListener('hashchange',route);
+  route();
+
+  /* ---- sign-up ---- */
+  $('#nf').addEventListener('submit',function(e){e.preventDefault();this.hidden=true;$('#ok').textContent='Thank you. You are on the list.'});
+})();
+</script>
+</body>
+</html>
