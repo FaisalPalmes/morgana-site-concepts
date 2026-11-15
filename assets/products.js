@@ -12,26 +12,26 @@ window.MORGANA = (function () {
 
   const sovRows = [
     ["01", "The Regent Suit", "Suits", 480, "Taupe", "Single-breasted blazer and wide-leg trouser in a soft taupe wool blend.", 8],
-    ["02", "Aurelia Lace Slip", "Dresses", 245, "Mocha", "Fitted knit slip dress trimmed with champagne lace at the neckline and hem.", 7],
+    ["02", "Aurelia Lace Slip", "Dresses", 245, "Mocha", "Fitted knit slip dress trimmed with champagne lace at the neckline and hem.", 5],
     ["03", "Margaux Pencil Skirt", "Skirts", 165, "Leopard", "High-waisted pencil skirt in a brushed animal-print jacquard.", 7],
-    ["04", "Windsor Cropped Jacket", "Jackets", 295, "Houndstooth", "Boxy cropped jacket in black and ivory houndstooth with a single button.", 7],
-    ["05", "Clementine Knit Set", "Knitwear", 260, "Espresso", "Fine roll-neck and button-front midi skirt in a dense espresso knit.", 7],
-    ["06", "Duchess Wrap Coat", "Coats", 495, "Oatmeal", "Double-face wool wrap coat with a self-tie belt and patch pockets.", 7],
-    ["07", "Ivoire Open-Knit Jacket", "Knitwear", 215, "Ivory / Tan", "Open-knit zip jacket edged in tan suede-effect trim.", 6],
-    ["08", "Lennox Wide Trouser", "Trousers", 175, "Dove grey", "Fluid wide-leg trouser with a soft pressed crease.", 5],
-    ["09", "Hampton Cardigan", "Knitwear", 225, "Cream", "Chunky double-breasted cardigan with horn-effect buttons.", 7],
-    ["10", "Saddle Suede Short", "Shorts", 155, "Chocolate", "High-rise suede short with a clean flat front.", 6],
-    ["11", "Essential Roll-Neck", "Knitwear", 95, "Black", "Second-skin fine-knit roll-neck. The layer under everything.", 6],
-    ["12", "Blanc Cocoon Coat", "Coats", 450, "Ivory", "Collarless cocoon coat with dropped shoulders and deep pockets.", 7],
-    ["13", "Mayfair Pleated Trouser", "Trousers", 185, "Charcoal", "Pleat-front trouser in a flecked charcoal tweed.", 7],
-    ["14", "Olivia Leather Set", "Sets", 395, "Olive", "Leather camisole and mini skirt finished with tonal lace.", 7],
-    ["15", "Sovereign Long Coat", "Coats", 550, "Black", "Floor-sweeping belted coat with wide lapels and a back vent.", 7],
-    ["16", "Atelier Poplin Shirt", "Shirts", 145, "White", "Oversized crisp poplin shirt with a stand collar.", 7],
-    ["17", "Pleated Short", "Shorts", 135, "Black", "Corset-waist pleated short with a tailored line.", 6],
+    ["04", "Windsor Cropped Jacket", "Jackets", 295, "Houndstooth", "Boxy cropped jacket in black and ivory houndstooth with a single button.", 8],
+    ["05", "Clementine Knit Set", "Knitwear", 260, "Espresso", "Fine roll-neck and button-front midi skirt in a dense espresso knit.", 8],
+    ["06", "Duchess Wrap Coat", "Coats", 495, "Oatmeal", "Double-face wool wrap coat with a self-tie belt and patch pockets.", 8],
+    ["07", "Ivoire Open-Knit Jacket", "Knitwear", 215, "Ivory / Tan", "Open-knit zip jacket edged in tan suede-effect trim.", 7],
+    ["08", "Lennox Wide Trouser", "Trousers", 175, "Dove grey", "Fluid wide-leg trouser with a soft pressed crease.", 7],
+    ["09", "Hampton Cardigan", "Knitwear", 225, "Cream", "Chunky double-breasted cardigan with horn-effect buttons.", 8],
+    ["10", "Saddle Suede Short", "Shorts", 155, "Chocolate", "High-rise suede short with a clean flat front.", 8],
+    ["11", "Essential Roll-Neck", "Knitwear", 95, "Black", "Second-skin fine-knit roll-neck. The layer under everything.", 4],
+    ["12", "Blanc Cocoon Coat", "Coats", 450, "Ivory", "Collarless cocoon coat with dropped shoulders and deep pockets.", 5],
+    ["13", "Mayfair Pleated Trouser", "Trousers", 185, "Charcoal", "Pleat-front trouser in a flecked charcoal tweed.", 5],
+    ["14", "Olivia Leather Set", "Sets", 395, "Olive", "Leather camisole and mini skirt finished with tonal lace.", 6],
+    ["15", "Sovereign Long Coat", "Coats", 550, "Black", "Floor-sweeping belted coat with wide lapels and a back vent.", 8],
+    ["16", "Atelier Poplin Shirt", "Shirts", 145, "White", "Oversized crisp poplin shirt with a stand collar.", 8],
+    ["17", "Pleated Short", "Shorts", 135, "Black", "Corset-waist pleated short with a tailored line.", 8],
     ["18", "Bordeaux Roll-Neck", "Knitwear", 110, "Bordeaux", "Fine roll-neck in a deep wine shade.", 7],
     ["19", "Kensington Blazer", "Jackets", 325, "Black", "Oversized single-breasted blazer with strong shoulders.", 7],
-    ["20", "Belgravia Mini", "Skirts", 120, "Black", "Structured A-line mini in wool crepe.", 6],
-    ["21", "Dorothy Roll-Neck", "Knitwear", 95, "Espresso", "", 7]
+    ["20", "Belgravia Mini", "Skirts", 120, "Black", "Structured A-line mini in wool crepe.", 2],
+    ["21", "Dorothy Roll-Neck", "Knitwear", 95, "Espresso", "", 8]
   ];
   const sov = sovRows.map(([id, name, cat, price, colour, desc, n]) => {
     const a = NAMED[id];
