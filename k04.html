@@ -106,6 +106,14 @@ a:hover>.ul,a.ul:hover,button.ul:hover{opacity:.55}
 .tile .cap h2{font:400 16px/1.25 var(--sans);letter-spacing:.02em}
 .tile.ink .cap{color:var(--ink);text-shadow:none}
 .tile.wide{height:56.25vw;max-height:calc(100vh - var(--hh));max-height:calc(100svh - var(--hh))}
+/* wide still life with the garment on the left: whole picture shown (no top clipping), title + button on the right */
+.tile.wide.side{max-height:none;height:auto;aspect-ratio:16/9}
+.tile.wide.side img{object-position:50% 50%}
+@media (max-width:760px){.tile.wide.side{aspect-ratio:4/5}}
+@media (min-width:761px){
+  .tile.side .cap{left:58%;right:6%;top:50%;bottom:auto;transform:translateY(-50%);gap:22px}
+  .tile.side .cap h2{font:400 clamp(28px,2.6vw,44px)/1.1 var(--serif);letter-spacing:.01em}
+}
 .tile.push img{transition:opacity .5s ease,transform 16s linear}
 .tile.push.in img{transform:scale(1.06)}
 @media (hover:hover){.tile.push a.fill:hover img{transform:scale(1.06)}}
@@ -572,10 +580,10 @@ a:hover>.ul,a.ul:hover,button.ul:hover{opacity:.55}
   <section class="car" id="newIn" aria-label="New in Sovereign"></section>
 
   <div class="stack">
-    <!-- 8. Wide still life -->
-    <section class="tile wide ink rv"><a class="fill" href="#/product/sov-07" tabindex="-1" aria-hidden="true"><picture>
-        <source media="(max-width:760px)" srcset="assets/k04/still-charlie-p.jpg">
-        <img src="assets/k04/still-charlie-w.jpg" alt="" loading="lazy" decoding="async" style="object-position:50% 100%"></picture></a>
+    <!-- 8. Wide still life: picture left, title and button right (phone: normal) -->
+    <section class="tile wide ink rv side"><a class="fill" href="#/product/sov-07" tabindex="-1" aria-hidden="true"><picture>
+        <source media="(max-width:760px)" srcset="assets/k04/charlie-wall-p.jpg">
+        <img src="assets/k04/charlie-wall-w.jpg" alt="" loading="lazy" decoding="async"></picture></a>
       <div class="cap"><h2>Charlie Cardigan</h2><a class="btn line" href="#/product/sov-07" aria-label="Shop the Charlie Cardigan">Shop now</a></div></section>
 
     <!-- 9. Two up, studio -->
