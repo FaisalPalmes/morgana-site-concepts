@@ -548,6 +548,11 @@ body{background:var(--ivory)}
 .worn b{font-weight:400}
 .worn a>span span{color:var(--mute);font-size:13px}
 .worn a:hover b{text-decoration:underline;text-underline-offset:3px}
+
+/* 16 Nov: window-seat hero */
+.hero.photo picture{position:absolute;inset:0}
+.hero.photo picture img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+@media (max-width:760px){.hero.photo picture img{object-position:68% 40%}}
 </style>
 </head>
 <body>
@@ -645,7 +650,7 @@ body{background:var(--ivory)}
 <div id="home">
   <!-- 1. Hero film -->
   <section class="tile hero photo" data-hd="clear" id="hero" aria-label="Sovereign, Autumn–Winter 2026">
-    <img src="assets/k04/hero-vivienne.jpg" alt="Angelica on a red velvet chaise in a grey sheer dress" fetchpriority="high" decoding="async">
+    <picture><source media="(max-width:760px)" srcset="assets/k05/hero-window-seat-p.jpg"><img src="assets/k05/hero-window-seat-w.jpg" alt="Angelica on a window seat at golden hour, reading a magazine, a Morganà bag beside her" fetchpriority="high" decoding="async"></picture>
     <div class="cap"><h1>Sovereign, Autumn–Winter 2026</h1><a class="btn solid" href="#/collection/sovereign">Shop now</a></div>
     <span class="scroll" aria-hidden="true">Scroll to discover more</span>
   </section>
