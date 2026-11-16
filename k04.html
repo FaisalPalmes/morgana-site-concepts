@@ -171,6 +171,29 @@ a:hover>.ul,a.ul:hover,button.ul:hover{opacity:.55}
 .mosaic h3{margin:24px 0 14px}
 .mosaic .ul{font-size:12px}
 
+/* testimonials */
+.tst{padding:var(--s7) 0 var(--s6)}
+.tst .track>*{flex-basis:calc((100% - 2 * var(--gut)) / 3.15)}
+.tq{background:#f6f1e7;padding:40px 36px 32px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:100%}
+.tq blockquote{font:400 21px/1.45 var(--serif)}
+.tq figcaption{font-size:12px;letter-spacing:.04em;display:flex;flex-direction:column;gap:4px}
+.tq figcaption b{font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:11px}
+.tq figcaption span{color:var(--mute)}
+@media (max-width:1100px){.tst .track>*{flex-basis:calc((100% - var(--gut)) / 2.1)}}
+@media (max-width:760px){.tst{padding:var(--s5) 0 var(--s5)}.tst .track>*{flex-basis:84%}.tq{padding:30px 24px 26px}.tq blockquote{font-size:19px}}
+/* events page */
+.evp .ph{padding-bottom:var(--s5)}
+.evt{display:grid;grid-template-columns:1.15fr 1fr;border-top:1px solid var(--line)}
+.evt-im{background:var(--stone);overflow:hidden;aspect-ratio:4/5;max-height:calc(100vh - var(--hh));position:relative}
+.evt-im img{position:absolute;inset:0}
+.evt-tx{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:var(--s6) clamp(32px,6vw,104px)}
+.evt-tx .lbl{color:var(--mute);margin-bottom:18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.evt-tx .tag{color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink);padding:6px 9px}
+.evt-tx .h1{margin-bottom:20px}
+.evt-tx p{font-size:15px;line-height:1.75;max-width:460px}
+.evt-tx .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.evt.flip .evt-im{order:2}
+@media (max-width:760px){.evt{grid-template-columns:1fr}.evt.flip .evt-im{order:0}.evt-im{max-height:none}.evt-tx{padding:var(--s5) var(--pad)}}
 /* the evening, on the home page */
 .eve .band{aspect-ratio:2400/608;background:var(--stone);overflow:hidden}
 .eve .tx{padding:var(--s6) var(--s3) var(--s7);text-align:center;border-bottom:1px solid var(--line)}
@@ -483,7 +506,7 @@ a:hover>.ul,a.ul:hover,button.ul:hover{opacity:.55}
         <h2 class="lbl">The house</h2>
         <ul class="mlist">
           <li><a href="#/house">About Morganà</a></li>
-          <li><a href="#/evening">The evening, 19.11.26</a></li>
+          <li><a href="#/events">Events</a></li>
         </ul>
       </div>
       <div>
@@ -496,7 +519,7 @@ a:hover>.ul,a.ul:hover,button.ul:hover{opacity:.55}
       </div>
       <a class="mimg" href="#/collection/sovereign"><div class="im"><img src="assets/k04/menu.jpg" alt="Angelica in a check jacket and long skirt, standing at a bar" loading="lazy" decoding="async"></div><span class="ul">Sovereign, Autumn–Winter 2026</span></a>
     </div>
-    <div class="mfoot"><span>One year of Morganà. Thursday 19.11.26, 7pm, 102 Stamford New Road, Altrincham. A private event.</span><a class="ul" href="mailto:info@morgana.london">info@morgana.london</a></div>
+    <div class="mfoot"><span>Morganà London. Tailoring, knitwear and coats.</span><a class="ul" href="mailto:info@morgana.london">info@morgana.london</a></div>
   </div>
 </div>
 
@@ -595,12 +618,12 @@ a:hover>.ul,a.ul:hover,button.ul:hover{opacity:.55}
     </div>
   </div>
 
-  <!-- 10. The evening -->
-  <section class="eve" aria-labelledby="eveh">
-    <a class="band rv" href="#/evening" tabindex="-1" aria-hidden="true" style="display:block"><img src="assets/img/hb/hb-00371-band.jpg" alt="" loading="lazy" decoding="async"></a>
-    <div class="tx rv up"><p class="lbl">A private event</p><h2 id="eveh">One year of Morganà</h2>
-      <p>Thursday 19.11.26, 7pm<br>102 Stamford New Road, Altrincham WA14 1DG<br>Drinks · Canapés · DJ</p>
-      <div class="acts"><a class="btn fill auto" href="mailto:info@morgana.london?subject=RSVP%3A%20One%20year%20of%20Morgan%C3%A0%2C%2019.11.26">RSVP</a><a class="btn ink" href="#/evening">The evening</a></div></div>
+  <!-- 10. Testimonials (as on the live store) -->
+  <section class="tst car" aria-labelledby="tsth">
+    <div class="top"><h2 class="lbl" id="tsth">Testimonials</h2><div class="ctl">
+      <button class="arw" data-d="-1" type="button" aria-label="Previous" disabled><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M8 1L3 6l5 5"/></svg></button>
+      <button class="arw" data-d="1" type="button" aria-label="Next"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4 1l5 5-5 5"/></svg></button></div></div>
+    <div class="track" role="list" aria-label="Testimonials" tabindex="0"><figure class="tq" role="listitem"><blockquote>“I bought the VEDA black waistcoat from Morgana London and I am OBSESSED. The way it can be styled for multiple occasions is one of the reasons I bought it. And the wool type material at the back makes it really comfortable to wear! I find myself choosing outfits based off this waistcoat just so I can wear it all the time.”</blockquote><figcaption><b>Abbie</b><span>Veda black waistcoat</span></figcaption></figure><figure class="tq" role="listitem"><blockquote>“I’ve worn Morgana pieces so much that they’ve become wardrobe staples. The quality is exceptional, and the versatility makes them perfect for real, everyday life. I’m already planning my next purchase.”</blockquote><figcaption><b>Elli</b></figcaption></figure><figure class="tq" role="listitem"><blockquote>“When I wear this cream fur hooded coat from Morgana London, I instantly feel elevated. The fur is incredibly soft, it sits beautifully on me, and the hood gives it that effortless, modern edge. It keeps me warm while still feeling luxe, and every time I put it on, I feel confident, comfortable, and genuinely amazing in it.”</blockquote><figcaption><b>Kiara E.</b><span>Cream fur hooded coat</span></figcaption></figure><figure class="tq" role="listitem"><blockquote>“Wearing Morgana London feels like stepping into a more elevated version of myself. Each piece is impeccably crafted, with thoughtful details and silhouettes that flatter effortlessly. The designs are timeless and refined, never trend-led, always confident. It’s rare to find clothing that looks this polished while feeling this good to wear, and Morgana London delivers that balance beautifully.”</blockquote><figcaption><b>Daphnie</b></figcaption></figure><figure class="tq" role="listitem"><blockquote>“This two piece is reliable and stylish and is a must in your wardrobe. It is an essential co-ord for anyone building a capsule or transitional wardrobe. I love the fit and feel super classy in it.”</blockquote><figcaption><b>Jodi E.</b><span>Zephyra set</span></figcaption></figure><figure class="tq" role="listitem"><blockquote>“This black sheer high-neck jumper feels so good on me. It’s lightweight, elegant, and hugs just right without feeling restrictive. Whether I layer it or wear it on its own, it gives me a subtle edge while still feeling refined and I always feel put together and empowered when I’m wearing it.”</blockquote><figcaption><b>Kiara E.</b><span>Sheer high-neck jumper</span></figcaption></figure></div>
   </section>
 </div>
 <div id="view" hidden></div>
@@ -615,9 +638,9 @@ a:hover>.ul,a.ul:hover,button.ul:hover{opacity:.55}
   </section>
   <div class="ft">
     <div><h3 class="lbl">May we help you?</h3><ul><li><a href="#/care/contact">Contact us</a></li><li><a href="#/care/delivery">Delivery</a></li><li><a href="#/care/returns">Returns</a></li><li><a href="mailto:info@morgana.london">info@morgana.london</a></li></ul></div>
-    <div><h3 class="lbl">The house</h3><ul><li><a href="#/house">About Morganà</a></li><li><a href="#/evening">The evening</a></li><li><a href="https://www.instagram.com/morgana.london/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+    <div><h3 class="lbl">The house</h3><ul><li><a href="#/house">About Morganà</a></li><li><a href="#/events">Events</a></li><li><a href="https://www.instagram.com/morgana.london/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
     <div class="c3"><h3 class="lbl">Collections</h3><ul><li><a href="#/collection/sovereign">Sovereign</a></li><li><a href="#/collection/lumiere">Lumière</a></li><li><a href="#/collection/fortia">Fortia</a></li><li><a href="#/shop">All pieces</a></li></ul></div>
-    <div class="evc"><h3 class="lbl">One year of Morganà</h3><div class="ev">Thursday 19.11.26, 7pm</div><p>A private event. Drinks · Canapés · DJ.<br>102 Stamford New Road, Altrincham WA14 1DG.<br>RSVP <a class="ul" href="mailto:info@morgana.london">info@morgana.london</a></p></div>
+    <div class="evc"><h3 class="lbl">Events</h3><div class="ev">An evening at Rolls-Royce</div><p>Wilmslow, 11.11.26. <a class="ul" href="#/events">See our events</a></p></div>
   </div>
   <div class="base"><svg class="wmsvg" viewBox="0 0 1000 152" aria-hidden="true" focusable="false"><text x="0" y="146" font-size="160" textLength="1000" lengthAdjust="spacing">MORGANÀ</text></svg><small>© Morganà London Ltd · Concept preview</small></div>
 </footer>
@@ -834,6 +857,7 @@ a:hover>.ul,a.ul:hover,button.ul:hover{opacity:.55}
 
   /* ---- home rail and reveal ---- */
   var newIn=$('#newIn');
+  bindRail($('.tst'));
   newIn.innerHTML=rail('New in Sovereign',pick(['sov-02','sov-03','sov-04','sov-11','sov-13','sov-12','sov-05','sov-08']),{all:'#/collection/sovereign',price:false});
   bindRail(newIn);
   var rv=$$('.rv');
@@ -908,14 +932,20 @@ a:hover>.ul,a.ul:hover,button.ul:hover{opacity:.55}
       }
     }};
   }
-  function evLines(){return '<p class="when">Thursday 19.11.26, 7pm</p><p>102 Stamford New Road, Altrincham WA14 1DG</p><p>Drinks · Canapés · DJ</p>'}
-  function vEvening(){
-    return {title:'One year of Morganà',html:'<div class="pg"><section class="split">'+
-      '<div class="im"><img src="assets/k04/evening.jpg" alt="A Morganà London bag and invitation cards on a table by the window at dusk"></div>'+
-      '<div class="tx"><p class="lbl">A private event</p><h1 class="h1">One year of Morganà</h1>'+evLines()+
-      '<p>Sovereign, the collection for Autumn–Winter 2026, arrives the same day.</p>'+
-      '<div class="acts"><a class="btn fill auto" href="mailto:info@morgana.london?subject=RSVP%3A%20One%20year%20of%20Morgan%C3%A0%2C%2019.11.26">RSVP</a><a class="btn ink" href="#/collection/sovereign">Discover Sovereign</a></div>'+
-      '</div></section></div>'};
+  var EVENTS=[
+    {when:'Rolls-Royce Motor Cars Manchester, Wilmslow · 11.11.26',title:'An evening at Rolls-Royce',img:'assets/k04/evening.jpg',pos:'50% 50%',
+     alt:'A Morganà London bag and cards by a window at dusk',
+     text:'<p>MAD Events had us along to An Evening of Health, Wellness &amp; Luxury at Rolls-Royce Motor Cars Manchester. Four looks from Sovereign, a few Morganà bags by the cars, and a very good room.</p>'},
+    {when:'Altrincham · Thursday 19.11.26, 7pm',title:'One year of Morganà',img:'assets/img/hb/hb-00371.jpg',pos:'50% 40%',up:1,
+     alt:'Morganà London cards and a bag on a table',
+     text:'<p>A private evening for the first year of the house, and the day Sovereign arrives. Drinks, canapés and a DJ at 102 Stamford New Road, Altrincham WA14 1DG.</p>',
+     acts:'<a class="btn fill auto" href="mailto:info@morgana.london?subject=RSVP%3A%20One%20year%20of%20Morgan%C3%A0%2C%2019.11.26">RSVP</a><a class="btn ink" href="#/collection/sovereign">Discover Sovereign</a>'}
+  ];
+  function vEvents(){
+    return {title:'Events',html:'<div class="pg evp"><div class="ph"><div><p class="lbl">Morganà London</p><h1 class="h1">Events</h1></div><p>Where you might have seen us lately.</p></div>'+
+      EVENTS.map(function(e,i){return '<article class="evt'+(i%2?' flip':'')+'"><div class="evt-im"><img src="'+e.img+'" alt="'+esc(e.alt)+'" style="object-position:'+e.pos+'"></div>'+
+        '<div class="evt-tx"><p class="lbl">'+(e.up?'<span class="tag">Coming up</span>':'')+esc(e.when)+'</p><h2 class="h1">'+esc(e.title)+'</h2>'+e.text+(e.acts?'<div class="acts">'+e.acts+'</div>':'')+'</div></article>'}).join('')+
+      '</div>'};
   }
   function vHouse(){
     return {title:'The House',html:'<div class="pg"><section class="split">'+
@@ -924,12 +954,12 @@ a:hover>.ul,a.ul:hover,button.ul:hover{opacity:.55}
       '<p style="margin-top:24px">Morganà London makes elegant, modern womenswear: tailoring, knitwear, dresses and coats. The house was founded by Angelica.</p>'+
       '<p>Sovereign is the third collection. It launches on 19 November 2026, as the house marks its first year.</p>'+
       '<div class="cols">'+COLS.map(function(id){return '<a href="#/collection/'+id+'"><b>'+esc(COL[id].name)+'</b><span>'+esc(COL[id].season)+'</span></a>'}).join('')+'</div>'+
-      '<div class="acts"><a class="btn ink" href="#/evening">The evening, 19.11.26</a></div></div></section></div>'};
+      '<div class="acts"><a class="btn ink" href="#/events">Events</a></div></div></section></div>'};
   }
   var MAIL='<a href="mailto:info@morgana.london">info@morgana.london</a>';
   var CARE={
     contact:['Contact','<p>For orders, sizing and anything else, write to us and we will reply by email.</p><h2 class="lbl">Email</h2><p class="big">'+MAIL+'</p>'+
-      '<h2 class="lbl">The evening</h2><p>To reply to the invitation for 19.11.26, see <a href="#/evening">One year of Morganà</a>.</p>'],
+      '<h2 class="lbl">Events</h2><p>Where you might have seen us lately: <a href="#/events">Events</a>.</p>'],
     delivery:['Delivery','<p>Delivery is confirmed by email with your order: the options, the cost and the estimated date.</p><p>Nothing is charged until you have agreed them.</p>'+
       '<h2 class="lbl">Outside the United Kingdom</h2><p>Please write to '+MAIL+' before ordering and we will confirm what is possible.</p>'],
     returns:['Returns','<p>If a piece is not right, write to us and we will help.</p><p>The terms for returns are confirmed by email with your order.</p>'+
@@ -958,7 +988,7 @@ a:hover>.ul,a.ul:hover,button.ul:hover{opacity:.55}
     else if(a[0]==='shop'&&n===1)v=vList('',r.q);
     else if(a[0]==='collection'&&n===2&&COL[a[1]])v=vList(a[1],r.q);
     else if(a[0]==='product'&&n===2&&byId[a[1]])v=vProduct(byId[a[1]]);
-    else if(a[0]==='evening'&&n===1)v=vEvening();
+    else if((a[0]==='events'||a[0]==='evening')&&n===1)v=vEvents();
     else if(a[0]==='house'&&n===1)v=vHouse();
     else if(a[0]==='care'&&n===2&&CARE[a[1]])v=vCare(a[1]);
     else{try{history.replaceState(null,'','#/')}catch(e){location.hash='#/'}base=''}
