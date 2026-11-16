@@ -120,6 +120,11 @@ a:hover>.ul,a.ul:hover,button.ul:hover{opacity:.55}
 .hero{height:100vh;height:100svh;min-height:560px;background-image:url(assets/hero-2026-11-10/hero-rail-montage-poster.jpg)}
 .hero.still{background-image:url(assets/img/hb/hb-hound-graded.jpg);background-position:58% 50%}
 .hero.still video,.hero.still .pause{display:none}
+.hero.photo{background:#d8cdc2}
+.hero.photo img{position:absolute;inset:0;object-position:50% 24%}
+.hero.photo::after{content:"";position:absolute;inset:auto 0 0;height:42%;background:linear-gradient(transparent,rgba(0,0,0,.34));pointer-events:none}
+.hero.photo::before{content:"";position:absolute;inset:0 0 auto;height:26%;background:linear-gradient(rgba(0,0,0,.30),transparent);pointer-events:none;z-index:1}
+.hero.photo .cap,.hero.photo .scroll{z-index:1}
 .hero .cap{bottom:40px;gap:20px}
 .hero .cap h1{font:400 16px/1.25 var(--sans);letter-spacing:.02em}
 .pause{position:absolute;right:var(--pad);bottom:40px;width:40px;height:40px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.75);display:grid;place-items:center;color:#fff;transition:background-color .3s,color .3s}
@@ -341,6 +346,7 @@ a:hover>.ul,a.ul:hover,button.ul:hover{opacity:.55}
   .h1{font-size:36px}
   .hero{background-image:url(assets/hero-2026-11-10/hero-rail-montage-mobile-poster.jpg)}
   .hero .cap{bottom:36px}
+  .hero.photo img{object-position:64% 50%}
   .scroll{display:none}
   .pause{bottom:36px;width:44px;height:44px}
   .txt{padding:var(--s5) 28px}
@@ -525,12 +531,10 @@ a:hover>.ul,a.ul:hover,button.ul:hover{opacity:.55}
 <main id="main" tabindex="-1">
 <div id="home">
   <!-- 1. Hero film -->
-  <section class="tile film hero" id="hero" aria-label="Sovereign, Autumn–Winter 2026">
-    <video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"
-      data-desk="assets/hero-2026-11-10/hero-rail-rail-only.mp4" data-mob="assets/hero-2026-11-10/hero-rail-rail-only-mobile.mp4"></video>
+  <section class="tile hero photo" id="hero" aria-label="Sovereign, Autumn–Winter 2026">
+    <img src="assets/k04/hero-vivienne.jpg" alt="Angelica on a red velvet chaise in a grey sheer dress" fetchpriority="high" decoding="async">
     <div class="cap"><h1>Sovereign, Autumn–Winter 2026</h1><a class="btn solid" href="#/collection/sovereign">Shop now</a></div>
     <span class="scroll" aria-hidden="true">Scroll to discover more</span>
-    <button class="pause" type="button" aria-label="Pause film"><svg viewBox="0 0 10 10" aria-hidden="true"></svg></button>
   </section>
 
   <!-- 2. One line -->
