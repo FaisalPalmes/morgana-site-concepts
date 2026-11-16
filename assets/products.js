@@ -51,6 +51,17 @@ window.MORGANA = (function () {
     if (id === "20") Object.assign(p, { name: "Regina Set", hidden: true, partOf: "sov-19" });
     return p;
   });
+  // 16 Nov (Angelica): no photo where the sheer roll-neck shows too much. Files kept, just not shown.
+  const HIDE = {"18": [0, 5, 6], "19": [4, 5, 6]};
+  sov.forEach(p => { const id = p.id.slice(4), h = HIDE[id];
+    if (h) p.images = p.images.filter(src => !h.some(k => src.endsWith("/" + id + "-" + k + ".jpg"))); });
+  // 16 Nov (Angelica): the black roll-neck worn with the Kiara skirt is Melissa (silk and wool); the brown one is Dorothy (100% merino).
+  const S = n => "assets/img/sov/" + n + ".jpg";
+  sov[10].images = ["03-4", "03-0", "03-1", "03-6"].map(S);
+  sov[20].images = sov[20].images.concat(["11-0", "11-1"].map(S));
+  // pieces worn together in the photos (shown as "Worn with" on the product page)
+  const WORN = {"03": ["11"], "11": ["03"], "05": ["21"], "21": ["05", "10"], "10": ["21"], "13": ["21"]};
+  sov.forEach(p => { const w = WORN[p.id.slice(4)]; if (w) p.wornWith = w.map(x => "sov-" + x); });
   // Regina: show item 20's photos with item 19's
   sov[18].images = sov[18].images.concat(sov[19].images);
 

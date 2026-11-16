@@ -541,6 +541,13 @@ body{background:var(--ivory)}
 @keyframes tsxbar{to{transform:scaleX(1)}}
 @media (max-width:760px){.tsx-stage::before{font-size:110px;top:-8px}.tsx-stage{padding-top:52px}.tsx-bar{width:64px}.tsx-ctl{gap:12px}}
 @media (prefers-reduced-motion:reduce){.tsx-q{transition:none}.tsx-bar i.run{animation:none}}
+.worn{margin-top:30px;padding-top:22px;border-top:1px solid var(--line)}
+.worn a{display:flex;gap:16px;align-items:center;margin-top:14px}
+.worn img{width:64px;height:96px;object-fit:cover;flex:none}
+.worn a>span{display:flex;flex-direction:column;gap:4px;font-size:14px}
+.worn b{font-weight:400}
+.worn a>span span{color:var(--mute);font-size:13px}
+.worn a:hover b{text-decoration:underline;text-underline-offset:3px}
 </style>
 </head>
 <body>
@@ -984,6 +991,8 @@ body{background:var(--ivory)}
       '<div class="szh"><span class="lbl" id="szl">Size</span><span id="szn" role="status"></span><a class="ul sg" href="#/care/contact">Size guide</a></div>'+
       '<div class="sz" role="group" aria-labelledby="szl">'+sizes()+'</div>'+
       '<button type="button" class="btn fill" id="add">Add to bag</button>'+
+      (p.wornWith&&p.wornWith.length?'<div class="worn"><p class="lbl">Worn with</p>'+p.wornWith.map(function(id){var q=all.filter(function(x){return x.id===id})[0];if(!q||q.hidden)return '';
+        return '<a href="#/product/'+esc(q.id)+'"><img src="'+esc(q.images[0])+'" alt="" width="64" height="96" loading="lazy"><span><b>'+esc(q.name)+'</b><span>'+gbp(q.price)+'</span></span></a>'}).join('')+'</div>':'')+
       (paras.length?'<div class="copy"><p>'+esc(paras[0])+'</p>'+(paras.length>1?'<div id="more" hidden>'+paras.slice(1).map(function(t){return '<p>'+esc(t)+'</p>'}).join('')+'</div><button type="button" class="ul" id="moreBtn" aria-expanded="false" aria-controls="more">Read more</button>':'')+'</div>':'')+
       '<div class="acc">'+
       (p.details&&p.details.length?'<details open><summary class="lbl">Details</summary><div class="in"><ul>'+p.details.map(function(d){return '<li>'+esc(d)+'</li>'}).join('')+'</ul></div></details>':'')+
