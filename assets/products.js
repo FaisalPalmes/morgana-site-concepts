@@ -64,6 +64,9 @@ window.MORGANA = (function () {
   sov.forEach(p => { const w = WORN[p.id.slice(4)]; if (w) p.wornWith = w.map(x => "sov-" + x); });
   // Regina: show item 20's photos with item 19's
   sov[18].images = sov[18].images.concat(sov[19].images);
+  // 16 Nov (Angelica): two Regina photos are enough; the red roll-neck (18) is from an older collection, so it is not listed.
+  sov[18].images = ["19-0", "20-0"].map(S);
+  sov[17].hidden = true;
 
   const lum = ["Isla Lace Skirt", "Capri Shirt Set", "Positano Shirt Dress", "Riviera Linen Set", "Marais Waistcoat Set",
     "Juliette Culotte Set", "Saint-Germain Short Suit", "Nuit Satin Bomber", "Nuit Zip Set", "Trocadéro Dot Dress",

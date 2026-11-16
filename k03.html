@@ -634,7 +634,7 @@ a:hover>.ul,a.ul:hover,button.ul:hover{opacity:.55}
 
   /* search */
   var sres=$('#sres'), snote=$('#snote'), qIn=$('#q');
-  var suggest=pick(['sov-10','sov-14','sov-18','sov-17','lum-12','for-27']);
+  var suggest=pick(['sov-10','sov-14','sov-11','sov-17','lum-12','for-27']);
   function norm(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')}
   function find(t){
     var words=norm(t).split(/\s+/).filter(Boolean);
