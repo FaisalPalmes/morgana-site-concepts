@@ -59,8 +59,9 @@ window.MORGANA = (function () {
   const S = n => "assets/img/sov/" + n + ".jpg";
   sov[10].images = ["03-4", "03-0", "03-1", "03-6"].map(S);
   sov[20].images = sov[20].images.concat(["11-0", "11-1"].map(S));
-  // 17 Nov (Faisal): Charlie is the ivory cardigan with tan trim, so it uses the wine-door photos from item 10 (Vesper keeps them too).
+  // 17 Nov (Faisal): Charlie is the ivory cardigan with tan trim, so it uses the wine-door photos from item 10 (Faisal: Charlie only, so Vesper keeps just 10-0 to 10-2).
   sov[6].images = ["10-3", "10-4", "10-5", "10-6", "10-7"].map(S);
+  sov[9].images = ["10-0", "10-1", "10-2"].map(S);
   // pieces worn together in the photos (shown as "Worn with" on the product page)
   const WORN = {"03": ["11"], "11": ["03"], "05": ["21"], "21": ["05", "10"], "10": ["21", "07"], "07": ["10"], "13": ["21"]};
   sov.forEach(p => { const w = WORN[p.id.slice(4)]; if (w) p.wornWith = w.map(x => "sov-" + x); });
