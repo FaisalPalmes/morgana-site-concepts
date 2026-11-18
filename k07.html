@@ -742,6 +742,10 @@ dialog.jp[open]::backdrop{animation:jpfade .5s ease both}
   .jt-x{border-top:0!important;border-left:1px solid rgba(246,241,231,.18)!important;padding:0 13px 0 11px}
 }
 
+
+/* 18 Nov: a product with a single photo fills the phone gallery (no empty strip) */
+.gal .im:only-child{flex-basis:100%}
+@media (min-width:761px){.gal:has(>.im:only-child){grid-template-columns:minmax(0,600px);justify-content:center}}
 </style>
 </head>
 <body class="vA">
