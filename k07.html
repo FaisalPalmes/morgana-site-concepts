@@ -742,10 +742,10 @@ dialog.jp[open]::backdrop{animation:jpfade .5s ease both}
   .jt-x{border-top:0!important;border-left:1px solid rgba(246,241,231,.18)!important;padding:0 13px 0 11px}
 }
 
-
 /* 18 Nov: a product with a single photo fills the phone gallery (no empty strip) */
 .gal .im:only-child{flex-basis:100%}
 @media (min-width:761px){.gal:has(>.im:only-child){grid-template-columns:minmax(0,600px);justify-content:center}}
+
 </style>
 </head>
 <body class="vA">
@@ -851,7 +851,6 @@ dialog.jp[open]::backdrop{animation:jpfade .5s ease both}
   <!-- 2. Masthead -->
   <section class="mast" data-hd="ivory">
     <div class="mast-in">
-      <p class="lbl rv">Nº 01 <i></i> Sovereign <i></i> Autumn–Winter 2026</p>
       <h2 class="mast-h rv up">Made for the<br><em>long evenings.</em></h2>
       <div class="mast-side rv up"><p>Cashmere, wool and silk for the colder months, cut for dinners that run late and the walk home after.</p><a class="ul" href="#/collection/sovereign">Discover the collection</a></div>
     </div>
@@ -874,9 +873,9 @@ dialog.jp[open]::backdrop{animation:jpfade .5s ease both}
 
     <!-- 5. Two still lifes -->
     <div class="grid2 duo">
-      <section class="tile ink rv"><a class="fill" href="#/product/sov-09" tabindex="-1" aria-hidden="true"><img src="assets/k04/still-ana-p.jpg" alt="" loading="lazy" decoding="async" style="object-position:50% 100%"></a>
+      <section class="tile ink rv"><a class="fill" href="#/product/sov-09" tabindex="-1" aria-hidden="true"><img src="assets/k07/still-ana-t.jpg" alt="" loading="lazy" decoding="async" style="object-position:50% 50%"></a>
         <div class="cap"><h2>Ana Cardigan</h2><a class="btn line" href="#/product/sov-09" aria-label="Shop the Ana Cardigan">Shop now</a></div></section>
-      <section class="tile ink rv"><a class="fill" href="#/product/sov-16" tabindex="-1" aria-hidden="true"><img src="assets/k04/still-vivienne-p.jpg" alt="" loading="lazy" decoding="async" style="object-position:50% 100%"></a>
+      <section class="tile ink rv"><a class="fill" href="#/product/sov-16" tabindex="-1" aria-hidden="true"><img src="assets/k07/still-vivienne-t.jpg" alt="" loading="lazy" decoding="async" style="object-position:50% 50%"></a>
         <div class="cap"><h2>Vivienne Shirt</h2><a class="btn line" href="#/product/sov-16" aria-label="Shop the Vivienne Shirt">Shop now</a></div></section>
     </div>
 
@@ -946,20 +945,20 @@ dialog.jp[open]::backdrop{animation:jpfade .5s ease both}
     <div class="jp-ph"><picture><source media="(max-width:760px)" srcset="assets/img/sov/popup-02799-m.jpg"><img src="assets/img/sov/popup-02799.jpg" alt=""></picture><p>Sovereign · AW26</p></div>
     <div class="jp-tx">
       <button type="button" class="jp-x" data-close aria-label="Close"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
-      <p class="lbl">The house letter <i></i> Nº 01</p>
-      <h2 class="jp-h" id="jp-h">Join <em>the house.</em></h2>
-      <p class="jp-p in">First sight of new collections, invitations to our private evenings, and <b>10% off your first order</b>.</p>
+      <p class="lbl">Morganà London</p>
+      <h2 class="jp-h" id="jp-h">10% off <em>your first order.</em></h2>
+      <p class="jp-p in">Join us for new collections and private invitations.</p>
       <form class="jp-f" id="jp-f">
-        <label class="jp-fl"><span>Email address</span><input type="email" id="jp-em" placeholder="you@example.com" autocomplete="email" required></label>
-        <div class="jp-fl"><span>Your birthday <em>(optional)</em></span>
+        <label class="jp-fl"><span>Email</span><input type="email" id="jp-em" placeholder="you@example.com" autocomplete="email" required></label>
+        <div class="jp-fl"><span>Birthday <em>(optional)</em></span>
           <div class="jp-bd"><label class="sr" for="jp-d">Day</label><select id="jp-d"><option value="">Day</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option></select><label class="sr" for="jp-m">Month</label><select id="jp-m"><option value="">Month</option><option>January</option><option>February</option><option>March</option><option>April</option><option>May</option><option>June</option><option>July</option><option>August</option><option>September</option><option>October</option><option>November</option><option>December</option></select></div>
-          <p class="jp-note">Tell us, and we'll send you 20% off for your birthday.</p></div>
-        <button class="jp-go" type="submit">Join and take 10% off</button>
-        <div class="jp-sm"><span>Unsubscribe at any time.</span><button type="button" data-close>No, thank you</button></div>
+          <p class="jp-note">A birthday gift from us: 20% off.</p></div>
+        <button class="jp-go" type="submit">Join</button>
+        <div class="jp-sm"><span>Unsubscribe anytime.</span><button type="button" data-close>No, thank you</button></div>
       </form>
       <div class="jp-ok" role="status">
-        <p class="jp-p">Welcome. Your <b>10% code</b> is on its way to your inbox.<span id="jp-bd-ok"></span></p>
-        <button type="button" class="jp-go" data-close>Continue to the collection</button>
+        <p class="jp-p">Thank you. Your 10% code is on its way.<span id="jp-bd-ok"></span></p>
+        <button type="button" class="jp-go" data-close>Continue shopping</button>
       </div>
     </div>
   </div>
@@ -1410,7 +1409,7 @@ dialog.jp[open]::backdrop{animation:jpfade .5s ease both}
     d.addEventListener('click',function(e){if(e.target===d||e.target.closest('[data-close]'))d.close()});
     document.getElementById('jp-f').addEventListener('submit',function(e){e.preventDefault();
       var dd=document.getElementById('jp-d').value, mm=document.getElementById('jp-m').value;
-      document.getElementById('jp-bd-ok').textContent=(dd&&mm)?' On '+dd+' '+mm+' we will send you 20% off for your birthday.':'';
+      document.getElementById('jp-bd-ok').textContent=(dd&&mm)?' We will be in touch on '+dd+' '+mm+'.':'';
       ls('mor-joined','1'); d.classList.add('done'); d.querySelector('.jp-ok .jp-go').focus();});
     var nf=document.getElementById('nf'); if(nf)nf.addEventListener('submit',function(){ls('mor-joined','1')});
     if(force)setTimeout(open,500); else {t=setTimeout(open,9000); addEventListener('scroll',onS,{passive:true});}
