@@ -70,6 +70,8 @@ window.MORGANA = (function () {
   // 16 Nov (Angelica): two Regina photos are enough; the red roll-neck (18) is from an older collection, so it is not listed.
   sov[18].images = ["19-0", "20-0"].map(S);
   sov[17].hidden = true;
+  // 18 Nov (Faisal): Anabelle shows the two blue-flagged office photos in place of DSC02069: 01-5 is now DSC02072, 01-8 is DSC02074.
+  sov[0].images = ["01-0", "01-1", "01-2", "01-3", "01-4", "01-5", "01-8", "01-6", "01-7"].map(S);
 
   const lum = ["Isla Lace Skirt", "Capri Shirt Set", "Positano Shirt Dress", "Riviera Linen Set", "Marais Waistcoat Set",
     "Juliette Culotte Set", "Saint-Germain Short Suit", "Nuit Satin Bomber", "Nuit Zip Set", "Trocadéro Dot Dress",
