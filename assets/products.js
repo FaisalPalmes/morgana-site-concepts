@@ -76,11 +76,12 @@ window.MORGANA = (function () {
   // 18 Nov (Faisal): Anabelle shows the two blue-flagged office photos in place of DSC02069: 01-5 is now DSC02072, 01-8 is DSC02074.
   sov[0].images = ["01-0", "01-1", "01-2", "01-3", "01-4", "01-5", "01-8", "01-6", "01-7"].map(S);
   // 19 Nov (Faisal, photo picker): chosen photos in order, first one is the main image. Overrides everything above for these 17.
+  // 03-k0/k1/k2 are fresh Resolve exports of 03-0/03-1/03-2 with the corrected skin (19 Nov).
   // Harper's 08-0 and 08-1 in the picker are the originals; they now show as the re-renders 08-r1 and 08-r2.
   const PICKS = {
     "01": ["01-0", "01-2", "01-4", "01-3"],
     "02": ["02-1", "02-3", "02-4", "02-2"],
-    "03": ["03-2", "03-5", "03-6", "03-1"],
+    "03": ["03-k2", "03-5", "03-6", "03-k1"],
     "04": ["04-2", "04-5", "04-6", "04-7", "04-1"],
     "05": ["05-3", "05-6", "05-0"],
     "06": ["06-0", "06-3", "06-4", "06-7", "06-2"],
@@ -88,7 +89,7 @@ window.MORGANA = (function () {
     "08": ["08-3", "08-5", "08-6", "08-r2", "08-r1", "08-4"],
     "09": ["09-3", "09-1", "09-2", "09-5", "09-6", "09-7"],
     "10": ["10-0", "10-2"],
-    "11": ["03-0", "03-4", "03-6", "03-1"],
+    "11": ["03-k0", "03-4", "03-6", "03-k1"],
     "12": ["12-4", "12-2", "12-3"],
     "13": ["13-0", "13-4"],
     "15": ["15-0", "15-1", "15-2", "15-7", "15-3"],
