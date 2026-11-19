@@ -75,6 +75,7 @@ window.MORGANA = (function () {
   sov[17].hidden = true;
   // 18 Nov (Faisal): Anabelle shows the two blue-flagged office photos in place of DSC02069: 01-5 is now DSC02072, 01-8 is DSC02074.
   sov[0].images = ["01-0", "01-1", "01-2", "01-3", "01-4", "01-5", "01-8", "01-6", "01-7"].map(S);
+  // 19 Nov (Faisal): picks keep the latest versions (re-renders and regrades): 03-k*, 08-r*, 10-r*, 13-r*, 14-r*, 15-r*.
   // 19 Nov (Faisal, photo picker): chosen photos in order, first one is the main image. Overrides everything above for these 17.
   // 03-k0/k1/k2 are fresh Resolve exports of 03-0/03-1/03-2 with the corrected skin (19 Nov).
   // Harper's 08-0 and 08-1 in the picker are the originals; they now show as the re-renders 08-r1 and 08-r2.
@@ -91,8 +92,9 @@ window.MORGANA = (function () {
     "10": ["10-0", "10-2"],
     "11": ["03-k0", "03-4", "03-6", "03-k1"],
     "12": ["12-4", "12-2", "12-3"],
-    "13": ["13-0", "13-4"],
-    "15": ["15-0", "15-1", "15-2", "15-7", "15-3"],
+    "13": ["13-r0", "13-r4"],
+    "14": ["14-r2", "14-r0", "14-r3", "14-r4"],
+    "15": ["15-0", "15-1", "15-2", "15-r7", "15-r3"],
     "16": ["16-2", "16-6", "16-7", "16-0"],
     "17": ["17-0", "17-7", "17-2"],
     "19": ["19-2", "19-0", "19-5", "19-3", "20-1"],
