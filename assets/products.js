@@ -93,7 +93,7 @@ window.MORGANA = (function () {
     "11": ["03-k0", "03-4", "03-6", "03-k1"],
     "12": ["12-n4", "12-n2", "12-n3"],
     "13": ["13-r0", "13-r4"],
-    "14": ["14-d2", "14-d0", "14-d4"],   // 19 Nov (Faisal): 3 picks only, doors graded to match the real shoot
+    "14": ["14-e2", "14-e0", "14-e4"],   // 19 Nov (Faisal): 3 picks only, doors graded to match the real shoot
     "15": ["15-0", "15-1", "15-2", "15-r7", "15-r3"],
     "16": ["16-2", "16-6", "16-7", "16-0"],
     "17": ["17-0", "17-7", "17-2"],
