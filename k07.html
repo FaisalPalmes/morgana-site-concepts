@@ -1183,7 +1183,7 @@ dialog.jp[open]::backdrop{animation:jpfade .5s ease both}
 
   /* ---- home rail and reveal ---- */
   var newIn=$('#newIn');
-  newIn.innerHTML='<div class="top"><h2 class="lbl">New in Sovereign</h2></div><div class="four" role="list" aria-label="New in Sovereign">'+pick(['sov-02','sov-04','sov-15','sov-01']).map(function(p){return card(p,{role:1,price:false})}).join('')+'</div><div class="more"><a class="btn line" href="#/collection/sovereign">Shop the full collection</a></div>';
+  newIn.innerHTML='<div class="top"><h2 class="lbl">New in Sovereign</h2></div><div class="four" role="list" aria-label="New in Sovereign">'+pick(['sov-05','sov-07','sov-12','sov-04']).map(function(p){return card(p,{role:1,price:false})}).join('')+'</div><div class="more"><a class="btn line" href="#/collection/sovereign">Shop the full collection</a></div>';
   bindRail(newIn);
   var rv=$$('.rv');
   if(!reduce&&'IntersectionObserver' in window){
