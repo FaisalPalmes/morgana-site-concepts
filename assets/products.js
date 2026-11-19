@@ -66,6 +66,8 @@ window.MORGANA = (function () {
   // pieces worn together in the photos (shown as "Worn with" on the product page)
   const WORN = {"03": ["11"], "11": ["03"], "05": ["21"], "21": ["05", "10"], "10": ["21", "07"], "07": ["10"], "13": ["21"]};
   sov.forEach(p => { const w = WORN[p.id.slice(4)]; if (w) p.wornWith = w.map(x => "sov-" + x); });
+  // 19 Nov (Faisal): Harper leads with the two re-rendered photos (standing, cropped above the feet; sofa); originals 08-0/08-1 replaced.
+  sov[7].images = ["08-r1", "08-r2", "08-2", "08-3", "08-4", "08-5", "08-6"].map(S);
   // Regina: show item 20's photos with item 19's
   sov[18].images = sov[18].images.concat(sov[19].images);
   // 16 Nov (Angelica): two Regina photos are enough; the red roll-neck (18) is from an older collection, so it is not listed.
